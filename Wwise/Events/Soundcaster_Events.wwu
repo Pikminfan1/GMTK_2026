@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9393BCA3-9AA4-4218-A07B-B3FD232488FB}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Soundcaster_Events" ID="{9393BCA3-9AA4-4218-A07B-B3FD232488FB}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Inclusion" Type="bool">
+					<ValueList>
+						<Value>False</Value>
+					</ValueList>
+				</Property>
+			</PropertyList>
+			<ChildrenList>
+				<Folder Name="UI" ID="{6D8EE124-9122-46D0-90E3-9AEFF6CA4C49}" ShortID="662484457">
+					<ChildrenList>
+						<Event Name="UI_HoverHoverClick" ID="{654694E6-8CD1-4DB9-B5DD-19AAB1887001}">
+							<ChildrenList>
+								<Action Name="" ID="{7D88713C-1FFC-4ECE-BCCE-A53B0A3F334D}" ShortID="209004353">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Hover" ID="{3CC29FD9-F95D-4EDE-9609-8AA2112589FE}" WorkUnitID="{DEC443DA-C97B-4055-AE25-A91A77EF8493}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4C0DC285-544A-4784-8B92-4C8AC91818E0}" ShortID="176373720">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Hover" ID="{3CC29FD9-F95D-4EDE-9609-8AA2112589FE}" WorkUnitID="{DEC443DA-C97B-4055-AE25-A91A77EF8493}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6B0BE3D3-F7D6-42C0-982E-E9F2F9EC33E0}" ShortID="921238266">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="0.7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Click" ID="{4C0CE177-8042-45A7-9168-929B62FD67E2}" WorkUnitID="{DEC443DA-C97B-4055-AE25-A91A77EF8493}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

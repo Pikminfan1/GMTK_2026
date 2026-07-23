@@ -4,6 +4,21 @@
 		<WorkUnit Name="UI" ID="{696536CF-8D7E-4856-92F0-DA004361B004}" PersistMode="Standalone">
 			<ChildrenList>
 				<PropertyContainer Name="CoreUI" ID="{E08FFF42-B5EC-4640-A199-10403FFACAFE}" ShortID="702148759">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{DB8A20A9-FDE3-4E59-ABA7-69F9509391E6}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+											<Property Name="Min" Type="Real64" Value="-400"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
@@ -12,6 +27,153 @@
 							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="UI_Back" ID="{30D72B18-02D0-435D-83E9-09F262F23B81}" ShortID="413239622">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{ACD835EA-F3DA-4252-A189-79E329AB5C41}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_ui_Back_st_fm" ID="{F4F712F4-6495-4F33-85B5-93BE232F79FC}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_ui_Back_st_fm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1057495068"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_ui_Back_st_fm" ID="{F4F712F4-6495-4F33-85B5-93BE232F79FC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_Click" ID="{E804455C-A030-415A-AF8A-945498C62470}" ShortID="840179653">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0CF4EEB2-C32B-4E69-B2F7-8A848D37A4EA}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_ui_Click_st_fm" ID="{D39778E4-CF89-446B-B1B9-3E9D4E5201F1}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_ui_Click_st_fm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="525508710"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_ui_Click_st_fm" ID="{D39778E4-CF89-446B-B1B9-3E9D4E5201F1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_Confirm" ID="{DA13C21D-F712-4699-B0A0-6F5017CA5B96}" ShortID="69078869">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{27EA91A0-9CE1-4259-AF52-19C3AB532976}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_ui_Confirm_st_fm" ID="{B158FC12-87A2-427A-92A4-4E502DA7EF1C}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_ui_Confirm_st_fm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="927475916"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_ui_Confirm_st_fm" ID="{B158FC12-87A2-427A-92A4-4E502DA7EF1C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_Hover" ID="{0DF4A5C9-1B37-4123-B7DC-5763048D2ED7}" ShortID="545746758">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{CFAEAACC-4D83-4C26-8FCF-8506DBDEF67E}">
+												<PropertyList>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{217B74C8-CF47-4F96-8112-03BA24FA97A9}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-400"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_ui_Hover_st_fm" ID="{A6DBDC37-9D6D-43D3-B649-575F605C85F1}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_ui_Hover_st_fm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="65310777"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_ui_Hover_st_fm" ID="{A6DBDC37-9D6D-43D3-B649-575F605C85F1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</PropertyContainer>
 			</ChildrenList>
 		</WorkUnit>

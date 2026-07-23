@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="CoreSoundbank" ID="{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}">
 					<ObjectInclusionList>
+						<ObjectRef Name="UI" ID="{DEC443DA-C97B-4055-AE25-A91A77EF8493}" WorkUnitID="{DEC443DA-C97B-4055-AE25-A91A77EF8493}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player" ID="{4B288FAA-04A9-4747-AC69-03BE70F0530A}" WorkUnitID="{4B288FAA-04A9-4747-AC69-03BE70F0530A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Generic" ID="{CC7CF7E9-E571-4A34-8330-D5260C11C8BE}" WorkUnitID="{CC7CF7E9-E571-4A34-8330-D5260C11C8BE}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
