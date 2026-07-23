@@ -59,6 +59,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Game_Wave_Start" ID="{D07F8884-352C-4162-B936-6933E83445D5}">
+					<ChildrenList>
+						<Action Name="" ID="{0A213AC7-95BA-43E9-87E8-142CBD27CB87}" ShortID="572764228">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_GameWaveStart_Mono_1_Bulba" ID="{3FCF1E5E-39B2-4693-94DB-A6E06E368A24}" WorkUnitID="{04587476-D33D-4081-9715-B7828A2CA1A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4036891676	Game_Wave_Start			\Generic\Game_Wave_Start	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	884931067	SFX_GameWaveStart_Mono_1_Bulba	.cache\64\{648C3D64-704E-D8C3-8740-23526BE95D48}.wem		\Containers\World\General\Waves\WavesSystem\SFX_GameWaveStart_Mono_1_Bulba		447756
+

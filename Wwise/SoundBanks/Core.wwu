@@ -4,7 +4,9 @@
 		<WorkUnit Name="Core" ID="{4EC2CE0A-FB53-4198-B4CF-95328AC1AFF7}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="CoreSoundbank" ID="{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Game_Wave_Start" ID="{D07F8884-352C-4162-B936-6933E83445D5}" WorkUnitID="{CC7CF7E9-E571-4A34-8330-D5260C11C8BE}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

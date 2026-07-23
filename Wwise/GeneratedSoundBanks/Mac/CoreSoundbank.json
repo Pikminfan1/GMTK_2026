@@ -10,12 +10,38 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{AFF9FFB0-8699-DCEB-ED38-291C1B45EE0B}",
+    "Hash": "{FC4B7D88-4869-5A4A-8D7E-CF6FD7A857CD}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
-    "Path": "CoreSoundbank.bnk"
+    "Path": "CoreSoundbank.bnk",
+    "Media": [
+     {
+      "Id": "884931067",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_GameWaveStart_Mono_1_Bulba.wav",
+      "CachePath": "64/{648C3D64-704E-D8C3-8740-23526BE95D48}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4036891676",
+      "Name": "Game_Wave_Start",
+      "ObjectPath": "\\Events\\Generic\\Game_Wave_Start",
+      "GUID": "{D07F8884-352C-4162-B936-6933E83445D5}",
+      "DurationType": "OneShot",
+      "DurationMin": "5.07551",
+      "DurationMax": "5.07551",
+      "MediaRefs": [
+       {
+        "Id": "884931067"
+       }
+      ]
+     }
+    ]
    }
   ],
-  "FileHash": "{F12813E6-0F40-76C2-87CF-F1C4497D95FA}"
+  "FileHash": "{DED932C3-0E16-66FD-071B-50DE2F609B2F}"
  }
 }
