@@ -1,6 +1,50 @@
 Event	ID	Name			Wwise Object Path	Notes
+	733168346	Game_Start			\Generic\Game_Start	
+	1359982855	Game_Unpause			\Generic\Game_Unpause	
+	2033512703	Game_Wave_End			\Generic\Game_Wave_End	
+	2453392179	Player_Footstep			\Player\PlayerLocomotion\Player_Footstep	
+	2772308904	Game_Pause			\Generic\Game_Pause	
+	3545070188	Game_Init			\Generic\Game_Init	
+	3610725078	Player_JumpLand			\Player\PlayerLocomotion\Player_JumpLand	
 	4036891676	Game_Wave_Start			\Generic\Game_Wave_Start	
 
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3072116243	GroundMaterial			\Generic\GroundMaterial	
+
+Switch	ID	Name	Switch Group			Notes
+	841620460	Concrete	GroundMaterial			
+	2185786256	Gravel	GroundMaterial			
+	2654748154	Water	GroundMaterial			
+	4248645337	Grass	GroundMaterial			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	884931067	SFX_GameWaveStart_Mono_1_Bulba	.cache\64\{648C3D64-704E-D8C3-8740-23526BE95D48}.wem		\Containers\World\General\Waves\WavesSystem\SFX_GameWaveStart_Mono_1_Bulba		447756
+	62002764	sfx_player_fs_water02_mo_fm	.cache\D2\{D2E6C821-4169-505B-9D2B-F20005FD40D7}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water02_mo_fm		46684
+	63900270	sfx_player_fs_concrete01_mo_fm	.cache\75\{758E0A4A-7DF4-03CC-2D6D-BCCA706B415D}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Concrete\sfx_player_fs_concrete01_mo_fm		19296
+	95351286	sfx_player_fs_gravel05_mo_fm	.cache\0B\{0B2ECD76-0B47-FD74-F631-C39184776F40}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel05_mo_fm		33654
+	96800232	sfx_player_fs_concrete04_mo_fm	.cache\7A\{7A5F4287-FB43-CEE3-44AB-7B9D71404BDB}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Concrete\sfx_player_fs_concrete04_mo_fm		12142
+	99727932	sfx_player_fs_gravel03_mo_fm	.cache\36\{366D0DBB-1FFB-15F3-A821-957A38DD8BF8}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel03_mo_fm		29816
+	99888205	sfx_player_fs_concrete05_mo_fm	.cache\E5\{E53D531E-A9F2-5B7B-6702-52BB808CE61A}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Concrete\sfx_player_fs_concrete05_mo_fm		18308
+	106114498	sfx_player_fs_concrete03_mo_fm	.cache\3E\{3E798728-0953-A4E9-3536-7CCB5B9811CB}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Concrete\sfx_player_fs_concrete03_mo_fm		18948
+	115118834	sfx_player_fs_water06_mo_fm	.cache\7F\{7F2E2E16-E1D6-908C-AA12-EFEE58E03AF4}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water06_mo_fm		47262
+	174541427	sfx_player_fs_concrete07_mo_fm	.cache\86\{86B8626E-C549-CA83-AA5A-7819C05F1B22}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Concrete\sfx_player_fs_concrete07_mo_fm		26798
+	293233281	SFX_GameWaveStart_Stereo_1_Bulba	.cache\6D\{6D0339E0-DB38-F125-E8B4-517FC6F638A1}.wem		\Containers\World\General\Waves\WavesSystem\SFX_GameWaveStart_Stereo_1_Bulba		1239764
+	339785647	sfx_player_fs_concrete02_mo_fm	.cache\DC\{DC2F030B-3D4E-F84E-5E81-D98212930E8B}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Concrete\sfx_player_fs_concrete02_mo_fm		13322
+	360556948	sfx_player_fs_grass01_mo_fm	.cache\AC\{ACB075C0-2828-13B2-3A13-CCF0DBB00096}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass01_mo_fm		23534
+	488679294	sfx_player_fs_gravel07_mo_fm	.cache\5F\{5FB3857F-64E5-E382-9145-D8EB8BACD119}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel07_mo_fm		44156
+	606561105	sfx_player_fs_grass05_mo_fm	.cache\CB\{CB579325-636E-E1D5-64DF-ED54DA07C03E}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass05_mo_fm		22108
+	613994929	SFX_GameWaveEnd_Stereo_1_Bulba	.cache\A5\{A5D0BB18-5FE5-30D1-F197-FC2FAC46B1DA}.wem		\Containers\World\General\Waves\WavesSystem\SFX_GameWaveEnd_Stereo_1_Bulba		1065156
+	621311079	sfx_player_fs_grass03_mo_fm	.cache\D7\{D7311761-B440-09DC-7018-E5ACB418F5B0}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass03_mo_fm		26328
+	668729395	sfx_player_fs_water04_mo_fm	.cache\80\{80E4EED5-0470-8CEC-8F7A-7D1D6D2EFDFE}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water04_mo_fm		41314
+	698699718	sfx_player_fs_gravel01_mo_fm	.cache\46\{468F7932-AF13-5918-21AF-CF21CE73229E}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel01_mo_fm		30276
+	705515410	sfx_player_fs_grass04_mo_fm	.cache\FC\{FC063EF7-2FD4-9A08-5158-5C9B588478A6}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass04_mo_fm		23972
+	706710518	sfx_player_fs_water03_mo_fm	.cache\2A\{2A51BAA4-74A5-F666-9466-A20CBA80555E}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water03_mo_fm		45278
+	741894269	sfx_player_fs_concrete06_mo_fm	.cache\FC\{FC80D0B8-639F-C37A-53E3-3393E8EA8EAC}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Concrete\sfx_player_fs_concrete06_mo_fm		21090
+	766849001	sfx_player_fs_gravel06_mo_fm	.cache\20\{205870B3-4A95-D9BC-0689-8B1AE830F615}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel06_mo_fm		36802
+	810403928	sfx_player_fs_gravel02_mo_fm	.cache\5D\{5DAAC415-E6E4-C28E-343C-907AF42D6939}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel02_mo_fm		31926
+	820646846	sfx_player_fs_water01_mo_fm	.cache\3C\{3C7D9F07-E6D3-51BD-5A16-E123DF9B0584}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water01_mo_fm		46176
+	822825595	sfx_player_fs_grass06_mo_fm	.cache\39\{39E5D5B1-EE32-F765-1760-E8445586DEBC}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass06_mo_fm		24426
+	837232218	sfx_player_fs_water07_mo_fm	.cache\93\{93D39706-73B0-6F32-CE04-3E12D80BE4B8}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water07_mo_fm		41814
+	925016750	sfx_player_fs_gravel04_mo_fm	.cache\1E\{1E3D9489-8C46-C776-066A-E1AD772ADF53}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel04_mo_fm		28310
+	943985641	sfx_player_fs_grass02_mo_fm	.cache\E4\{E40AC205-ED98-6067-D50C-3F11BDD8548C}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass02_mo_fm		32204
+	1071347720	sfx_player_fs_water05_mo_fm	.cache\B0\{B079797B-A3B4-C35D-28A0-537778D4684D}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water05_mo_fm		44720
 

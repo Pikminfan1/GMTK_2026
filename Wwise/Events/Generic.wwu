@@ -64,7 +64,18 @@
 						<Action Name="" ID="{0A213AC7-95BA-43E9-87E8-142CBD27CB87}" ShortID="572764228">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_GameWaveStart_Mono_1_Bulba" ID="{3FCF1E5E-39B2-4693-94DB-A6E06E368A24}" WorkUnitID="{04587476-D33D-4081-9715-B7828A2CA1A1}"/>
+									<ObjectRef Name="SFX_GameWaveStart_Stereo_1_Bulba" ID="{F76CE3A3-9FDF-4BA5-8D6F-D5022360129F}" WorkUnitID="{04587476-D33D-4081-9715-B7828A2CA1A1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Game_Wave_End" ID="{EAEEF1DA-5554-4949-AC19-E0C1AF60D35C}">
+					<ChildrenList>
+						<Action Name="" ID="{8B4EE6BA-907A-4370-941B-AFA9508FD491}" ShortID="152268302">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_GameWaveEnd_Stereo_1_Bulba" ID="{5E7D9637-3990-470E-8A5E-34975440338B}" WorkUnitID="{04587476-D33D-4081-9715-B7828A2CA1A1}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -516,9 +516,9 @@
         "GUID": "{2909E49A-F254-4BEC-8412-78C656B898F4}"
        },
        {
-        "Id": "2195636714",
-        "Name": "Dirt",
-        "ObjectPath": "\\Switches\\Generic\\GroundMaterial\\Dirt",
+        "Id": "2185786256",
+        "Name": "Gravel",
+        "ObjectPath": "\\Switches\\Generic\\GroundMaterial\\Gravel",
         "GUID": "{80146527-6D28-4DB3-BF98-2F63780C8D95}"
        },
        {
@@ -538,6 +538,6 @@
     ]
    }
   ],
-  "FileHash": "{F7B36AA5-D4F5-1C37-0CE2-0C7B3C048CBA}"
+  "FileHash": "{F9FE0962-E1A7-AA1E-8237-846C0884B14F}"
  }
 }

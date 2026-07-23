@@ -10,38 +10,563 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{FC4B7D88-4869-5A4A-8D7E-CF6FD7A857CD}",
+    "Hash": "{ADCEAB96-C59C-390E-4BC2-43F2A85B85A3}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
     "Media": [
      {
-      "Id": "884931067",
+      "Id": "62002764",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "SFX_GameWaveStart_Mono_1_Bulba.wav",
-      "CachePath": "64/{648C3D64-704E-D8C3-8740-23526BE95D48}.wem"
+      "ShortName": "sfx_player_fs_water02_mo_fm.wav",
+      "CachePath": "D2/{D2E6C821-4169-505B-9D2B-F20005FD40D7}.wem"
+     },
+     {
+      "Id": "63900270",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_concrete01_mo_fm.wav",
+      "CachePath": "75/{758E0A4A-7DF4-03CC-2D6D-BCCA706B415D}.wem"
+     },
+     {
+      "Id": "95351286",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_gravel05_mo_fm.wav",
+      "CachePath": "0B/{0B2ECD76-0B47-FD74-F631-C39184776F40}.wem"
+     },
+     {
+      "Id": "96800232",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_concrete04_mo_fm.wav",
+      "CachePath": "7A/{7A5F4287-FB43-CEE3-44AB-7B9D71404BDB}.wem"
+     },
+     {
+      "Id": "99727932",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_gravel03_mo_fm.wav",
+      "CachePath": "36/{366D0DBB-1FFB-15F3-A821-957A38DD8BF8}.wem"
+     },
+     {
+      "Id": "99888205",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_concrete05_mo_fm.wav",
+      "CachePath": "E5/{E53D531E-A9F2-5B7B-6702-52BB808CE61A}.wem"
+     },
+     {
+      "Id": "106114498",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_concrete03_mo_fm.wav",
+      "CachePath": "3E/{3E798728-0953-A4E9-3536-7CCB5B9811CB}.wem"
+     },
+     {
+      "Id": "115118834",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_water06_mo_fm.wav",
+      "CachePath": "7F/{7F2E2E16-E1D6-908C-AA12-EFEE58E03AF4}.wem"
+     },
+     {
+      "Id": "174541427",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_concrete07_mo_fm.wav",
+      "CachePath": "86/{86B8626E-C549-CA83-AA5A-7819C05F1B22}.wem"
+     },
+     {
+      "Id": "293233281",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_GameWaveStart_Stereo_1_Bulba.wav",
+      "CachePath": "6D/{6D0339E0-DB38-F125-E8B4-517FC6F638A1}.wem"
+     },
+     {
+      "Id": "339785647",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_concrete02_mo_fm.wav",
+      "CachePath": "DC/{DC2F030B-3D4E-F84E-5E81-D98212930E8B}.wem"
+     },
+     {
+      "Id": "360556948",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_grass01_mo_fm.wav",
+      "CachePath": "AC/{ACB075C0-2828-13B2-3A13-CCF0DBB00096}.wem"
+     },
+     {
+      "Id": "488679294",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_gravel07_mo_fm.wav",
+      "CachePath": "5F/{5FB3857F-64E5-E382-9145-D8EB8BACD119}.wem"
+     },
+     {
+      "Id": "606561105",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_grass05_mo_fm.wav",
+      "CachePath": "CB/{CB579325-636E-E1D5-64DF-ED54DA07C03E}.wem"
+     },
+     {
+      "Id": "613994929",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_GameWaveEnd_Stereo_1_Bulba.wav",
+      "CachePath": "A5/{A5D0BB18-5FE5-30D1-F197-FC2FAC46B1DA}.wem"
+     },
+     {
+      "Id": "621311079",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_grass03_mo_fm.wav",
+      "CachePath": "D7/{D7311761-B440-09DC-7018-E5ACB418F5B0}.wem"
+     },
+     {
+      "Id": "668729395",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_water04_mo_fm.wav",
+      "CachePath": "80/{80E4EED5-0470-8CEC-8F7A-7D1D6D2EFDFE}.wem"
+     },
+     {
+      "Id": "698699718",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_gravel01_mo_fm.wav",
+      "CachePath": "46/{468F7932-AF13-5918-21AF-CF21CE73229E}.wem"
+     },
+     {
+      "Id": "705515410",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_grass04_mo_fm.wav",
+      "CachePath": "FC/{FC063EF7-2FD4-9A08-5158-5C9B588478A6}.wem"
+     },
+     {
+      "Id": "706710518",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_water03_mo_fm.wav",
+      "CachePath": "2A/{2A51BAA4-74A5-F666-9466-A20CBA80555E}.wem"
+     },
+     {
+      "Id": "741894269",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_concrete06_mo_fm.wav",
+      "CachePath": "FC/{FC80D0B8-639F-C37A-53E3-3393E8EA8EAC}.wem"
+     },
+     {
+      "Id": "766849001",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_gravel06_mo_fm.wav",
+      "CachePath": "20/{205870B3-4A95-D9BC-0689-8B1AE830F615}.wem"
+     },
+     {
+      "Id": "810403928",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_gravel02_mo_fm.wav",
+      "CachePath": "5D/{5DAAC415-E6E4-C28E-343C-907AF42D6939}.wem"
+     },
+     {
+      "Id": "820646846",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_water01_mo_fm.wav",
+      "CachePath": "3C/{3C7D9F07-E6D3-51BD-5A16-E123DF9B0584}.wem"
+     },
+     {
+      "Id": "822825595",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_grass06_mo_fm.wav",
+      "CachePath": "39/{39E5D5B1-EE32-F765-1760-E8445586DEBC}.wem"
+     },
+     {
+      "Id": "837232218",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_water07_mo_fm.wav",
+      "CachePath": "93/{93D39706-73B0-6F32-CE04-3E12D80BE4B8}.wem"
+     },
+     {
+      "Id": "925016750",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_gravel04_mo_fm.wav",
+      "CachePath": "1E/{1E3D9489-8C46-C776-066A-E1AD772ADF53}.wem"
+     },
+     {
+      "Id": "943985641",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_grass02_mo_fm.wav",
+      "CachePath": "E4/{E40AC205-ED98-6067-D50C-3F11BDD8548C}.wem"
+     },
+     {
+      "Id": "1071347720",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_player_fs_water05_mo_fm.wav",
+      "CachePath": "B0/{B079797B-A3B4-C35D-28A0-537778D4684D}.wem"
      }
     ],
     "Events": [
+     {
+      "Id": "3545070188",
+      "Name": "Game_Init",
+      "ObjectPath": "\\Events\\Generic\\Game_Init",
+      "GUID": "{E7219119-A3DB-4B75-9EB8-C855EAABAB95}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "4091656514",
+        "Id": "3374585465",
+        "Name": "InMenu",
+        "ObjectPath": "\\States\\Generic\\GameState\\InMenu",
+        "GUID": "{460E9C64-EAB3-4105-86A6-B699F9B16754}"
+       }
+      ]
+     },
+     {
+      "Id": "2772308904",
+      "Name": "Game_Pause",
+      "ObjectPath": "\\Events\\Generic\\Game_Pause",
+      "GUID": "{00E8FBD9-52D9-4700-8D72-4F5269868AF0}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "4091656514",
+        "Id": "3327551418",
+        "Name": "InPause",
+        "ObjectPath": "\\States\\Generic\\GameState\\InPause",
+        "GUID": "{0C858250-0140-4F25-A4DA-AB76497864D2}"
+       }
+      ]
+     },
+     {
+      "Id": "733168346",
+      "Name": "Game_Start",
+      "ObjectPath": "\\Events\\Generic\\Game_Start",
+      "GUID": "{BB120B2F-00D3-4CFC-B654-20E1198B6A1A}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "4091656514",
+        "Id": "984691642",
+        "Name": "InGame",
+        "ObjectPath": "\\States\\Generic\\GameState\\InGame",
+        "GUID": "{5B8E4749-545C-4E1A-9F98-9F37C7DF1FFB}"
+       }
+      ]
+     },
+     {
+      "Id": "1359982855",
+      "Name": "Game_Unpause",
+      "ObjectPath": "\\Events\\Generic\\Game_Unpause",
+      "GUID": "{EE3DD2CA-C081-48B5-BE3B-E61C0EF1578F}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "4091656514",
+        "Id": "984691642",
+        "Name": "InGame",
+        "ObjectPath": "\\States\\Generic\\GameState\\InGame",
+        "GUID": "{5B8E4749-545C-4E1A-9F98-9F37C7DF1FFB}"
+       }
+      ]
+     },
+     {
+      "Id": "2033512703",
+      "Name": "Game_Wave_End",
+      "ObjectPath": "\\Events\\Generic\\Game_Wave_End",
+      "GUID": "{EAEEF1DA-5554-4949-AC19-E0C1AF60D35C}",
+      "DurationType": "OneShot",
+      "DurationMin": "6.037755",
+      "DurationMax": "6.037755",
+      "MediaRefs": [
+       {
+        "Id": "613994929"
+       }
+      ]
+     },
      {
       "Id": "4036891676",
       "Name": "Game_Wave_Start",
       "ObjectPath": "\\Events\\Generic\\Game_Wave_Start",
       "GUID": "{D07F8884-352C-4162-B936-6933E83445D5}",
       "DurationType": "OneShot",
-      "DurationMin": "5.07551",
-      "DurationMax": "5.07551",
+      "DurationMin": "7.0275965",
+      "DurationMax": "7.0275965",
       "MediaRefs": [
        {
-        "Id": "884931067"
+        "Id": "293233281"
+       }
+      ]
+     },
+     {
+      "Id": "2453392179",
+      "Name": "Player_Footstep",
+      "ObjectPath": "\\Events\\Player\\PlayerLocomotion\\Player_Footstep",
+      "GUID": "{CFA5B9DE-F894-4129-A77D-7F7C1CBDA8C9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.118436545",
+      "DurationMax": "0.55147964",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3072116243",
+         "Id": "2185786256",
+         "GUID": "{80146527-6D28-4DB3-BF98-2F63780C8D95}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "95351286"
+         },
+         {
+          "Id": "99727932"
+         },
+         {
+          "Id": "488679294"
+         },
+         {
+          "Id": "698699718"
+         },
+         {
+          "Id": "766849001"
+         },
+         {
+          "Id": "810403928"
+         },
+         {
+          "Id": "925016750"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3072116243",
+         "Id": "4248645337",
+         "GUID": "{86697764-0D1F-4610-BACF-4E36E3F1FEBF}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "360556948"
+         },
+         {
+          "Id": "606561105"
+         },
+         {
+          "Id": "621311079"
+         },
+         {
+          "Id": "705515410"
+         },
+         {
+          "Id": "822825595"
+         },
+         {
+          "Id": "943985641"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3072116243",
+         "Id": "2654748154",
+         "GUID": "{4DBABE6C-B1B2-4F92-A75E-963F8BFE2A81}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "62002764"
+         },
+         {
+          "Id": "115118834"
+         },
+         {
+          "Id": "668729395"
+         },
+         {
+          "Id": "706710518"
+         },
+         {
+          "Id": "820646846"
+         },
+         {
+          "Id": "837232218"
+         },
+         {
+          "Id": "1071347720"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3072116243",
+         "Id": "841620460",
+         "GUID": "{2909E49A-F254-4BEC-8412-78C656B898F4}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "63900270"
+         },
+         {
+          "Id": "96800232"
+         },
+         {
+          "Id": "99888205"
+         },
+         {
+          "Id": "106114498"
+         },
+         {
+          "Id": "174541427"
+         },
+         {
+          "Id": "339785647"
+         },
+         {
+          "Id": "741894269"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "3610725078",
+      "Name": "Player_JumpLand",
+      "ObjectPath": "\\Events\\Player\\PlayerLocomotion\\Player_JumpLand",
+      "GUID": "{25E1C6A7-BC62-4B4B-A201-1E0412548BFE}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "SwitchContainers": []
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "4091656514",
+      "Name": "GameState",
+      "ObjectPath": "\\States\\Generic\\GameState",
+      "GUID": "{567F5043-A81B-4281-A7C1-0D08768169EB}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Generic\\GameState\\None",
+        "GUID": "{066EBA92-BE06-48B1-B6FD-B032178EBF1A}"
+       },
+       {
+        "Id": "984691642",
+        "Name": "InGame",
+        "ObjectPath": "\\States\\Generic\\GameState\\InGame",
+        "GUID": "{5B8E4749-545C-4E1A-9F98-9F37C7DF1FFB}"
+       },
+       {
+        "Id": "3327551418",
+        "Name": "InPause",
+        "ObjectPath": "\\States\\Generic\\GameState\\InPause",
+        "GUID": "{0C858250-0140-4F25-A4DA-AB76497864D2}"
+       },
+       {
+        "Id": "3374585465",
+        "Name": "InMenu",
+        "ObjectPath": "\\States\\Generic\\GameState\\InMenu",
+        "GUID": "{460E9C64-EAB3-4105-86A6-B699F9B16754}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3072116243",
+      "Name": "GroundMaterial",
+      "ObjectPath": "\\Switches\\Generic\\GroundMaterial",
+      "GUID": "{064CBE77-CC8E-4FB9-8E31-20807EAA39FA}",
+      "Switches": [
+       {
+        "Id": "841620460",
+        "Name": "Concrete",
+        "ObjectPath": "\\Switches\\Generic\\GroundMaterial\\Concrete",
+        "GUID": "{2909E49A-F254-4BEC-8412-78C656B898F4}"
+       },
+       {
+        "Id": "2185786256",
+        "Name": "Gravel",
+        "ObjectPath": "\\Switches\\Generic\\GroundMaterial\\Gravel",
+        "GUID": "{80146527-6D28-4DB3-BF98-2F63780C8D95}"
+       },
+       {
+        "Id": "2654748154",
+        "Name": "Water",
+        "ObjectPath": "\\Switches\\Generic\\GroundMaterial\\Water",
+        "GUID": "{4DBABE6C-B1B2-4F92-A75E-963F8BFE2A81}"
+       },
+       {
+        "Id": "4248645337",
+        "Name": "Grass",
+        "ObjectPath": "\\Switches\\Generic\\GroundMaterial\\Grass",
+        "GUID": "{86697764-0D1F-4610-BACF-4E36E3F1FEBF}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{DED932C3-0E16-66FD-071B-50DE2F609B2F}"
+  "FileHash": "{9769B9CE-40A5-63B5-1D20-50C5C4CE9FF8}"
  }
 }
