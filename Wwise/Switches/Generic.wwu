@@ -6,7 +6,7 @@
 				<SwitchGroup Name="GroundMaterial" ID="{064CBE77-CC8E-4FB9-8E31-20807EAA39FA}">
 					<ChildrenList>
 						<Switch Name="Concrete" ID="{2909E49A-F254-4BEC-8412-78C656B898F4}"/>
-						<Switch Name="Dirt" ID="{80146527-6D28-4DB3-BF98-2F63780C8D95}"/>
+						<Switch Name="Gravel" ID="{80146527-6D28-4DB3-BF98-2F63780C8D95}"/>
 						<Switch Name="Grass" ID="{86697764-0D1F-4610-BACF-4E36E3F1FEBF}"/>
 						<Switch Name="Water" ID="{4DBABE6C-B1B2-4F92-A75E-963F8BFE2A81}"/>
 					</ChildrenList>

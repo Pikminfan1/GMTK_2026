@@ -44,6 +44,9 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
 								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Concrete" ID="{2909E49A-F254-4BEC-8412-78C656B898F4}" WorkUnitID="{7CDB7EE2-C1A0-4110-B9AD-B946051E28AE}"/>
+								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 								</Reference>
@@ -66,7 +69,7 @@
 										</Reference>
 									</ReferenceList>
 								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="PlayerJump_Land_Dirt" ID="{27C61832-2918-489B-8C9B-FFFCEE034865}" ShortID="574559402">
+								<RandomSequenceContainer Name="PlayerJump_Land_Gravel" ID="{27C61832-2918-489B-8C9B-FFFCEE034865}" ShortID="574559402">
 									<PropertyList>
 										<Property Name="Color" Type="int16" Value="2"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -118,7 +121,7 @@
 										<ItemRef Name="PlayerJump_Land_Grass" ID="{6F171B21-7DC9-417A-B002-A95F9EF8DBF1}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="PlayerJump_Land_Dirt" ID="{27C61832-2918-489B-8C9B-FFFCEE034865}"/>
+										<ItemRef Name="PlayerJump_Land_Gravel" ID="{27C61832-2918-489B-8C9B-FFFCEE034865}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="PlayerJump_Land_Water" ID="{227E2AFA-1D48-44A8-A79C-FA8C99142C1F}"/>
@@ -126,9 +129,9 @@
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
-										<SwitchRef Name="Dirt" ID="{80146527-6D28-4DB3-BF98-2F63780C8D95}"/>
+										<SwitchRef Name="Gravel" ID="{80146527-6D28-4DB3-BF98-2F63780C8D95}"/>
 										<ItemList>
-											<ItemRef Name="PlayerJump_Land_Dirt" ID="{27C61832-2918-489B-8C9B-FFFCEE034865}"/>
+											<ItemRef Name="PlayerJump_Land_Gravel" ID="{27C61832-2918-489B-8C9B-FFFCEE034865}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -156,10 +159,26 @@
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="2"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E0533DD1-5F01-4564-BBDD-51CBDE9E0D44}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Concrete" ID="{2909E49A-F254-4BEC-8412-78C656B898F4}" WorkUnitID="{7CDB7EE2-C1A0-4110-B9AD-B946051E28AE}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
@@ -182,8 +201,164 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_player_fs_concrete01_mo_fm" ID="{60C901E3-D968-4D6D-B12F-73062CFCD9CC}" ShortID="607287607">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_concrete01_mo_fm" ID="{4C066E7F-BD85-4309-9CA5-5318808BEBCC}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_concrete01_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="63900270"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_concrete01_mo_fm" ID="{4C066E7F-BD85-4309-9CA5-5318808BEBCC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_concrete02_mo_fm" ID="{80BB4A02-EA08-45CF-8A45-5D7D0188EDC8}" ShortID="784111752">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_concrete02_mo_fm" ID="{1FC466EC-6CFD-42AE-BCAD-79DE6F7350CF}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_concrete02_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="339785647"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_concrete02_mo_fm" ID="{1FC466EC-6CFD-42AE-BCAD-79DE6F7350CF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_concrete03_mo_fm" ID="{A4DF6268-011E-4D40-8343-6E33F18554EF}" ShortID="930814266">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_concrete03_mo_fm" ID="{3A3979AD-091F-4967-B2A9-C1306C9E7155}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_concrete03_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="106114498"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_concrete03_mo_fm" ID="{3A3979AD-091F-4967-B2A9-C1306C9E7155}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_concrete04_mo_fm" ID="{940B6CF1-73D5-40AA-BCE3-A41F9CD1B7E3}" ShortID="1008555261">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_concrete04_mo_fm" ID="{8132358E-BCF1-404D-9FAC-ECE401DD14A2}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_concrete04_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="96800232"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_concrete04_mo_fm" ID="{8132358E-BCF1-404D-9FAC-ECE401DD14A2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_concrete05_mo_fm" ID="{DE0010B7-F775-49AC-96F0-DE9326594D3D}" ShortID="755064559">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_concrete05_mo_fm" ID="{F0E9E1EE-E2BA-4573-A082-771B9FAABFDA}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_concrete05_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="99888205"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_concrete05_mo_fm" ID="{F0E9E1EE-E2BA-4573-A082-771B9FAABFDA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_concrete06_mo_fm" ID="{06D0AEFB-6861-48FE-BB79-94F6611BB36A}" ShortID="283912790">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_concrete06_mo_fm" ID="{3FC5AA00-6B1A-441E-A56D-46E140499625}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_concrete06_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="741894269"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_concrete06_mo_fm" ID="{3FC5AA00-6B1A-441E-A56D-46E140499625}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_concrete07_mo_fm" ID="{B83921F3-087F-4174-BC19-F40965B658DE}" ShortID="1047394157">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_concrete07_mo_fm" ID="{67FB9F39-13A1-4751-9DA7-9411586DE5CA}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_concrete07_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="174541427"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_concrete07_mo_fm" ID="{67FB9F39-13A1-4751-9DA7-9411586DE5CA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="PlayerFootstep_Dirt" ID="{E5F73AC2-0962-4A57-A7F7-90CD4BE9CDD6}" ShortID="866731411">
+								<RandomSequenceContainer Name="PlayerFootstep_Gravel" ID="{E5F73AC2-0962-4A57-A7F7-90CD4BE9CDD6}" ShortID="866731411">
 									<PropertyList>
 										<Property Name="Color" Type="int16" Value="2"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -196,6 +371,162 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_player_fs_gravel07_mo_fm" ID="{557110D0-A75B-4476-B3D0-C6029C855FD4}" ShortID="822710029">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_gravel07_mo_fm" ID="{B0FB30EB-F6ED-442D-AC8C-169A69293500}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_gravel07_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="488679294"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_gravel07_mo_fm" ID="{B0FB30EB-F6ED-442D-AC8C-169A69293500}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_gravel01_mo_fm" ID="{46223640-BA26-4BE5-84DB-6EA0B5191CBD}" ShortID="616430538">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_gravel01_mo_fm" ID="{56DECF75-66B8-492C-B271-F3DD6A5646D6}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_gravel01_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="698699718"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_gravel01_mo_fm" ID="{56DECF75-66B8-492C-B271-F3DD6A5646D6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_gravel02_mo_fm" ID="{18508426-1C01-4B33-86A7-BB17BE357897}" ShortID="1066920810">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_gravel02_mo_fm" ID="{862A463A-51F7-4661-9F11-6D6EBF21C146}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_gravel02_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="810403928"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_gravel02_mo_fm" ID="{862A463A-51F7-4661-9F11-6D6EBF21C146}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_gravel03_mo_fm" ID="{EB6A0BAC-CD99-4314-BEEA-E3B700DBF0BC}" ShortID="1010403219">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_gravel03_mo_fm" ID="{009D73FF-72A6-42A8-A90C-7E70D1187956}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_gravel03_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="99727932"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_gravel03_mo_fm" ID="{009D73FF-72A6-42A8-A90C-7E70D1187956}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_gravel04_mo_fm" ID="{6F338009-B5FC-483A-88C6-87ED8CB7755F}" ShortID="822078530">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_gravel04_mo_fm" ID="{7AD384A1-E49A-443D-9AFC-BC68C13A87D8}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_gravel04_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="925016750"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_gravel04_mo_fm" ID="{7AD384A1-E49A-443D-9AFC-BC68C13A87D8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_gravel05_mo_fm" ID="{DCD61143-6426-4163-BC39-6CCCEE63A562}" ShortID="853829610">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_gravel05_mo_fm" ID="{BDCA8E0B-C29F-49AC-A0EC-97E4BDD1DC49}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_gravel05_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="95351286"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_gravel05_mo_fm" ID="{BDCA8E0B-C29F-49AC-A0EC-97E4BDD1DC49}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_gravel06_mo_fm" ID="{D248E470-FCA4-40FF-AE25-69F28225F093}" ShortID="716736994">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_gravel06_mo_fm" ID="{FBCF2BEF-BC47-476D-8BC5-652C6171E0FD}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_gravel06_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="766849001"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_gravel06_mo_fm" ID="{FBCF2BEF-BC47-476D-8BC5-652C6171E0FD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="PlayerFootstep_Grass" ID="{835A6055-E402-47A1-BC86-2CBDA6EF24F6}" ShortID="838366065">
 									<PropertyList>
@@ -210,6 +541,140 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_player_fs_grass01_mo_fm" ID="{C3CA589D-3C81-4545-98E6-D8E1891E5856}" ShortID="323793332">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_grass01_mo_fm" ID="{E6F24C2B-56CC-472B-AF5F-37F8399AE684}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_grass01_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="360556948"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_grass01_mo_fm" ID="{E6F24C2B-56CC-472B-AF5F-37F8399AE684}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_grass02_mo_fm" ID="{2784BF4C-C325-4F20-B27B-C3CFC8F0E46B}" ShortID="1038679851">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_grass02_mo_fm" ID="{453B9A07-CC18-4508-8D3C-7FFD7E30948C}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_grass02_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="943985641"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_grass02_mo_fm" ID="{453B9A07-CC18-4508-8D3C-7FFD7E30948C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_grass03_mo_fm" ID="{C891E016-F8A1-46DC-AB7C-E6D5D1691C8C}" ShortID="874295472">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_grass03_mo_fm" ID="{C4AE7EF4-6D79-4E0A-A17A-AE003B3B7CDB}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_grass03_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="621311079"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_grass03_mo_fm" ID="{C4AE7EF4-6D79-4E0A-A17A-AE003B3B7CDB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_grass04_mo_fm" ID="{1ED4EF7B-C9A0-491B-A9AF-27B3CE247074}" ShortID="161684826">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_grass04_mo_fm" ID="{DF722857-F09F-4445-86AD-8AE7DC0E0904}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_grass04_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="705515410"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_grass04_mo_fm" ID="{DF722857-F09F-4445-86AD-8AE7DC0E0904}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_grass05_mo_fm" ID="{C6593209-C909-4724-9B43-7B8870380566}" ShortID="20788383">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_grass05_mo_fm" ID="{991B57E5-02C0-42C4-8357-EE5EFEA5173D}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_grass05_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="606561105"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_grass05_mo_fm" ID="{991B57E5-02C0-42C4-8357-EE5EFEA5173D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_grass06_mo_fm" ID="{716CCAAE-49B7-4EBA-8A89-9FDB8D0F628D}" ShortID="318436319">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_grass06_mo_fm" ID="{C12C40D9-615D-46B1-96F3-56C4C9B56129}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_grass06_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="822825595"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_grass06_mo_fm" ID="{C12C40D9-615D-46B1-96F3-56C4C9B56129}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="PlayerFootstep_Water" ID="{6492B6E1-C02B-4601-8EDD-8B028382E458}" ShortID="717655811">
 									<PropertyList>
@@ -224,6 +689,162 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_player_fs_water07_mo_fm" ID="{FA9FD0C0-4ED9-4F8C-AA4B-AE79A52C4025}" ShortID="572302627">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_water07_mo_fm" ID="{100AF8B3-B30B-4857-A254-88923F25025E}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_water07_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="837232218"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_water07_mo_fm" ID="{100AF8B3-B30B-4857-A254-88923F25025E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_water01_mo_fm" ID="{9430A2A6-603C-4D4C-B744-FCE479ECC821}" ShortID="589146408">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_water01_mo_fm" ID="{5252C973-6ED4-4380-8384-76D69288943A}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_water01_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="820646846"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_water01_mo_fm" ID="{5252C973-6ED4-4380-8384-76D69288943A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_water02_mo_fm" ID="{E3AE7E9C-2F03-4602-AFE8-4B82EF0C3920}" ShortID="967330546">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_water02_mo_fm" ID="{18B03B39-2C00-436C-9D96-033324DE313D}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_water02_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="62002764"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_water02_mo_fm" ID="{18B03B39-2C00-436C-9D96-033324DE313D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_water03_mo_fm" ID="{B0467595-35F8-4033-9C54-A4077CE4758B}" ShortID="784547608">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_water03_mo_fm" ID="{652BE84B-BE80-4862-AD60-7743A218DCC7}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_water03_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="706710518"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_water03_mo_fm" ID="{652BE84B-BE80-4862-AD60-7743A218DCC7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_water04_mo_fm" ID="{93F597B7-FD1A-45D8-BDE7-6F0C6D6760D6}" ShortID="629434513">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_water04_mo_fm" ID="{908E52EF-FAAD-468B-BA2A-BE9E13CA2C51}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_water04_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="668729395"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_water04_mo_fm" ID="{908E52EF-FAAD-468B-BA2A-BE9E13CA2C51}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_water05_mo_fm" ID="{7C0CC735-3D68-4C05-8B6B-165C44F24123}" ShortID="421040777">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_water05_mo_fm" ID="{0E59FC4A-BC6D-4BDC-AD10-2EB2CC2F7E50}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_water05_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1071347720"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_water05_mo_fm" ID="{0E59FC4A-BC6D-4BDC-AD10-2EB2CC2F7E50}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sfx_player_fs_water06_mo_fm" ID="{2F966625-E76D-41F8-8F49-275496EEA02C}" ShortID="918999568">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_player_fs_water06_mo_fm" ID="{07D59603-9B5D-4DBF-8AD5-A7A6B9713036}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_player_fs_water06_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="115118834"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_player_fs_water06_mo_fm" ID="{07D59603-9B5D-4DBF-8AD5-A7A6B9713036}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
 							</ChildrenList>
 							<GroupingInfo>
@@ -232,7 +853,7 @@
 										<ItemRef Name="PlayerFootstep_Grass" ID="{835A6055-E402-47A1-BC86-2CBDA6EF24F6}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="PlayerFootstep_Dirt" ID="{E5F73AC2-0962-4A57-A7F7-90CD4BE9CDD6}"/>
+										<ItemRef Name="PlayerFootstep_Gravel" ID="{E5F73AC2-0962-4A57-A7F7-90CD4BE9CDD6}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="PlayerFootstep_Concrete" ID="{E00205D2-4BC6-4212-8D85-981F0D1EE188}"/>
@@ -243,9 +864,9 @@
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
-										<SwitchRef Name="Dirt" ID="{80146527-6D28-4DB3-BF98-2F63780C8D95}"/>
+										<SwitchRef Name="Gravel" ID="{80146527-6D28-4DB3-BF98-2F63780C8D95}"/>
 										<ItemList>
-											<ItemRef Name="PlayerFootstep_Dirt" ID="{E5F73AC2-0962-4A57-A7F7-90CD4BE9CDD6}"/>
+											<ItemRef Name="PlayerFootstep_Gravel" ID="{E5F73AC2-0962-4A57-A7F7-90CD4BE9CDD6}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
