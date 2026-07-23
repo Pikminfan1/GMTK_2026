@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{04587476-D33D-4081-9715-B7828A2CA1A1}" SchemaVersion="133" RootDocumentID="{38282CAE-841C-4993-AD65-B53E6DCDEDF3}" ParentDocumentID="{5EA49094-6348-4633-A22A-242A593CDF7A}">
+<WwiseDocument Type="WorkUnit" ID="{04587476-D33D-4081-9715-B7828A2CA1A1}" SchemaVersion="133" RootDocumentID="{5EA49094-6348-4633-A22A-242A593CDF7A}" ParentDocumentID="{55DBB179-6E75-4FF8-AA4D-A55783A166F2}">
 	<Containers>
-		<WorkUnit Name="Waves" ID="{04587476-D33D-4081-9715-B7828A2CA1A1}" OwnerID="{5EA49094-6348-4633-A22A-242A593CDF7A}" PersistMode="Nested">
+		<WorkUnit Name="Waves" ID="{04587476-D33D-4081-9715-B7828A2CA1A1}" OwnerID="{55DBB179-6E75-4FF8-AA4D-A55783A166F2}" PersistMode="Nested">
 			<ChildrenList>
 				<PropertyContainer Name="WavesSystem" ID="{A633B3FE-2625-4145-AE36-D5EE5353C6E4}" ShortID="471395329">
 					<PropertyList>
@@ -12,7 +12,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+							<ObjectRef Name="GameEvents" ID="{1483FF16-16EC-422E-95B4-A6916FCC8D04}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>

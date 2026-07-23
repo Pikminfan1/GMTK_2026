@@ -44,12 +44,14 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\MainBusses\Main Audio Bus\World\Ambience	
 	309309195	2DAmbience			\MainBusses\Main Audio Bus\World\Ambience\2DAmbience	
 	833916109	NPCs			\MainBusses\Main Audio Bus\World\NPCs	
+	838047381	Non-World			\MainBusses\Main Audio Bus\Non-World	
 	986618877	PlayerWeapons			\MainBusses\Main Audio Bus\World\Player\PlayerCombat\PlayerWeapons	
 	1069431850	Player			\MainBusses\Main Audio Bus\World\Player	
 	1217116541	NPCLocomotion			\MainBusses\Main Audio Bus\World\NPCs\NPCLocomotion	
 	1257671459	ObjectPassive			\MainBusses\Main Audio Bus\World\Objects\ObjectPassive	
 	1301074112	3DAmbience			\MainBusses\Main Audio Bus\World\Ambience\3DAmbience	
-	1551306167	UI			\MainBusses\Main Audio Bus\UI	
+	1529463900	GameEvents			\MainBusses\Main Audio Bus\Non-World\GameEvents	
+	1551306167	UI			\MainBusses\Main Audio Bus\Non-World\UI	
 	1634810678	PlayerCombat			\MainBusses\Main Audio Bus\World\Player\PlayerCombat	
 	1695690031	Objects			\MainBusses\Main Audio Bus\World\Objects	
 	1711335080	ObjectDestruction			\MainBusses\Main Audio Bus\World\Objects\ObjectDestruction	
@@ -59,10 +61,10 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	2343802269	PlayerLocomotion			\MainBusses\Main Audio Bus\World\Player\PlayerLocomotion	
 	2609808943	World			\MainBusses\Main Audio Bus\World	
 	2702185859	PlayerCombatActions			\MainBusses\Main Audio Bus\World\Player\PlayerCombat\PlayerCombatActions	
-	2940432316	Stingers			\MainBusses\Main Audio Bus\Music\Stingers	
+	2940432316	Stingers			\MainBusses\Main Audio Bus\Non-World\Music\Stingers	
 	3077849308	NPCVocals			\MainBusses\Main Audio Bus\World\NPCs\NPCVocals	
 	3545700988	Reverbs			\MainBusses\Main Audio Bus\World\Reverbs	
-	3991942870	Music			\MainBusses\Main Audio Bus\Music	
+	3991942870	Music			\MainBusses\Main Audio Bus\Non-World\Music	
 	4000439062	NPCCombat			\MainBusses\Main Audio Bus\World\NPCs\NPCCombat	
 	4275850663	Projectiles			\MainBusses\Main Audio Bus\World\Objects\Projectiles	
 

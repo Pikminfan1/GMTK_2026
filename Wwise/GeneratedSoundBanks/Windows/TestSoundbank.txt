@@ -1,6 +1,3 @@
-Event	ID	Name			Wwise Object Path	Notes
-	1164080211	EVT_Test			\Default Work Unit\EVT_Test	
-
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	1000407848	Sine	Wwise Sine		\Containers\Default Work Unit\testbeep_440hz_10ms\Sine	
 

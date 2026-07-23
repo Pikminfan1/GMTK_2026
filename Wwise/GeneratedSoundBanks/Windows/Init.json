@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{29200333-C58E-19D6-0923-E9C699C102B3}",
+    "Hash": "{033696FE-EFFA-BF8C-6D54-0980B19D7DEC}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -72,6 +72,12 @@
       "GUID": "{316AA0B0-2FDA-4563-A591-EDE30805F674}"
      },
      {
+      "Id": "838047381",
+      "Name": "Non-World",
+      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\Non-World",
+      "GUID": "{5D9DD141-1969-45C3-94E0-FE8731676F7E}"
+     },
+     {
       "Id": "986618877",
       "Name": "PlayerWeapons",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Player\\PlayerCombat\\PlayerWeapons",
@@ -102,9 +108,15 @@
       "GUID": "{FEC9235C-6435-44BB-A3B9-88C7C778201D}"
      },
      {
+      "Id": "1529463900",
+      "Name": "GameEvents",
+      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\Non-World\\GameEvents",
+      "GUID": "{1483FF16-16EC-422E-95B4-A6916FCC8D04}"
+     },
+     {
       "Id": "1551306167",
       "Name": "UI",
-      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\UI",
+      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\Non-World\\UI",
       "GUID": "{1661C569-BA41-492E-8564-FC4A04407F71}"
      },
      {
@@ -174,7 +186,7 @@
      {
       "Id": "2940432316",
       "Name": "Stingers",
-      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\Music\\Stingers",
+      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\Non-World\\Music\\Stingers",
       "GUID": "{D284416F-B7B8-4789-8924-8724D2B97C22}"
      },
      {
@@ -192,7 +204,7 @@
      {
       "Id": "3991942870",
       "Name": "Music",
-      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\Music",
+      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\Non-World\\Music",
       "GUID": "{E5C6A8DB-6725-4FC9-8818-3C39D38E99B9}"
      },
      {
@@ -538,6 +550,6 @@
     ]
    }
   ],
-  "FileHash": "{F9FE0962-E1A7-AA1E-8237-846C0884B14F}"
+  "FileHash": "{4D971C87-5206-3CF0-D04A-1DAEAE1638AC}"
  }
 }
