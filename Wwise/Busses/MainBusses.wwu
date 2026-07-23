@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{66ECAEA2-F804-4D86-9794-C60350778AEA}" SchemaVersion="133">
+	<Busses>
+		<WorkUnit Name="MainBusses" ID="{66ECAEA2-F804-4D86-9794-C60350778AEA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{1B480DB2-D3EC-4705-941E-49833DDF92B1}" WorkUnitID="{EA6324DE-A8E4-40D1-A7FE-52E9EC6A89D6}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="World" ID="{BCB3C6E0-27DD-4C3F-B929-4944D0EBC3D1}">
+							<ChildrenList>
+								<Bus Name="Player" ID="{6089C328-5295-482E-8DC1-F7AC25C8EF98}">
+									<ChildrenList>
+										<Bus Name="PlayerCombat" ID="{E0794755-7A44-41C5-98E3-2E356CE63F32}">
+											<ChildrenList>
+												<Bus Name="PlayerCombatActions" ID="{9A7BB22D-7527-48E7-9B9E-C6C9FB4E3125}"/>
+												<Bus Name="PlayerWeapons" ID="{8EEF11CD-7B0C-4E69-8473-D8CA830847AA}"/>
+											</ChildrenList>
+										</Bus>
+										<Bus Name="PlayerLocomotion" ID="{F706F1B3-99E9-4E33-9902-C07B65469D7A}"/>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="Ambience" ID="{4AE7ACDA-9A33-4550-AB26-A275524C9351}">
+									<ChildrenList>
+										<Bus Name="2DAmbience" ID="{6CA633B0-A874-4DEF-AB25-4B80EC215A4A}"/>
+										<Bus Name="3DAmbience" ID="{FEC9235C-6435-44BB-A3B9-88C7C778201D}"/>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="NPCs" ID="{316AA0B0-2FDA-4563-A591-EDE30805F674}">
+									<ChildrenList>
+										<Bus Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}"/>
+										<Bus Name="NPCLocomotion" ID="{2B45A8A7-9841-4E20-975F-EE4AF534F605}"/>
+										<Bus Name="NPCVocals" ID="{992199C8-302C-4EE2-9C4A-D9094B6CB76F}"/>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="Objects" ID="{6B96A338-66AD-4F7A-ABF7-6247EA034591}">
+									<ChildrenList>
+										<Bus Name="Projectiles" ID="{9FF5EEE9-A6D2-49F1-ADEC-A3FFCD0B93DA}"/>
+										<Bus Name="ObjectPickup" ID="{BEB73DBA-65D1-468E-8B9A-E81C98232023}"/>
+										<Bus Name="ObjectPassive" ID="{FEECFFA9-2BBF-4F32-9AA2-C6DBC613FD0F}"/>
+										<Bus Name="ObjectDestruction" ID="{6E174F30-26A0-4E2A-8484-B8A0EBA0062F}"/>
+										<Bus Name="Doors" ID="{83608F04-1523-4947-813E-0EE4888F66D1}"/>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="Reverbs" ID="{944D548D-F8AA-4C46-98D6-CB08A9D4D1D3}">
+									<ChildrenList>
+										<AuxBus Name="Room_Small" ID="{E0D9BC87-EF3E-4ED7-9B11-F65A2301ACCB}"/>
+										<AuxBus Name="Room_Medium" ID="{65FE0A3A-3C20-4621-8416-07760CF0F4D9}"/>
+										<AuxBus Name="Room_Large" ID="{ECB2B324-77C5-4EB4-AD62-7E75AC58FCA2}"/>
+										<AuxBus Name="Outdoors" ID="{1925E056-166D-4DD7-AB68-8EA81697C003}"/>
+										<AuxBus Name="Cave" ID="{1618779C-6D79-42CC-BE24-5B192AE46F9B}"/>
+									</ChildrenList>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{A04D794C-03BF-44B6-983E-631A2E972C99}" ShortID="199301114">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_User_SFX" ID="{4DF2F460-4C89-46E1-8331-9F32711CCFDC}" WorkUnitID="{8B988A52-F3D7-4C81-911E-A05CED30F501}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{34CA9578-97C7-4422-BEF6-6721321E37F8}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+						<Bus Name="Music" ID="{E5C6A8DB-6725-4FC9-8818-3C39D38E99B9}">
+							<ChildrenList>
+								<Bus Name="Stingers" ID="{D284416F-B7B8-4789-8924-8724D2B97C22}"/>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{BF6465A0-41C8-41B4-A780-8C3A6355A3B6}" ShortID="11433210">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_User_Music" ID="{B7BD444D-47D9-4A45-B494-75FFDBB16E06}" WorkUnitID="{8B988A52-F3D7-4C81-911E-A05CED30F501}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{1CC9DAE9-8821-45E9-8682-564CA4B50D42}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+						<Bus Name="UI" ID="{1661C569-BA41-492E-8564-FC4A04407F71}">
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{449E63E4-EA46-4D1F-A783-DD79C9CD1451}" ShortID="924509777">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="RTPC_User_SFX" ID="{4DF2F460-4C89-46E1-8331-9F32711CCFDC}" WorkUnitID="{8B988A52-F3D7-4C81-911E-A05CED30F501}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{2A5BD6D4-9A6F-47FB-81E1-36CD8CCC3DE0}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>1</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<EffectSlot Name="" ID="{24351089-6383-4EF1-A3ED-6E256B24CF3B}" ShortID="497221005">
+								<ReferenceList>
+									<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+										<ObjectRef Name="Master_EQ" ID="{C73728D6-CD65-4947-AC4A-2DC5E5750345}" WorkUnitID="{70F0081E-F42F-4AF1-8618-94293CAACC0E}"/>
+									</Reference>
+								</ReferenceList>
+							</EffectSlot>
+							<EffectSlot Name="" ID="{FDE391ED-3C20-47FF-8AC7-C8102E3A28C7}" ShortID="614176821">
+								<ReferenceList>
+									<Reference Name="Effect" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+										<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" ID="{2144284E-7ADD-4341-86A4-4E468BEC9A2D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+									</Reference>
+								</ReferenceList>
+							</EffectSlot>
+						</ObjectList>
+						<ObjectList Name="RTPC">
+							<RTPC Name="" ID="{7B17348E-E996-4ABB-95C8-9A4A7C8EA08F}" ShortID="748442367">
+								<PropertyList>
+									<Property Name="PropertyName" Type="string" Value="Volume"/>
+								</PropertyList>
+								<ReferenceList>
+									<Reference Name="ControlInput">
+										<ObjectRef Name="RTPC_User_Master" ID="{57FCC93C-5203-47FA-A72F-4E76494E73BE}" WorkUnitID="{8B988A52-F3D7-4C81-911E-A05CED30F501}"/>
+									</Reference>
+									<Reference Name="Curve">
+										<Custom>
+											<Curve Name="" ID="{A48D832C-F7CD-4158-B65D-315F70D77338}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Log2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</Custom>
+									</Reference>
+								</ReferenceList>
+							</RTPC>
+						</ObjectList>
+					</ObjectLists>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

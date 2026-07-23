@@ -1,0 +1,685 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1711082133",
+    "Type": "User",
+    "GUID": "{806425B6-D29B-4CBA-9E26-2D2FE498C5C4}",
+    "Language": "SFX",
+    "Hash": "{EFC6C608-9A4B-7874-2FB4-A8F0B6173E92}",
+    "ObjectPath": "\\SoundBanks\\Debug\\DebugSoundbank",
+    "ShortName": "DebugSoundbank",
+    "Path": "DebugSoundbank.bnk",
+    "Media": [
+     {
+      "Id": "17932229",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_100.wav",
+      "CachePath": "39/{39C1E8E5-A0C1-AEF7-5B63-11427F65B0AF}.wem"
+     },
+     {
+      "Id": "25829374",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_170.wav",
+      "CachePath": "54/{54CF1B67-6709-30A3-1868-C3D53A86B5CC}.wem"
+     },
+     {
+      "Id": "28588062",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_0.wav",
+      "CachePath": "2C/{2C964885-C903-4091-03A3-DF4EE43EF571}.wem"
+     },
+     {
+      "Id": "48030369",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_200.wav",
+      "CachePath": "57/{576B8395-5E7A-E7FE-8861-175E1B77C0A8}.wem"
+     },
+     {
+      "Id": "49997267",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_9.wav",
+      "CachePath": "64/{64745757-0A90-9C9C-8826-BE96585567AC}.wem"
+     },
+     {
+      "Id": "106195816",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_60.wav",
+      "CachePath": "3D/{3D2A796F-5716-2480-E17B-82C38BAE3FE4}.wem"
+     },
+     {
+      "Id": "113433565",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_80.wav",
+      "CachePath": "16/{16222BFC-E154-8F21-CF89-1C3126C52F17}.wem"
+     },
+     {
+      "Id": "173862396",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_85.wav",
+      "CachePath": "6E/{6EE84A5B-7A8B-4CF3-CB39-871B0D57C009}.wem"
+     },
+     {
+      "Id": "182048868",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_8.wav",
+      "CachePath": "75/{759D03C2-9463-2166-9CE5-893F93A8DEBC}.wem"
+     },
+     {
+      "Id": "194937607",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_6.wav",
+      "CachePath": "E1/{E121032B-DCC2-E708-741D-6AC62B4AD4B1}.wem"
+     },
+     {
+      "Id": "205036045",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_110.wav",
+      "CachePath": "E4/{E4E1E36A-2594-1FA2-B30E-4CE3FBB5274E}.wem"
+     },
+     {
+      "Id": "248113364",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_160.wav",
+      "CachePath": "04/{04FEF4CE-392F-2A58-C0A2-4CADBFAA47EB}.wem"
+     },
+     {
+      "Id": "275879356",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_140.wav",
+      "CachePath": "F4/{F4763A2C-AC91-3A2D-C56B-6E73DF6ED5C0}.wem"
+     },
+     {
+      "Id": "281493717",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_90.wav",
+      "CachePath": "69/{69E27860-612A-E193-C6FC-7DA18D1F7292}.wem"
+     },
+     {
+      "Id": "296436777",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_15.wav",
+      "CachePath": "9D/{9D63C3B6-F579-B498-1AE1-F2B04E9CBA3E}.wem"
+     },
+     {
+      "Id": "312655483",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_3.wav",
+      "CachePath": "D4/{D46EEEE4-5770-C1DE-77C5-4597E52F5E15}.wem"
+     },
+     {
+      "Id": "352764488",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_35.wav",
+      "CachePath": "0A/{0A091490-8BE8-0B4C-4A37-FABDD4C922EA}.wem"
+     },
+     {
+      "Id": "384439757",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_190.wav",
+      "CachePath": "EF/{EFDA91CE-B5F3-2E1D-876C-38E49665A27C}.wem"
+     },
+     {
+      "Id": "415172585",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_40.wav",
+      "CachePath": "21/{214B6048-BF3B-FC54-7EC4-9A1E98D9CD97}.wem"
+     },
+     {
+      "Id": "428002276",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_30.wav",
+      "CachePath": "6F/{6FE523FD-9FD2-86E4-E5E4-CD76B4A6AF37}.wem"
+     },
+     {
+      "Id": "431297954",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_75.wav",
+      "CachePath": "FE/{FED3D83A-87D9-F264-C37C-DCDA1D7C5787}.wem"
+     },
+     {
+      "Id": "495735999",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_20.wav",
+      "CachePath": "55/{55EDE038-4C9F-AAA9-3D80-08D640CC5712}.wem"
+     },
+     {
+      "Id": "499815888",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_2.wav",
+      "CachePath": "F3/{F3332FFE-1662-576A-5B81-56698EC03F44}.wem"
+     },
+     {
+      "Id": "502700156",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_10.wav",
+      "CachePath": "7D/{7D01BA94-24AB-FCD1-D2F4-E82B1A2DFF47}.wem"
+     },
+     {
+      "Id": "638251489",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_95.wav",
+      "CachePath": "9B/{9BCB51C7-9DAB-5309-B7F3-F6F02562AF51}.wem"
+     },
+     {
+      "Id": "643072411",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_50.wav",
+      "CachePath": "24/{24BEAEE8-EC56-2D3A-FC38-DE839FA0C5E6}.wem"
+     },
+     {
+      "Id": "665660573",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_65.wav",
+      "CachePath": "D7/{D7C8A872-3DEF-DFCE-4B13-7365DF9A218C}.wem"
+     },
+     {
+      "Id": "809945826",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_130.wav",
+      "CachePath": "1C/{1CE66296-6EDE-0BE5-25C3-085C2C6E2676}.wem"
+     },
+     {
+      "Id": "812875699",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_180.wav",
+      "CachePath": "D6/{D6299825-B452-C0A3-E685-B7FDFCE45D32}.wem"
+     },
+     {
+      "Id": "841277880",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_1.wav",
+      "CachePath": "78/{7840ED90-3EF9-A2AA-80F7-799CA8A37CDC}.wem"
+     },
+     {
+      "Id": "841775150",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_7.wav",
+      "CachePath": "CA/{CABC6D04-F26C-F4D2-8CE7-D56BA803052F}.wem"
+     },
+     {
+      "Id": "856612942",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_5.wav",
+      "CachePath": "44/{44AC2CD6-275F-BF46-D4B0-D139F59DB7A1}.wem"
+     },
+     {
+      "Id": "860780804",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_120.wav",
+      "CachePath": "03/{032DA5E3-294C-1E68-21A7-2EDB065D029C}.wem"
+     },
+     {
+      "Id": "914882427",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_25.wav",
+      "CachePath": "71/{71BBBBA0-4DAB-BC27-E347-FD1627D5041B}.wem"
+     },
+     {
+      "Id": "1005155270",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_55.wav",
+      "CachePath": "7C/{7C94955E-A5DF-E505-38F1-43069D95728C}.wem"
+     },
+     {
+      "Id": "1034611591",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_150.wav",
+      "CachePath": "0D/{0DB1C4FC-0FE1-D385-D7A0-089216203D2D}.wem"
+     },
+     {
+      "Id": "1035899610",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_45.wav",
+      "CachePath": "F5/{F5CBAAA4-1F7B-B939-D2F9-92FB5F70F135}.wem"
+     },
+     {
+      "Id": "1049443531",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_70.wav",
+      "CachePath": "38/{38FAC70E-2BBE-E5A3-2ED0-B5245820A003}.wem"
+     },
+     {
+      "Id": "1070845789",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "DistanceDebug_4.wav",
+      "CachePath": "FE/{FEEA1A97-6C1C-C8AC-54DE-4FE8AAC1C6A1}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "111471719",
+       "Name": "Tone Generator",
+       "ObjectPath": "\\Containers\\_Debug\\Debug2D\\Debug_2D_WhiteNoise_lp\\Tone Generator",
+       "GUID": "{C32F6B02-41DA-4F52-BAC7-676684154509}",
+       "LibName": "Wwise Tone Generator",
+       "LibId": "6684674"
+      },
+      {
+       "Id": "123651020",
+       "Name": "Tone Generator",
+       "ObjectPath": "\\Containers\\_Debug\\Debug2D\\Debug_2D_Sine440Hz_100ms\\Tone Generator",
+       "GUID": "{1834DFCA-69FF-40FC-BFDD-A3EC1EBEFB3C}",
+       "LibName": "Wwise Tone Generator",
+       "LibId": "6684674"
+      },
+      {
+       "Id": "384726505",
+       "Name": "Tone Generator",
+       "ObjectPath": "\\Containers\\_Debug\\Debug3D\\Debug_3D_WhiteNoise_lp\\Tone Generator",
+       "GUID": "{9461FE2D-7957-496E-AA1C-2D7C9A1AE0C7}",
+       "LibName": "Wwise Tone Generator",
+       "LibId": "6684674"
+      },
+      {
+       "Id": "440737193",
+       "Name": "Silence",
+       "ObjectPath": "\\Containers\\_Debug\\Debug2D\\Debug_2D_Silence_lp\\Silence",
+       "GUID": "{362A4B73-6568-45E8-AA4D-DF2791D07464}",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      },
+      {
+       "Id": "501828373",
+       "Name": "Tone Generator",
+       "ObjectPath": "\\Containers\\_Debug\\Debug3D\\Debug_3D_Sine220Hz_3000ms_lp\\Tone Generator",
+       "GUID": "{D19B9FDA-9845-42AF-BD7F-D2D94EF8C6D4}",
+       "LibName": "Wwise Tone Generator",
+       "LibId": "6684674"
+      },
+      {
+       "Id": "865437512",
+       "Name": "Tone Generator",
+       "ObjectPath": "\\Containers\\_Debug\\Debug2D\\Debug_2D_Sine220Hz_3000ms_lp\\Tone Generator",
+       "GUID": "{26E252B9-238F-4266-8F9D-5A11AAC67B20}",
+       "LibName": "Wwise Tone Generator",
+       "LibId": "6684674"
+      },
+      {
+       "Id": "907261179",
+       "Name": "Tone Generator",
+       "ObjectPath": "\\Containers\\_Debug\\Debug3D\\Debug_3D_Sine440Hz_100ms\\Tone Generator",
+       "GUID": "{F279D3F0-FA0C-43CA-9C71-694DCCAA50A6}",
+       "LibName": "Wwise Tone Generator",
+       "LibId": "6684674"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "51787976",
+      "Name": "Debug2D_100ms",
+      "ObjectPath": "\\Events\\_Debug\\Debug2D\\Debug2D_100ms",
+      "GUID": "{89E5A43B-BC49-46E2-BDDD-20AE6F3B78BE}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.1",
+      "DurationMax": "0.1",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "123651020"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "3262692124",
+      "Name": "Debug2D_3000ms_lp_start",
+      "ObjectPath": "\\Events\\_Debug\\Debug2D\\Debug2D_3000ms_lp_start",
+      "GUID": "{4C811AA0-8F07-4BFC-A4FB-1E5235145CA0}",
+      "DurationType": "OneShot",
+      "DurationMin": "3",
+      "DurationMax": "3",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "865437512"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2118189552",
+      "Name": "Debug2D_3000ms_lp_stop",
+      "ObjectPath": "\\Events\\_Debug\\Debug2D\\Debug2D_3000ms_lp_stop",
+      "GUID": "{A4FD3FE8-06E0-48E0-8F9D-5D6A9C8B7BE1}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2840770682",
+      "Name": "Debug2D_Silence_lp_start",
+      "ObjectPath": "\\Events\\_Debug\\Debug2D\\Debug2D_Silence_lp_start",
+      "GUID": "{FC89B95D-689D-449F-9E79-4A25E896F251}",
+      "DurationType": "Infinite",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "440737193"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2323719314",
+      "Name": "Debug2D_Silence_lp_stop",
+      "ObjectPath": "\\Events\\_Debug\\Debug2D\\Debug2D_Silence_lp_stop",
+      "GUID": "{6C0EF932-9FE0-4F96-A68E-1809925FD0B0}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3299421430",
+      "Name": "Debug2D_WhiteNoise_lp_start",
+      "ObjectPath": "\\Events\\_Debug\\Debug2D\\Debug2D_WhiteNoise_lp_start",
+      "GUID": "{6E269D72-C43B-4CB9-BE4A-BC73346C908A}",
+      "DurationType": "Infinite",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "111471719"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "24669046",
+      "Name": "Debug2D_WhiteNoise_lp_stop",
+      "ObjectPath": "\\Events\\_Debug\\Debug2D\\Debug2D_WhiteNoise_lp_stop",
+      "GUID": "{386F3FA3-5748-4C0B-9E36-EBB1C7F92B14}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2306445543",
+      "Name": "Debug3D_100ms",
+      "ObjectPath": "\\Events\\_Debug\\Debug3D\\Debug3D_100ms",
+      "GUID": "{B06F1353-0FF6-4940-935A-1C25173C7FF5}",
+      "MaxAttenuation": "200",
+      "DurationType": "OneShot",
+      "DurationMin": "0.1",
+      "DurationMax": "0.1",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "907261179"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2586177215",
+      "Name": "Debug3D_3000ms_lp_start",
+      "ObjectPath": "\\Events\\_Debug\\Debug3D\\Debug3D_3000ms_lp_start",
+      "GUID": "{4A27A9CA-565D-41BD-B0C4-6FC76CDC4D36}",
+      "MaxAttenuation": "200",
+      "DurationType": "OneShot",
+      "DurationMin": "3",
+      "DurationMax": "3",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "501828373"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "4044979461",
+      "Name": "Debug3D_3000ms_lp_stop",
+      "ObjectPath": "\\Events\\_Debug\\Debug3D\\Debug3D_3000ms_lp_stop",
+      "GUID": "{06D5A52C-2624-4D21-8C83-D06B8F065608}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2464970301",
+      "Name": "Debug3D_WhiteNoise_lp_start",
+      "ObjectPath": "\\Events\\_Debug\\Debug3D\\Debug3D_WhiteNoise_lp_start",
+      "GUID": "{8711344B-7585-4730-A08B-673A56D9C762}",
+      "MaxAttenuation": "200",
+      "DurationType": "Infinite",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "384726505"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "4027775167",
+      "Name": "Debug3D_WhiteNoise_lp_stop",
+      "ObjectPath": "\\Events\\_Debug\\Debug3D\\Debug3D_WhiteNoise_lp_stop",
+      "GUID": "{CC6A6316-6ED2-40C5-87D4-300C2E9ECC6B}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1611159812",
+      "Name": "Debug_Distance",
+      "ObjectPath": "\\Events\\_Debug\\Debug3D\\Debug_Distance",
+      "GUID": "{9B6F5F03-EEB4-468F-BCA1-E77DAF0FAA3B}",
+      "MaxAttenuation": "200",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0682292",
+      "DurationMax": "1.0682292",
+      "MediaRefs": [
+       {
+        "Id": "17932229"
+       },
+       {
+        "Id": "25829374"
+       },
+       {
+        "Id": "28588062"
+       },
+       {
+        "Id": "48030369"
+       },
+       {
+        "Id": "49997267"
+       },
+       {
+        "Id": "106195816"
+       },
+       {
+        "Id": "113433565"
+       },
+       {
+        "Id": "173862396"
+       },
+       {
+        "Id": "182048868"
+       },
+       {
+        "Id": "194937607"
+       },
+       {
+        "Id": "205036045"
+       },
+       {
+        "Id": "248113364"
+       },
+       {
+        "Id": "275879356"
+       },
+       {
+        "Id": "281493717"
+       },
+       {
+        "Id": "296436777"
+       },
+       {
+        "Id": "312655483"
+       },
+       {
+        "Id": "352764488"
+       },
+       {
+        "Id": "384439757"
+       },
+       {
+        "Id": "415172585"
+       },
+       {
+        "Id": "428002276"
+       },
+       {
+        "Id": "431297954"
+       },
+       {
+        "Id": "495735999"
+       },
+       {
+        "Id": "499815888"
+       },
+       {
+        "Id": "502700156"
+       },
+       {
+        "Id": "638251489"
+       },
+       {
+        "Id": "643072411"
+       },
+       {
+        "Id": "665660573"
+       },
+       {
+        "Id": "809945826"
+       },
+       {
+        "Id": "812875699"
+       },
+       {
+        "Id": "841277880"
+       },
+       {
+        "Id": "841775150"
+       },
+       {
+        "Id": "856612942"
+       },
+       {
+        "Id": "860780804"
+       },
+       {
+        "Id": "914882427"
+       },
+       {
+        "Id": "1005155270"
+       },
+       {
+        "Id": "1034611591"
+       },
+       {
+        "Id": "1035899610"
+       },
+       {
+        "Id": "1049443531"
+       },
+       {
+        "Id": "1070845789"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{758D95DB-D9B7-CBE2-4113-BEB566F4E12D}"
+ }
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CC7CF7E9-E571-4A34-8330-D5260C11C8BE}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Generic" ID="{CC7CF7E9-E571-4A34-8330-D5260C11C8BE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Game_Pause" ID="{00E8FBD9-52D9-4700-8D72-4F5269868AF0}">
+					<ChildrenList>
+						<Action Name="" ID="{A504C675-85E2-402A-A4E3-B7FF36A5E5B7}" ShortID="804860607">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="InPause" ID="{0C858250-0140-4F25-A4DA-AB76497864D2}" WorkUnitID="{12705436-DC25-4D2F-B4E3-6FFF03F90AAB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Game_Unpause" ID="{EE3DD2CA-C081-48B5-BE3B-E61C0EF1578F}">
+					<ChildrenList>
+						<Action Name="" ID="{1933DFF6-3F0F-4392-84B1-A0AEE8F4A55E}" ShortID="129806004">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="InGame" ID="{5B8E4749-545C-4E1A-9F98-9F37C7DF1FFB}" WorkUnitID="{12705436-DC25-4D2F-B4E3-6FFF03F90AAB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Game_Init" ID="{E7219119-A3DB-4B75-9EB8-C855EAABAB95}">
+					<ChildrenList>
+						<Action Name="" ID="{4CDBDE53-00C5-43AE-A174-6A1417EDA6D9}" ShortID="821823836">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="InMenu" ID="{460E9C64-EAB3-4105-86A6-B699F9B16754}" WorkUnitID="{12705436-DC25-4D2F-B4E3-6FFF03F90AAB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Game_Start" ID="{BB120B2F-00D3-4CFC-B654-20E1198B6A1A}">
+					<ChildrenList>
+						<Action Name="" ID="{9A02E744-3C06-468B-BD0C-5D5657E3C2E8}" ShortID="937477191">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="InGame" ID="{5B8E4749-545C-4E1A-9F98-9F37C7DF1FFB}" WorkUnitID="{12705436-DC25-4D2F-B4E3-6FFF03F90AAB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

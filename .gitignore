@@ -54,14 +54,14 @@ Wwise/*.wsettings
 */Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
 
 # Exception for libraries
-!Plugins/Wwise/
-!Plugins/Wwise/**
-!Plugins/WwiseNiagara/
-!Plugins/WwiseNiagara/**
-!Plugins/WwiseSoundEngine/
-!Plugins/WwiseSoundEngine/**
-!Plugins/WwiseSoundEngine/ThirdParty/
-!Plugins/WwiseSoundEngine/ThirdParty/**
+Plugins/Wwise/
+Plugins/Wwise/**
+Plugins/WwiseNiagara/
+Plugins/WwiseNiagara/**
+Plugins/WwiseSoundEngine/
+Plugins/WwiseSoundEngine/**
+Plugins/WwiseSoundEngine/ThirdParty/
+Plugins/WwiseSoundEngine/ThirdParty/**
 
 # Precompiled Assets
 SourceArt/**/*.png

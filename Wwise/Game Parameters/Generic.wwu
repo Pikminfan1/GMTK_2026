@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C299D5E1-79C7-4ACF-9257-EBC9F877CA0E}" SchemaVersion="133">
+	<GameParameters>
+		<WorkUnit Name="Generic" ID="{C299D5E1-79C7-4ACF-9257-EBC9F877CA0E}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="RTPC_Distance" ID="{55F3A2ED-B196-4C08-AADD-0E1F7EC058F4}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_FlyCount" ID="{A94098B4-8EDD-40B3-8148-AC62C66A477C}">
+					<Comment>If A lot of dead enemies around, we could use this to drive a flies buzzing sound (while not in frenetic combat)</Comment>
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_EnemyCount" ID="{AE3EE53E-CB7E-48C3-8A6B-4F826D46E61B}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="10"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

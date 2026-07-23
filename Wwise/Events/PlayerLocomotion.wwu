@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7C4DCA67-1CF4-4EC2-B69A-758A9A3B6B9F}" SchemaVersion="133" RootDocumentID="{267721AC-3434-4988-BC76-0271F7F5E92D}" ParentDocumentID="{267721AC-3434-4988-BC76-0271F7F5E92D}">
+	<Events>
+		<WorkUnit Name="PlayerLocomotion" ID="{7C4DCA67-1CF4-4EC2-B69A-758A9A3B6B9F}" OwnerID="{267721AC-3434-4988-BC76-0271F7F5E92D}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Player_Evade" ID="{A5FB40A8-9E52-4C29-80B3-29EA07240046}"/>
+				<Event Name="Player_Footstep" ID="{CFA5B9DE-F894-4129-A77D-7F7C1CBDA8C9}">
+					<ChildrenList>
+						<Action Name="" ID="{1DBE21DB-C6B4-4081-974A-2BC35FCD66F2}" ShortID="881069635">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerFootstep" ID="{C9FF8F99-0343-4B9A-BE81-23415F910443}" WorkUnitID="{79FB47C6-9757-4145-BA35-D226AD7DC16E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_JumpLand" ID="{25E1C6A7-BC62-4B4B-A201-1E0412548BFE}">
+					<ChildrenList>
+						<Action Name="" ID="{B3AB7296-7C8C-45DD-A12D-DC470F7594EE}" ShortID="906178369">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerJump_Land" ID="{BFC2DBA0-485D-44A2-ABCE-DAA99145EC6E}" WorkUnitID="{79FB47C6-9757-4145-BA35-D226AD7DC16E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_JumpStart" ID="{45A926FF-C7BB-4934-915B-27BBCB7DEC80}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

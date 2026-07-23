@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{79FB47C6-9757-4145-BA35-D226AD7DC16E}" SchemaVersion="133" RootDocumentID="{38282CAE-841C-4993-AD65-B53E6DCDEDF3}" ParentDocumentID="{4B288FAA-04A9-4747-AC69-03BE70F0530A}">
+	<Containers>
+		<WorkUnit Name="PlayerLocomotion" ID="{79FB47C6-9757-4145-BA35-D226AD7DC16E}" OwnerID="{4B288FAA-04A9-4747-AC69-03BE70F0530A}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="2"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<PropertyContainer Name="PlayerLocomotion" ID="{59A144BC-EF2B-489E-9E36-42B0173F877C}" ShortID="264744579">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PlayerLocomotion" ID="{F706F1B3-99E9-4E33-9902-C07B65469D7A}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="PlayerJump_Start" ID="{F4BB0C92-8C91-41A9-84BA-4E7AB048D6AE}" ShortID="479581359">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+						<SwitchContainer Name="PlayerJump_Land" ID="{BFC2DBA0-485D-44A2-ABCE-DAA99145EC6E}" ShortID="487331467">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundMaterial" ID="{064CBE77-CC8E-4FB9-8E31-20807EAA39FA}" WorkUnitID="{7CDB7EE2-C1A0-4110-B9AD-B946051E28AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="PlayerJump_Land_Concrete" ID="{B68FE207-C7A1-4709-9D7C-85E556DDCC9A}" ShortID="523665534">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="PlayerJump_Land_Dirt" ID="{27C61832-2918-489B-8C9B-FFFCEE034865}" ShortID="574559402">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="PlayerJump_Land_Grass" ID="{6F171B21-7DC9-417A-B002-A95F9EF8DBF1}" ShortID="589235943">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="PlayerJump_Land_Water" ID="{227E2AFA-1D48-44A8-A79C-FA8C99142C1F}" ShortID="435393904">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="PlayerJump_Land_Concrete" ID="{B68FE207-C7A1-4709-9D7C-85E556DDCC9A}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="PlayerJump_Land_Grass" ID="{6F171B21-7DC9-417A-B002-A95F9EF8DBF1}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="PlayerJump_Land_Dirt" ID="{27C61832-2918-489B-8C9B-FFFCEE034865}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="PlayerJump_Land_Water" ID="{227E2AFA-1D48-44A8-A79C-FA8C99142C1F}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Dirt" ID="{80146527-6D28-4DB3-BF98-2F63780C8D95}"/>
+										<ItemList>
+											<ItemRef Name="PlayerJump_Land_Dirt" ID="{27C61832-2918-489B-8C9B-FFFCEE034865}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Grass" ID="{86697764-0D1F-4610-BACF-4E36E3F1FEBF}"/>
+										<ItemList>
+											<ItemRef Name="PlayerJump_Land_Grass" ID="{6F171B21-7DC9-417A-B002-A95F9EF8DBF1}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Water" ID="{4DBABE6C-B1B2-4F92-A75E-963F8BFE2A81}"/>
+										<ItemList>
+											<ItemRef Name="PlayerJump_Land_Water" ID="{227E2AFA-1D48-44A8-A79C-FA8C99142C1F}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Concrete" ID="{2909E49A-F254-4BEC-8412-78C656B898F4}"/>
+										<ItemList>
+											<ItemRef Name="PlayerJump_Land_Concrete" ID="{B68FE207-C7A1-4709-9D7C-85E556DDCC9A}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="PlayerFootstep" ID="{C9FF8F99-0343-4B9A-BE81-23415F910443}" ShortID="715831065">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundMaterial" ID="{064CBE77-CC8E-4FB9-8E31-20807EAA39FA}" WorkUnitID="{7CDB7EE2-C1A0-4110-B9AD-B946051E28AE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="PlayerFootstep_Concrete" ID="{E00205D2-4BC6-4212-8D85-981F0D1EE188}" ShortID="845508987">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="PlayerFootstep_Dirt" ID="{E5F73AC2-0962-4A57-A7F7-90CD4BE9CDD6}" ShortID="866731411">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="PlayerFootstep_Grass" ID="{835A6055-E402-47A1-BC86-2CBDA6EF24F6}" ShortID="838366065">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="PlayerFootstep_Water" ID="{6492B6E1-C02B-4601-8EDD-8B028382E458}" ShortID="717655811">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="PlayerFootstep_Grass" ID="{835A6055-E402-47A1-BC86-2CBDA6EF24F6}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="PlayerFootstep_Dirt" ID="{E5F73AC2-0962-4A57-A7F7-90CD4BE9CDD6}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="PlayerFootstep_Concrete" ID="{E00205D2-4BC6-4212-8D85-981F0D1EE188}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="PlayerFootstep_Water" ID="{6492B6E1-C02B-4601-8EDD-8B028382E458}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Dirt" ID="{80146527-6D28-4DB3-BF98-2F63780C8D95}"/>
+										<ItemList>
+											<ItemRef Name="PlayerFootstep_Dirt" ID="{E5F73AC2-0962-4A57-A7F7-90CD4BE9CDD6}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Grass" ID="{86697764-0D1F-4610-BACF-4E36E3F1FEBF}"/>
+										<ItemList>
+											<ItemRef Name="PlayerFootstep_Grass" ID="{835A6055-E402-47A1-BC86-2CBDA6EF24F6}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Water" ID="{4DBABE6C-B1B2-4F92-A75E-963F8BFE2A81}"/>
+										<ItemList>
+											<ItemRef Name="PlayerFootstep_Water" ID="{6492B6E1-C02B-4601-8EDD-8B028382E458}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Concrete" ID="{2909E49A-F254-4BEC-8412-78C656B898F4}"/>
+										<ItemList>
+											<ItemRef Name="PlayerFootstep_Concrete" ID="{E00205D2-4BC6-4212-8D85-981F0D1EE188}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+				</PropertyContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

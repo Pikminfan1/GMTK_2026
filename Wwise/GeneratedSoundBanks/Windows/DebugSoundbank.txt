@@ -1,0 +1,65 @@
+Event	ID	Name			Wwise Object Path	Notes
+	24669046	Debug2D_WhiteNoise_lp_stop			\_Debug\Debug2D\Debug2D_WhiteNoise_lp_stop	
+	51787976	Debug2D_100ms			\_Debug\Debug2D\Debug2D_100ms	
+	1611159812	Debug_Distance			\_Debug\Debug3D\Debug_Distance	
+	2118189552	Debug2D_3000ms_lp_stop			\_Debug\Debug2D\Debug2D_3000ms_lp_stop	
+	2306445543	Debug3D_100ms			\_Debug\Debug3D\Debug3D_100ms	
+	2323719314	Debug2D_Silence_lp_stop			\_Debug\Debug2D\Debug2D_Silence_lp_stop	
+	2464970301	Debug3D_WhiteNoise_lp_start			\_Debug\Debug3D\Debug3D_WhiteNoise_lp_start	
+	2586177215	Debug3D_3000ms_lp_start			\_Debug\Debug3D\Debug3D_3000ms_lp_start	
+	2840770682	Debug2D_Silence_lp_start			\_Debug\Debug2D\Debug2D_Silence_lp_start	
+	3262692124	Debug2D_3000ms_lp_start			\_Debug\Debug2D\Debug2D_3000ms_lp_start	
+	3299421430	Debug2D_WhiteNoise_lp_start			\_Debug\Debug2D\Debug2D_WhiteNoise_lp_start	
+	4027775167	Debug3D_WhiteNoise_lp_stop			\_Debug\Debug3D\Debug3D_WhiteNoise_lp_stop	
+	4044979461	Debug3D_3000ms_lp_stop			\_Debug\Debug3D\Debug3D_3000ms_lp_stop	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	111471719	Tone Generator	Wwise Tone Generator		\Containers\_Debug\Debug2D\Debug_2D_WhiteNoise_lp\Tone Generator	
+	123651020	Tone Generator	Wwise Tone Generator		\Containers\_Debug\Debug2D\Debug_2D_Sine440Hz_100ms\Tone Generator	
+	384726505	Tone Generator	Wwise Tone Generator		\Containers\_Debug\Debug3D\Debug_3D_WhiteNoise_lp\Tone Generator	
+	440737193	Silence	Wwise Silence		\Containers\_Debug\Debug2D\Debug_2D_Silence_lp\Silence	
+	501828373	Tone Generator	Wwise Tone Generator		\Containers\_Debug\Debug3D\Debug_3D_Sine220Hz_3000ms_lp\Tone Generator	
+	865437512	Tone Generator	Wwise Tone Generator		\Containers\_Debug\Debug2D\Debug_2D_Sine220Hz_3000ms_lp\Tone Generator	
+	907261179	Tone Generator	Wwise Tone Generator		\Containers\_Debug\Debug3D\Debug_3D_Sine440Hz_100ms\Tone Generator	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	17932229	DistanceDebug_100	.cache\39\{39C1E8E5-A0C1-AEF7-5B63-11427F65B0AF}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_100		119916
+	25829374	DistanceDebug_170	.cache\54\{54CF1B67-6709-30A3-1868-C3D53A86B5CC}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_170		199192
+	28588062	DistanceDebug_0	.cache\2C\{2C964885-C903-4091-03A3-DF4EE43EF571}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_0		73464
+	48030369	DistanceDebug_200	.cache\57\{576B8395-5E7A-E7FE-8861-175E1B77C0A8}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_200		108500
+	49997267	DistanceDebug_9	.cache\64\{64745757-0A90-9C9C-8826-BE96585567AC}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_9		100864
+	106195816	DistanceDebug_60	.cache\3D\{3D2A796F-5716-2480-E17B-82C38BAE3FE4}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_60		117248
+	113433565	DistanceDebug_80	.cache\16\{16222BFC-E154-8F21-CF89-1C3126C52F17}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_80		79292
+	173862396	DistanceDebug_85	.cache\6E\{6EE84A5B-7A8B-4CF3-CB39-871B0D57C009}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_85		141408
+	182048868	DistanceDebug_8	.cache\75\{759D03C2-9463-2166-9CE5-893F93A8DEBC}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_8		63344
+	194937607	DistanceDebug_6	.cache\E1\{E121032B-DCC2-E708-741D-6AC62B4AD4B1}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_6		108656
+	205036045	DistanceDebug_110	.cache\E4\{E4E1E36A-2594-1FA2-B30E-4CE3FBB5274E}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_110		176764
+	248113364	DistanceDebug_160	.cache\04\{04FEF4CE-392F-2A58-C0A2-4CADBFAA47EB}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_160		205196
+	275879356	DistanceDebug_140	.cache\F4\{F4763A2C-AC91-3A2D-C56B-6E73DF6ED5C0}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_140		186500
+	281493717	DistanceDebug_90	.cache\69\{69E27860-612A-E193-C6FC-7DA18D1F7292}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_90		99548
+	296436777	DistanceDebug_15	.cache\9D\{9D63C3B6-F579-B498-1AE1-F2B04E9CBA3E}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_15		135080
+	312655483	DistanceDebug_3	.cache\D4\{D46EEEE4-5770-C1DE-77C5-4597E52F5E15}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_3		89992
+	352764488	DistanceDebug_35	.cache\0A\{0A091490-8BE8-0B4C-4A37-FABDD4C922EA}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_35		140168
+	384439757	DistanceDebug_190	.cache\EF\{EFDA91CE-B5F3-2E1D-876C-38E49665A27C}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_190		179200
+	415172585	DistanceDebug_40	.cache\21\{214B6048-BF3B-FC54-7EC4-9A1E98D9CD97}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_40		88424
+	428002276	DistanceDebug_30	.cache\6F\{6FE523FD-9FD2-86E4-E5E4-CD76B4A6AF37}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_30		78820
+	431297954	DistanceDebug_75	.cache\FE\{FED3D83A-87D9-F264-C37C-DCDA1D7C5787}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_75		175524
+	495735999	DistanceDebug_20	.cache\55\{55EDE038-4C9F-AAA9-3D80-08D640CC5712}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_20		96640
+	499815888	DistanceDebug_2	.cache\F3\{F3332FFE-1662-576A-5B81-56698EC03F44}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_2		90992
+	502700156	DistanceDebug_10	.cache\7D\{7D01BA94-24AB-FCD1-D2F4-E82B1A2DFF47}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_10		84316
+	638251489	DistanceDebug_95	.cache\9B\{9BCB51C7-9DAB-5309-B7F3-F6F02562AF51}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_95		148116
+	643072411	DistanceDebug_50	.cache\24\{24BEAEE8-EC56-2D3A-FC38-DE839FA0C5E6}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_50		92208
+	665660573	DistanceDebug_65	.cache\D7\{D7C8A872-3DEF-DFCE-4B13-7365DF9A218C}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_65		164312
+	809945826	DistanceDebug_130	.cache\1C\{1CE66296-6EDE-0BE5-25C3-085C2C6E2676}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_130		179876
+	812875699	DistanceDebug_180	.cache\D6\{D6299825-B452-C0A3-E685-B7FDFCE45D32}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_180		169432
+	841277880	DistanceDebug_1	.cache\78\{7840ED90-3EF9-A2AA-80F7-799CA8A37CDC}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_1		80696
+	841775150	DistanceDebug_7	.cache\CA\{CABC6D04-F26C-F4D2-8CE7-D56BA803052F}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_7		108716
+	856612942	DistanceDebug_5	.cache\44\{44AC2CD6-275F-BF46-D4B0-D139F59DB7A1}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_5		99620
+	860780804	DistanceDebug_120	.cache\03\{032DA5E3-294C-1E68-21A7-2EDB065D029C}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_120		192060
+	914882427	DistanceDebug_25	.cache\71\{71BBBBA0-4DAB-BC27-E347-FD1627D5041B}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_25		149008
+	1005155270	DistanceDebug_55	.cache\7C\{7C94955E-A5DF-E505-38F1-43069D95728C}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_55		146708
+	1034611591	DistanceDebug_150	.cache\0D\{0DB1C4FC-0FE1-D385-D7A0-089216203D2D}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_150		197468
+	1035899610	DistanceDebug_45	.cache\F5\{F5CBAAA4-1F7B-B939-D2F9-92FB5F70F135}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_45		140524
+	1049443531	DistanceDebug_70	.cache\38\{38FAC70E-2BBE-E5A3-2ED0-B5245820A003}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_70		112640
+	1070845789	DistanceDebug_4	.cache\FE\{FEEA1A97-6C1C-C8AC-54DE-4FE8AAC1C6A1}.wem		\Containers\_Debug\Debug3D\Debug_3D_Distance\DistanceDebug_4		88628
+

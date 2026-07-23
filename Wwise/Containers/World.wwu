@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{38282CAE-841C-4993-AD65-B53E6DCDEDF3}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="World" ID="{38282CAE-841C-4993-AD65-B53E6DCDEDF3}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Player" ID="{4B288FAA-04A9-4747-AC69-03BE70F0530A}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

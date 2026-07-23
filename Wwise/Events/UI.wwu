@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{DEC443DA-C97B-4055-AE25-A91A77EF8493}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="UI" ID="{DEC443DA-C97B-4055-AE25-A91A77EF8493}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="UI_Back" ID="{62A7A69B-D4D3-4A1E-A5FE-36F36177BFC0}"/>
+				<Event Name="UI_Click" ID="{4C0CE177-8042-45A7-9168-929B62FD67E2}"/>
+				<Event Name="UI_Confirm" ID="{2CA65647-9C8E-4524-9002-21AE70DD9490}"/>
+				<Event Name="UI_Denied" ID="{7831CEB3-B951-424D-AB8D-15D1A16AB9D8}"/>
+				<Event Name="UI_GameBegin" ID="{15A96AC7-01A5-4D12-B4FE-E5317D30F73C}"/>
+				<Event Name="UI_Hover" ID="{3CC29FD9-F95D-4EDE-9609-8AA2112589FE}"/>
+				<Event Name="UI_Slider_Start" ID="{6F2A42BE-9811-4838-839F-9D2B8B172AD5}"/>
+				<Event Name="UI_Slider_Stop" ID="{108D9081-C9FF-4A81-B8BE-EA00D725C85D}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

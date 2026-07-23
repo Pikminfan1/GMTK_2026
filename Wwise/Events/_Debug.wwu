@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5AD0A3D0-0C36-4AC2-917B-0471ED49C076}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="_Debug" ID="{5AD0A3D0-0C36-4AC2-917B-0471ED49C076}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Debug2D" ID="{2C49F1A9-9286-40E9-85AB-7DBF38DC934F}" ShortID="792052628">
+					<ChildrenList>
+						<Event Name="Debug2D_100ms" ID="{89E5A43B-BC49-46E2-BDDD-20AE6F3B78BE}">
+							<ChildrenList>
+								<Action Name="" ID="{3F454B45-C4E6-43E0-8DB7-863C0C38F3A7}" ShortID="1005797059">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_2D_Sine440Hz_100ms" ID="{1E5349A9-2281-4F97-8F3D-E922BDB93E46}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Debug2D_3000ms_lp_start" ID="{4C811AA0-8F07-4BFC-A4FB-1E5235145CA0}">
+							<ChildrenList>
+								<Action Name="" ID="{58ED11E2-2B1D-431E-92FB-7AA2E4BED046}" ShortID="575651977">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_2D_Sine220Hz_3000ms_lp" ID="{06A13360-7466-45F4-9D63-ACD818F11E47}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Debug2D_3000ms_lp_stop" ID="{A4FD3FE8-06E0-48E0-8F9D-5D6A9C8B7BE1}">
+							<ChildrenList>
+								<Action Name="" ID="{9E5233FE-B26D-4880-916E-839DC2459BE9}" ShortID="190218838">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_2D_Sine220Hz_3000ms_lp" ID="{06A13360-7466-45F4-9D63-ACD818F11E47}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Debug2D_Silence_lp_start" ID="{FC89B95D-689D-449F-9E79-4A25E896F251}">
+							<ChildrenList>
+								<Action Name="" ID="{7248C73A-D011-4E24-9A45-65E29938D7C2}" ShortID="297073842">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_2D_Silence_lp" ID="{537D4684-5053-4108-8CDA-E485830B91FA}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Debug2D_Silence_lp_stop" ID="{6C0EF932-9FE0-4F96-A68E-1809925FD0B0}">
+							<ChildrenList>
+								<Action Name="" ID="{A8ADCFEE-4077-4847-94A3-F433E31F9DB4}" ShortID="1036957541">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_2D_Silence_lp" ID="{537D4684-5053-4108-8CDA-E485830B91FA}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Debug2D_WhiteNoise_lp_stop" ID="{386F3FA3-5748-4C0B-9E36-EBB1C7F92B14}">
+							<ChildrenList>
+								<Action Name="" ID="{99D53C92-3C3F-4B71-8AFB-15A6B26E537B}" ShortID="116597791">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_2D_WhiteNoise_lp" ID="{AD523DB4-6099-42DB-AB3B-35B667674832}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Debug2D_WhiteNoise_lp_start" ID="{6E269D72-C43B-4CB9-BE4A-BC73346C908A}">
+							<ChildrenList>
+								<Action Name="" ID="{2C42AEFD-BC6C-40C3-BDC2-97A9E3EBE86F}" ShortID="966562872">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_2D_WhiteNoise_lp" ID="{AD523DB4-6099-42DB-AB3B-35B667674832}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Debug3D" ID="{3F4E6D93-84F4-4090-A992-8C4F1AA93EB5}" ShortID="740324158">
+					<ChildrenList>
+						<Event Name="Debug3D_100ms" ID="{B06F1353-0FF6-4940-935A-1C25173C7FF5}">
+							<ChildrenList>
+								<Action Name="" ID="{3DA6D0C9-2376-4061-B3B0-A9C819A61A1B}" ShortID="881320732">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_3D_Sine440Hz_100ms" ID="{0F3EBEBC-11C1-40BD-A4D4-1BA3ECB556AB}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Debug3D_3000ms_lp_start" ID="{4A27A9CA-565D-41BD-B0C4-6FC76CDC4D36}">
+							<ChildrenList>
+								<Action Name="" ID="{F6B34D68-3A92-4169-9842-C8ECEA523EB1}" ShortID="479317135">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_3D_Sine220Hz_3000ms_lp" ID="{6DF5306E-5AE3-4C14-BAA8-A447BB069FB2}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Debug3D_3000ms_lp_stop" ID="{06D5A52C-2624-4D21-8C83-D06B8F065608}">
+							<ChildrenList>
+								<Action Name="" ID="{F84E496F-F7E0-4D7D-B5C0-0604426B2782}" ShortID="981565288">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_3D_Sine220Hz_3000ms_lp" ID="{6DF5306E-5AE3-4C14-BAA8-A447BB069FB2}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Debug3D_WhiteNoise_lp_start" ID="{8711344B-7585-4730-A08B-673A56D9C762}">
+							<ChildrenList>
+								<Action Name="" ID="{B3E29383-1B3D-402E-8495-84CF2260FA38}" ShortID="663883173">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_3D_WhiteNoise_lp" ID="{5E4B7D45-0DFC-4002-9A26-7F7ABFF6AF08}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Debug3D_WhiteNoise_lp_stop" ID="{CC6A6316-6ED2-40C5-87D4-300C2E9ECC6B}">
+							<ChildrenList>
+								<Action Name="" ID="{CA11FE39-8A5B-450E-9A91-9B8EA83F5410}" ShortID="268316266">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_3D_WhiteNoise_lp" ID="{5E4B7D45-0DFC-4002-9A26-7F7ABFF6AF08}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Debug_Distance" ID="{9B6F5F03-EEB4-468F-BCA1-E77DAF0FAA3B}">
+							<ChildrenList>
+								<Action Name="" ID="{4935EDAB-FC8E-4348-8B3E-482ECC3DD9B9}" ShortID="486379739">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Debug_3D_Distance" ID="{E26B67D0-E97A-4925-832F-9B86745F6E70}" WorkUnitID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

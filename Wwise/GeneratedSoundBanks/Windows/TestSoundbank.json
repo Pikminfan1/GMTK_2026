@@ -1,0 +1,51 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1831431028",
+    "Type": "User",
+    "GUID": "{4E044E23-4ADA-4260-81FE-DE913394A775}",
+    "Language": "SFX",
+    "Hash": "{F2AC481C-EFAC-8D2C-DC1F-41F5F4EAE7C0}",
+    "ObjectPath": "\\SoundBanks\\Debug\\TestSoundbank",
+    "ShortName": "TestSoundbank",
+    "Path": "TestSoundbank.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "1000407848",
+       "Name": "Sine",
+       "ObjectPath": "\\Containers\\Default Work Unit\\testbeep_440hz_10ms\\Sine",
+       "GUID": "{683BB297-EC63-4D85-8BAB-C7F6FCC90182}",
+       "LibName": "Wwise Sine",
+       "LibId": "6553602"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "1164080211",
+      "Name": "EVT_Test",
+      "ObjectPath": "\\Events\\Default Work Unit\\EVT_Test",
+      "GUID": "{EE14A6C8-743F-42AC-BF57-D926DA50D8CB}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.1",
+      "DurationMax": "0.1",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "1000407848"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A370D5E3-EE51-B170-7ACE-4D96441E7A06}"
+ }
+}

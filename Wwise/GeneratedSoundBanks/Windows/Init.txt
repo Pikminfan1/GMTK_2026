@@ -1,0 +1,83 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	48152839	RainType			\Generic\RainType	
+	1493153371	PlayerSpeed			\Player\PlayerSpeed	
+
+Switch	ID	Name	Switch Group			Notes
+	991379416	FullRain	RainType			
+	1278453130	MediumRain	RainType			
+	1686739424	Storm	RainType			
+	2789071989	LightRain	RainType			
+	3569642402	Sunny	RainType			
+	712161704	Run	PlayerSpeed			
+	1296465089	Sprint	PlayerSpeed			
+	2108779966	Walk	PlayerSpeed			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	778922764	GameplayState			\Generic\GameplayState	
+	1253610732	CombatIntensity			\Generic\CombatIntensity	
+	2554230907	PlayerLifeState			\Player\PlayerLifeState	
+	4091656514	GameState			\Generic\GameState	
+
+State	ID	Name	State Group			Notes
+	580146960	BossFight	GameplayState			
+	748895195	None	GameplayState			
+	2582085496	Exploration	GameplayState			
+	2764240573	Combat	GameplayState			
+	513390134	Bad	CombatIntensity			
+	529018163	Easy	CombatIntensity			
+	748895195	None	CombatIntensity			
+	1926155092	Uncomfortable	CombatIntensity			
+	655265632	Alive	PlayerLifeState			
+	748895195	None	PlayerLifeState			
+	2044049779	Dead	PlayerLifeState			
+	748895195	None	GameState			
+	984691642	InGame	GameState			
+	3327551418	InPause	GameState			
+	3374585465	InMenu	GameState			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1016444334	RTPC_User_Music			\UserSettings\RTPC_User_Music	
+	3592141631	RTPC_User_Master			\UserSettings\RTPC_User_Master	
+	3751289958	RTPC_User_SFX			\UserSettings\RTPC_User_SFX	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\MainBusses\Main Audio Bus\World\Ambience	
+	309309195	2DAmbience			\MainBusses\Main Audio Bus\World\Ambience\2DAmbience	
+	833916109	NPCs			\MainBusses\Main Audio Bus\World\NPCs	
+	986618877	PlayerWeapons			\MainBusses\Main Audio Bus\World\Player\PlayerCombat\PlayerWeapons	
+	1069431850	Player			\MainBusses\Main Audio Bus\World\Player	
+	1217116541	NPCLocomotion			\MainBusses\Main Audio Bus\World\NPCs\NPCLocomotion	
+	1257671459	ObjectPassive			\MainBusses\Main Audio Bus\World\Objects\ObjectPassive	
+	1301074112	3DAmbience			\MainBusses\Main Audio Bus\World\Ambience\3DAmbience	
+	1551306167	UI			\MainBusses\Main Audio Bus\UI	
+	1634810678	PlayerCombat			\MainBusses\Main Audio Bus\World\Player\PlayerCombat	
+	1695690031	Objects			\MainBusses\Main Audio Bus\World\Objects	
+	1711335080	ObjectDestruction			\MainBusses\Main Audio Bus\World\Objects\ObjectDestruction	
+	2150196036	Doors			\MainBusses\Main Audio Bus\World\Objects\Doors	
+	2246998526	Main Audio Bus			\MainBusses\Main Audio Bus	
+	2251568080	ObjectPickup			\MainBusses\Main Audio Bus\World\Objects\ObjectPickup	
+	2343802269	PlayerLocomotion			\MainBusses\Main Audio Bus\World\Player\PlayerLocomotion	
+	2609808943	World			\MainBusses\Main Audio Bus\World	
+	2702185859	PlayerCombatActions			\MainBusses\Main Audio Bus\World\Player\PlayerCombat\PlayerCombatActions	
+	2940432316	Stingers			\MainBusses\Main Audio Bus\Music\Stingers	
+	3077849308	NPCVocals			\MainBusses\Main Audio Bus\World\NPCs\NPCVocals	
+	3545700988	Reverbs			\MainBusses\Main Audio Bus\World\Reverbs	
+	3991942870	Music			\MainBusses\Main Audio Bus\Music	
+	4000439062	NPCCombat			\MainBusses\Main Audio Bus\World\NPCs\NPCCombat	
+	4275850663	Projectiles			\MainBusses\Main Audio Bus\World\Objects\Projectiles	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	602546716	Room_Large			\MainBusses\Main Audio Bus\World\Reverbs\Room_Large	
+	1990128658	Room_Medium			\MainBusses\Main Audio Bus\World\Reverbs\Room_Medium	
+	2730119150	Outdoors			\MainBusses\Main Audio Bus\World\Reverbs\Outdoors	
+	2995775460	Room_Small			\MainBusses\Main Audio Bus\World\Reverbs\Room_Small	
+	4122393694	Cave			\MainBusses\Main Audio Bus\World\Reverbs\Cave	
+
+Effect plug-ins	ID	Name	Type				Notes
+	900190560	Master_EQ	Wwise Parametric EQ			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

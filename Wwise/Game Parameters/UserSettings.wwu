@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8B988A52-F3D7-4C81-911E-A05CED30F501}" SchemaVersion="133">
+	<GameParameters>
+		<WorkUnit Name="UserSettings" ID="{8B988A52-F3D7-4C81-911E-A05CED30F501}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="RTPC_User_Master" ID="{57FCC93C-5203-47FA-A72F-4E76494E73BE}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_User_SFX" ID="{4DF2F460-4C89-46E1-8331-9F32711CCFDC}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_User_Music" ID="{B7BD444D-47D9-4A45-B494-75FFDBB16E06}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

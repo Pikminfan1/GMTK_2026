@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{25755D2E-3CBB-459C-BA2E-5A5C50FDA565}" SchemaVersion="133" RootDocumentID="{38282CAE-841C-4993-AD65-B53E6DCDEDF3}" ParentDocumentID="{4B288FAA-04A9-4747-AC69-03BE70F0530A}">
+	<Containers>
+		<WorkUnit Name="PlayerCombat" ID="{25755D2E-3CBB-459C-BA2E-5A5C50FDA565}" OwnerID="{4B288FAA-04A9-4747-AC69-03BE70F0530A}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="2"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

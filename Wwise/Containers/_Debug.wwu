@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="_Debug" ID="{F13EE4BB-C093-460A-9201-C41B3C27EABC}" PersistMode="Standalone">
+			<ChildrenList>
+				<PropertyContainer Name="Debug3D" ID="{BB517294-2C1A-461D-AA18-D3A3F66704C3}" ShortID="649774017">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ATT_Generic_200" ID="{79CA2108-D3D6-4BEF-AE0E-61A619222A1D}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Debug_3D_Sine440Hz_100ms" ID="{0F3EBEBC-11C1-40BD-A4D4-1BA3ECB556AB}" ShortID="405908554">
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Physically_Based" ID="{7AF96D5E-B0A7-4524-B96B-04F53DEAEC94}" WorkUnitID="{E312AA2F-7D32-49AE-9B3F-853E8C0370AC}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Tone Generator" ID="{F279D3F0-FA0C-43CA-9C71-694DCCAA50A6}" ShortID="907261179" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+									<PropertyList>
+										<Property Name="FixDur" Type="Real32" Value="0.1"/>
+										<Property Name="StartFreq" Type="Real32" Value="440"/>
+										<Property Name="WaveGain" Type="Real32" Value="-18"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Tone Generator" ID="{F279D3F0-FA0C-43CA-9C71-694DCCAA50A6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Debug_3D_Sine220Hz_3000ms_lp" ID="{6DF5306E-5AE3-4C14-BAA8-A447BB069FB2}" ShortID="152904187">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Tone Generator" ID="{D19B9FDA-9845-42AF-BD7F-D2D94EF8C6D4}" ShortID="501828373" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+									<PropertyList>
+										<Property Name="FixDur" Type="Real32" Value="3"/>
+										<Property Name="StartFreq" Type="Real32" Value="220"/>
+										<Property Name="WaveGain" Type="Real32" Value="-18"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Tone Generator" ID="{D19B9FDA-9845-42AF-BD7F-D2D94EF8C6D4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Debug_3D_WhiteNoise_lp" ID="{5E4B7D45-0DFC-4002-9A26-7F7ABFF6AF08}" ShortID="216459223">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Tone Generator" ID="{9461FE2D-7957-496E-AA1C-2D7C9A1AE0C7}" ShortID="384726505" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+									<PropertyList>
+										<Property Name="FixDur" Type="Real32" Value="0.3"/>
+										<Property Name="StartFreq" Type="Real32" Value="440"/>
+										<Property Name="WaveGain" Type="Real32" Value="-24"/>
+										<Property Name="WaveType" Type="int32" Value="4"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Tone Generator" ID="{9461FE2D-7957-496E-AA1C-2D7C9A1AE0C7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<BlendContainer Name="Debug_3D_Distance" ID="{E26B67D0-E97A-4925-832F-9B86745F6E70}" ShortID="841325681">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="DistanceDebug_1" ID="{F3FF49A3-FD6D-4D40-8A0E-9A372493292C}" ShortID="11935697">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_1" ID="{4C95787F-A9C8-4498-9638-BF35DCDB9231}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="841277880"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_1" ID="{4C95787F-A9C8-4498-9638-BF35DCDB9231}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_2" ID="{7942546D-1BE1-4B29-9C35-2AF19FD1948B}" ShortID="110579558">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_2" ID="{914B3CA8-2253-455B-8199-084C127E590B}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="499815888"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_2" ID="{914B3CA8-2253-455B-8199-084C127E590B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_3" ID="{8C5B9D5E-411B-4A80-93DF-85C5E56C21AB}" ShortID="669983621">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_3" ID="{4485CDD1-B546-4601-BC03-BFC3922B94BB}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="312655483"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_3" ID="{4485CDD1-B546-4601-BC03-BFC3922B94BB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_4" ID="{AD2B9ECF-040B-45C3-ABEB-C4FCE83DA368}" ShortID="62484421">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_4" ID="{8F1DBB2D-0A76-4ED5-8696-0143D705CAAF}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1070845789"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_4" ID="{8F1DBB2D-0A76-4ED5-8696-0143D705CAAF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_5" ID="{EEAD4193-2C63-4812-947E-FEBB107A5CED}" ShortID="488313320">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_5" ID="{0C99F64B-ADDA-4629-8684-4D5567B105E1}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="856612942"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_5" ID="{0C99F64B-ADDA-4629-8684-4D5567B105E1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_6" ID="{E0F1F3F3-756B-441A-A300-4E0E95322550}" ShortID="825081081">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_6" ID="{05758350-F2DE-419D-9B97-0035026FF7D4}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="194937607"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_6" ID="{05758350-F2DE-419D-9B97-0035026FF7D4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_7" ID="{ACE7D0EA-4D19-45A5-BB05-15A49E34CA2A}" ShortID="619910164">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_7" ID="{1D23AB01-DAB0-4717-A299-C50DEB6765A4}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="841775150"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_7" ID="{1D23AB01-DAB0-4717-A299-C50DEB6765A4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_8" ID="{FD7B8AB4-A864-4F44-BE88-CF9F8FE58875}" ShortID="410126182">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_8" ID="{1C5379B3-CF2C-4910-AB5A-402C72918A03}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_8.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="182048868"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_8" ID="{1C5379B3-CF2C-4910-AB5A-402C72918A03}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_9" ID="{54B2598C-6D9D-46F1-AEF8-BDBD1CD314E7}" ShortID="933509241">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_9" ID="{C9793F99-ED04-4B51-B350-2BD45D10F5A2}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_9.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="49997267"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_9" ID="{C9793F99-ED04-4B51-B350-2BD45D10F5A2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_10" ID="{7B6A4246-20E4-4C5D-85EA-CC16DEA4F4A5}" ShortID="841324870">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_10" ID="{748DC0E9-8B2C-4859-A58A-C575A50D2CD9}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_10.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="502700156"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_10" ID="{748DC0E9-8B2C-4859-A58A-C575A50D2CD9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_15" ID="{D53B7AB0-EC11-4E0E-8AA3-928D09AC227D}" ShortID="658985248">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_15" ID="{0DFF37DE-C270-4B6D-8724-B69623E47783}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_15.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="296436777"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_15" ID="{0DFF37DE-C270-4B6D-8724-B69623E47783}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_20" ID="{57198065-E0BF-46E8-B9E6-9581BF646C67}" ShortID="1049097248">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_20" ID="{C8BC22B1-215B-4A7C-8165-F39801C33F35}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_20.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="495735999"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_20" ID="{C8BC22B1-215B-4A7C-8165-F39801C33F35}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_25" ID="{A986F0D9-84AC-4DA6-B453-FCE33A1E5AA8}" ShortID="1069840189">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_25" ID="{80EF7D2D-1BA9-4513-A604-A9EDAE097217}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_25.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="914882427"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_25" ID="{80EF7D2D-1BA9-4513-A604-A9EDAE097217}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_30" ID="{D2402C48-FD5C-400F-B584-663273B8A88E}" ShortID="167004548">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_30" ID="{169F234A-9029-4C2D-B8F0-DC06D3A67CAA}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_30.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="428002276"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_30" ID="{169F234A-9029-4C2D-B8F0-DC06D3A67CAA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_35" ID="{8DA9377C-F6CA-40D6-BA72-25882A49625C}" ShortID="900828099">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_35" ID="{2AA5C9AB-CD7E-4808-848E-70C8406314FF}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_35.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="352764488"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_35" ID="{2AA5C9AB-CD7E-4808-848E-70C8406314FF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_40" ID="{7D4ACC0C-3AB7-4651-A6B7-D37E8CA1A422}" ShortID="204334458">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_40" ID="{86A98869-44FB-4ADC-AFAE-77BD9EFCD1AE}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_40.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="415172585"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_40" ID="{86A98869-44FB-4ADC-AFAE-77BD9EFCD1AE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_45" ID="{F990DC1C-4E40-4361-9237-CEB815DB705B}" ShortID="92935160">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_45" ID="{CD6B11EB-5DE1-4174-995E-FFE5B8F857E8}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_45.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1035899610"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_45" ID="{CD6B11EB-5DE1-4174-995E-FFE5B8F857E8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_50" ID="{F38E8FC7-4096-4EA5-8E29-F47BFA606852}" ShortID="938666632">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_50" ID="{F4330B39-B82B-4BAF-82DA-304A83E93D2A}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_50.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="643072411"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_50" ID="{F4330B39-B82B-4BAF-82DA-304A83E93D2A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_55" ID="{E3B1989B-EEDB-4796-B1E4-D5B197215E85}" ShortID="458233642">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_55" ID="{715082EA-C372-4CFF-8510-95BE0AE0E6EE}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_55.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1005155270"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_55" ID="{715082EA-C372-4CFF-8510-95BE0AE0E6EE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_60" ID="{A900CD88-E30D-4A01-AB9F-ECF67528F966}" ShortID="568267057">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_60" ID="{8D550B06-9845-4A68-87D5-26AC94F27345}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_60.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="106195816"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_60" ID="{8D550B06-9845-4A68-87D5-26AC94F27345}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_65" ID="{7D63BA5C-4E3B-4353-B8DA-EA3B47AC337C}" ShortID="745432368">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_65" ID="{D110EAF1-509F-4CA5-AA6A-8E9E2C7877BF}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_65.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="665660573"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_65" ID="{D110EAF1-509F-4CA5-AA6A-8E9E2C7877BF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_70" ID="{4C87AE54-11A7-421B-8D41-0693F5D1C604}" ShortID="193740661">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_70" ID="{78D33FB8-2372-451A-9E6D-7D6A7B4A8D44}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_70.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1049443531"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_70" ID="{78D33FB8-2372-451A-9E6D-7D6A7B4A8D44}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_75" ID="{6FF9A1D5-6A6D-4F7A-8127-B5589300EF9A}" ShortID="307202291">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_75" ID="{DB5E3658-B3C4-4DB0-8D30-D0B90211ADD6}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_75.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="431297954"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_75" ID="{DB5E3658-B3C4-4DB0-8D30-D0B90211ADD6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_80" ID="{8233E5B8-DD4B-4434-95ED-FA2BBA79292B}" ShortID="51098149">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_80" ID="{DE13FB05-0CED-48B7-9F33-77EC137B76BC}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_80.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="113433565"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_80" ID="{DE13FB05-0CED-48B7-9F33-77EC137B76BC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_85" ID="{8AE854C8-E2DA-4623-8F07-D4D7E4A4AF55}" ShortID="871782928">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_85" ID="{4E35410A-2209-4843-99E8-81FBD2C70E25}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_85.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="173862396"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_85" ID="{4E35410A-2209-4843-99E8-81FBD2C70E25}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_90" ID="{6B8F24B6-7FB8-4DF7-A34F-6DCCC4CCCC72}" ShortID="458534219">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_90" ID="{4670920E-BAAD-404A-A39D-A952AD7C2032}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_90.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="281493717"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_90" ID="{4670920E-BAAD-404A-A39D-A952AD7C2032}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_95" ID="{8F2FF54F-7142-4A99-8773-B569B85B768E}" ShortID="877477185">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_95" ID="{52764FC6-545B-4A19-AAB5-E9EB4DEE9517}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_95.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="638251489"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_95" ID="{52764FC6-545B-4A19-AAB5-E9EB4DEE9517}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_100" ID="{1AFEF253-A100-48E5-A22E-1EF663E076DB}" ShortID="1068024874">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_100" ID="{A83B7B12-A56B-49F3-A56A-EA87307B14D0}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_100.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="17932229"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_100" ID="{A83B7B12-A56B-49F3-A56A-EA87307B14D0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_110" ID="{B2CECB67-D70D-42E7-8F85-2D70618FE0B8}" ShortID="107589878">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_110" ID="{3F314144-862B-4DC6-8C37-ED2267A93009}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_110.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="205036045"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_110" ID="{3F314144-862B-4DC6-8C37-ED2267A93009}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_120" ID="{DDE9129C-3934-42EB-910B-76FA5CF45C3E}" ShortID="177815303">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_120" ID="{63BF45F0-B82C-480F-ACDB-46DF62FEC764}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_120.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="860780804"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_120" ID="{63BF45F0-B82C-480F-ACDB-46DF62FEC764}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_130" ID="{261080EB-55C9-4DEB-B2F1-917C5CD45198}" ShortID="900510271">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_130" ID="{3D3E9599-8B6E-4E2C-87A3-88461C190AB9}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_130.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="809945826"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_130" ID="{3D3E9599-8B6E-4E2C-87A3-88461C190AB9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_140" ID="{13D94D2B-F06B-47A1-A3B2-8AC7CD6D88A9}" ShortID="868887187">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_140" ID="{AED80E31-16D3-418C-AEB1-7839A153819B}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_140.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="275879356"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_140" ID="{AED80E31-16D3-418C-AEB1-7839A153819B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_150" ID="{F4354600-AA4F-4323-B92C-C3286A4735BE}" ShortID="485941508">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_150" ID="{8AFCB406-7814-41E1-8F40-AC7484456A2E}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_150.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1034611591"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_150" ID="{8AFCB406-7814-41E1-8F40-AC7484456A2E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_160" ID="{4D87DA3F-7634-4FEC-9899-693BAB19BC35}" ShortID="426259804">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_160" ID="{771D58A6-FC2F-425A-A310-C168E1DD4D6C}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_160.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="248113364"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_160" ID="{771D58A6-FC2F-425A-A310-C168E1DD4D6C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_170" ID="{31107645-9398-420A-8F8A-0282430C07C7}" ShortID="451287065">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_170" ID="{9B1BB20C-FE66-4962-87FE-A07E12257A3B}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_170.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="25829374"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_170" ID="{9B1BB20C-FE66-4962-87FE-A07E12257A3B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_180" ID="{40550A30-23D6-4D5F-8531-28CC3FD6500D}" ShortID="53831398">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_180" ID="{954E48D9-074E-4871-B235-74A38EE5829A}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_180.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="812875699"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_180" ID="{954E48D9-074E-4871-B235-74A38EE5829A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_190" ID="{48F23CB6-82C5-4346-ABB7-9B4B367E86B2}" ShortID="897306001">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_190" ID="{1D36E01A-6420-4A12-8A5D-5C63D4FA7FEB}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_190.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="384439757"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_190" ID="{1D36E01A-6420-4A12-8A5D-5C63D4FA7FEB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_200" ID="{CCA2EF2B-1F0C-4C90-A81A-BD0083DE7A70}" ShortID="950714586">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_200" ID="{C12DEEB2-1F8F-4D1C-9541-451D808F4EED}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_200.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="48030369"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_200" ID="{C12DEEB2-1F8F-4D1C-9541-451D808F4EED}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DistanceDebug_0" ID="{7F8F290C-9831-49DF-B144-FBECF76B143F}" ShortID="865940691">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DistanceDebug_0" ID="{344374DB-3C72-403A-B3E4-BB578126189F}">
+											<Language>SFX</Language>
+											<AudioFile>DistanceDebug_0.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="28588062"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DistanceDebug_0" ID="{344374DB-3C72-403A-B3E4-BB578126189F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="Distance" ID="{726D523E-B293-4AEB-A1B7-78486C8AE545}" ShortID="537831603">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+									</PropertyList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_0" ID="{7F8F290C-9831-49DF-B144-FBECF76B143F}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_1" ID="{F3FF49A3-FD6D-4D40-8A0E-9A372493292C}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_2" ID="{7942546D-1BE1-4B29-9C35-2AF19FD1948B}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_3" ID="{8C5B9D5E-411B-4A80-93DF-85C5E56C21AB}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_4" ID="{AD2B9ECF-040B-45C3-ABEB-C4FCE83DA368}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_5" ID="{EEAD4193-2C63-4812-947E-FEBB107A5CED}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_6" ID="{E0F1F3F3-756B-441A-A300-4E0E95322550}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_7" ID="{ACE7D0EA-4D19-45A5-BB05-15A49E34CA2A}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_8" ID="{FD7B8AB4-A864-4F44-BE88-CF9F8FE58875}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_9" ID="{54B2598C-6D9D-46F1-AEF8-BDBD1CD314E7}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_10" ID="{7B6A4246-20E4-4C5D-85EA-CC16DEA4F4A5}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_15" ID="{D53B7AB0-EC11-4E0E-8AA3-928D09AC227D}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_20" ID="{57198065-E0BF-46E8-B9E6-9581BF646C67}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_25" ID="{A986F0D9-84AC-4DA6-B453-FCE33A1E5AA8}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_30" ID="{D2402C48-FD5C-400F-B584-663273B8A88E}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_35" ID="{8DA9377C-F6CA-40D6-BA72-25882A49625C}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_40" ID="{7D4ACC0C-3AB7-4651-A6B7-D37E8CA1A422}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_45" ID="{F990DC1C-4E40-4361-9237-CEB815DB705B}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_50" ID="{F38E8FC7-4096-4EA5-8E29-F47BFA606852}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_55" ID="{E3B1989B-EEDB-4796-B1E4-D5B197215E85}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_60" ID="{A900CD88-E30D-4A01-AB9F-ECF67528F966}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_65" ID="{7D63BA5C-4E3B-4353-B8DA-EA3B47AC337C}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_70" ID="{4C87AE54-11A7-421B-8D41-0693F5D1C604}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_75" ID="{6FF9A1D5-6A6D-4F7A-8127-B5589300EF9A}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_80" ID="{8233E5B8-DD4B-4434-95ED-FA2BBA79292B}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_85" ID="{8AE854C8-E2DA-4623-8F07-D4D7E4A4AF55}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_90" ID="{6B8F24B6-7FB8-4DF7-A34F-6DCCC4CCCC72}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_95" ID="{8F2FF54F-7142-4A99-8773-B569B85B768E}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_100" ID="{1AFEF253-A100-48E5-A22E-1EF663E076DB}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_110" ID="{B2CECB67-D70D-42E7-8F85-2D70618FE0B8}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_120" ID="{DDE9129C-3934-42EB-910B-76FA5CF45C3E}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_130" ID="{261080EB-55C9-4DEB-B2F1-917C5CD45198}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_140" ID="{13D94D2B-F06B-47A1-A3B2-8AC7CD6D88A9}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_150" ID="{F4354600-AA4F-4323-B92C-C3286A4735BE}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_160" ID="{4D87DA3F-7634-4FEC-9899-693BAB19BC35}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_170" ID="{31107645-9398-420A-8F8A-0282430C07C7}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_180" ID="{40550A30-23D6-4D5F-8531-28CC3FD6500D}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_190" ID="{48F23CB6-82C5-4346-ABB7-9B4B367E86B2}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="DistanceDebug_200" ID="{CCA2EF2B-1F0C-4C90-A81A-BD0083DE7A70}"/>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+					</ChildrenList>
+				</PropertyContainer>
+				<PropertyContainer Name="Debug2D" ID="{A85A91AB-9B59-4E25-9A2D-D55CC76CC71E}" ShortID="715462376">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Debug_2D_Sine220Hz_3000ms_lp" ID="{06A13360-7466-45F4-9D63-ACD818F11E47}" ShortID="855558158">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Tone Generator" ID="{26E252B9-238F-4266-8F9D-5A11AAC67B20}" ShortID="865437512" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+									<PropertyList>
+										<Property Name="FixDur" Type="Real32" Value="3"/>
+										<Property Name="StartFreq" Type="Real32" Value="220"/>
+										<Property Name="WaveGain" Type="Real32" Value="-18"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Tone Generator" ID="{26E252B9-238F-4266-8F9D-5A11AAC67B20}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Debug_2D_Sine440Hz_100ms" ID="{1E5349A9-2281-4F97-8F3D-E922BDB93E46}" ShortID="231425345">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Tone Generator" ID="{1834DFCA-69FF-40FC-BFDD-A3EC1EBEFB3C}" ShortID="123651020" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+									<PropertyList>
+										<Property Name="FixDur" Type="Real32" Value="0.1"/>
+										<Property Name="StartFreq" Type="Real32" Value="440"/>
+										<Property Name="WaveGain" Type="Real32" Value="-18"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Tone Generator" ID="{1834DFCA-69FF-40FC-BFDD-A3EC1EBEFB3C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Debug_2D_Silence_lp" ID="{537D4684-5053-4108-8CDA-E485830B91FA}" ShortID="347121990">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Silence" ID="{362A4B73-6568-45E8-AA4D-DF2791D07464}" ShortID="440737193" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+									<PropertyList>
+										<Property Name="Length" Type="Real32" Value="0.5"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Silence" ID="{362A4B73-6568-45E8-AA4D-DF2791D07464}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Debug_2D_WhiteNoise_lp" ID="{AD523DB4-6099-42DB-AB3B-35B667674832}" ShortID="549293431">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Tone Generator" ID="{C32F6B02-41DA-4F52-BAC7-676684154509}" ShortID="111471719" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+									<PropertyList>
+										<Property Name="FixDur" Type="Real32" Value="0.3"/>
+										<Property Name="StartFreq" Type="Real32" Value="440"/>
+										<Property Name="WaveGain" Type="Real32" Value="-24"/>
+										<Property Name="WaveType" Type="int32" Value="4"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Tone Generator" ID="{C32F6B02-41DA-4F52-BAC7-676684154509}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</PropertyContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

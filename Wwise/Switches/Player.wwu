@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6E14F209-0C9C-4E83-AD70-35FF0515EE7C}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="Player" ID="{6E14F209-0C9C-4E83-AD70-35FF0515EE7C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="PlayerSpeed" ID="{8E64FB38-6096-4437-95DF-73C874412A98}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Walk" ID="{D63C2B66-E001-45B3-959F-2599E296E382}"/>
+						<Switch Name="Sprint" ID="{630EC635-EDEA-472E-B234-F50DFABF5663}"/>
+						<Switch Name="Run" ID="{4FCAB6EB-E9BE-42CC-9F87-249CE7D94EE6}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_PlayerSpeed" ID="{222BC605-777A-42C7-9324-D60B841AEC24}"/>
+						<Curve Name="" ID="{EA71F20D-FBE4-4218-8B7D-579CAADCA5C1}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>0.35</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>0.69988</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>3</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

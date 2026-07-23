@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BD140EFC-66FC-4DFD-BAF3-73B13478D5DC}" SchemaVersion="133">
+	<GameParameters>
+		<WorkUnit Name="Player" ID="{BD140EFC-66FC-4DFD-BAF3-73B13478D5DC}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="RTPC_PlayerHealth" ID="{5617AFDA-566B-4414-AFB2-BF2BBF6378D4}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_PlayerSpeed" ID="{222BC605-777A-42C7-9324-D60B841AEC24}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_TimeInSight" ID="{20172ACC-AEE8-4C98-8073-3A742B29089C}">
+					<Comment>The player takes damage when in line of sight of an enemy. This can drive some sound related thingy</Comment>
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="4"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

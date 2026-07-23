@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{837209B6-F63C-4525-A6F2-F22AE7C5217C}" SchemaVersion="133">
+	<GameParameters>
+		<WorkUnit Name="World" ID="{837209B6-F63C-4525-A6F2-F22AE7C5217C}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="RTPC_WaveTimer" ID="{EDCA8B72-159E-464B-AFFE-08B4F55355BB}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="24"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_RainAmount" ID="{43653B55-7322-4910-83A8-072561860C74}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

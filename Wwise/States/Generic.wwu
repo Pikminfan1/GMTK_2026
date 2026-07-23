@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{12705436-DC25-4D2F-B4E3-6FFF03F90AAB}" SchemaVersion="133">
+	<States>
+		<WorkUnit Name="Generic" ID="{12705436-DC25-4D2F-B4E3-6FFF03F90AAB}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="GameState" ID="{567F5043-A81B-4281-A7C1-0D08768169EB}">
+					<ChildrenList>
+						<State Name="None" ID="{066EBA92-BE06-48B1-B6FD-B032178EBF1A}"/>
+						<State Name="InGame" ID="{5B8E4749-545C-4E1A-9F98-9F37C7DF1FFB}"/>
+						<State Name="InMenu" ID="{460E9C64-EAB3-4105-86A6-B699F9B16754}"/>
+						<State Name="InPause" ID="{0C858250-0140-4F25-A4DA-AB76497864D2}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="GameplayState" ID="{B3ED71B0-3DFD-4EA2-9E9E-040A7ECDCBE9}">
+					<ChildrenList>
+						<State Name="None" ID="{A50D5CEA-4277-4B3F-AD8D-13118997F565}"/>
+						<State Name="BossFight" ID="{F337622F-02A8-4DF2-9353-27935E793E44}"/>
+						<State Name="Combat" ID="{2BE59E25-6AE0-4AA5-AE16-F86C3328DA34}"/>
+						<State Name="Exploration" ID="{05F8B323-F3F4-40FB-BE60-ADA9D37AAE46}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="CombatIntensity" ID="{AA83C3B5-2836-475A-872A-E1317AB10234}">
+					<ChildrenList>
+						<State Name="None" ID="{CB6020BF-7EE4-4C4F-9387-C8B8C2B05325}"/>
+						<State Name="Easy" ID="{D1641EF6-2CFC-41B9-8C12-42D697334159}"/>
+						<State Name="Uncomfortable" ID="{D1430318-412E-4400-B404-46E1EDACBDC4}"/>
+						<State Name="Bad" ID="{1C1E0F0F-C5DA-4B42-B468-F53D6D72045F}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>
