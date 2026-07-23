@@ -1,5 +1,6 @@
 # Visual Studio 2015 user specific files
 .vs/
+.idea/
 
 # Compiled Object files
 *.slo
@@ -40,7 +41,27 @@
 *.sdf
 *.VC.db
 *.VC.opendb
-.vsconfig
+
+# Wwise Project
+Wwise/IncrementalSoundBankData.xml
+Wwise/.cache/
+Wwise/.backup/
+Wwise/*.akd
+Wwise/*.akpk
+Wwise/*.prof
+Wwise/*.validationcache
+Wwise/*.wsettings
+*/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
+
+# Exception for libraries
+!Plugins/Wwise/
+!Plugins/Wwise/**
+!Plugins/WwiseNiagara/
+!Plugins/WwiseNiagara/**
+!Plugins/WwiseSoundEngine/
+!Plugins/WwiseSoundEngine/**
+!Plugins/WwiseSoundEngine/ThirdParty/
+!Plugins/WwiseSoundEngine/ThirdParty/**
 
 # Precompiled Assets
 SourceArt/**/*.png
@@ -73,3 +94,6 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Developer Folder
+Developers/*
