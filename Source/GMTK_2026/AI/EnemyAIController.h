@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "DetourCrowdAIController.h"
+#include "GenericTeamAgentInterface.h"
 #include "Perception/AIPerceptionTypes.h"
 #include "EnemyAIController.generated.h"
 
@@ -29,33 +30,65 @@ enum class EEnemyMovementSpeed : uint8
 	Jogging     UMETA(DisplayName = "Jogging"),
 	Sprinting   UMETA(DisplayName = "Sprinting"),
 };
+
 /**
  * Runs the Behavior Tree and owns perception for each enemy. Derives from
  * ADetourCrowdAIController (not plain AAIController) so multiple enemies converging
  * on the player locally avoid each other via Detour Crowd instead of just clumping.
+ *
+ * Implements IGenericTeamAgentInterface so perception can tell the player apart from
+ * other enemies - without that, enemies perceive each other and end up writing a
+ * fellow enemy into TargetActor.
  */
 UCLASS()
 class GMTK_2026_API AEnemyAIController : public ADetourCrowdAIController
 {
 	GENERATED_BODY()
-	
+
 public:
 	AEnemyAIController();
-	
-	
+
+	//~ Begin IGenericTeamAgentInterface
+	virtual FGenericTeamId GetGenericTeamId() const override;
+	virtual ETeamAttitude::Type GetTeamAttitudeTowards(const AActor& Other) const override;
+	//~ End IGenericTeamAgentInterface
+
+	/** Blackboard key names. Exposed so a Blueprint subclass can rename them if needed. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AI|Blackboard")
+	FName TargetActorKey = TEXT("TargetActor");
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AI|Blackboard")
+	FName LastKnownLocationKey = TEXT("LastKnownLocation");
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AI|Blackboard")
+	FName SelfActorKey = TEXT("SelfActor");
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AI|Blackboard")
+	FName IsDeadKey = TEXT("IsDead");
+
 protected:
 	virtual void OnPossess(APawn* InPawn) override;
+	virtual void OnUnPossess() override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "AI")
 	TObjectPtr<UBehaviorTree> BehaviorTreeAsset;
 
-	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI", meta = (AllowPrivateAccess = "true"))
-	//TObjectPtr<UAIPerceptionComponent> PerceptionComponent;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
-	FName AttackTargetKeyName = TEXT("AttackTarget");
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UAISenseConfig_Sight> SightConfig;
 
+	/** Which team this controller belongs to. Set to Enemy by default. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AI|Team")
+	uint8 TeamId = 1;
+
 	UFUNCTION()
 	void OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus);
+
+	/** Bound to the possessed pawn's HealthComponent so death releases the token. */
+	UFUNCTION()
+	void HandlePawnDeath(AActor* DeadActor);
+
+private:
+	/** Hands the combat token back, if this pawn is holding one. Safe to call repeatedly. */
+	void ReleaseCombatToken();
 };

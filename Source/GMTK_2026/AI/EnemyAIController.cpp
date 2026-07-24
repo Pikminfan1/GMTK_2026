@@ -1,71 +1,178 @@
 #include "AI/EnemyAIController.h"
+
+#include "AI/Tokens/CombatTokenSubsystem.h"
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "Characters/BaseCharacter.h"
+#include "Characters/Components/HealthComponent.h"
 #include "Perception/AIPerceptionComponent.h"
 #include "Perception/AISenseConfig_Sight.h"
+#include "Utility/CombatTeams.h"
 #include "Utility/LogChannels.h"
 
 AEnemyAIController::AEnemyAIController()
 {
-	UAIPerceptionComponent* NewPerceptionComponent = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("PerceptionComponent"));
+	UAIPerceptionComponent* NewPerceptionComponent =
+		CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("PerceptionComponent"));
 
 	SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("SightConfig"));
-	SightConfig->SightRadius = 1500.f;
-	SightConfig->LoseSightRadius = 1800.f;
+	SightConfig->SightRadius = 2200.f;
+	SightConfig->LoseSightRadius = 2600.f;
 	SightConfig->PeripheralVisionAngleDegrees = 90.f;
 	SightConfig->SetMaxAge(5.f);
+
+	// Only react to hostiles. GetTeamAttitudeTowards() below is what actually
+	// classifies actors, so enemies no longer register each other as targets.
 	SightConfig->DetectionByAffiliation.bDetectEnemies = true;
-	SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
-	SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
+	SightConfig->DetectionByAffiliation.bDetectNeutrals = false;
+	SightConfig->DetectionByAffiliation.bDetectFriendlies = false;
 
 	NewPerceptionComponent->ConfigureSense(*SightConfig);
 	NewPerceptionComponent->SetDominantSense(SightConfig->GetSenseImplementation());
-	NewPerceptionComponent->OnTargetPerceptionUpdated.AddDynamic(this, &AEnemyAIController::OnTargetPerceptionUpdated);
+	NewPerceptionComponent->OnTargetPerceptionUpdated.AddDynamic(
+		this, &AEnemyAIController::OnTargetPerceptionUpdated);
 
 	SetPerceptionComponent(*NewPerceptionComponent);
+
+	// Sight radius needs to comfortably exceed the laser's max engagement range,
+	// otherwise the enemy loses its target mid-attack and the beam cuts out.
+	SetGenericTeamId(CombatTeams::Enemy);
+}
+
+FGenericTeamId AEnemyAIController::GetGenericTeamId() const
+{
+	return FGenericTeamId(TeamId);
+}
+
+ETeamAttitude::Type AEnemyAIController::GetTeamAttitudeTowards(const AActor& Other) const
+{
+	// Ask the other actor (or its controller) which team it's on. Pawns don't
+	// implement the interface themselves, so fall through to their controller.
+	const IGenericTeamAgentInterface* OtherTeamAgent = Cast<const IGenericTeamAgentInterface>(&Other);
+
+	if (!OtherTeamAgent)
+	{
+		if (const APawn* OtherPawn = Cast<const APawn>(&Other))
+		{
+			OtherTeamAgent = Cast<const IGenericTeamAgentInterface>(OtherPawn->GetController());
+		}
+	}
+
+	if (!OtherTeamAgent)
+	{
+		return ETeamAttitude::Neutral;
+	}
+
+	return OtherTeamAgent->GetGenericTeamId() == GetGenericTeamId()
+		? ETeamAttitude::Friendly
+		: ETeamAttitude::Hostile;
 }
 
 void AEnemyAIController::OnPossess(APawn* InPawn)
 {
 	Super::OnPossess(InPawn);
 
-	if (BehaviorTreeAsset)
+	if (!BehaviorTreeAsset)
 	{
-		if (BehaviorTreeAsset->BlackboardAsset)
-		{
-			UBlackboardComponent* BlackboardComp = nullptr;
-			if (UseBlackboard(BehaviorTreeAsset->BlackboardAsset, BlackboardComp))
-			{
-				Blackboard = BlackboardComp;
-			}
-		}
-		RunBehaviorTree(BehaviorTreeAsset);
-		//GetWorld()->GetFirstPlayerController()->GetCharacter();
-		//Blackboard->SetValueAsObject(AttackTargetKeyName, TargetActor);
-		
+		UE_LOG(LogGMTKAI, Warning, TEXT("%s possessed %s with no BehaviorTreeAsset assigned"),
+			*GetName(), InPawn ? *InPawn->GetName() : TEXT("nullptr"));
+		return;
 	}
-	else
+
+	if (BehaviorTreeAsset->BlackboardAsset)
 	{
-		UE_LOG(LogGMTKAI, Warning, TEXT("%s possessed %s with no BehaviorTreeAsset assigned"), *GetName(), *InPawn->GetName());
+		UBlackboardComponent* BlackboardComp = nullptr;
+		if (UseBlackboard(BehaviorTreeAsset->BlackboardAsset, BlackboardComp))
+		{
+			Blackboard = BlackboardComp;
+		}
+	}
+
+	RunBehaviorTree(BehaviorTreeAsset);
+
+	if (Blackboard)
+	{
+		// SelfActor lets EQS tests and BT nodes reference the querying pawn without
+		// each one having to walk the controller chain.
+		Blackboard->SetValueAsObject(SelfActorKey, InPawn);
+		Blackboard->SetValueAsBool(IsDeadKey, false);
+	}
+
+	// Death has to release the combat token, or the budget leaks every time an
+	// enemy dies mid-attack and eventually nobody can attack at all.
+	if (const ABaseCharacter* PossessedCharacter = Cast<ABaseCharacter>(InPawn))
+	{
+		if (UHealthComponent* Health = PossessedCharacter->GetHealthComponent())
+		{
+			Health->OnDeath.AddUniqueDynamic(this, &AEnemyAIController::HandlePawnDeath);
+		}
+	}
+}
+
+void AEnemyAIController::OnUnPossess()
+{
+	ReleaseCombatToken();
+	Super::OnUnPossess();
+}
+
+void AEnemyAIController::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	ReleaseCombatToken();
+	Super::EndPlay(EndPlayReason);
+}
+
+void AEnemyAIController::HandlePawnDeath(AActor* DeadActor)
+{
+	ReleaseCombatToken();
+
+	if (Blackboard)
+	{
+		Blackboard->SetValueAsBool(IsDeadKey, true);
+	}
+
+	// Stop the tree so a half-finished attack branch can't keep ticking on a corpse.
+	if (UBrainComponent* Brain = GetBrainComponent())
+	{
+		Brain->StopLogic(TEXT("Pawn died"));
+	}
+}
+
+void AEnemyAIController::ReleaseCombatToken()
+{
+	if (const UWorld* World = GetWorld())
+	{
+		if (UCombatTokenSubsystem* Tokens = World->GetSubsystem<UCombatTokenSubsystem>())
+		{
+			Tokens->ReleaseToken(GetPawn());
+		}
 	}
 }
 
 void AEnemyAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
 {
-	if (!Blackboard)
+	if (!Blackboard || !Actor)
 	{
 		return;
 	}
 
-	// TODO: swap "TargetActor"/"CanSeeTarget" for whatever Blackboard keys you actually
-	// set up once the tree (and the token system it'll coordinate with) exists.
+	// Belt-and-braces: the affiliation filter should already have excluded friendlies,
+	// but an explicit check here means a misconfigured team ID can't cause enemies to
+	// start lasering each other.
+	if (GetTeamAttitudeTowards(*Actor) != ETeamAttitude::Hostile)
+	{
+		return;
+	}
+
 	if (Stimulus.WasSuccessfullySensed())
 	{
-		Blackboard->SetValueAsObject(TEXT("TargetActor"), Actor);
-		Blackboard->SetValueAsBool(TEXT("CanSeeTarget"), true);
+		Blackboard->SetValueAsObject(TargetActorKey, Actor);
+		Blackboard->SetValueAsVector(LastKnownLocationKey, Actor->GetActorLocation());
 	}
 	else
 	{
-		Blackboard->SetValueAsBool(TEXT("CanSeeTarget"), false);
+		// Keep TargetActor set so the tree can run its search behaviour toward the
+		// last known position. BTService_CombatState clears it if the target goes
+		// stale or dies.
+		Blackboard->SetValueAsVector(LastKnownLocationKey, Stimulus.StimulusLocation);
 	}
 }
