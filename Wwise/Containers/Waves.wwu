@@ -52,7 +52,7 @@
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="SFX_GameWaveStart_Stereo_2_Bulba" ID="{2FFD8C95-9C9F-4A08-8513-3673D22A242A}" Platform="Linked"/>
+								<ActiveSource Name="SFX_GameWaveStart_Stereo_1_Bulba" ID="{6C178A8E-0A02-4F08-BB13-FD6CAED48194}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="SFX_GameWaveEnd_Stereo_1_Bulba" ID="{EA383A6B-1E36-4659-9F64-5F1DCFE4148F}" ShortID="33110045">
