@@ -4,6 +4,7 @@
 		<WorkUnit Name="World" ID="{38282CAE-841C-4993-AD65-B53E6DCDEDF3}" PersistMode="Standalone">
 			<ChildrenList>
 				<WorkUnit Name="Player" ID="{4B288FAA-04A9-4747-AC69-03BE70F0530A}" PersistMode="Reference"/>
+				<WorkUnit Name="Ambience" ID="{C5960BBC-3754-4098-B66C-E168451D2F66}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

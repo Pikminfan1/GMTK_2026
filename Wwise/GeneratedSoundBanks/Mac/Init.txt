@@ -76,6 +76,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	4122393694	Cave			\MainBusses\Main Audio Bus\World\Reverbs\Cave	
 
 Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	900190560	Master_EQ	Wwise Parametric EQ			
 	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
 

@@ -50,7 +50,26 @@
 										<AuxBus Name="Room_Small" ID="{E0D9BC87-EF3E-4ED7-9B11-F65A2301ACCB}"/>
 										<AuxBus Name="Room_Medium" ID="{65FE0A3A-3C20-4621-8416-07760CF0F4D9}"/>
 										<AuxBus Name="Room_Large" ID="{ECB2B324-77C5-4EB4-AD62-7E75AC58FCA2}"/>
-										<AuxBus Name="Outdoors" ID="{1925E056-166D-4DD7-AB68-8EA81697C003}"/>
+										<AuxBus Name="Outdoors" ID="{1925E056-166D-4DD7-AB68-8EA81697C003}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{7E6B6E1E-5E35-40E5-88F0-616B42272FEF}" ShortID="607710049">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+										</AuxBus>
 										<AuxBus Name="Cave" ID="{1618779C-6D79-42CC-BE24-5B192AE46F9B}"/>
 									</ChildrenList>
 								</Bus>
@@ -220,6 +239,19 @@
 								<ReferenceList>
 									<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 										<ObjectRef Name="Master_EQ" ID="{C73728D6-CD65-4947-AC4A-2DC5E5750345}" WorkUnitID="{70F0081E-F42F-4AF1-8618-94293CAACC0E}"/>
+									</Reference>
+								</ReferenceList>
+							</EffectSlot>
+							<EffectSlot Name="" ID="{37FCDD74-03F8-4845-93F4-A411B4DC2B58}" ShortID="981712666">
+								<ReferenceList>
+									<Reference Name="Effect">
+										<Custom>
+											<Effect Name="Gain (Custom)" ID="{36BE553E-6B99-458A-99FC-C02F4A9BF282}" ShortID="122002127" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+												<PropertyList>
+													<Property Name="FullBandGain" Type="Real32" Value="5.5"/>
+												</PropertyList>
+											</Effect>
+										</Custom>
 									</Reference>
 								</ReferenceList>
 							</EffectSlot>

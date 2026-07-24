@@ -39,6 +39,13 @@
     "StaticLib": "AkPeakLimiterFX"
    },
    {
+    "LibName": "Wwise RoomVerb",
+    "LibId": "7733251",
+    "Type": "Effect",
+    "DLL": "AkRoomVerb",
+    "StaticLib": "AkRoomVerbFX"
+   },
+   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -49,6 +56,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{EF9EBD77-788D-4504-3560-97D0BE444F41}"
+  "FileHash": "{B56DE8C6-88AE-610A-C184-19B95BA99CAB}"
  }
 }

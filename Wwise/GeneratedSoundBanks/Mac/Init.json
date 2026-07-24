@@ -10,12 +10,20 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{08E690DD-56A3-45B3-D958-84C331628890}",
+    "Hash": "{E30976A6-A950-64CB-DAE7-F6D7727AB9A1}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "ShareSets": [
+      {
+       "Id": "48620415",
+       "Name": "Have_U_Ever_Been_Outside",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Exteriors\\Have_U_Ever_Been_Outside",
+       "GUID": "{FE29AE8D-FD86-4652-A95D-68D32F5760EC}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
       {
        "Id": "900190560",
        "Name": "Master_EQ",
@@ -237,7 +245,14 @@
       "Id": "2730119150",
       "Name": "Outdoors",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
-      "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}"
+      "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "48620415"
+        }
+       ]
+      }
      },
      {
       "Id": "2995775460",
@@ -550,6 +565,6 @@
     ]
    }
   ],
-  "FileHash": "{69C75524-9EB7-7D60-4135-34357591FD42}"
+  "FileHash": "{2FD2AD0A-5E0E-2821-2D9B-BADC8D4D709D}"
  }
 }

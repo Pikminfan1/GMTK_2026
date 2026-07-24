@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{DA118689-58AC-0E82-38B9-DEA3DDCBF511}",
+    "Hash": "{1955CEDC-2EA2-1653-D1F2-A29C39BD619E}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
@@ -393,6 +393,14 @@
       "DurationType": "OneShot",
       "DurationMin": "0.118436545",
       "DurationMax": "0.55147964",
+      "AuxBusRefs": [
+       {
+        "Id": "2730119150",
+        "Name": "Outdoors",
+        "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
+        "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}"
+       }
+      ],
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -695,6 +703,6 @@
     ]
    }
   ],
-  "FileHash": "{1F8A70CA-C2F2-47BA-32EC-276184218C1D}"
+  "FileHash": "{34CC271D-94AA-BD85-2DA4-29AEC8766433}"
  }
 }

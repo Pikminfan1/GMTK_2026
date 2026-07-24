@@ -8,6 +8,14 @@
 						<Property Name="FrequencyBand2" Type="Real32" Value="93.92598"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="Verb_Outdoors" ID="{C5ACEBE2-3841-47C2-9CF8-508142D6322D}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+					<PropertyList>
+						<Property Name="ERLevel" Type="Real32" Value="-3"/>
+						<Property Name="ERPattern" Type="int32" Value="1"/>
+						<Property Name="ReverbLevel" Type="Real32" Value="-2"/>
+						<Property Name="RoomSize" Type="Real32" Value="100"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>
