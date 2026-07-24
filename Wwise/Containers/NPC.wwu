@@ -121,7 +121,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="NPC_Pain" ID="{7D4B3623-82FB-457A-8388-8096057ACD1A}" ShortID="720210925">
 							<PropertyList>
-								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
