@@ -22,6 +22,104 @@
 							<ObjectRef Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="NPC_Death" ID="{29D69050-8AE8-4B57-9315-90CB98C91C38}" ShortID="996594745">
+							<PropertyList>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_NPCDeath_Mono_1_Bulba" ID="{DD74A322-33D5-47BB-B12A-C2625A7F13C2}" ShortID="639449707">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCDeath_Mono_1_Bulba" ID="{C7AB3443-9793-4704-A336-4C7D4F9916DD}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.05013"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.11335"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCDeath_Mono_1_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="120210842"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCDeath_Mono_1_Bulba" ID="{C7AB3443-9793-4704-A336-4C7D4F9916DD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_NPCDeath_Mono_3_Bulba" ID="{4D5579F9-2E68-4A30-9045-3818B59F8527}" ShortID="660696072">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCDeath_Mono_3_Bulba" ID="{FC02C7DD-4704-4552-B085-E7615B3FA473}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.1143"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.19999"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCDeath_Mono_3_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="698968429"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCDeath_Mono_3_Bulba" ID="{FC02C7DD-4704-4552-B085-E7615B3FA473}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_NPCDeath_Mono_2_Bulba" ID="{D9FFA4A4-62D0-43D2-97B8-C4B498E4536E}" ShortID="732122151">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCDeath_Mono_2_Bulba" ID="{B5A9EAA5-B072-4491-BB4A-45E832B1EA4B}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0515"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.22892"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCDeath_Mono_2_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="927997342"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCDeath_Mono_2_Bulba" ID="{B5A9EAA5-B072-4491-BB4A-45E832B1EA4B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
 				</PropertyContainer>
 				<PropertyContainer Name="NPCActions" ID="{09C5BBBE-8DE8-493C-BD08-CAD8E2B6E91A}" ShortID="383474643">
 					<PropertyList>

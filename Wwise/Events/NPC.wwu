@@ -14,6 +14,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="NPC_Death" ID="{915C4952-F74B-4193-92A3-14B562573B68}">
+					<ChildrenList>
+						<Action Name="" ID="{8A84AF22-C5AE-4EB4-B9E9-08908353CD15}" ShortID="80078193">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NPC_Death" ID="{29D69050-8AE8-4B57-9315-90CB98C91C38}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

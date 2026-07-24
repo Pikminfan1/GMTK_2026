@@ -10,6 +10,7 @@
 						<ObjectRef Name="Player" ID="{267721AC-3434-4988-BC76-0271F7F5E92D}" WorkUnitID="{267721AC-3434-4988-BC76-0271F7F5E92D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Generic" ID="{CC7CF7E9-E571-4A34-8330-D5260C11C8BE}" WorkUnitID="{CC7CF7E9-E571-4A34-8330-D5260C11C8BE}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Ambience" ID="{344F54AA-E556-4A4E-8D62-F3F71ACFC90F}" WorkUnitID="{344F54AA-E556-4A4E-8D62-F3F71ACFC90F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="NPC" ID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}" WorkUnitID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="GameEvents" ID="{BEC9D9D7-DD1D-4D9D-9A18-229D63F1D6CB}" WorkUnitID="{BEC9D9D7-DD1D-4D9D-9A18-229D63F1D6CB}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
