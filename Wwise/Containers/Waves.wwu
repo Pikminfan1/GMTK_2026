@@ -16,7 +16,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="SFX_GameWaveStart_Stereo_2_Bulba" ID="{A6215565-AC16-4F4D-96D9-C7DD87246F86}" ShortID="466475566">
+						<Sound Name="SFX_GameWaveStart_Stereo_1_Bulba" ID="{A6215565-AC16-4F4D-96D9-C7DD87246F86}" ShortID="466475566">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
@@ -26,18 +26,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="SFX_GameWaveStart_Stereo_2_Bulba" ID="{D04BBB36-554B-444A-B0AA-7411B0118EE9}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0136"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.74161"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>SFX_GameWaveEnd_Stereo_1_Bulba.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="613994929"/>
-									</MediaIDList>
-								</AudioFileSource>
 								<AudioFileSource Name="SFX_GameWaveStart_Stereo_1_Bulba" ID="{6C178A8E-0A02-4F08-BB13-FD6CAED48194}">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -50,12 +38,24 @@
 										<MediaID ID="293233281"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="SFX_GameWaveStart_Stereo_2_Bulba" ID="{2FFD8C95-9C9F-4A08-8513-3673D22A242A}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.74841"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.47806"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SFX_GameWaveStart_Stereo_2_Bulba.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="914865142"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="SFX_GameWaveStart_Stereo_2_Bulba" ID="{D04BBB36-554B-444A-B0AA-7411B0118EE9}" Platform="Linked"/>
+								<ActiveSource Name="SFX_GameWaveStart_Stereo_2_Bulba" ID="{2FFD8C95-9C9F-4A08-8513-3673D22A242A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="SFX_GameWaveEnd_Stereo_2_Bulba" ID="{EA383A6B-1E36-4659-9F64-5F1DCFE4148F}" ShortID="33110045">
+						<Sound Name="SFX_GameWaveEnd_Stereo_1_Bulba" ID="{EA383A6B-1E36-4659-9F64-5F1DCFE4148F}" ShortID="33110045">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
@@ -65,17 +65,16 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="SFX_GameWaveEnd_Stereo_2_Bulba" ID="{AD38F766-F1E1-43F7-A24B-5FABA4DCFA4D}">
-									<ReferenceList/>
+								<AudioFileSource Name="SFX_GameWaveEnd_Stereo_1_Bulba" ID="{8DCF1C0F-CCAD-4EB3-9A9A-5FD924593E9C}">
 									<Language>SFX</Language>
-									<AudioFile>SFX_GameWaveEnd_Stereo_2_Bulba.wav</AudioFile>
+									<AudioFile>SFX_GameWaveEnd_Stereo_1_Bulba.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="990847121"/>
+										<MediaID ID="123786618"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="SFX_GameWaveEnd_Stereo_2_Bulba" ID="{AD38F766-F1E1-43F7-A24B-5FABA4DCFA4D}" Platform="Linked"/>
+								<ActiveSource Name="SFX_GameWaveEnd_Stereo_1_Bulba" ID="{8DCF1C0F-CCAD-4EB3-9A9A-5FD924593E9C}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
