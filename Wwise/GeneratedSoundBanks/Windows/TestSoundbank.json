@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{4E044E23-4ADA-4260-81FE-DE913394A775}",
     "Language": "SFX",
-    "Hash": "{F2AC481C-EFAC-8D2C-DC1F-41F5F4EAE7C0}",
+    "Hash": "{8960524A-959C-A52E-2EE5-3090C58B7CFA}",
     "ObjectPath": "\\SoundBanks\\Debug\\TestSoundbank",
     "ShortName": "TestSoundbank",
     "Path": "TestSoundbank.bnk",
@@ -25,27 +25,9 @@
        "LibId": "6553602"
       }
      ]
-    },
-    "Events": [
-     {
-      "Id": "1164080211",
-      "Name": "EVT_Test",
-      "ObjectPath": "\\Events\\Default Work Unit\\EVT_Test",
-      "GUID": "{EE14A6C8-743F-42AC-BF57-D926DA50D8CB}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.1",
-      "DurationMax": "0.1",
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "1000407848"
-        }
-       ]
-      }
-     }
-    ]
+    }
    }
   ],
-  "FileHash": "{A370D5E3-EE51-B170-7ACE-4D96441E7A06}"
+  "FileHash": "{109AFF62-23F5-CF8B-5C82-10193F8B5A62}"
  }
 }

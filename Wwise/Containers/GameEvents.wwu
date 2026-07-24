@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{55DBB179-6E75-4FF8-AA4D-A55783A166F2}" SchemaVersion="133" RootDocumentID="{5EA49094-6348-4633-A22A-242A593CDF7A}" ParentDocumentID="{5EA49094-6348-4633-A22A-242A593CDF7A}">
+	<Containers>
+		<WorkUnit Name="GameEvents" ID="{55DBB179-6E75-4FF8-AA4D-A55783A166F2}" OwnerID="{5EA49094-6348-4633-A22A-242A593CDF7A}" PersistMode="Nested">
+			<ChildrenList>
+				<WorkUnit Name="Waves" ID="{04587476-D33D-4081-9715-B7828A2CA1A1}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

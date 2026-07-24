@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AECEFD25-F5CE-40FD-924F-53384963B6ED}" SchemaVersion="133">
+	<SoundcasterSessions>
+		<WorkUnit Name="Ambience" ID="{AECEFD25-F5CE-40FD-924F-53384963B6ED}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="SC_Ambience" ID="{3AC0EE8F-FD1E-4D8F-9300-22C20165B615}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Ambience_Play" ID="{7F7D7CE3-98D9-494C-AD8E-AD6A760D9988}" WorkUnitID="{344F54AA-E556-4A4E-8D62-F3F71ACFC90F}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambience_Stop" ID="{1736C940-345B-4547-B0C2-7FB1F3AA1615}" WorkUnitID="{344F54AA-E556-4A4E-8D62-F3F71ACFC90F}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>
