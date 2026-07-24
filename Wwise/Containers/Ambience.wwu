@@ -26,7 +26,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+							<ObjectRef Name="2DAmbience" ID="{6CA633B0-A874-4DEF-AB25-4B80EC215A4A}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>

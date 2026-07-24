@@ -9,8 +9,15 @@
 			<ChildrenList>
 				<PropertyContainer Name="PlayerLocomotion" ID="{59A144BC-EF2B-489E-9E36-42B0173F877C}" ShortID="264744579">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
 								<Value>-9</Value>
@@ -23,9 +30,6 @@
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="PlayerLocomotion" ID="{F706F1B3-99E9-4E33-9902-C07B65469D7A}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Outdoors" ID="{1925E056-166D-4DD7-AB68-8EA81697C003}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>

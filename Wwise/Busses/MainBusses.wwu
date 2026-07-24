@@ -20,10 +20,25 @@
 												<Bus Name="PlayerWeapons" ID="{8EEF11CD-7B0C-4E69-8473-D8CA830847AA}"/>
 											</ChildrenList>
 										</Bus>
-										<Bus Name="PlayerLocomotion" ID="{F706F1B3-99E9-4E33-9902-C07B65469D7A}"/>
+										<Bus Name="PlayerLocomotion" ID="{F706F1B3-99E9-4E33-9902-C07B65469D7A}">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+										</Bus>
 									</ChildrenList>
 								</Bus>
 								<Bus Name="Ambience" ID="{4AE7ACDA-9A33-4550-AB26-A275524C9351}">
+									<PropertyList>
+										<Property Name="OutputBusVolume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ChildrenList>
 										<Bus Name="2DAmbience" ID="{6CA633B0-A874-4DEF-AB25-4B80EC215A4A}"/>
 										<Bus Name="3DAmbience" ID="{FEC9235C-6435-44BB-A3B9-88C7C778201D}"/>

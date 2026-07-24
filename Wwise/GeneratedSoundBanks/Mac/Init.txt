@@ -1,6 +1,7 @@
 Switch Group	ID	Name			Wwise Object Path	Notes
 	48152839	RainType			\Generic\RainType	
 	1493153371	PlayerSpeed			\Player\PlayerSpeed	
+	2533675384	PlayerAmmo			\Player\PlayerAmmo	
 
 Switch	ID	Name	Switch Group			Notes
 	991379416	FullRain	RainType			
@@ -11,6 +12,8 @@ Switch	ID	Name	Switch Group			Notes
 	712161704	Run	PlayerSpeed			
 	1296465089	Sprint	PlayerSpeed			
 	2108779966	Walk	PlayerSpeed			
+	3354297748	Empty	PlayerAmmo			
+	3620752402	Loaded	PlayerAmmo			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	778922764	GameplayState			\Generic\GameplayState	
@@ -59,6 +62,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	2246998526	Main Audio Bus			\MainBusses\Main Audio Bus	
 	2251568080	ObjectPickup			\MainBusses\Main Audio Bus\World\Objects\ObjectPickup	
 	2343802269	PlayerLocomotion			\MainBusses\Main Audio Bus\World\Player\PlayerLocomotion	
+	2368351591	NPCActions			\MainBusses\Main Audio Bus\World\NPCs\NPCActions	
 	2609808943	World			\MainBusses\Main Audio Bus\World	
 	2702185859	PlayerCombatActions			\MainBusses\Main Audio Bus\World\Player\PlayerCombat\PlayerCombatActions	
 	2940432316	Stingers			\MainBusses\Main Audio Bus\Non-World\Music\Stingers	

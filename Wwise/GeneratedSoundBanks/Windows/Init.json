@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{BDB7F051-1C06-6571-0A17-885CE4C375ED}",
+    "Hash": "{B58FC0EA-D7A2-2BDC-E3CB-D2B3BFE64C74}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -195,6 +195,12 @@
       "GUID": "{F706F1B3-99E9-4E33-9902-C07B65469D7A}"
      },
      {
+      "Id": "2368351591",
+      "Name": "NPCActions",
+      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\NPCs\\NPCActions",
+      "GUID": "{1332443F-AFEF-4643-8236-2C139FFE9AA7}"
+     },
+     {
       "Id": "2609808943",
       "Name": "World",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World",
@@ -222,7 +228,8 @@
       "Id": "3545700988",
       "Name": "Reverbs",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs",
-      "GUID": "{944D548D-F8AA-4C46-98D6-CB08A9D4D1D3}"
+      "GUID": "{944D548D-F8AA-4C46-98D6-CB08A9D4D1D3}",
+      "Color": "24"
      },
      {
       "Id": "3991942870",
@@ -248,19 +255,22 @@
       "Id": "602546716",
       "Name": "Room_Large",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Room_Large",
-      "GUID": "{ECB2B324-77C5-4EB4-AD62-7E75AC58FCA2}"
+      "GUID": "{ECB2B324-77C5-4EB4-AD62-7E75AC58FCA2}",
+      "Color": "24"
      },
      {
       "Id": "1990128658",
       "Name": "Room_Medium",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Room_Medium",
-      "GUID": "{65FE0A3A-3C20-4621-8416-07760CF0F4D9}"
+      "GUID": "{65FE0A3A-3C20-4621-8416-07760CF0F4D9}",
+      "Color": "24"
      },
      {
       "Id": "2730119150",
       "Name": "Outdoors",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
       "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}",
+      "Color": "24",
       "PluginRefs": {
        "ShareSets": [
         {
@@ -273,13 +283,15 @@
       "Id": "2995775460",
       "Name": "Room_Small",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Room_Small",
-      "GUID": "{E0D9BC87-EF3E-4ED7-9B11-F65A2301ACCB}"
+      "GUID": "{E0D9BC87-EF3E-4ED7-9B11-F65A2301ACCB}",
+      "Color": "24"
      },
      {
       "Id": "4122393694",
       "Name": "Cave",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Cave",
-      "GUID": "{1618779C-6D79-42CC-BE24-5B192AE46F9B}"
+      "GUID": "{1618779C-6D79-42CC-BE24-5B192AE46F9B}",
+      "Color": "24"
      }
     ],
     "GameParameters": [
@@ -312,6 +324,12 @@
       "Name": "RTPC_FlyCount",
       "ObjectPath": "\\Game Parameters\\Generic\\RTPC_FlyCount",
       "GUID": "{A94098B4-8EDD-40B3-8148-AC62C66A477C}"
+     },
+     {
+      "Id": "1370132602",
+      "Name": "RTPC_PlayerAmmo",
+      "ObjectPath": "\\Game Parameters\\Player\\RTPC_PlayerAmmo",
+      "GUID": "{2B746929-9453-45FF-9C67-310FC96EEAB9}"
      },
      {
       "Id": "2653406601",
@@ -546,6 +564,29 @@
       ]
      },
      {
+      "Id": "2533675384",
+      "Name": "PlayerAmmo",
+      "ObjectPath": "\\Switches\\Player\\PlayerAmmo",
+      "GUID": "{942B5B2B-0FF8-40E6-9AF3-C32BC6520B85}",
+      "GameParameterRef": {
+       "Id": "1370132602"
+      },
+      "Switches": [
+       {
+        "Id": "3354297748",
+        "Name": "Empty",
+        "ObjectPath": "\\Switches\\Player\\PlayerAmmo\\Empty",
+        "GUID": "{F9A2AF1A-DF83-40D1-B745-3E7490E85A5F}"
+       },
+       {
+        "Id": "3620752402",
+        "Name": "Loaded",
+        "ObjectPath": "\\Switches\\Player\\PlayerAmmo\\Loaded",
+        "GUID": "{E119A801-FC68-4C7E-B7A4-19BC1189F2BD}"
+       }
+      ]
+     },
+     {
       "Id": "3072116243",
       "Name": "GroundMaterial",
       "ObjectPath": "\\Switches\\Generic\\GroundMaterial",
@@ -580,6 +621,6 @@
     ]
    }
   ],
-  "FileHash": "{4B91112A-894C-000A-E5D9-6B4E1F2DE64D}"
+  "FileHash": "{715ADDFA-7E68-49AA-2CB7-A1164FD74E3E}"
  }
 }
