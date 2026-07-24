@@ -14,10 +14,13 @@ class UInputMappingContext;
  * pause/menu input handling later.
  */
 UCLASS()
-class GMTK_2026_API ABasePlayerController : public APlayerController
+class GMTK_2026_API ABasePlayerController : public APlayerController , public IGenericTeamAgentInterface
 {
 	GENERATED_BODY()
-	
+public:
+	//~ Begin IGenericTeamAgentInterface
+	virtual FGenericTeamId GetGenericTeamId() const override;
+	//~ End IGenericTeamAgentInterface
 protected:
 	virtual void BeginPlay() override;
 

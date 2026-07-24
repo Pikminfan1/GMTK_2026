@@ -5,6 +5,12 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputMappingContext.h"
 #include "Utility/LogChannels.h"
+#include "Utility/CombatTeams.h"
+
+FGenericTeamId ABasePlayerController::GetGenericTeamId() const
+{
+	return CombatTeams::Player;
+}
 
 void ABasePlayerController::BeginPlay()
 {

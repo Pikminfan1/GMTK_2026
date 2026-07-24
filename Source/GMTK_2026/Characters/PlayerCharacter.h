@@ -59,13 +59,31 @@ protected:
 	// Weapon spawned and attached automatically in BeginPlay.
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Combat")
 	TSubclassOf<AWeaponBase> DefaultWeaponClass;
-
+	
+	// Used to determine if the player should be dual wielding or not
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Combat")
+	bool bIsDualWielding = true;
+	
+	//Determines if the player should be using the alternate fire mode or not
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Combat")
+	bool bIsAltFire = true;
+	
+	// Determines if the player should be firing from the right or left hand
+	bool bFireRight = true;
+	
 	// Socket on THIS character's skeletal mesh (a hand socket, typically) that the weapon attaches to.
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Combat")
-	FName WeaponAttachSocketName = "WeaponSocket";
+	FName WeaponAttachSocketNameR = "WeaponSocket_R";
+	
+	// Socket on THIS character's skeletal mesh (a hand socket, typically) that the weapon attaches to.
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Combat")
+	FName WeaponAttachSocketNameL = "WeaponSocket_L";
 
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
-	TObjectPtr<AWeaponBase> EquippedWeapon;
+	TObjectPtr<AWeaponBase> EquippedWeaponL;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Combat")
+	TObjectPtr<AWeaponBase> EquippedWeaponR;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
 	bool bIsAiming = false;

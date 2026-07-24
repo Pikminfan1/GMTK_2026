@@ -26,7 +26,7 @@ APlayerCharacter::APlayerCharacter()
 		Movement->RotationRate = FRotator(0.f, 540.f, 0.f);
 	}
 }
-
+//TODO: Account for single weapons, (shotguns)
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
@@ -38,11 +38,15 @@ void APlayerCharacter::BeginPlay()
 		SpawnParams.Instigator = this;
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-		EquippedWeapon = GetWorld()->SpawnActor<AWeaponBase>(DefaultWeaponClass, GetActorTransform(), SpawnParams);
-		if (EquippedWeapon)
+		EquippedWeaponL = GetWorld()->SpawnActor<AWeaponBase>(DefaultWeaponClass, GetActorTransform(), SpawnParams);
+		EquippedWeaponR = GetWorld()->SpawnActor<AWeaponBase>(DefaultWeaponClass, GetActorTransform(), SpawnParams);
+		if (EquippedWeaponL && EquippedWeaponR)
 		{
-			EquippedWeapon->Equip(this);
-			EquippedWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketName);
+			EquippedWeaponL->Equip(this);
+			EquippedWeaponL->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketNameL);
+
+			EquippedWeaponR->Equip(this);
+			EquippedWeaponR->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketNameR);
 		}
 	}
 	else
@@ -111,15 +115,65 @@ void APlayerCharacter::Look(const FInputActionValue& Value)
 
 void APlayerCharacter::StartFire(const FInputActionValue& Value)
 {
-	if (EquippedWeapon)
+	if (bIsDualWielding)
 	{
-		EquippedWeapon->Fire();
+		if (bIsAltFire)
+		{
+			// Fire the hand indicated by bFireRight; fall through to the other hand if it's empty
+			AWeaponBase* PrimaryHand   = bFireRight ? EquippedWeaponR : EquippedWeaponL;
+			AWeaponBase* SecondaryHand = bFireRight ? EquippedWeaponL : EquippedWeaponR;
+
+			if (PrimaryHand)
+			{
+				PrimaryHand->Fire();
+				bFireRight = !bFireRight;
+			}
+			else if (SecondaryHand)
+			{
+				SecondaryHand->Fire();
+				// Leave bFireRight as-is so the next press returns to the intended hand
+			}
+			else
+			{
+				UE_LOG(LogGMTKCombat, Verbose, TEXT("Alt fire input received but no weapon is equipped"));
+			}
+		}
+		else
+		{
+			// Simultaneous fire: fire whichever hands are equipped
+			bool bFired = false;
+
+			if (EquippedWeaponR)
+			{
+				EquippedWeaponR->Fire();
+				bFired = true;
+			}
+			if (EquippedWeaponL)
+			{
+				EquippedWeaponL->Fire();
+				bFired = true;
+			}
+
+			if (!bFired)
+			{
+				UE_LOG(LogGMTKCombat, Verbose, TEXT("Dual fire input received but no weapon is equipped"));
+			}
+		}
 	}
 	else
 	{
-		UE_LOG(LogGMTKCombat, Verbose, TEXT("Fire input received but no weapon is equipped"));
+		if (EquippedWeaponR)
+		{
+			EquippedWeaponR->Fire();
+		}
+		else
+		{
+			UE_LOG(LogGMTKCombat, Verbose, TEXT("Fire input received but no weapon is equipped"));
+		}
 	}
 }
+	
+
 
 void APlayerCharacter::StartAim(const FInputActionValue& Value)
 {
