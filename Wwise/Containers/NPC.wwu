@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}" SchemaVersion="133" RootDocumentID="{38282CAE-841C-4993-AD65-B53E6DCDEDF3}" ParentDocumentID="{38282CAE-841C-4993-AD65-B53E6DCDEDF3}">
+	<Containers>
+		<WorkUnit Name="NPC" ID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}" OwnerID="{38282CAE-841C-4993-AD65-B53E6DCDEDF3}" PersistMode="Nested">
+			<ChildrenList>
+				<PropertyContainer Name="NPCLocomotion" ID="{CC3F401E-0777-4FDA-8F87-39F11FA349B1}" ShortID="659776278">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="NPCLocomotion" ID="{2B45A8A7-9841-4E20-975F-EE4AF534F605}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+						</Reference>
+					</ReferenceList>
+				</PropertyContainer>
+				<PropertyContainer Name="NPCCombat" ID="{510C603C-A975-4AEF-8B11-797A18AE379D}" ShortID="610173703">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+						</Reference>
+					</ReferenceList>
+				</PropertyContainer>
+				<PropertyContainer Name="NPCActions" ID="{09C5BBBE-8DE8-493C-BD08-CAD8E2B6E91A}" ShortID="383474643">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ATT_Generic_200" ID="{79CA2108-D3D6-4BEF-AE0E-61A619222A1D}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="NPCActions" ID="{1332443F-AFEF-4643-8236-2C139FFE9AA7}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="NPC_Spawn" ID="{D3C1D72C-51DE-4FC1-BE09-B9790E9EE4DA}" ShortID="697895905">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SourcePlugin Name="Tone Generator" ID="{CB283452-A17E-47FA-BA8A-A59C72D724F1}" ShortID="956524932" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+									<PropertyList>
+										<Property Name="FixDur" Type="Real32" Value="0.1"/>
+										<Property Name="StartFreq" Type="Real32" Value="220"/>
+									</PropertyList>
+									<Language>SFX</Language>
+								</SourcePlugin>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Tone Generator" ID="{CB283452-A17E-47FA-BA8A-A59C72D724F1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</PropertyContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

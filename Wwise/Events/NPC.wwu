@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="NPC" ID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="NPC_Spawn" ID="{21F256B3-C993-4BB3-9692-6FBA3183FA3B}">
+					<ChildrenList>
+						<Action Name="" ID="{49636F3D-7D6A-4136-8AE7-D4A5570C5550}" ShortID="798416725">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NPC_Spawn" ID="{D3C1D72C-51DE-4FC1-BE09-B9790E9EE4DA}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -34,6 +34,7 @@
 										<Bus Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}"/>
 										<Bus Name="NPCLocomotion" ID="{2B45A8A7-9841-4E20-975F-EE4AF534F605}"/>
 										<Bus Name="NPCVocals" ID="{992199C8-302C-4EE2-9C4A-D9094B6CB76F}"/>
+										<Bus Name="NPCActions" ID="{1332443F-AFEF-4643-8236-2C139FFE9AA7}"/>
 									</ChildrenList>
 								</Bus>
 								<Bus Name="Objects" ID="{6B96A338-66AD-4F7A-ABF7-6247EA034591}">
