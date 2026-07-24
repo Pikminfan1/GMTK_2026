@@ -4,6 +4,8 @@
 #include "Interfaces/Damageable.h"
 #include "Utility/LogChannels.h"
 #include "DrawDebugHelpers.h"
+#include "Camera/CameraComponent.h"
+#include "Characters/PlayerCharacter.h"
 
 // Sets default values
 AWeaponBase::AWeaponBase()
@@ -27,6 +29,15 @@ void AWeaponBase::BeginPlay()
 void AWeaponBase::Equip(AActor* NewOwnerActor)
 {
 	SetOwner(NewOwnerActor);
+
+	if (APlayerCharacter* PlayerOwner = Cast<APlayerCharacter>(NewOwnerActor))
+	{
+		CachedAimCamera = PlayerOwner->GetFollowCamera();
+	}
+	else
+	{
+		CachedAimCamera = nullptr;
+	}
 }
 
 void AWeaponBase::Fire()
@@ -61,15 +72,27 @@ void AWeaponBase::Reload()
 
 void AWeaponBase::FireHitscan()
 {
-	if (!WeaponMesh || !WeaponMesh->DoesSocketExist(MuzzleSocketName))
+	FVector TraceStart;
+	FVector TraceDirection;
+
+	if (CachedAimCamera)
 	{
-		UE_LOG(LogGMTKCombat, Warning, TEXT("%s has no muzzle socket named %s"), *GetName(), *MuzzleSocketName.ToString());
+		TraceStart = CachedAimCamera->GetComponentLocation();
+		TraceDirection = CachedAimCamera->GetForwardVector();
+	}
+	else if (WeaponMesh && WeaponMesh->DoesSocketExist(MuzzleSocketName))
+	{
+		const FTransform MuzzleTransform = WeaponMesh->GetSocketTransform(MuzzleSocketName);
+		TraceStart = MuzzleTransform.GetLocation();
+		TraceDirection = MuzzleTransform.GetRotation().GetForwardVector();
+	}
+	else
+	{
+		UE_LOG(LogGMTKCombat, Warning, TEXT("%s has no aim camera and no muzzle socket named %s - cannot fire"), *GetName(), *MuzzleSocketName.ToString());
 		return;
 	}
 
-	const FTransform MuzzleTransform = WeaponMesh->GetSocketTransform(MuzzleSocketName);
-	const FVector Start = MuzzleTransform.GetLocation();
-	const FVector End = Start + MuzzleTransform.GetRotation().GetForwardVector() * HitscanRange;
+	const FVector TraceEnd = TraceStart + TraceDirection * HitscanRange;
 
 	FHitResult Hit;
 	FCollisionQueryParams Params;
@@ -79,13 +102,13 @@ void AWeaponBase::FireHitscan()
 		Params.AddIgnoredActor(CurrentOwner);
 	}
 
-	const bool bHit = GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Pawn, Params);
+	const bool bHit = GetWorld()->LineTraceSingleByChannel(Hit, TraceStart, TraceEnd, ECC_Pawn, Params);
 
 #if ENABLE_DRAW_DEBUG
 	if (bShowDebugTrace)
 	{
-		const FVector TraceEnd = bHit ? Hit.ImpactPoint : End;
-		DrawDebugLine(GetWorld(), Start, TraceEnd, bHit ? FColor::Green : FColor::Red, false, 2.f, 0, 1.5f);
+		const FVector DebugEnd = bHit ? Hit.ImpactPoint : TraceEnd;
+		DrawDebugLine(GetWorld(), TraceStart, DebugEnd, bHit ? FColor::Green : FColor::Red, false, 2.f, 0, 1.5f);
 		if (bHit)
 		{
 			DrawDebugSphere(GetWorld(), Hit.ImpactPoint, 8.f, 12, FColor::Yellow, false, 2.f);

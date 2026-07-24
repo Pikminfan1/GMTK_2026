@@ -25,6 +25,9 @@ public:
 	APlayerCharacter();
 	UFUNCTION(BlueprintPure, Category = "Combat")
 	bool IsAiming() const { return bIsAiming; }
+	
+	UFUNCTION(BlueprintPure, Category = "Camera")
+	UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
 protected:
 	virtual void BeginPlay() override;

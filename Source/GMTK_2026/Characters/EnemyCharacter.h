@@ -21,4 +21,7 @@ public:
 
 	UFUNCTION(BlueprintPure, Category = "AI")
 	AEnemyAIController* GetEnemyAIController() const;
+	
+	UFUNCTION(BlueprintCallable, Category = "AI")
+	float SetMovementSpeed(EEnemyMovementSpeed NewSpeed);
 };

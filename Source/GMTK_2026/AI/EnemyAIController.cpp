@@ -40,6 +40,9 @@ void AEnemyAIController::OnPossess(APawn* InPawn)
 			}
 		}
 		RunBehaviorTree(BehaviorTreeAsset);
+		//GetWorld()->GetFirstPlayerController()->GetCharacter();
+		//Blackboard->SetValueAsObject(AttackTargetKeyName, TargetActor);
+		
 	}
 	else
 	{

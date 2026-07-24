@@ -8,6 +8,7 @@
 
 class USkeletalMeshComponent;
 class AProjectileBase;
+class UCameraComponent;
 
 UENUM(BlueprintType)
 enum class EWeaponFireMode : uint8
@@ -44,8 +45,12 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon" , meta = (AllowPrivateAccess = "true"))
+
+	// Cached once in Equip() rather than re-cast on every shot - null if the current owner has no camera to aim from.
+	UPROPERTY()
+	TObjectPtr<UCameraComponent> CachedAimCamera;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<USkeletalMeshComponent> WeaponMesh;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
