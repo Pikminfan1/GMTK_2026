@@ -47,10 +47,29 @@
 									</ChildrenList>
 								</Bus>
 								<Bus Name="Reverbs" ID="{944D548D-F8AA-4C46-98D6-CB08A9D4D1D3}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="24"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ChildrenList>
-										<AuxBus Name="Room_Small" ID="{E0D9BC87-EF3E-4ED7-9B11-F65A2301ACCB}"/>
-										<AuxBus Name="Room_Medium" ID="{65FE0A3A-3C20-4621-8416-07760CF0F4D9}"/>
-										<AuxBus Name="Room_Large" ID="{ECB2B324-77C5-4EB4-AD62-7E75AC58FCA2}"/>
+										<AuxBus Name="Room_Small" ID="{E0D9BC87-EF3E-4ED7-9B11-F65A2301ACCB}">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="24"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+										</AuxBus>
+										<AuxBus Name="Room_Medium" ID="{65FE0A3A-3C20-4621-8416-07760CF0F4D9}">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="24"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+										</AuxBus>
+										<AuxBus Name="Room_Large" ID="{ECB2B324-77C5-4EB4-AD62-7E75AC58FCA2}">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="24"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+										</AuxBus>
 										<AuxBus Name="Outdoors" ID="{1925E056-166D-4DD7-AB68-8EA81697C003}">
 											<PropertyList>
 												<Property Name="BusVolume" Type="Real64">
@@ -58,6 +77,8 @@
 														<Value>-3</Value>
 													</ValueList>
 												</Property>
+												<Property Name="Color" Type="int16" Value="24"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
 											</PropertyList>
 											<ObjectLists>
 												<ObjectList Name="Effects">
@@ -71,7 +92,12 @@
 												</ObjectList>
 											</ObjectLists>
 										</AuxBus>
-										<AuxBus Name="Cave" ID="{1618779C-6D79-42CC-BE24-5B192AE46F9B}"/>
+										<AuxBus Name="Cave" ID="{1618779C-6D79-42CC-BE24-5B192AE46F9B}">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="24"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+										</AuxBus>
 									</ChildrenList>
 								</Bus>
 							</ChildrenList>
