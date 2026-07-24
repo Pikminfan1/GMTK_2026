@@ -2,18 +2,24 @@ Event	ID	Name			Wwise Object Path	Notes
 	216067002	UI_Confirm			\UI\UI_Confirm	
 	700716975	UI_Denied			\UI\UI_Denied	
 	733168346	Game_Start			\Generic\Game_Start	
+	871813740	Player_Hit			\Player\PlayerCombat\Player_Hit	
 	938457140	UI_Slider_Stop			\UI\UI_Slider_Stop	
 	990816403	UI_GameBegin			\UI\UI_GameBegin	
 	1145501800	UI_Slider_Start			\UI\UI_Slider_Start	
 	1359982855	Game_Unpause			\Generic\Game_Unpause	
+	1496310610	Ambience_Play			\Ambience\Ambience_Play	
 	2024222415	UI_Back			\UI\UI_Back	
 	2033512703	Game_Wave_End			\GameEvents\Game_Wave_End	
 	2118900976	UI_Hover			\UI\UI_Hover	
 	2249769530	UI_Click			\UI\UI_Click	
 	2453392179	Player_Footstep			\Player\PlayerLocomotion\Player_Footstep	
 	2772308904	Game_Pause			\Generic\Game_Pause	
+	3079583356	Player_Evade			\Player\PlayerLocomotion\Player_Evade	
+	3083087645	Player_Death			\Player\PlayerCombat\Player_Death	
+	3166394572	Ambience_Stop			\Ambience\Ambience_Stop	
 	3545070188	Game_Init			\Generic\Game_Init	
 	3610725078	Player_JumpLand			\Player\PlayerLocomotion\Player_JumpLand	
+	3763496167	Player_JumpStart			\Player\PlayerLocomotion\Player_JumpStart	
 	4036891676	Game_Wave_Start			\GameEvents\Game_Wave_Start	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -59,4 +65,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	943985641	sfx_player_fs_grass02_mo_fm	.cache\E4\{E40AC205-ED98-6067-D50C-3F11BDD8548C}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass02_mo_fm		32204
 	1057495068	UI_Back	.cache\4C\{4C4A1E64-D6EE-9AAF-3A3A-6F0BB45C32D0}.wem		\Containers\UI\CoreUI\UI_Back		265500
 	1071347720	sfx_player_fs_water05_mo_fm	.cache\B0\{B079797B-A3B4-C35D-28A0-537778D4684D}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water05_mo_fm		44720
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	118269225	amb2d_outdoorsBed01_lp_st_fm	.cache\19\{1954698C-4EB4-A613-AAF5-1D3F2F3DA766}.wem	118269225.wem	\Containers\World\Ambience\Amb2D\Amb2D_Courtyard_Bed\amb2d_outdoorsBed01_lp_st_fm	
+	334497531	amb2d_outdoorsBed02_lp_st_fm	.cache\8D\{8D4A79BE-1D97-BAAB-8037-84535739BCDE}.wem	334497531.wem	\Containers\World\Ambience\Amb2D\Amb2D_Courtyard_Bed\amb2d_outdoorsBed02_lp_st_fm	
 

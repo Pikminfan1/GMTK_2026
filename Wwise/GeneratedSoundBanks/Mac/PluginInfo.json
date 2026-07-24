@@ -46,6 +46,13 @@
     "StaticLib": "AkRoomVerbFX"
    },
    {
+    "LibName": "Wwise Gain",
+    "LibId": "9109507",
+    "Type": "Effect",
+    "DLL": "AkGain",
+    "StaticLib": "AkGainFX"
+   },
+   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -56,6 +63,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{24310445-7E71-0439-3172-CB720A0AA9DE}"
+  "FileHash": "{39EF4CBA-9C1F-6097-E7C0-6CE840813D27}"
  }
 }

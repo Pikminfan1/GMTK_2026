@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{1955CEDC-2EA2-1653-D1F2-A29C39BD619E}",
+    "Hash": "{4980A0B0-3B31-4C23-91EE-B53CFE974C91}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
@@ -88,6 +88,15 @@
       "CachePath": "7F/{7F2E2E16-E1D6-908C-AA12-EFEE58E03AF4}.wem"
      },
      {
+      "Id": "118269225",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "amb2d_outdoorsBed01_lp_st_fm.wav",
+      "Path": "Media/118269225.wem",
+      "CachePath": "19/{1954698C-4EB4-A613-AAF5-1D3F2F3DA766}.wem"
+     },
+     {
       "Id": "174541427",
       "Language": "SFX",
       "Streaming": "false",
@@ -102,6 +111,15 @@
       "Location": "Memory",
       "ShortName": "SFX_GameWaveStart_Stereo_1_Bulba.wav",
       "CachePath": "6D/{6D0339E0-DB38-F125-E8B4-517FC6F638A1}.wem"
+     },
+     {
+      "Id": "334497531",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "amb2d_outdoorsBed02_lp_st_fm.wav",
+      "Path": "Media/334497531.wem",
+      "CachePath": "8D/{8D4A79BE-1D97-BAAB-8037-84535739BCDE}.wem"
      },
      {
       "Id": "339785647",
@@ -282,6 +300,31 @@
     ],
     "Events": [
      {
+      "Id": "1496310610",
+      "Name": "Ambience_Play",
+      "ObjectPath": "\\Events\\Ambience\\Ambience_Play",
+      "GUID": "{7F7D7CE3-98D9-494C-AD8E-AD6A760D9988}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "118269225"
+       },
+       {
+        "Id": "334497531"
+       }
+      ]
+     },
+     {
+      "Id": "3166394572",
+      "Name": "Ambience_Stop",
+      "ObjectPath": "\\Events\\Ambience\\Ambience_Stop",
+      "GUID": "{1736C940-345B-4547-B0C2-7FB1F3AA1615}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "3545070188",
       "Name": "Game_Init",
       "ObjectPath": "\\Events\\Generic\\Game_Init",
@@ -384,6 +427,26 @@
         "Id": "293233281"
        }
       ]
+     },
+     {
+      "Id": "3083087645",
+      "Name": "Player_Death",
+      "ObjectPath": "\\Events\\Player\\PlayerCombat\\Player_Death",
+      "GUID": "{D5FB05DA-69C2-4E8D-8037-E1546E1B8313}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3079583356",
+      "Name": "Player_Evade",
+      "ObjectPath": "\\Events\\Player\\PlayerLocomotion\\Player_Evade",
+      "GUID": "{A5FB40A8-9E52-4C29-80B3-29EA07240046}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      },
      {
       "Id": "2453392179",
@@ -523,8 +586,140 @@
           "Id": "741894269"
          }
         ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3072116243",
+         "Id": "2185786256",
+         "GUID": "{80146527-6D28-4DB3-BF98-2F63780C8D95}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "95351286"
+         },
+         {
+          "Id": "99727932"
+         },
+         {
+          "Id": "488679294"
+         },
+         {
+          "Id": "698699718"
+         },
+         {
+          "Id": "766849001"
+         },
+         {
+          "Id": "810403928"
+         },
+         {
+          "Id": "925016750"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3072116243",
+         "Id": "4248645337",
+         "GUID": "{86697764-0D1F-4610-BACF-4E36E3F1FEBF}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "360556948"
+         },
+         {
+          "Id": "606561105"
+         },
+         {
+          "Id": "621311079"
+         },
+         {
+          "Id": "705515410"
+         },
+         {
+          "Id": "822825595"
+         },
+         {
+          "Id": "943985641"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3072116243",
+         "Id": "2654748154",
+         "GUID": "{4DBABE6C-B1B2-4F92-A75E-963F8BFE2A81}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "62002764"
+         },
+         {
+          "Id": "115118834"
+         },
+         {
+          "Id": "668729395"
+         },
+         {
+          "Id": "706710518"
+         },
+         {
+          "Id": "820646846"
+         },
+         {
+          "Id": "837232218"
+         },
+         {
+          "Id": "1071347720"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3072116243",
+         "Id": "841620460",
+         "GUID": "{2909E49A-F254-4BEC-8412-78C656B898F4}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "63900270"
+         },
+         {
+          "Id": "96800232"
+         },
+         {
+          "Id": "99888205"
+         },
+         {
+          "Id": "106114498"
+         },
+         {
+          "Id": "174541427"
+         },
+         {
+          "Id": "339785647"
+         },
+         {
+          "Id": "741894269"
+         }
+        ]
        }
       ]
+     },
+     {
+      "Id": "871813740",
+      "Name": "Player_Hit",
+      "ObjectPath": "\\Events\\Player\\PlayerCombat\\Player_Hit",
+      "GUID": "{522E92C0-CB47-4E3E-9C1F-33E9713D5C5A}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      },
      {
       "Id": "3610725078",
@@ -535,6 +730,16 @@
       "DurationMin": "0",
       "DurationMax": "0",
       "SwitchContainers": []
+     },
+     {
+      "Id": "3763496167",
+      "Name": "Player_JumpStart",
+      "ObjectPath": "\\Events\\Player\\PlayerLocomotion\\Player_JumpStart",
+      "GUID": "{45A926FF-C7BB-4934-915B-27BBCB7DEC80}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      },
      {
       "Id": "2024222415",
@@ -703,6 +908,6 @@
     ]
    }
   ],
-  "FileHash": "{B9755806-7BBF-663F-45F3-349842AB5454}"
+  "FileHash": "{A1AAB35A-77C7-6C31-2E6C-5B47BFCDA995}"
  }
 }
