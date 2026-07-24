@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{4980A0B0-3B31-4C23-91EE-B53CFE974C91}",
+    "Hash": "{63017EEC-057E-AD6E-5191-05FC64AE896B}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
@@ -88,13 +88,13 @@
       "CachePath": "7F/{7F2E2E16-E1D6-908C-AA12-EFEE58E03AF4}.wem"
      },
      {
-      "Id": "118269225",
+      "Id": "129152429",
       "Language": "SFX",
       "Streaming": "true",
       "Location": "Loose",
-      "ShortName": "amb2d_outdoorsBed01_lp_st_fm.wav",
-      "Path": "Media/118269225.wem",
-      "CachePath": "19/{1954698C-4EB4-A613-AAF5-1D3F2F3DA766}.wem"
+      "ShortName": "amb2d_darkBed_lp_st_fm.wav",
+      "Path": "Media/129152429.wem",
+      "CachePath": "43/{43D6C74E-D4EB-DADD-FD79-57B785FB8E08}.wem"
      },
      {
       "Id": "174541427",
@@ -105,21 +105,21 @@
       "CachePath": "86/{86B8626E-C549-CA83-AA5A-7819C05F1B22}.wem"
      },
      {
+      "Id": "201238401",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "amb2d_insects_lp_st_fm.wav",
+      "Path": "Media/201238401.wem",
+      "CachePath": "5C/{5C561BD2-9AF9-EC98-B8BD-E53EFBD6C177}.wem"
+     },
+     {
       "Id": "293233281",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "SFX_GameWaveStart_Stereo_1_Bulba.wav",
       "CachePath": "6D/{6D0339E0-DB38-F125-E8B4-517FC6F638A1}.wem"
-     },
-     {
-      "Id": "334497531",
-      "Language": "SFX",
-      "Streaming": "true",
-      "Location": "Loose",
-      "ShortName": "amb2d_outdoorsBed02_lp_st_fm.wav",
-      "Path": "Media/334497531.wem",
-      "CachePath": "8D/{8D4A79BE-1D97-BAAB-8037-84535739BCDE}.wem"
      },
      {
       "Id": "339785647",
@@ -307,10 +307,10 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "118269225"
+        "Id": "129152429"
        },
        {
-        "Id": "334497531"
+        "Id": "201238401"
        }
       ]
      },
@@ -908,6 +908,6 @@
     ]
    }
   ],
-  "FileHash": "{D4BED653-C002-160A-BD7D-9170647446C1}"
+  "FileHash": "{85FA9BAC-225D-999B-4DED-96C9C7A42FF0}"
  }
 }

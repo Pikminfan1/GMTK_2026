@@ -68,9 +68,21 @@
 												<MediaID ID="118269225"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="amb2d_darkBed_lp_st_fm" ID="{AECD469C-C6DD-443E-9E41-BF3B69D6B21C}">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+											</ReferenceList>
+											<Language>SFX</Language>
+											<AudioFile>amb2d_darkBed_lp_st_fm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="129152429"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="amb2d_outdoorsBed01_lp_st_fm" ID="{33E07278-20C3-4E06-A681-4F9D8AFA397D}" Platform="Linked"/>
+										<ActiveSource Name="amb2d_darkBed_lp_st_fm" ID="{AECD469C-C6DD-443E-9E41-BF3B69D6B21C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="amb2d_outdoorsBed02_lp_st_fm" ID="{A8DABD3A-9CBF-47A0-BBD7-18C3585FEF59}" ShortID="902652562">
@@ -98,9 +110,21 @@
 												<MediaID ID="334497531"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="amb2d_insects_lp_st_fm" ID="{065887BF-EA30-4528-8A7A-BE786AF4449E}">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+											</ReferenceList>
+											<Language>SFX</Language>
+											<AudioFile>amb2d_insects_lp_st_fm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="201238401"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="amb2d_outdoorsBed02_lp_st_fm" ID="{29AF9EB1-5B31-40B6-8698-FAA6E4776BEF}" Platform="Linked"/>
+										<ActiveSource Name="amb2d_insects_lp_st_fm" ID="{065887BF-EA30-4528-8A7A-BE786AF4449E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
