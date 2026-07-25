@@ -90,6 +90,8 @@ void UEnemyLaserAttackComponent::EnterState(ELaserState NewState)
 				FVector::ZeroVector, FRotator::ZeroRotator,
 				EAttachLocation::SnapToTarget, /*bAutoDestroy*/ true);
 		}
+
+		OnWindUpStarted.Broadcast();
 		break;
 	}
 
@@ -108,6 +110,7 @@ void UEnemyLaserAttackComponent::EnterState(ELaserState NewState)
 
 		DamageAccumulator = 0.f;
 		SpawnBeamFX();
+		OnFiringStarted.Broadcast();
 		break;
 	}
 
@@ -115,6 +118,7 @@ void UEnemyLaserAttackComponent::EnterState(ELaserState NewState)
 	{
 		Target = nullptr;
 		OnLaserFinished.Broadcast();
+		OnCooldownStarted.Broadcast();
 		break;
 	}
 

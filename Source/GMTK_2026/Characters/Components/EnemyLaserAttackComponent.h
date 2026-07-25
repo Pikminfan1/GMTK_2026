@@ -18,6 +18,9 @@ enum class ELaserState : uint8
 };
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLaserFinished);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLaserWindUpStarted);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLaserFiringStarted);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLaserCooldownStarted);
 
 /**
  * The sustained-beam ranged attack: a telegraphed wind-up, then a continuous beam
@@ -71,6 +74,19 @@ public:
 	/** Fires when the attack ends for any reason - completion, LOS loss, or abort. */
 	UPROPERTY(BlueprintAssignable, Category = "Laser")
 	FOnLaserFinished OnLaserFinished;
+
+	/** Fires when the wind-up (telegraph) phase begins. Hook charge-up VFX/SFX. */
+	UPROPERTY(BlueprintAssignable, Category = "Laser")
+	FOnLaserWindUpStarted OnWindUpStarted;
+
+	/** Fires when the beam actually starts firing. Hook the beam-start flash/boom. */
+	UPROPERTY(BlueprintAssignable, Category = "Laser")
+	FOnLaserFiringStarted OnFiringStarted;
+
+	/** Fires when the attack ends and cooldown begins. Same moment as OnLaserFinished,
+	 *  but named for the cooldown phase specifically (smoke, recovery anim). */
+	UPROPERTY(BlueprintAssignable, Category = "Laser")
+	FOnLaserCooldownStarted OnCooldownStarted;
 
 protected:
 	virtual void BeginPlay() override;
