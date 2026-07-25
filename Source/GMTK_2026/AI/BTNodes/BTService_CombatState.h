@@ -74,7 +74,14 @@ protected:
 	/** A vantage point this close to the player is no longer usable. */
 	UPROPERTY(EditAnywhere, Category = "Combat|Ranges")
 	float MinVantageDistance = 700.f;
+	
+	/** Upper bound of the range band the enemy considers a good firing position. */
+	UPROPERTY(EditAnywhere, Category = "Combat|Ranges")
+	float MaxVantageDistance = 1600.f;
 
+	/** Trace height for vantage validity - match the laser component's muzzle height. */
+	UPROPERTY(EditAnywhere, Category = "Combat|Ranges")
+	float LaserTraceHeight = 60.f;
 	/**
 	 * Seconds the player must stay inside PanicRadius before the enemy repositions.
 	 * This delay is deliberate - it's what gives the player a window to close the

@@ -1,5 +1,5 @@
 #include "AI/EnemyAIController.h"
-
+#include "Characters/PlayerCharacter.h"
 #include "AI/Tokens/CombatTokenSubsystem.h"
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BlackboardComponent.h"
@@ -159,6 +159,11 @@ void AEnemyAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus St
 	// but an explicit check here means a misconfigured team ID can't cause enemies to
 	// start lasering each other.
 	if (GetTeamAttitudeTowards(*Actor) != ETeamAttitude::Hostile)
+	{
+		return;
+	}
+	
+	if (!Actor->IsA<APlayerCharacter>())
 	{
 		return;
 	}

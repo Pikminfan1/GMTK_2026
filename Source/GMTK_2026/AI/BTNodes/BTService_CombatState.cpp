@@ -148,17 +148,29 @@ void UBTService_CombatState::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* 
 	Blackboard->SetValueAsFloat(PressureKey.SelectedKeyName, Pressure);
 	Blackboard->SetValueAsBool(ShouldRepositionKey.SelectedKeyName, Pressure >= PressureThreshold);
 
-	// ---------- Vantage invalidation ----------
+	// ---------- Vantage validity ----------
 
-	// If the player has walked into the spot the enemy was heading for, that spot
-	// is no longer a vantage point and the tree should re-query.
-	if (Blackboard->GetValueAsBool(HasValidVantageKey.SelectedKeyName))
+	// Validity must match what the LASER can actually do, not the lenient
+	// LineOfSightTo (which traces from the eyes to several points and passes if any
+	// connect). A spot where the eyes can see the player but the chest-height beam
+	// hits a ramp is NOT a good vantage - checking it with the same kind of trace
+	// the beam uses stops the enemy believing a blocked spot is fine.
+	bool bLaserCanConnect = false;
 	{
-		const FVector Vantage = Blackboard->GetValueAsVector(VantagePointKey.SelectedKeyName);
+		const FVector Muzzle = Pawn->GetActorLocation() + FVector(0, 0, LaserTraceHeight);
+		const FVector TargetChest = TargetActor->GetActorLocation() + FVector(0, 0, LaserTraceHeight);
 
-		if (FVector::Dist(Vantage, TargetActor->GetActorLocation()) < MinVantageDistance)
-		{
-			Blackboard->SetValueAsBool(HasValidVantageKey.SelectedKeyName, false);
-		}
+		FCollisionQueryParams Params(SCENE_QUERY_STAT(VantageLOS), false, Pawn);
+		Params.AddIgnoredActor(TargetActor);
+
+		const bool bBlocked = GetWorld()->LineTraceTestByChannel(
+			Muzzle, TargetChest, ECC_Visibility, Params);
+
+		bLaserCanConnect = !bBlocked;
 	}
+
+	const bool bInRangeBand = Distance >= MinVantageDistance && Distance <= MaxVantageDistance;
+	const bool bCurrentSpotIsGood = bLaserCanConnect && bInRangeBand;
+
+	Blackboard->SetValueAsBool(HasValidVantageKey.SelectedKeyName, bCurrentSpotIsGood);
 }

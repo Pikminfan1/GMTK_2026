@@ -164,6 +164,9 @@ void UEnemyLaserAttackComponent::TickWindUp(float DeltaTime)
 		AbortAttack();
 		return;
 	}
+	
+	// Turn to face the player during the telegraph so the beam starts aimed at them.
+	FaceTarget(DeltaTime);
 
 	FHitResult Hit;
 	FVector Start, End;
@@ -186,10 +189,36 @@ void UEnemyLaserAttackComponent::TickWindUp(float DeltaTime)
 		return;
 	}
 
-	if (StateTime >= WindUpDuration)
+	// Only advance to Firing once the wind-up time has elapsed AND we're actually
+	// pointed at the target. Without the alignment gate, a wind-up that starts
+	// facing away fires its first frame before the turn finishes, so the first
+	// shot misses.
+	const bool bTimeElapsed = StateTime >= WindUpDuration;
+	const bool bOverdue = StateTime >= WindUpDuration * 2.f;
+
+	if ((bTimeElapsed && IsFacingTarget()) || bOverdue)
 	{
 		EnterState(ELaserState::Firing);
 	}
+}
+
+bool UEnemyLaserAttackComponent::IsFacingTarget() const
+{
+	if (!IsValid(Target) || !GetOwner())
+	{
+		return false;
+	}
+
+	const FVector Forward = GetOwner()->GetActorForwardVector();
+	FVector ToTarget = Target->GetActorLocation() - GetOwner()->GetActorLocation();
+	ToTarget.Z = 0.f;
+	ToTarget.Normalize();
+
+	// Dot of two unit vectors = cosine of the angle between them.
+	const float Dot = FVector::DotProduct(Forward, ToTarget);
+	const float CosTolerance = FMath::Cos(FMath::DegreesToRadians(FireAngleTolerance));
+
+	return Dot >= CosTolerance;
 }
 
 void UEnemyLaserAttackComponent::TickFiring(float DeltaTime)
@@ -200,6 +229,12 @@ void UEnemyLaserAttackComponent::TickFiring(float DeltaTime)
 		StopMontages();
 		EnterState(ELaserState::Cooldown);
 		return;
+	}
+	
+	// Keep tracking the player through the beam so it follows them as they move.
+	if (bTrackTargetWhileFiring)
+	{
+		FaceTarget(DeltaTime);
 	}
 
 	FHitResult Hit;
@@ -356,6 +391,34 @@ void UEnemyLaserAttackComponent::ApplyDamageTick()
 			TEXT("Laser target %s does not implement IDamageable - no damage applied."),
 			*Target->GetName());
 	}
+}
+
+void UEnemyLaserAttackComponent::FaceTarget(float DeltaTime)
+{
+	if (!IsValid(Target))
+	{
+		return;
+	}
+
+	AActor* Owner = GetOwner();
+	if (!Owner)
+	{
+		return;
+	}
+
+	// Yaw-only: we want the body to turn toward the player, not tip up or down.
+	const FVector ToTarget = Target->GetActorLocation() - Owner->GetActorLocation();
+	FRotator CurrentRot = Owner->GetActorRotation();
+	FRotator DesiredRot = ToTarget.Rotation();
+	DesiredRot.Pitch = CurrentRot.Pitch;
+	DesiredRot.Roll = CurrentRot.Roll;
+
+	// Interpolate at a fixed angular rate so the turn reads as deliberate rather
+	// than snapping instantly to face the player.
+	const FRotator NewRot = FMath::RInterpConstantTo(
+		CurrentRot, DesiredRot, DeltaTime, RotationSpeedDegrees);
+
+	Owner->SetActorRotation(NewRot);
 }
 
 void UEnemyLaserAttackComponent::DrawDebug(const FVector& Start, const FVector& End, bool bHasLOS) const

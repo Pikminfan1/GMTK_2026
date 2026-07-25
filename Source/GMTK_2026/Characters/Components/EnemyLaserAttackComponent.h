@@ -93,6 +93,21 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Laser|Timing")
 	float LOSGraceTime = 0.4f;
 
+	
+	// ---------- Aiming ----------
+
+	/** Degrees per second the enemy rotates to face the target while winding up and firing. */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Laser|Aiming")
+	float RotationSpeedDegrees = 360.f;
+
+	/** If false, the enemy only rotates during wind-up, then holds still while firing. */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Laser|Aiming")
+	bool bTrackTargetWhileFiring = true;
+	
+	/** How many degrees off-aim is still allowed to start firing. */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Laser|Aiming")
+	float FireAngleTolerance = 12.f;
+	
 	// ---------- Damage ----------
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Laser|Damage")
@@ -156,10 +171,14 @@ private:
 	void EnterState(ELaserState NewState);
 	void TickWindUp(float DeltaTime);
 	void TickFiring(float DeltaTime);
+	
+	/** Rotates the owner toward the target on the yaw axis only. */
+	void FaceTarget(float DeltaTime);
 
 	/** Traces muzzle -> target. Returns true if nothing blocked the path. */
 	bool TraceToTarget(FHitResult& OutHit, FVector& OutStart, FVector& OutEnd) const;
-
+	/** True if the owner's forward vector is within FireAngleTolerance of the target. */
+	bool IsFacingTarget() const;
 	FVector GetMuzzleLocation() const;
 	FVector GetAimPoint() const;
 
