@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{BE706892-E520-EEC9-9F24-CFF4E9F1838A}",
+    "Hash": "{473D0A5A-CEA4-5A8F-07AB-9C3986271A0C}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
@@ -145,6 +145,14 @@
       "CachePath": "43/{43D6C74E-D4EB-DADD-FD79-57B785FB8E08}.wem"
      },
      {
+      "Id": "141102772",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_Combat_fuzzypad_120bpm4-4_L36M-P17B_iw_48k24_260725_FM.wav",
+      "CachePath": "86/{86683426-BADA-4C51-43F6-4E0567094F1A}.wem"
+     },
+     {
       "Id": "143593656",
       "Language": "SFX",
       "Streaming": "false",
@@ -175,6 +183,14 @@
       "Location": "Memory",
       "ShortName": "sfx_revolver_kick03_mo_fm.wav",
       "CachePath": "92/{921F44A8-10AC-17E9-B070-77CA6A248C3D}.wem"
+     },
+     {
+      "Id": "199677059",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_Combat_guitar_120bpm4-4_L36M-P17B_iw_48k24_260725_FM.wav",
+      "CachePath": "51/{51867423-D54D-9EAA-9A54-7E39BBE753D5}.wem"
      },
      {
       "Id": "201238401",
@@ -218,6 +234,14 @@
       "CachePath": "66/{666E9102-0A9D-3A0A-4E1C-6EFE19513EBB}.wem"
      },
      {
+      "Id": "291894663",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_Combat_percussion_120bpm4-4_L36M-P17B_iw_48k24_260725_FM.wav",
+      "CachePath": "ED/{ED066DB8-ED61-04E7-4AFE-1001C963A721}.wem"
+     },
+     {
       "Id": "292997913",
       "Language": "SFX",
       "Streaming": "false",
@@ -226,12 +250,13 @@
       "CachePath": "83/{83FADDA5-F25D-6A19-7DDE-94F4424D6ADD}.wem"
      },
      {
-      "Id": "293233281",
+      "Id": "294836438",
       "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "SFX_GameWaveStart_Stereo_1_Bulba.wav",
-      "CachePath": "6D/{6D0339E0-DB38-F125-E8B4-517FC6F638A1}.wem"
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "DMG2 Trans 4beats 023.wav",
+      "Path": "Media/294836438.wem",
+      "CachePath": "79/{796B78DA-3DF7-F9EB-8CC4-48BD41B53F56}.wem"
      },
      {
       "Id": "304552554",
@@ -240,6 +265,14 @@
       "Location": "Memory",
       "ShortName": "SFX_NPCPain_Mono_1_Bulba.wav",
       "CachePath": "26/{26450C28-7274-6361-E965-A62106160A36}.wem"
+     },
+     {
+      "Id": "330647431",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_Combat_theremish_120bpm4-4_L36M-P17B_iw_48k24_260725_FM.wav",
+      "CachePath": "16/{161FE12B-F951-8269-5D1C-5D3D4C1CCF33}.wem"
      },
      {
       "Id": "339785647",
@@ -296,6 +329,14 @@
       "Location": "Memory",
       "ShortName": "sfx_player_fs_gravel07_mo_fm.wav",
       "CachePath": "5F/{5FB3857F-64E5-E382-9145-D8EB8BACD119}.wem"
+     },
+     {
+      "Id": "495019206",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_NPCRayStop_Mono_lp_Bulba.wav",
+      "CachePath": "95/{95682CB3-5109-A3CB-982A-DF86D31FAF4C}.wem"
      },
      {
       "Id": "525508710",
@@ -498,6 +539,14 @@
       "CachePath": "5D/{5DAAC415-E6E4-C28E-343C-907AF42D6939}.wem"
      },
      {
+      "Id": "813004226",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_Combat_harpsichord_120bpm4-4_L36M-P17B_iw_48k24_260725_FM.wav",
+      "CachePath": "5C/{5C0BC5D1-69A2-9573-2A8E-2F581AE8C8A9}.wem"
+     },
+     {
       "Id": "820646846",
       "Language": "SFX",
       "Streaming": "false",
@@ -512,6 +561,14 @@
       "Location": "Memory",
       "ShortName": "sfx_player_fs_grass06_mo_fm.wav",
       "CachePath": "39/{39E5D5B1-EE32-F765-1760-E8445586DEBC}.wem"
+     },
+     {
+      "Id": "825183121",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_NPCRay_Mono_lp_Bulba.wav",
+      "CachePath": "BA/{BA8BF036-F298-603E-8178-88F7EDAD23F5}.wem"
      },
      {
       "Id": "837232218",
@@ -538,6 +595,14 @@
       "CachePath": "B0/{B034AD56-4438-3F40-B682-096F54D106E8}.wem"
      },
      {
+      "Id": "914865142",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_GameWaveStart_Stereo_2_Bulba.wav",
+      "CachePath": "9F/{9F642839-C882-8436-2761-9FFF517AA22A}.wem"
+     },
+     {
       "Id": "925016750",
       "Language": "SFX",
       "Streaming": "false",
@@ -562,6 +627,23 @@
       "CachePath": "12/{128861FE-88E9-D7FE-CDE8-064CB0F1CA39}.wem"
      },
      {
+      "Id": "933638355",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_NPCRayStart_Mono_Bulba.wav",
+      "CachePath": "26/{2679F59A-6D31-DDC8-CB6F-83D783A27D9A}.wem"
+     },
+     {
+      "Id": "940847795",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "mus_Combat_bass_120bpm4-4_L36M-P17B_iw_48k24_260725_FM.wav",
+      "Path": "Media/940847795.wem",
+      "CachePath": "42/{420DF667-1C7C-C269-3F7E-4C54B2AE3824}.wem"
+     },
+     {
       "Id": "943985641",
       "Language": "SFX",
       "Streaming": "false",
@@ -576,6 +658,22 @@
       "Location": "Memory",
       "ShortName": "sfx_revolver_Metal01_mo_fm.wav",
       "CachePath": "1A/{1AFCAFA3-D2BB-E86F-A4C2-3B12E67D149E}.wem"
+     },
+     {
+      "Id": "1032317867",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_Combat_organ_120bpm4-4_L36M-P17B_iw_48k24_260725_FM.wav",
+      "CachePath": "F0/{F0367710-E890-1CB9-5C49-F32262D215E6}.wem"
+     },
+     {
+      "Id": "1038514920",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mus_Combat_strings_120bpm4-4_L36M-P17B_iw_48k24_260725_FM.wav",
+      "CachePath": "F5/{F5BD0BB0-971F-1A4B-EB69-93D5A14DAB2A}.wem"
      },
      {
       "Id": "1057495068",
@@ -714,11 +812,11 @@
       "ObjectPath": "\\Events\\Game\\GameEvents\\Game_Wave_End",
       "GUID": "{EAEEF1DA-5554-4949-AC19-E0C1AF60D35C}",
       "DurationType": "OneShot",
-      "DurationMin": "7.0275965",
-      "DurationMax": "7.0275965",
+      "DurationMin": "4.72965",
+      "DurationMax": "4.72965",
       "MediaRefs": [
        {
-        "Id": "293233281"
+        "Id": "914865142"
        }
       ]
      },
@@ -728,11 +826,47 @@
       "ObjectPath": "\\Events\\Game\\GameEvents\\Game_Wave_Start",
       "GUID": "{D07F8884-352C-4162-B936-6933E83445D5}",
       "DurationType": "OneShot",
-      "DurationMin": "7.0275965",
-      "DurationMax": "7.0275965",
+      "DurationMin": "4.72965",
+      "DurationMax": "4.72965",
       "MediaRefs": [
        {
-        "Id": "293233281"
+        "Id": "914865142"
+       }
+      ]
+     },
+     {
+      "Id": "1639008996",
+      "Name": "Music_Combat_Start",
+      "ObjectPath": "\\Events\\Game\\Music\\Music_Combat_Start",
+      "GUID": "{0AFCE4EA-848E-404C-9BD8-A495942A14C8}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "141102772"
+       },
+       {
+        "Id": "199677059"
+       },
+       {
+        "Id": "291894663"
+       },
+       {
+        "Id": "294836438"
+       },
+       {
+        "Id": "330647431"
+       },
+       {
+        "Id": "813004226"
+       },
+       {
+        "Id": "940847795"
+       },
+       {
+        "Id": "1032317867"
+       },
+       {
+        "Id": "1038514920"
        }
       ]
      },
@@ -741,7 +875,6 @@
       "Name": "NPC_Death",
       "ObjectPath": "\\Events\\Game\\NPC\\NPC_Death",
       "GUID": "{915C4952-F74B-4193-92A3-14B562573B68}",
-      "MaxAttenuation": "10000",
       "DurationType": "OneShot",
       "DurationMin": "1.52108",
       "DurationMax": "3.55001",
@@ -762,7 +895,6 @@
       "Name": "NPC_Pain",
       "ObjectPath": "\\Events\\Game\\NPC\\NPC_Pain",
       "GUID": "{98162397-C994-49AC-82E9-3C8DEDD5C07E}",
-      "MaxAttenuation": "10000",
       "DurationType": "OneShot",
       "DurationMin": "0.8303857",
       "DurationMax": "1.1114887",
@@ -775,6 +907,35 @@
        },
        {
         "Id": "701897157"
+       }
+      ]
+     },
+     {
+      "Id": "4106045826",
+      "Name": "NPC_Ray_Start",
+      "ObjectPath": "\\Events\\Game\\NPC\\NPC_Ray_Start",
+      "GUID": "{61720CB7-A9F1-4F0F-A916-EFD202D3127A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "825183121"
+       },
+       {
+        "Id": "933638355"
+       }
+      ]
+     },
+     {
+      "Id": "2217293306",
+      "Name": "NPC_Ray_Stop",
+      "ObjectPath": "\\Events\\Game\\NPC\\NPC_Ray_Stop",
+      "GUID": "{737329C3-A8CC-47CF-9B29-7032509B7790}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6586515",
+      "DurationMax": "0.6586515",
+      "MediaRefs": [
+       {
+        "Id": "495019206"
        }
       ]
      },
@@ -1368,6 +1529,6 @@
     ]
    }
   ],
-  "FileHash": "{AE34A0AB-AA5D-31ED-4E00-ADF4BCC08D1E}"
+  "FileHash": "{050D9402-3501-51DA-0162-F39F384E6F75}"
  }
 }
