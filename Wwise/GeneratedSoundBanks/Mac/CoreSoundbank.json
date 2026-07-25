@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{51FEC51C-F70F-6EEF-8B2D-70FA54D80770}",
+    "Hash": "{BE706892-E520-EEC9-9F24-CFF4E9F1838A}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
@@ -741,6 +741,7 @@
       "Name": "NPC_Death",
       "ObjectPath": "\\Events\\Game\\NPC\\NPC_Death",
       "GUID": "{915C4952-F74B-4193-92A3-14B562573B68}",
+      "MaxAttenuation": "10000",
       "DurationType": "OneShot",
       "DurationMin": "1.52108",
       "DurationMax": "3.55001",
@@ -761,6 +762,7 @@
       "Name": "NPC_Pain",
       "ObjectPath": "\\Events\\Game\\NPC\\NPC_Pain",
       "GUID": "{98162397-C994-49AC-82E9-3C8DEDD5C07E}",
+      "MaxAttenuation": "10000",
       "DurationType": "OneShot",
       "DurationMin": "0.8303857",
       "DurationMax": "1.1114887",
@@ -781,7 +783,7 @@
       "Name": "NPC_Spawn",
       "ObjectPath": "\\Events\\Game\\NPC\\NPC_Spawn",
       "GUID": "{21F256B3-C993-4BB3-9692-6FBA3183FA3B}",
-      "MaxAttenuation": "200",
+      "MaxAttenuation": "20000",
       "DurationType": "OneShot",
       "DurationMin": "0.1",
       "DurationMax": "0.1",
@@ -1366,6 +1368,6 @@
     ]
    }
   ],
-  "FileHash": "{FC58876E-B637-345F-1C3C-17CE5A5E5B7E}"
+  "FileHash": "{9B5AEF5F-664F-6E25-A143-F17E0C456DD5}"
  }
 }
