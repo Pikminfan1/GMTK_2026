@@ -876,17 +876,6 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</PropertyContainer>
-						<SwitchContainer Name="New Switch Container" ID="{D0B19822-AB7C-4D56-A72C-2815746BF4D6}" ShortID="50838243">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-								</Reference>
-							</ReferenceList>
-							<GroupingInfo/>
-						</SwitchContainer>
 						<Sound Name="Revolver_reload" ID="{445E575A-8E92-47DF-898D-2E4B502C3C90}" ShortID="115085503">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
@@ -895,8 +884,8 @@
 											<Modifier Name="" ID="{64CE237E-AC88-4A5B-A758-32D5CBB3A3D3}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="200"/>
-													<Property Name="Min" Type="Real64" Value="-100"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -924,9 +913,23 @@
 										<MediaID ID="545437347"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="sfx_revolver_reload02_ethereal2_mo_fm" ID="{3E277EE9-0710-47E4-B5D4-AFB3DB5D3A05}">
+									<PropertyList>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>-5.1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>sfx_revolver_reload02_ethereal2_mo_fm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="460805782"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="sfx_revolver_reload01_mo_fm" ID="{BC8549E4-93D3-4896-A164-7EA96F9BB953}" Platform="Linked"/>
+								<ActiveSource Name="sfx_revolver_reload02_ethereal2_mo_fm" ID="{3E277EE9-0710-47E4-B5D4-AFB3DB5D3A05}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

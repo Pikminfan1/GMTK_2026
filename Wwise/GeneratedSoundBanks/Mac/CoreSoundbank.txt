@@ -1,32 +1,33 @@
 Event	ID	Name			Wwise Object Path	Notes
-	216067002	UI_Confirm			\UI\UI_Confirm	
-	606045712	Revolver_NoAmmo			\Player\PlayerCombat\Revolver_NoAmmo	
-	700716975	UI_Denied			\UI\UI_Denied	
-	733168346	Game_Start			\Generic\Game_Start	
-	736581181	NPC_Death			\NPC\NPC_Death	
-	860578996	Revolver_Shoot			\Player\PlayerCombat\Revolver_Shoot	
-	871813740	Player_Hit			\Player\PlayerCombat\Player_Hit	
-	938457140	UI_Slider_Stop			\UI\UI_Slider_Stop	
-	990816403	UI_GameBegin			\UI\UI_GameBegin	
-	1145501800	UI_Slider_Start			\UI\UI_Slider_Start	
-	1359982855	Game_Unpause			\Generic\Game_Unpause	
-	1496310610	Ambience_Play			\Ambience\Ambience_Play	
-	2024222415	UI_Back			\UI\UI_Back	
-	2033512703	Game_Wave_End			\GameEvents\Game_Wave_End	
-	2118900976	UI_Hover			\UI\UI_Hover	
-	2249769530	UI_Click			\UI\UI_Click	
-	2453392179	Player_Footstep			\Player\PlayerLocomotion\Player_Footstep	
-	2552535698	NPC_Spawn			\NPC\NPC_Spawn	
-	2731495197	NPC_Pain			\NPC\NPC_Pain	
-	2772308904	Game_Pause			\Generic\Game_Pause	
-	2806042552	Revolver_Reload			\Player\PlayerCombat\Revolver_Reload	
-	3079583356	Player_Evade			\Player\PlayerLocomotion\Player_Evade	
-	3083087645	Player_Death			\Player\PlayerCombat\Player_Death	
-	3166394572	Ambience_Stop			\Ambience\Ambience_Stop	
-	3545070188	Game_Init			\Generic\Game_Init	
-	3610725078	Player_JumpLand			\Player\PlayerLocomotion\Player_JumpLand	
-	3763496167	Player_JumpStart			\Player\PlayerLocomotion\Player_JumpStart	
-	4036891676	Game_Wave_Start			\GameEvents\Game_Wave_Start	
+	216067002	UI_Confirm			\Game\UI\UI_Confirm	
+	606045712	Revolver_NoAmmo			\Game\Player\PlayerCombat\Revolver_NoAmmo	
+	700716975	UI_Denied			\Game\UI\UI_Denied	
+	733168346	Game_Start			\Game\Generic\Game_Start	
+	736581181	NPC_Death			\Game\NPC\NPC_Death	
+	860578996	Revolver_Shoot			\Game\Player\PlayerCombat\Revolver_Shoot	
+	871813740	Player_Hit			\Game\Player\PlayerCombat\Player_Hit	
+	938457140	UI_Slider_Stop			\Game\UI\UI_Slider_Stop	
+	990816403	UI_GameBegin			\Game\UI\UI_GameBegin	
+	1145501800	UI_Slider_Start			\Game\UI\UI_Slider_Start	
+	1359982855	Game_Unpause			\Game\Generic\Game_Unpause	
+	1496310610	Ambience_Play			\Game\Ambience\Ambience_Play	
+	2024222415	UI_Back			\Game\UI\UI_Back	
+	2033512703	Game_Wave_End			\Game\GameEvents\Game_Wave_End	
+	2118900976	UI_Hover			\Game\UI\UI_Hover	
+	2249769530	UI_Click			\Game\UI\UI_Click	
+	2453392179	Player_Footstep			\Game\Player\PlayerLocomotion\Player_Footstep	
+	2552535698	NPC_Spawn			\Game\NPC\NPC_Spawn	
+	2731495197	NPC_Pain			\Game\NPC\NPC_Pain	
+	2772308904	Game_Pause			\Game\Generic\Game_Pause	
+	2806042552	Revolver_Reload			\Game\Player\PlayerCombat\Revolver_Reload	
+	3070140873	Pickup_HealthOrb			\Game\Pickups\Pickup_HealthOrb	
+	3079583356	Player_Evade			\Game\Player\PlayerLocomotion\Player_Evade	
+	3083087645	Player_Death			\Game\Player\PlayerCombat\Player_Death	
+	3166394572	Ambience_Stop			\Game\Ambience\Ambience_Stop	
+	3545070188	Game_Init			\Game\Generic\Game_Init	
+	3610725078	Player_JumpLand			\Game\Player\PlayerLocomotion\Player_JumpLand	
+	3763496167	Player_JumpStart			\Game\Player\PlayerLocomotion\Player_JumpStart	
+	4036891676	Game_Wave_Start			\Game\GameEvents\Game_Wave_Start	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	3072116243	GroundMaterial			\Generic\GroundMaterial	
@@ -44,6 +45,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	956524932	Tone Generator	Wwise Tone Generator		\Containers\World\NPC\NPCActions\NPC_Spawn\Tone Generator	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	6733374	Pickup_HealthOrb	.cache\D7\{D75DCB3B-0CD8-7FFC-7FB5-3ACC0D169C14}.wem		\Containers\World\Objects\ObjectPickup\Pickups\Pickup_HealthOrb		442464
 	7507446	sfx_revolver_shot04_mo_fm	.cache\E2\{E27CB381-BBD1-A243-5DFE-1B2C5604A755}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_shot\sfx_revolver_shot04_mo_fm		71960
 	28656243	sfx_revolver_kick04_mo_fm	.cache\92\{921F44A8-10AC-17E9-B070-77CA6A248C3D}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_kick\sfx_revolver_kick04_mo_fm		36098
 	62002764	sfx_player_fs_water02_mo_fm	.cache\D2\{D2E6C821-4169-505B-9D2B-F20005FD40D7}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water02_mo_fm		46684
@@ -65,16 +67,17 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	222492959	sfx_revolver_Mech02_mo_fm	.cache\B1\{B15EF704-7E94-53FC-21FC-AD9E381011DD}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_NoAmmo\sfx_revolver_Mech02_mo_fm		10072
 	270737109	SFX_NPCPain_Mono_3_Bulba	.cache\66\{666E9102-0A9D-3A0A-4E1C-6EFE19513EBB}.wem		\Containers\World\NPC\NPCCombat\NPC_Pain\SFX_NPCPain_Mono_3_Bulba		74686
 	292997913	sfx_revolver_Mech02_mo_fm	.cache\83\{83FADDA5-F25D-6A19-7DDE-94F4424D6ADD}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_mech\sfx_revolver_Mech02_mo_fm		48898
+	293233281	SFX_GameWaveStart_Stereo_1_Bulba	.cache\6D\{6D0339E0-DB38-F125-E8B4-517FC6F638A1}.wem		\Containers\General\GameEvents\Waves\WavesSystem\SFX_GameWaveStart_Stereo_1_Bulba		1239764
 	304552554	SFX_NPCPain_Mono_1_Bulba	.cache\26\{26450C28-7274-6361-E965-A62106160A36}.wem		\Containers\World\NPC\NPCCombat\NPC_Pain\SFX_NPCPain_Mono_1_Bulba		98130
 	339785647	sfx_player_fs_concrete02_mo_fm	.cache\DC\{DC2F030B-3D4E-F84E-5E81-D98212930E8B}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Concrete\sfx_player_fs_concrete02_mo_fm		13322
 	360556948	sfx_player_fs_grass01_mo_fm	.cache\AC\{ACB075C0-2828-13B2-3A13-CCF0DBB00096}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass01_mo_fm		23534
 	428893571	sfx_revolver_Metal02_mo_fm	.cache\42\{429248B7-5E49-3742-04DA-5672C6C95DBC}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_metal\sfx_revolver_Metal02_mo_fm		78254
 	455978967	sfx_revolver_tail04_mo_fm	.cache\37\{37B4A9F1-3A0C-8C05-4315-2F7B85C4F27F}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_tail\sfx_revolver_tail04_mo_fm		112082
 	456620000	sfx_revolver_Mech01_mo_fm	.cache\40\{40DBF69C-4BD0-132A-C457-EA435E5CBA12}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_mech\sfx_revolver_Mech01_mo_fm		40634
+	460805782	Revolver_reload	.cache\B0\{B0AE938F-59DB-166C-3C9D-5E7D9022C240}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_reload		878104
 	488679294	sfx_player_fs_gravel07_mo_fm	.cache\5F\{5FB3857F-64E5-E382-9145-D8EB8BACD119}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel07_mo_fm		44156
 	525508710	UI_Click	.cache\46\{46C7E8DA-DA14-3C87-B44D-94E338BEFFB7}.wem		\Containers\UI\CoreUI\UI_Click		478388
 	537368572	sfx_revolver_Metal04_mo_fm	.cache\5C\{5C9896A0-16BD-E303-7E15-89813FE97F8B}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_metal\sfx_revolver_Metal04_mo_fm		128134
-	545437347	Revolver_reload	.cache\D2\{D2E3DF35-0168-7013-F198-D76C591C514A}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_reload		229602
 	554598858	sfx_revolver_Mech03_mo_fm	.cache\41\{412C02CD-9A19-231B-39A1-5E3E2B0697EA}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_mech\sfx_revolver_Mech03_mo_fm		48924
 	571317540	sfx_revolver_kick02_mo_fm	.cache\51\{51A76A4C-E174-3063-813B-3DC44A635EE1}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_kick\sfx_revolver_kick02_mo_fm		36098
 	606561105	sfx_player_fs_grass05_mo_fm	.cache\CB\{CB579325-636E-E1D5-64DF-ED54DA07C03E}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass05_mo_fm		22108
@@ -99,7 +102,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	822825595	sfx_player_fs_grass06_mo_fm	.cache\39\{39E5D5B1-EE32-F765-1760-E8445586DEBC}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass06_mo_fm		24426
 	837232218	sfx_player_fs_water07_mo_fm	.cache\93\{93D39706-73B0-6F32-CE04-3E12D80BE4B8}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water07_mo_fm		41814
 	863346427	sfx_revolver_tail01_mo_fm	.cache\55\{55284233-FE57-E0F3-3BE0-2C9706C53807}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_tail\sfx_revolver_tail01_mo_fm		114454
-	914865142	SFX_GameWaveStart_Stereo_1_Bulba	.cache\9F\{9F642839-C882-8436-2761-9FFF517AA22A}.wem		\Containers\General\GameEvents\Waves\WavesSystem\SFX_GameWaveStart_Stereo_1_Bulba		834404
 	925016750	sfx_player_fs_gravel04_mo_fm	.cache\1E\{1E3D9489-8C46-C776-066A-E1AD772ADF53}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel04_mo_fm		28310
 	927475916	UI_Confirm	.cache\B3\{B37EF65C-581D-1A55-C1F2-6A25EF1E6AA0}.wem		\Containers\UI\CoreUI\UI_Confirm		414432
 	927997342	SFX_NPCDeath_Mono_2_Bulba	.cache\12\{128861FE-88E9-D7FE-CDE8-064CB0F1CA39}.wem		\Containers\World\NPC\NPCCombat\NPC_Death\SFX_NPCDeath_Mono_2_Bulba		134256

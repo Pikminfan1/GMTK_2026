@@ -6,6 +6,7 @@
 				<WorkUnit Name="Player" ID="{4B288FAA-04A9-4747-AC69-03BE70F0530A}" PersistMode="Reference"/>
 				<WorkUnit Name="Ambience" ID="{C5960BBC-3754-4098-B66C-E168451D2F66}" PersistMode="Reference"/>
 				<WorkUnit Name="NPC" ID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}" PersistMode="Reference"/>
+				<WorkUnit Name="Objects" ID="{C23A6F80-5E17-4ACD-9EB7-7BEC178578A3}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
