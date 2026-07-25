@@ -8,6 +8,8 @@ class USpringArmComponent;
 class UCameraComponent;
 class UInputAction;
 class AWeaponBase;
+class UComboComponent;
+class UHealthComponent;
 struct FInputActionValue;
 
 /**
@@ -33,11 +35,20 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
+	
+
+	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<USpringArmComponent> CameraBoom;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UCameraComponent> FollowCamera;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combat", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<UComboComponent> ComboComponent;
+	
+	UFUNCTION(BlueprintPure, Category = "Combat")
+	UComboComponent* GetComboComponent() const { return ComboComponent; }
 
 	// Assign these Input Actions in the Class Defaults / a Blueprint subclass once you've
 	// created them via Project Settings > Input (Enhanced Input).
@@ -98,4 +109,7 @@ protected:
 	void StopAim(const FInputActionValue& Value);
 	void StartReload(const FInputActionValue& Value);
 	void StopReload(const FInputActionValue& Value);
+	
+	UFUNCTION()
+	void HandleDeathResetCombo(AActor* DeadActor);
 };

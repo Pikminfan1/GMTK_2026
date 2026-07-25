@@ -1,5 +1,7 @@
 #include "Characters/PlayerCharacter.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Characters/Components/ComboComponent.h"
+#include "Characters/Components/HealthComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Camera/CameraComponent.h"
 #include "EnhancedInputComponent.h"
@@ -19,6 +21,8 @@ APlayerCharacter::APlayerCharacter()
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	FollowCamera->bUsePawnControlRotation = false;
+	
+	ComboComponent = CreateDefaultSubobject<UComboComponent>(TEXT("ComboComponent"));
 
 	if (UCharacterMovementComponent* Movement = GetCharacterMovement())
 	{
@@ -31,6 +35,10 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	if (UHealthComponent* Health = GetHealthComponent())
+	{
+		Health->OnDeath.AddDynamic(this, &APlayerCharacter::HandleDeathResetCombo);
+	}
 	if (DefaultWeaponClass)
 	{
 		FActorSpawnParameters SpawnParams;
@@ -228,5 +236,13 @@ void APlayerCharacter::StopAim(const FInputActionValue& Value)
 	if (UCharacterMovementComponent* Movement = GetCharacterMovement())
 	{
 		Movement->bOrientRotationToMovement = true;
+	}
+}
+
+void APlayerCharacter::HandleDeathResetCombo(AActor* DeadActor)
+{
+	if (ComboComponent)
+	{
+		ComboComponent->ResetCombo();
 	}
 }
