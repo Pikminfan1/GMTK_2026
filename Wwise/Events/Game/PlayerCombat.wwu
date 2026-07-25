@@ -1,130 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}" SchemaVersion="133" RootDocumentID="{6268078F-654B-4069-8B2F-893FB9EB4270}" ParentDocumentID="{267721AC-3434-4988-BC76-0271F7F5E92D}">
+<WwiseDocument Type="WorkUnit" ID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}" SchemaVersion="133" RootDocumentID="{267721AC-3434-4988-BC76-0271F7F5E92D}" ParentDocumentID="{267721AC-3434-4988-BC76-0271F7F5E92D}">
 	<Events>
 		<WorkUnit Name="PlayerCombat" ID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}" OwnerID="{267721AC-3434-4988-BC76-0271F7F5E92D}" PersistMode="Nested">
 			<ChildrenList>
 				<Event Name="Player_Death" ID="{D5FB05DA-69C2-4E8D-8037-E1546E1B8313}"/>
 				<Event Name="Player_Hit" ID="{522E92C0-CB47-4E3E-9C1F-33E9713D5C5A}"/>
-				<Event Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}">
+				<Folder Name="Revolver" ID="{E6BECD6C-83D8-41C8-BEDB-2695A095690D}" ShortID="332505742">
 					<ChildrenList>
-						<Action Name="" ID="{2A44CDD1-DE44-4329-97E7-81DC9C6AE0A4}" ShortID="563034524">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Revolver_mech" ID="{151BFCF3-665A-42FB-A425-61AD314633D2}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{CC9B0F3C-8201-42D5-A58D-712457205B69}" ShortID="839162401">
+						<Event Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}">
+							<ChildrenList>
+								<Action Name="" ID="{2A44CDD1-DE44-4329-97E7-81DC9C6AE0A4}" ShortID="563034524">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_mech" ID="{151BFCF3-665A-42FB-A425-61AD314633D2}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CC9B0F3C-8201-42D5-A58D-712457205B69}" ShortID="839162401">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.05">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{FA7D9FEA-CC5C-440F-BCAE-92BD08A083C8}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.02"/>
+															<Property Name="Min" Type="Real64" Value="-0.02"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_shot" ID="{1E80F21C-AD7E-4BCA-A4A7-DC86073159DC}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{05F0A72C-DD6A-499A-B863-D400022541BE}" ShortID="266317441">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.1">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{AB9A0220-BA58-43CC-9BB8-DC0FBAD9903A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.02"/>
+															<Property Name="Min" Type="Real64" Value="-0.02"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_kick" ID="{C28AB93C-AD6D-40C8-A415-7BD2E3F0413C}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{15EF9DC9-F0DA-48EE-8324-2D17FC486E56}" ShortID="277950843">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.11">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{F840B9F8-C3E6-4226-9068-4CFCCC911E82}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.03"/>
+															<Property Name="Min" Type="Real64" Value="-0.03"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_metal" ID="{E07FAFD9-8312-4157-BFDB-799C72C30849}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D09B94E2-94BB-4480-91B2-FBCBBDE62A3D}" ShortID="347367154">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.25">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{32CCC210-2D42-4AAB-B267-ED345EC0766E}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-0.1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_tail" ID="{7C4CAF77-5018-435D-ADBA-A4AEB35AE47C}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Revolver_NoAmmo" ID="{E270140D-9AEB-4D94-BDD8-4B0CF79DFB76}">
+							<ChildrenList>
+								<Action Name="" ID="{0B120793-8D83-41D9-B8B2-ACDE2219A6E6}" ShortID="550593282">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_NoAmmo" ID="{700F5D63-263B-4B48-AD4C-88B3A9ED089F}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Revolver_Reload_start" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}">
+							<ChildrenList>
+								<Action Name="" ID="{6E6E3FBE-AD8A-4E5D-BD1D-0E37EE7162B7}" ShortID="923872509">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_reload_start" ID="{445E575A-8E92-47DF-898D-2E4B502C3C90}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{24390679-B4DB-47CF-A54F-22330CD71EA6}" ShortID="578718685">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.4"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_reload_loop" ID="{4CB84007-5AF5-45A3-B2DD-D57D92E1932B}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Revolver_reload_insertBullet" ID="{76C4A2FE-95F1-4A9E-93E9-0E8EFC75D981}">
+							<ChildrenList>
+								<Action Name="" ID="{7BC0EA9E-8A97-46DC-B326-6BA35C7B7977}" ShortID="898403941">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_reload_insertBullet" ID="{93C317BD-2CDC-4E57-8931-7ED89B23159F}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Revolver_reload_end" ID="{90745F62-D7A3-4208-8EDE-460A3EBAB0EB}">
+							<ChildrenList>
+								<Action Name="" ID="{C80F1C28-F695-468E-B1FE-A24C1FB43882}" ShortID="826252665">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_reload_end" ID="{DDA720A7-6F37-4E7F-B0D9-E3E92857417B}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C926D572-2C76-4201-9F24-3BCA0F1659A2}" ShortID="1035512400">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="0.7"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_reload_loop" ID="{4CB84007-5AF5-45A3-B2DD-D57D92E1932B}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Revolver_reload_cancel" ID="{25443B76-8B7A-4A1F-A818-CFDD2250EE33}">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.05">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{FA7D9FEA-CC5C-440F-BCAE-92BD08A083C8}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="0.02"/>
-													<Property Name="Min" Type="Real64" Value="-0.02"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
+								<Property Name="InstanceLimit" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Revolver_shot" ID="{1E80F21C-AD7E-4BCA-A4A7-DC86073159DC}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{05F0A72C-DD6A-499A-B863-D400022541BE}" ShortID="266317441">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.1">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{AB9A0220-BA58-43CC-9BB8-DC0FBAD9903A}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="0.02"/>
-													<Property Name="Min" Type="Real64" Value="-0.02"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Revolver_kick" ID="{C28AB93C-AD6D-40C8-A415-7BD2E3F0413C}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{15EF9DC9-F0DA-48EE-8324-2D17FC486E56}" ShortID="277950843">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.11">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{F840B9F8-C3E6-4226-9068-4CFCCC911E82}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="0.03"/>
-													<Property Name="Min" Type="Real64" Value="-0.03"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Revolver_metal" ID="{E07FAFD9-8312-4157-BFDB-799C72C30849}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{D09B94E2-94BB-4480-91B2-FBCBBDE62A3D}" ShortID="347367154">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.25">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{32CCC210-2D42-4AAB-B267-ED345EC0766E}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Min" Type="Real64" Value="-0.1"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Revolver_tail" ID="{7C4CAF77-5018-435D-ADBA-A4AEB35AE47C}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+							<ChildrenList>
+								<Action Name="" ID="{031F07D3-2DBD-4F2B-A33F-21184F40B16D}" ShortID="144772966">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_reload_loop" ID="{4CB84007-5AF5-45A3-B2DD-D57D92E1932B}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Revolver_NoAmmo" ID="{E270140D-9AEB-4D94-BDD8-4B0CF79DFB76}">
-					<ChildrenList>
-						<Action Name="" ID="{0B120793-8D83-41D9-B8B2-ACDE2219A6E6}" ShortID="550593282">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Revolver_NoAmmo" ID="{700F5D63-263B-4B48-AD4C-88B3A9ED089F}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Revolver_Reload" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}">
-					<ChildrenList>
-						<Action Name="" ID="{6E6E3FBE-AD8A-4E5D-BD1D-0E37EE7162B7}" ShortID="923872509">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Revolver_reload" ID="{445E575A-8E92-47DF-898D-2E4B502C3C90}" WorkUnitID="{B1A95E57-25FC-4A78-B3FA-CC8BEEA351BB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{5EDC0998-4D37-9538-ACD3-41733F7514D4}",
+    "Hash": "{51FEC51C-F70F-6EEF-8B2D-70FA54D80770}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
@@ -21,7 +21,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_healthorb01_pickup_st_fm.wav",
-      "CachePath": "D7/{D75DCB3B-0CD8-7FFC-7FB5-3ACC0D169C14}.wem"
+      "CachePath": "CD/{CD6C173B-A132-F909-5FF1-6A1BDFD22FE3}.wem"
      },
      {
       "Id": "7507446",
@@ -153,6 +153,14 @@
       "CachePath": "6D/{6D9D0C5B-A353-E430-2515-038F6639C129}.wem"
      },
      {
+      "Id": "154056081",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_Reload_Start_st_fm.wav",
+      "CachePath": "5A/{5AD44734-3456-B727-3344-1705F96A1E1C}.wem"
+     },
+     {
       "Id": "174541427",
       "Language": "SFX",
       "Streaming": "false",
@@ -184,6 +192,14 @@
       "Location": "Memory",
       "ShortName": "sfx_revolver_Mech01_mo_fm.wav",
       "CachePath": "AB/{ABF8AD37-2633-CB31-FED2-8044C354FD3D}.wem"
+     },
+     {
+      "Id": "206242964",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_Reload_End_st_fm.wav",
+      "CachePath": "79/{7934D907-FC0B-01CF-AC99-77E70665DD6A}.wem"
      },
      {
       "Id": "222492959",
@@ -266,12 +282,12 @@
       "CachePath": "40/{40DBF69C-4BD0-132A-C457-EA435E5CBA12}.wem"
      },
      {
-      "Id": "460805782",
+      "Id": "482921553",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "sfx_revolver_reload02_ethereal2_mo_fm.wav",
-      "CachePath": "B0/{B0AE938F-59DB-166C-3C9D-5E7D9022C240}.wem"
+      "ShortName": "sfx_reload_bullet01_mo_fm.wav",
+      "CachePath": "40/{40C146CA-B92C-26E9-4853-A6CC1170AE92}.wem"
      },
      {
       "Id": "488679294",
@@ -426,12 +442,36 @@
       "CachePath": "92/{921F44A8-10AC-17E9-B070-77CA6A248C3D}.wem"
      },
      {
+      "Id": "724246101",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_reload_bullet04_mo_fm.wav",
+      "CachePath": "03/{0342944F-C8A1-5F2D-C4EB-BE410A10C7D5}.wem"
+     },
+     {
+      "Id": "739735133",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_reload_bullet02_mo_fm.wav",
+      "CachePath": "08/{08C43F0C-D88E-D575-33F3-FE58C6FA0265}.wem"
+     },
+     {
       "Id": "741894269",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_player_fs_concrete06_mo_fm.wav",
       "CachePath": "FC/{FC80D0B8-639F-C37A-53E3-3393E8EA8EAC}.wem"
+     },
+     {
+      "Id": "763663487",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_reload_bullet03_mo_fm.wav",
+      "CachePath": "F1/{F12CF014-A2D8-0673-7772-EAE8A84368C6}.wem"
      },
      {
       "Id": "766849001",
@@ -488,6 +528,14 @@
       "Location": "Memory",
       "ShortName": "sfx_revolver_tail01_mo_fm.wav",
       "CachePath": "55/{55284233-FE57-E0F3-3BE0-2C9706C53807}.wem"
+     },
+     {
+      "Id": "899753535",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_Reload_loop_lp_st_fm.wav",
+      "CachePath": "B0/{B034AD56-4438-3F40-B682-096F54D106E8}.wem"
      },
      {
       "Id": "925016750",
@@ -945,7 +993,7 @@
      {
       "Id": "606045712",
       "Name": "Revolver_NoAmmo",
-      "ObjectPath": "\\Events\\Game\\Player\\PlayerCombat\\Revolver_NoAmmo",
+      "ObjectPath": "\\Events\\Game\\Player\\PlayerCombat\\Revolver\\Revolver_NoAmmo",
       "GUID": "{E270140D-9AEB-4D94-BDD8-4B0CF79DFB76}",
       "DurationType": "OneShot",
       "DurationMin": "0.07987",
@@ -975,16 +1023,82 @@
       ]
      },
      {
-      "Id": "2806042552",
-      "Name": "Revolver_Reload",
-      "ObjectPath": "\\Events\\Game\\Player\\PlayerCombat\\Revolver_Reload",
-      "GUID": "{02C94503-1A2B-4216-85C3-EC1F2DAF4430}",
+      "Id": "1100999433",
+      "Name": "Revolver_reload_cancel",
+      "ObjectPath": "\\Events\\Game\\Player\\PlayerCombat\\Revolver\\Revolver_reload_cancel",
+      "GUID": "{25443B76-8B7A-4A1F-A818-CFDD2250EE33}",
+      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "4.4427752",
-      "DurationMax": "4.7069564",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2598527806",
+      "Name": "Revolver_reload_end",
+      "ObjectPath": "\\Events\\Game\\Player\\PlayerCombat\\Revolver\\Revolver_reload_end",
+      "GUID": "{90745F62-D7A3-4208-8EDE-460A3EBAB0EB}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.5544972",
+      "DurationMax": "2.8673267",
       "MediaRefs": [
        {
-        "Id": "460805782"
+        "Id": "206242964"
+       }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "2730119150",
+        "Name": "Outdoors",
+        "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
+        "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}",
+        "Color": "24"
+       }
+      ]
+     },
+     {
+      "Id": "1909082840",
+      "Name": "Revolver_reload_insertBullet",
+      "ObjectPath": "\\Events\\Game\\Player\\PlayerCombat\\Revolver\\Revolver_reload_insertBullet",
+      "GUID": "{76C4A2FE-95F1-4A9E-93E9-0E8EFC75D981}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.1210912",
+      "DurationMax": "0.1695141",
+      "MediaRefs": [
+       {
+        "Id": "482921553"
+       },
+       {
+        "Id": "724246101"
+       },
+       {
+        "Id": "739735133"
+       },
+       {
+        "Id": "763663487"
+       }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "2730119150",
+        "Name": "Outdoors",
+        "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
+        "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}",
+        "Color": "24"
+       }
+      ]
+     },
+     {
+      "Id": "3961022741",
+      "Name": "Revolver_Reload_start",
+      "ObjectPath": "\\Events\\Game\\Player\\PlayerCombat\\Revolver\\Revolver_Reload_start",
+      "GUID": "{02C94503-1A2B-4216-85C3-EC1F2DAF4430}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "154056081"
+       },
+       {
+        "Id": "899753535"
        }
       ],
       "AuxBusRefs": [
@@ -1000,7 +1114,7 @@
      {
       "Id": "860578996",
       "Name": "Revolver_Shoot",
-      "ObjectPath": "\\Events\\Game\\Player\\PlayerCombat\\Revolver_Shoot",
+      "ObjectPath": "\\Events\\Game\\Player\\PlayerCombat\\Revolver\\Revolver_Shoot",
       "GUID": "{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}",
       "DurationType": "OneShot",
       "DurationMin": "1.2431439",
@@ -1252,6 +1366,6 @@
     ]
    }
   ],
-  "FileHash": "{19F9BF2C-9450-38B0-389C-7BF24583E3EF}"
+  "FileHash": "{FC58876E-B637-345F-1C3C-17CE5A5E5B7E}"
  }
 }
