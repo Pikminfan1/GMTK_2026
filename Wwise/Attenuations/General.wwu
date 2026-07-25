@@ -3,9 +3,9 @@
 	<Attenuations>
 		<WorkUnit Name="General" ID="{45D68877-CE1B-4135-98BC-C165B2B4501C}" PersistMode="Standalone">
 			<ChildrenList>
-				<Attenuation Name="ATT_Generic_10" ID="{BEA8B0CE-57DB-40B1-A1AB-F45DEAE711F1}" ShortID="467270397">
+				<Attenuation Name="ATT_Generic_1000" ID="{BEA8B0CE-57DB-40B1-A1AB-F45DEAE711F1}" ShortID="467270397">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="10"/>
+						<Property Name="RadiusMax" Type="Real64" Value="1000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -21,7 +21,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>10</XPos>
+											<XPos>1000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -100,9 +100,9 @@
 						</TransmissionDSFUsage>
 					</CurveUsageInfoList>
 				</Attenuation>
-				<Attenuation Name="ATT_Generic_20" ID="{929FD621-29CD-495F-B79B-AE15B24D87A4}" ShortID="557462521">
+				<Attenuation Name="ATT_Generic_2000" ID="{929FD621-29CD-495F-B79B-AE15B24D87A4}" ShortID="557462521">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="20"/>
+						<Property Name="RadiusMax" Type="Real64" Value="2000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -118,7 +118,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>20</XPos>
+											<XPos>2000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -197,9 +197,9 @@
 						</TransmissionDSFUsage>
 					</CurveUsageInfoList>
 				</Attenuation>
-				<Attenuation Name="ATT_Generic_50" ID="{E963E22A-1199-4FA4-AE81-9E168CB057AB}" ShortID="718360199">
+				<Attenuation Name="ATT_Generic_5000" ID="{E963E22A-1199-4FA4-AE81-9E168CB057AB}" ShortID="718360199">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="50"/>
+						<Property Name="RadiusMax" Type="Real64" Value="5000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -215,7 +215,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>50</XPos>
+											<XPos>5000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -294,7 +294,10 @@
 						</TransmissionDSFUsage>
 					</CurveUsageInfoList>
 				</Attenuation>
-				<Attenuation Name="ATT_Generic_100" ID="{5D272496-F2D6-42FA-9BFC-08EB711FF125}" ShortID="250287151">
+				<Attenuation Name="ATT_Generic_10000" ID="{5D272496-F2D6-42FA-9BFC-08EB711FF125}" ShortID="250287151">
+					<PropertyList>
+						<Property Name="RadiusMax" Type="Real64" Value="10000"/>
+					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
@@ -309,7 +312,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>100</XPos>
+											<XPos>10000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -388,9 +391,9 @@
 						</TransmissionDSFUsage>
 					</CurveUsageInfoList>
 				</Attenuation>
-				<Attenuation Name="ATT_Generic_150" ID="{2ADBC841-3FF9-4AF1-857F-BBABB7708234}" ShortID="600470573">
+				<Attenuation Name="ATT_Generic_15000" ID="{2ADBC841-3FF9-4AF1-857F-BBABB7708234}" ShortID="600470573">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="150"/>
+						<Property Name="RadiusMax" Type="Real64" Value="15000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -406,7 +409,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>150</XPos>
+											<XPos>15000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -485,9 +488,9 @@
 						</TransmissionDSFUsage>
 					</CurveUsageInfoList>
 				</Attenuation>
-				<Attenuation Name="ATT_Generic_200" ID="{79CA2108-D3D6-4BEF-AE0E-61A619222A1D}" ShortID="1044744977">
+				<Attenuation Name="ATT_Generic_20000" ID="{79CA2108-D3D6-4BEF-AE0E-61A619222A1D}" ShortID="1044744977">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="200"/>
+						<Property Name="RadiusMax" Type="Real64" Value="20000"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -503,7 +506,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>200</XPos>
+											<XPos>20000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>

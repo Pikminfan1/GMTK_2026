@@ -22,7 +22,7 @@
 							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Revolver_Reload" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+							<ObjectRef Name="Revolver_Reload_start" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 					</ModuleList>
@@ -32,6 +32,26 @@
 						<Module>
 							<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Reload" ID="{18964B2D-D94B-470A-83E2-B19CAC85AC2F}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Revolver_Reload_start" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Revolver_reload_insertBullet" ID="{76C4A2FE-95F1-4A9E-93E9-0E8EFC75D981}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Revolver_reload_end" ID="{90745F62-D7A3-4208-8EDE-460A3EBAB0EB}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Revolver_reload_cancel" ID="{25443B76-8B7A-4A1F-A818-CFDD2250EE33}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+							<Position X="3" Y="0"/>
 						</Module>
 					</ModuleList>
 				</SoundcasterSession>

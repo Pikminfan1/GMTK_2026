@@ -5,6 +5,8 @@
 			<ChildrenList>
 				<PropertyContainer Name="Revolver" ID="{630496B4-DFD8-4695-870B-AE891B8DF751}" ShortID="342170189">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
 								<Value>-6</Value>
@@ -12,6 +14,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ATT_Generic_20000" ID="{79CA2108-D3D6-4BEF-AE0E-61A619222A1D}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
 						</Reference>
@@ -151,26 +156,6 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
-						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Revolver_Shot" ID="{B6A101E1-EF44-401C-A44A-4CA2703241FC}" ShortID="20323325">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-								</Reference>
-							</ReferenceList>
-						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Revolver_Tail" ID="{2F07B29B-0DC3-4E30-8D86-EC740806D99C}" ShortID="333533560">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-								</Reference>
-							</ReferenceList>
 						</RandomSequenceContainer>
 						<PropertyContainer Name="Revolver_shoot" ID="{0AEBF0AB-DC35-4418-A6E8-9165FC0D8940}" ShortID="730469166">
 							<ReferenceList>
@@ -876,62 +861,290 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</PropertyContainer>
-						<Sound Name="Revolver_reload" ID="{445E575A-8E92-47DF-898D-2E4B502C3C90}" ShortID="115085503">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{64CE237E-AC88-4A5B-A758-32D5CBB3A3D3}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="50"/>
-													<Property Name="Min" Type="Real64" Value="-50"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-6</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-								</Reference>
-							</ReferenceList>
+						<Folder Name="Revolver_reload" ID="{FEF15D8F-446E-49E0-9248-2C5EFED060E3}" ShortID="784178070">
 							<ChildrenList>
-								<AudioFileSource Name="sfx_revolver_reload01_mo_fm" ID="{BC8549E4-93D3-4896-A164-7EA96F9BB953}">
-									<Language>SFX</Language>
-									<AudioFile>sfx_revolver_reload01_mo_fm.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="545437347"/>
-									</MediaIDList>
-								</AudioFileSource>
-								<AudioFileSource Name="sfx_revolver_reload02_ethereal2_mo_fm" ID="{3E277EE9-0710-47E4-B5D4-AFB3DB5D3A05}">
+								<PropertyContainer Name="Revolver_Reload" ID="{0FF8B2B1-526B-498C-B574-BDAAD8766EEC}" ShortID="678871157">
 									<PropertyList>
-										<Property Name="VolumeOffset" Type="Real64">
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{03DDE8D5-C4FB-4CAF-BA55-0C7B27F40A7F}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5.1</Value>
+												<Value>-9</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_revolver_reload02_ethereal2_mo_fm.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="460805782"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Revolver_reload_insertBullet" ID="{93C317BD-2CDC-4E57-8931-7ED89B23159F}" ShortID="325998730">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{0C8DAD94-E799-42B0-A6BF-923B396A440A}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerCombat" ID="{E0794755-7A44-41C5-98E3-2E356CE63F32}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="Outdoors" ID="{1925E056-166D-4DD7-AB68-8EA81697C003}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="sfx_reload_bullet01_mo_fm" ID="{C6317039-6474-43C6-BFDF-4AC13264F0A3}" ShortID="75546833">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sfx_reload_bullet01_mo_fm" ID="{464EC2E3-F072-4D5B-9807-3EDDC2EB01A7}">
+															<Language>SFX</Language>
+															<AudioFile>sfx_reload_bullet01_mo_fm.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="482921553"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sfx_reload_bullet01_mo_fm" ID="{464EC2E3-F072-4D5B-9807-3EDDC2EB01A7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sfx_reload_bullet02_mo_fm" ID="{18321496-0D37-4DE3-9AAC-DFE7FA24B85B}" ShortID="657304693">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sfx_reload_bullet02_mo_fm" ID="{4C80A529-E413-4913-A680-92D24B25AA67}">
+															<Language>SFX</Language>
+															<AudioFile>sfx_reload_bullet02_mo_fm.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="739735133"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sfx_reload_bullet02_mo_fm" ID="{4C80A529-E413-4913-A680-92D24B25AA67}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sfx_reload_bullet03_mo_fm" ID="{F5AF8ED9-2C5F-40A8-9192-5E8539A8DD09}" ShortID="581638947">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sfx_reload_bullet03_mo_fm" ID="{0D833652-4E27-40C5-86E8-B7240644E6D5}">
+															<Language>SFX</Language>
+															<AudioFile>sfx_reload_bullet03_mo_fm.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="763663487"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sfx_reload_bullet03_mo_fm" ID="{0D833652-4E27-40C5-86E8-B7240644E6D5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sfx_reload_bullet04_mo_fm" ID="{C9CF0FB2-4878-4D60-81D5-2CC28A5528C1}" ShortID="9084201">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sfx_reload_bullet04_mo_fm" ID="{96FE4E06-0629-4897-91E7-EFE39F57ECDA}">
+															<Language>SFX</Language>
+															<AudioFile>sfx_reload_bullet04_mo_fm.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="724246101"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sfx_reload_bullet04_mo_fm" ID="{96FE4E06-0629-4897-91E7-EFE39F57ECDA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<Sound Name="Revolver_reload_loop" ID="{4CB84007-5AF5-45A3-B2DD-D57D92E1932B}" ShortID="394387565">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{0C81BD00-BEE7-4A30-AFC1-8DE7CBE3281F}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerCombat" ID="{E0794755-7A44-41C5-98E3-2E356CE63F32}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="Outdoors" ID="{1925E056-166D-4DD7-AB68-8EA81697C003}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_Reload_loop_lp_st_fm" ID="{7F421A67-0FFB-490A-B936-7B77B26D7D8A}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_Reload_loop_lp_st_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="899753535"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_Reload_loop_lp_st_fm" ID="{7F421A67-0FFB-490A-B936-7B77B26D7D8A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Revolver_reload_start" ID="{445E575A-8E92-47DF-898D-2E4B502C3C90}" ShortID="115085503">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{64CE237E-AC88-4A5B-A758-32D5CBB3A3D3}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="50"/>
+																	<Property Name="Min" Type="Real64" Value="-50"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerCombat" ID="{E0794755-7A44-41C5-98E3-2E356CE63F32}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="Outdoors" ID="{1925E056-166D-4DD7-AB68-8EA81697C003}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_revolver_reload01_mo_fm" ID="{BC8549E4-93D3-4896-A164-7EA96F9BB953}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_revolver_reload01_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="545437347"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="sfx_revolver_reload02_ethereal2_mo_fm" ID="{3E277EE9-0710-47E4-B5D4-AFB3DB5D3A05}">
+													<PropertyList>
+														<Property Name="VolumeOffset" Type="Real64">
+															<ValueList>
+																<Value>-5.1</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>sfx_revolver_reload02_ethereal2_mo_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="460805782"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="sfx_Reload_Start_st_fm" ID="{B283C154-5B4C-417B-AA89-15BEEBD44F89}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>sfx_Reload_Start_st_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="154056081"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_Reload_Start_st_fm" ID="{B283C154-5B4C-417B-AA89-15BEEBD44F89}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Revolver_reload_end" ID="{DDA720A7-6F37-4E7F-B0D9-E3E92857417B}" ShortID="164903458">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_Reload_End_st_fm" ID="{568C6151-AE98-4432-86C0-49D98122D016}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_Reload_End_st_fm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="206242964"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_Reload_End_st_fm" ID="{568C6151-AE98-4432-86C0-49D98122D016}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</PropertyContainer>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="sfx_revolver_reload02_ethereal2_mo_fm" ID="{3E277EE9-0710-47E4-B5D4-AFB3DB5D3A05}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</Folder>
 					</ChildrenList>
 				</PropertyContainer>
 			</ChildrenList>

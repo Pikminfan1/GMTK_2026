@@ -194,6 +194,13 @@
 									</ObjectLists>
 								</Bus>
 								<Bus Name="Music" ID="{E5C6A8DB-6725-4FC9-8818-3C39D38E99B9}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ChildrenList>
 										<Bus Name="Stingers" ID="{D284416F-B7B8-4789-8924-8724D2B97C22}"/>
 									</ChildrenList>

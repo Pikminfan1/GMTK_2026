@@ -241,7 +241,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Revolver_Reload" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+											<ObjectRef Name="Revolver_Reload_start" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -392,7 +392,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Revolver_Reload" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+											<ObjectRef Name="Revolver_Reload_start" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
