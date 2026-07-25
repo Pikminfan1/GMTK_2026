@@ -9,6 +9,7 @@
 			<ChildrenList>
 				<WorkUnit Name="PlayerCombat" ID="{25755D2E-3CBB-459C-BA2E-5A5C50FDA565}" PersistMode="Reference"/>
 				<WorkUnit Name="PlayerLocomotion" ID="{79FB47C6-9757-4145-BA35-D226AD7DC16E}" PersistMode="Reference"/>
+				<WorkUnit Name="PlayerActions" ID="{3DC3FB59-BDF1-4361-86DC-0B3DD48E0A2D}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

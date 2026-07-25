@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}" SchemaVersion="133" RootDocumentID="{267721AC-3434-4988-BC76-0271F7F5E92D}" ParentDocumentID="{267721AC-3434-4988-BC76-0271F7F5E92D}">
+<WwiseDocument Type="WorkUnit" ID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}" SchemaVersion="133" RootDocumentID="{6268078F-654B-4069-8B2F-893FB9EB4270}" ParentDocumentID="{267721AC-3434-4988-BC76-0271F7F5E92D}">
 	<Events>
 		<WorkUnit Name="PlayerCombat" ID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}" OwnerID="{267721AC-3434-4988-BC76-0271F7F5E92D}" PersistMode="Nested">
 			<ChildrenList>

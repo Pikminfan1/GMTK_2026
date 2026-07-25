@@ -12887,6 +12887,9 @@
 				<PhysicalFolder Path="Events">
 					<WorkUnit Name="Events" ID="{A69BF0FC-D84A-487C-ABDD-56F71CB2A126}" PersistMode="Standalone"/>
 				</PhysicalFolder>
+				<PhysicalFolder Path="Events\Game">
+					<WorkUnit Name="Game" ID="{3D09C46B-1085-4BE1-873C-CB6F7D0E89E2}" PersistMode="Standalone"/>
+				</PhysicalFolder>
 				<PhysicalFolder Path="Game Parameters">
 					<WorkUnit Name="Game Parameters" ID="{4025818E-097F-4A72-B692-B8A2E2663DCB}" PersistMode="Standalone"/>
 				</PhysicalFolder>
