@@ -56,6 +56,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Input")
 	TObjectPtr<UInputAction> AimAction;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Input")
+	TObjectPtr<UInputAction> ReloadAction;
+
 	// Weapon spawned and attached automatically in BeginPlay.
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Combat")
 	TSubclassOf<AWeaponBase> DefaultWeaponClass;
@@ -93,4 +96,6 @@ protected:
 	void StartFire(const FInputActionValue& Value);
 	void StartAim(const FInputActionValue& Value);
 	void StopAim(const FInputActionValue& Value);
+	void StartReload(const FInputActionValue& Value);
+	void StopReload(const FInputActionValue& Value);
 };

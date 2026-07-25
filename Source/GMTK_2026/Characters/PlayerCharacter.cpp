@@ -83,6 +83,11 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 			EnhancedInput->BindAction(AimAction, ETriggerEvent::Started, this, &APlayerCharacter::StartAim);
 			EnhancedInput->BindAction(AimAction, ETriggerEvent::Completed, this, &APlayerCharacter::StopAim);
 		}
+		if (ReloadAction)
+		{
+			EnhancedInput->BindAction(ReloadAction, ETriggerEvent::Started, this, &APlayerCharacter::StartReload);
+			EnhancedInput->BindAction(ReloadAction, ETriggerEvent::Completed, this, &APlayerCharacter::StopReload);
+		}
 	}
 	else
 	{
@@ -170,6 +175,35 @@ void APlayerCharacter::StartFire(const FInputActionValue& Value)
 		{
 			UE_LOG(LogGMTKCombat, Verbose, TEXT("Fire input received but no weapon is equipped"));
 		}
+	}
+}
+
+void APlayerCharacter::StartReload(const FInputActionValue& Value)
+{
+	// Both hands begin loading independently. Each weapon guards against reloading
+	// when full or already loading, and runs its own per-round timer, so the two
+	// mags fill on their own schedules.
+	UE_LOG(LogTemp, Warning, TEXT(">>> StartReload C++ handler CALLED"));
+	UE_LOG(LogGMTKCombat, Verbose, TEXT("Player Character Reload input received"));
+	if (EquippedWeaponR)
+	{
+		EquippedWeaponR->StartReload();
+	}
+	if (EquippedWeaponL)
+	{
+		EquippedWeaponL->StartReload();
+	}
+}
+
+void APlayerCharacter::StopReload(const FInputActionValue& Value)
+{
+	if (EquippedWeaponR)
+	{
+		EquippedWeaponR->StopReload();
+	}
+	if (EquippedWeaponL)
+	{
+		EquippedWeaponL->StopReload();
 	}
 }
 	

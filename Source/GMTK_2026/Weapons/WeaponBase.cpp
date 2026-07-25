@@ -1,3 +1,5 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
 #include "Weapons/WeaponBase.h"
 #include "Weapons/ProjectileBase.h"
 #include "Components/SkeletalMeshComponent.h"
@@ -6,25 +8,29 @@
 #include "DrawDebugHelpers.h"
 #include "Camera/CameraComponent.h"
 #include "Characters/PlayerCharacter.h"
+#include "TimerManager.h"
 
-// Sets default values
 AWeaponBase::AWeaponBase()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
-	
+
 	WeaponMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WeaponMesh"));
 	SetRootComponent(WeaponMesh);
-
 }
 
-// Called when the game starts or when spawned
 void AWeaponBase::BeginPlay()
 {
 	Super::BeginPlay();
 	CurrentAmmo = MaxAmmo;
-	
 }
+
+void AWeaponBase::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	// Don't leave a reload timer pointing at a destroyed weapon.
+	GetWorldTimerManager().ClearTimer(ReloadTimerHandle);
+	Super::EndPlay(EndPlayReason);
+}
+
 //TODO: May need to add attach logic here
 void AWeaponBase::Equip(AActor* NewOwnerActor)
 {
@@ -42,9 +48,17 @@ void AWeaponBase::Equip(AActor* NewOwnerActor)
 
 void AWeaponBase::Fire()
 {
+	// Firing cancels a reload - and it's a *fire* cancel, distinct from the player
+	// releasing the reload button, so it fires OnReloadCancelledByFire (no interrupt SFX).
+	if (bIsReloading)
+	{
+		EndReload(EReloadEndReason::CancelledByFire);
+	}
+
 	if (CurrentAmmo <= 0)
 	{
-		UE_LOG(LogGMTKCombat, Verbose, TEXT("%s tried to fire with no ammo"), *GetName());
+		UE_LOG(LogGMTKCombat, Verbose, TEXT("%s dry-fired (no ammo)"), *GetName());
+		OnDryFire.Broadcast();
 		return;
 	}
 
@@ -60,14 +74,88 @@ void AWeaponBase::Fire()
 		break;
 	}
 
-	// TODO: muzzle flash VFX, fire sound, and recoil/animation montage hooks go here.
-	// TODO: May also add the casting health drain attack here as well
+	OnFired.Broadcast(CurrentAmmo, MaxAmmo);
 }
 
-void AWeaponBase::Reload()
+void AWeaponBase::StartReload()
 {
-	CurrentAmmo = MaxAmmo;
-	// TODO: reload animation/sound hook.
+	if (bIsReloading || IsMagazineFull())
+	{
+		return;
+	}
+
+	bIsReloading = true;
+	OnReloadStarted.Broadcast();
+
+	UE_LOG(LogGMTKCombat, Verbose, TEXT("%s started incremental reload (%.2fs/round)"),
+		*GetName(), RoundReloadInterval);
+
+	if (ReloadStartDelay <= 0.f)
+	{
+		LoadOneRound();
+	}
+	else
+	{
+		GetWorldTimerManager().SetTimer(
+			ReloadTimerHandle, this, &AWeaponBase::LoadOneRound, ReloadStartDelay, false);
+	}
+}
+
+void AWeaponBase::StopReload()
+{
+	// Called on button release. If we're not reloading there's nothing to interrupt.
+	if (!bIsReloading)
+	{
+		return;
+	}
+
+	EndReload(EReloadEndReason::Interrupted);
+}
+
+void AWeaponBase::LoadOneRound()
+{
+	CurrentAmmo = FMath::Min(CurrentAmmo + 1, MaxAmmo);
+
+	OnRoundLoaded.Broadcast(CurrentAmmo, MaxAmmo);
+
+	UE_LOG(LogGMTKCombat, Verbose, TEXT("%s loaded a round (%d/%d)"),
+		*GetName(), CurrentAmmo, MaxAmmo);
+
+	// Full? End as Completed.
+	if (IsMagazineFull())
+	{
+		EndReload(EReloadEndReason::Completed);
+		return;
+	}
+
+	// Otherwise schedule the next round. If the player releases the button,
+	// StopReload clears this timer before it fires.
+	GetWorldTimerManager().SetTimer(
+		ReloadTimerHandle, this, &AWeaponBase::LoadOneRound, RoundReloadInterval, false);
+}
+
+void AWeaponBase::EndReload(EReloadEndReason Reason)
+{
+	GetWorldTimerManager().ClearTimer(ReloadTimerHandle);
+	bIsReloading = false;
+
+	switch (Reason)
+	{
+	case EReloadEndReason::Completed:
+		UE_LOG(LogGMTKCombat, Verbose, TEXT("%s reload completed (%d/%d)"), *GetName(), CurrentAmmo, MaxAmmo);
+		OnReloadCompleted.Broadcast();
+		break;
+
+	case EReloadEndReason::Interrupted:
+		UE_LOG(LogGMTKCombat, Verbose, TEXT("%s reload interrupted by release (%d/%d)"), *GetName(), CurrentAmmo, MaxAmmo);
+		OnReloadInterrupted.Broadcast();
+		break;
+
+	case EReloadEndReason::CancelledByFire:
+		UE_LOG(LogGMTKCombat, Verbose, TEXT("%s reload cancelled by fire (%d/%d)"), *GetName(), CurrentAmmo, MaxAmmo);
+		OnReloadCancelledByFire.Broadcast();
+		break;
+	}
 }
 
 void AWeaponBase::FireHitscan()

@@ -65,6 +65,12 @@ void UHealthComponent::Heal(float HealAmount)
 		GetOwner() ? *GetOwner()->GetName() : TEXT("Unknown"), HealAmount, OldHealth, CurrentHealth);
 
 	OnHealthChanged.Broadcast(CurrentHealth, MaxHealth, Delta);
+
+	// Delta is positive here (we clamped upward), so this is the actual amount restored.
+	if (Delta > 0.f)
+	{
+		OnHealed.Broadcast(Delta, CurrentHealth);
+	}
 }
 
 

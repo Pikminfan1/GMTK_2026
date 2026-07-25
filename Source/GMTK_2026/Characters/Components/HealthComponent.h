@@ -8,6 +8,7 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnHealthChanged, float, NewHealth, float, MaxHealth, float, Delta);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDeath, AActor*, DeadActor);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnHealed, float, AmountHealed, float, NewHealth);
 
 /**
  * Tracks current/max health and death state for anything that can take damage.
@@ -37,6 +38,10 @@ public:
 	/* Broadcast death, for ragdoll / death animation / VFX etc */
 	UPROPERTY(BlueprintAssignable, Category = "Health")
 	FOnDeath OnDeath;
+
+	/* Broadcast specifically when healed (not on damage), for pickup VFX/SFX. */
+	UPROPERTY(BlueprintAssignable, Category = "Health")
+	FOnHealed OnHealed;
 	
 	/** Apply damage to this component's owner. Return true if the damage was actually applied. */
 	UFUNCTION(BlueprintCallable, Category = "Health")
