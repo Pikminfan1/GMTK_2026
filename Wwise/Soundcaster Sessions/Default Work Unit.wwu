@@ -10,12 +10,28 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Test_Weapon_QuickFire6shots" ID="{E6188A5E-786D-48E6-8B42-6365298A1570}" WorkUnitID="{9393BCA3-9AA4-4218-A07B-B3FD232488FB}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Revolver_NoAmmo" ID="{E270140D-9AEB-4D94-BDD8-4B0CF79DFB76}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Test_Weapon_QuickFire6shots_nodry" ID="{DBEDD711-C3E6-4C8E-8393-E82E127ADDF0}" WorkUnitID="{9393BCA3-9AA4-4218-A07B-B3FD232488FB}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Revolver_Reload" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
 							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Pickups" ID="{8B29A9D2-031C-4C91-9921-53E2E76BCEC7}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
+							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
 				</SoundcasterSession>
