@@ -36,7 +36,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="NPC_RayStart" ID="{61720CB7-A9F1-4F0F-A916-EFD202D3127A}">
+				<Event Name="NPC_Ray_Start" ID="{61720CB7-A9F1-4F0F-A916-EFD202D3127A}">
 					<ChildrenList>
 						<Action Name="" ID="{57DA09B6-D4A2-4CBB-8BC1-7FE08978DC8A}" ShortID="684030950">
 							<ReferenceList>
