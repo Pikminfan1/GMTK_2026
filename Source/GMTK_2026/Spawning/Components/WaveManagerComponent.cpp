@@ -6,17 +6,10 @@
 #include "Kismet/GameplayStatics.h"
 #include "Utility/LogChannels.h"
 
-
-// Sets default values for this component's properties
 UWaveManagerComponent::UWaveManagerComponent()
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = false;
-
-	// ...
 }
-
 
 void UWaveManagerComponent::BeginPlay()
 {
@@ -38,8 +31,18 @@ void UWaveManagerComponent::BeginPlay()
 	}
 }
 
-void UWaveManagerComponent::StartNextWave()
+void UWaveManagerComponent::StartNextWave(bool bForce)
 {
+	// Guard against starting a new wave while the current one is still being fought,
+	// so a stray call (or an over-eager player shooting the start actor twice) can't
+	// double-spawn. bForce bypasses this for debug or scripted starts.
+	if (IsWaveActive() && !bForce)
+	{
+		UE_LOG(LogGMTKSpawn, Log, TEXT("StartNextWave ignored - wave %d still active (%d enemies left)."),
+			GetCurrentWaveNumber(), EnemiesRemaining);
+		return;
+	}
+
 	CurrentWaveIndex++;
 
 	if (!Waves.IsValidIndex(CurrentWaveIndex))
@@ -53,7 +56,7 @@ void UWaveManagerComponent::StartNextWave()
 	if (!Wave)
 	{
 		UE_LOG(LogGMTKSpawn, Warning, TEXT("Wave entry %d is null, skipping."), CurrentWaveIndex);
-		StartNextWave();
+		StartNextWave(bForce);
 		return;
 	}
 
@@ -80,18 +83,18 @@ void UWaveManagerComponent::SpawnEnemyEntry(const FWaveEnemyEntry& Entry)
 	{
 		return;
 	}
-	
+
 	AEnemySpawnPoint* SpawnPoint = CachedSpawnPoints[FMath::RandRange(0, CachedSpawnPoints.Num() - 1)];
 	if (!SpawnPoint)
 	{
 		return;
 	}
-	
+
 	TSubclassOf<AEnemyCharacter> ClassToSpawn = SpawnPoint->OverrideEnemyClass ? SpawnPoint->OverrideEnemyClass : Entry.EnemyClass;
-	
+
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
-	
+
 	//TODO: Before Passing the enemy transform, modify the rotation to be facing the player
 	if (AEnemyCharacter* NewEnemy = GetWorld()->SpawnActor<AEnemyCharacter>(ClassToSpawn, SpawnPoint->GetActorTransform(), SpawnParams))
 	{
@@ -99,25 +102,25 @@ void UWaveManagerComponent::SpawnEnemyEntry(const FWaveEnemyEntry& Entry)
 		{
 			HealthComp->OnDeath.AddDynamic(this, &UWaveManagerComponent::HandleEnemyDeath);
 		}
-		
 	}
 }
 
 void UWaveManagerComponent::HandleEnemyDeath(AActor* DeadActor)
 {
 	EnemiesRemaining = FMath::Max(0, EnemiesRemaining - 1);
-	
+
+	// Relay the victim upward so the GameMode can report it into the central kill
+	// event (with a resolved killer) and drive score/combo/pickups from one place.
+	OnEnemyDied.Broadcast(DeadActor);
+
 	if (EnemiesRemaining == 0)
 	{
-		OnWaveCompleted.Broadcast((GetCurrentWaveNumber()));
+		OnWaveCompleted.Broadcast(GetCurrentWaveNumber());
 		UE_LOG(LogGMTKSpawn, Log, TEXT("Wave %d cleared"), GetCurrentWaveNumber());
-		
-		// TODO: decide whether the next wave starts automatically after a delay, or
-		// waits for something else (a UI prompt, a pickup, a countdown) before calling StartNextWave().
-		// This would be a good place for a shop system and upgrades to be inserted
+
+		// Intentionally does NOT auto-start the next wave. The next wave begins when
+		// something external calls StartNextWave() - e.g. the shootable "start wave"
+		// actor. This is also where a between-wave upgrade/shop pause would slot in
+		// later (not built yet).
 	}
 }
-
-
-
-
