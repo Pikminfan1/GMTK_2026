@@ -115,7 +115,6 @@
 										</AuxBus>
 									</ChildrenList>
 								</Bus>
-								<Bus Name="Pickups" ID="{F5FE45A2-B165-4103-B512-98BDFD0005EE}"/>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{50A8CD5B-27CA-4AE8-A073-FA5E693CC325}" SchemaVersion="133">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{50A8CD5B-27CA-4AE8-A073-FA5E693CC325}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{50A8CD5B-27CA-4AE8-A073-FA5E693CC325}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Weapon_Revolver" ID="{D07129FA-DFE8-41F1-B869-1C7CBD7BCF7A}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Revolver_NoAmmo" ID="{E270140D-9AEB-4D94-BDD8-4B0CF79DFB76}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Revolver_Reload" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
