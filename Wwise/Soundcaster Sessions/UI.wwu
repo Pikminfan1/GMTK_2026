@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="SC_UI" ID="{144F8345-1909-491B-88FE-329E783A06CE}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="UI_HoverHoverClick" ID="{654694E6-8CD1-4DB9-B5DD-19AAB1887001}" WorkUnitID="{9393BCA3-9AA4-4218-A07B-B3FD232488FB}"/>
+							<ObjectRef Name="Test_UI_HoverHoverClick" ID="{654694E6-8CD1-4DB9-B5DD-19AAB1887001}" WorkUnitID="{9393BCA3-9AA4-4218-A07B-B3FD232488FB}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>

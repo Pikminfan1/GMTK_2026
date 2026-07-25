@@ -21,6 +21,12 @@
 						<Property Name="Max" Type="Real64" Value="4"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="RTPC_PlayerAmmo" ID="{2B746929-9453-45FF-9C67-310FC96EEAB9}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="10"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

@@ -12,7 +12,7 @@
 			<ChildrenList>
 				<Folder Name="UI" ID="{6D8EE124-9122-46D0-90E3-9AEFF6CA4C49}" ShortID="662484457">
 					<ChildrenList>
-						<Event Name="UI_HoverHoverClick" ID="{654694E6-8CD1-4DB9-B5DD-19AAB1887001}">
+						<Event Name="Test_UI_HoverHoverClick" ID="{654694E6-8CD1-4DB9-B5DD-19AAB1887001}">
 							<ChildrenList>
 								<Action Name="" ID="{7D88713C-1FFC-4ECE-BCCE-A53B0A3F334D}" ShortID="209004353">
 									<PropertyList>
@@ -43,6 +43,205 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="UI_Click" ID="{4C0CE177-8042-45A7-9168-929B62FD67E2}" WorkUnitID="{DEC443DA-C97B-4055-AE25-A91A77EF8493}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Weapon" ID="{A008981D-E516-491B-94BC-B59D10A1AC4C}" ShortID="715935735">
+					<ChildrenList>
+						<Event Name="Test_Weapon_QuickFire6shots" ID="{E6188A5E-786D-48E6-8B42-6365298A1570}">
+							<ChildrenList>
+								<Action Name="" ID="{641291C1-5747-4A62-B391-A8B3B7F8DB9E}" ShortID="669512883">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_PlayerAmmo" ID="{2B746929-9453-45FF-9C67-310FC96EEAB9}" WorkUnitID="{BD140EFC-66FC-4DFD-BAF3-73B13478D5DC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{35BFCD30-2BF1-432D-AAF9-C38467C0325E}" ShortID="328299612">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DDFDEF8F-602C-4AAE-A8FF-4C03277DDDB2}" ShortID="1050762958">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_PlayerAmmo" ID="{2B746929-9453-45FF-9C67-310FC96EEAB9}" WorkUnitID="{BD140EFC-66FC-4DFD-BAF3-73B13478D5DC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0A1DBC83-6677-4201-B227-2C35CA90002E}" ShortID="730985795">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B92026CB-DC88-425E-931E-4A1236786212}" ShortID="342221011">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.4"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_PlayerAmmo" ID="{2B746929-9453-45FF-9C67-310FC96EEAB9}" WorkUnitID="{BD140EFC-66FC-4DFD-BAF3-73B13478D5DC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{200BA716-5723-46EE-8F13-6E97D9240E18}" ShortID="176389672">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="0.4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B055608D-1004-460A-B3AD-65049E5CE6CC}" ShortID="524197734">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.6"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_PlayerAmmo" ID="{2B746929-9453-45FF-9C67-310FC96EEAB9}" WorkUnitID="{BD140EFC-66FC-4DFD-BAF3-73B13478D5DC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{40E030F0-43B4-4A00-8965-C37270E06D1C}" ShortID="580790428">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="0.6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B8BDCFD0-3EA4-4E96-BAB7-2FB51AADD2F1}" ShortID="724953138">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.8"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_PlayerAmmo" ID="{2B746929-9453-45FF-9C67-310FC96EEAB9}" WorkUnitID="{BD140EFC-66FC-4DFD-BAF3-73B13478D5DC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{41274F18-1D8D-4F57-A00D-BEF2B4755135}" ShortID="507622589">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="0.8"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{057E817E-E697-43CF-95C8-84641A699008}" ShortID="867625033">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_PlayerAmmo" ID="{2B746929-9453-45FF-9C67-310FC96EEAB9}" WorkUnitID="{BD140EFC-66FC-4DFD-BAF3-73B13478D5DC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{001F89AB-8174-4CE7-90EF-4679DB59702F}" ShortID="188242819">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8BA46201-ED6C-4880-BE94-C28231404D1C}" ShortID="357532165">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="1.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_NoAmmo" ID="{E270140D-9AEB-4D94-BDD8-4B0CF79DFB76}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CA562AAF-B476-440C-8E3B-E6177D6F6880}" ShortID="925864933">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="1.4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_NoAmmo" ID="{E270140D-9AEB-4D94-BDD8-4B0CF79DFB76}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{11AC996D-B98F-494B-8F24-851EDE77E19D}" ShortID="967996699">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="1.6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_NoAmmo" ID="{E270140D-9AEB-4D94-BDD8-4B0CF79DFB76}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D725F732-35E4-418B-9038-CA19829608F7}" ShortID="1045043791">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="1.8"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_NoAmmo" ID="{E270140D-9AEB-4D94-BDD8-4B0CF79DFB76}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{66ED5C8B-F315-4541-BDF6-0B31478D4E33}" ShortID="673687792">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="2.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_Reload" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
