@@ -213,6 +213,93 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Folder Name="NPC_Ray" ID="{F43C30E7-6722-4F10-AC0A-AA4458E6E9D5}" ShortID="609165459">
+							<ChildrenList>
+								<Sound Name="SFX_NPCRayStart_Mono_Bulba" ID="{1E09EF4E-D57F-46E8-9B66-B4B06DB9DD89}" ShortID="63725975">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCRayStart_Mono_Bulba" ID="{F517858D-7973-4678-89FC-50BF45A96C54}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.07623"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.32046"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.03516"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.17504"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCRayStart_Mono_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="933638355"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCRayStart_Mono_Bulba" ID="{F517858D-7973-4678-89FC-50BF45A96C54}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_NPCRay_Mono_lp_Bulba" ID="{9C8CF281-DADC-4A8B-B22B-1BD760CB7DCF}" ShortID="580772304">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCRay_Mono_lp_Bulba" ID="{75C72A27-763A-4A76-A5A9-B5EA965FDA63}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCRay_Mono_lp_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="825183121"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCRay_Mono_lp_Bulba" ID="{75C72A27-763A-4A76-A5A9-B5EA965FDA63}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_NPCRayStop_Mono_Bulba" ID="{B28690FB-1C92-47FC-B33B-99ED4C98956D}" ShortID="916595225">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCRayStop_Mono_lp_Bulba" ID="{5C270F98-859C-435F-A92C-212D2A5E26F3}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.05401"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.05346"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.84374"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.18509"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCRayStop_Mono_lp_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="495019206"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCRayStop_Mono_lp_Bulba" ID="{5C270F98-859C-435F-A92C-212D2A5E26F3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</PropertyContainer>
 				<PropertyContainer Name="NPCActions" ID="{09C5BBBE-8DE8-493C-BD08-CAD8E2B6E91A}" ShortID="383474643">
