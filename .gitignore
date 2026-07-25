@@ -53,6 +53,7 @@ Wwise/*.validationcache
 Wwise/*.wsettings
 */Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
 
+
 # Exception for libraries
 Plugins/Wwise/
 Plugins/Wwise/**

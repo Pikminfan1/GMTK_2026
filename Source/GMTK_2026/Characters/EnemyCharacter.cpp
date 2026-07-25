@@ -4,16 +4,32 @@
 #include "Characters/EnemyCharacter.h"
 #include "AI/EnemyAIController.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Pickups/HealthOrbSpawnerComponent.h"
 
 AEnemyCharacter::AEnemyCharacter()
 {
 	// Intentionally minimal - mesh, stats, and Behavior Tree assignment happen per
 	// enemy-archetype Blueprint, not here.
+
+	// Every enemy drops health orbs on death by default. Blueprint archetypes tune the
+	// amount (or set count to 0 to drop nothing) on this component.
+	OrbSpawner = CreateDefaultSubobject<UHealthOrbSpawnerComponent>(TEXT("OrbSpawner"));
 }
 
 AEnemyAIController* AEnemyCharacter::GetEnemyAIController() const
 {
 	return Cast<AEnemyAIController>(GetController());
+}
+
+void AEnemyCharacter::HandleDeath_Implementation(AActor* DeadActor)
+{
+	// Drop the loot before the base tears the enemy down (disables collision/movement).
+	if (OrbSpawner)
+	{
+		OrbSpawner->NotifyOwnerDied();
+	}
+
+	Super::HandleDeath_Implementation(DeadActor);
 }
 
 float AEnemyCharacter::SetMovementSpeed(EEnemyMovementSpeed SpeedType)
