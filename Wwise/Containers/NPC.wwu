@@ -668,7 +668,7 @@
 				</PropertyContainer>
 				<PropertyContainer Name="NPCActions" ID="{09C5BBBE-8DE8-493C-BD08-CAD8E2B6E91A}" ShortID="383474643">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
