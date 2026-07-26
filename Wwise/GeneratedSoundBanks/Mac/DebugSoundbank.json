@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{806425B6-D29B-4CBA-9E26-2D2FE498C5C4}",
     "Language": "SFX",
-    "Hash": "{3BED5DAB-F5CE-2EED-68AD-C9AAAC135F7D}",
+    "Hash": "{03D1F834-C7AB-27DA-6424-12E390E0A52E}",
     "ObjectPath": "\\SoundBanks\\Debug\\DebugSoundbank",
     "ShortName": "DebugSoundbank",
     "Path": "DebugSoundbank.bnk",
@@ -21,7 +21,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_100.wav",
-      "CachePath": "39/{39C1E8E5-A0C1-AEF7-5B63-11427F65B0AF}.wem"
+      "CachePath": "C5/{C5F9598D-4617-60C2-9266-462015780147}.wem"
      },
      {
       "Id": "25829374",
@@ -29,7 +29,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_170.wav",
-      "CachePath": "54/{54CF1B67-6709-30A3-1868-C3D53A86B5CC}.wem"
+      "CachePath": "31/{318CEBD1-8EB8-76C9-7CCB-FD34D4688ED1}.wem"
      },
      {
       "Id": "28588062",
@@ -37,7 +37,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_0.wav",
-      "CachePath": "2C/{2C964885-C903-4091-03A3-DF4EE43EF571}.wem"
+      "CachePath": "00/{00248D1F-CF1A-9E3E-9567-BA3028024036}.wem"
      },
      {
       "Id": "48030369",
@@ -45,7 +45,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_200.wav",
-      "CachePath": "57/{576B8395-5E7A-E7FE-8861-175E1B77C0A8}.wem"
+      "CachePath": "57/{576B9250-51D3-86B2-11F7-4E3A4A2897A0}.wem"
      },
      {
       "Id": "49997267",
@@ -53,7 +53,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_9.wav",
-      "CachePath": "64/{64745757-0A90-9C9C-8826-BE96585567AC}.wem"
+      "CachePath": "ED/{ED7534FE-CE07-A113-BA07-4FE553D993ED}.wem"
      },
      {
       "Id": "106195816",
@@ -61,7 +61,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_60.wav",
-      "CachePath": "3D/{3D2A796F-5716-2480-E17B-82C38BAE3FE4}.wem"
+      "CachePath": "1A/{1AFD75AF-8851-1FDB-5B21-E6110C7DAD8C}.wem"
      },
      {
       "Id": "113433565",
@@ -69,7 +69,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_80.wav",
-      "CachePath": "16/{16222BFC-E154-8F21-CF89-1C3126C52F17}.wem"
+      "CachePath": "8F/{8F2CAECB-EEC2-A5EB-E666-2A1E1B567238}.wem"
      },
      {
       "Id": "173862396",
@@ -77,7 +77,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_85.wav",
-      "CachePath": "6E/{6EE84A5B-7A8B-4CF3-CB39-871B0D57C009}.wem"
+      "CachePath": "CC/{CCE94085-845A-CA88-8CE6-9D0838FCF01D}.wem"
      },
      {
       "Id": "182048868",
@@ -85,7 +85,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_8.wav",
-      "CachePath": "75/{759D03C2-9463-2166-9CE5-893F93A8DEBC}.wem"
+      "CachePath": "B9/{B97711F6-5E48-3475-D7D0-3E16EEAF1B06}.wem"
      },
      {
       "Id": "194937607",
@@ -93,7 +93,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_6.wav",
-      "CachePath": "E1/{E121032B-DCC2-E708-741D-6AC62B4AD4B1}.wem"
+      "CachePath": "BE/{BE1BBE15-A68A-4681-C62D-581B5683887C}.wem"
      },
      {
       "Id": "205036045",
@@ -101,7 +101,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_110.wav",
-      "CachePath": "E4/{E4E1E36A-2594-1FA2-B30E-4CE3FBB5274E}.wem"
+      "CachePath": "7D/{7D213C0A-B86F-1276-F864-A90574FEB391}.wem"
      },
      {
       "Id": "248113364",
@@ -109,7 +109,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_160.wav",
-      "CachePath": "04/{04FEF4CE-392F-2A58-C0A2-4CADBFAA47EB}.wem"
+      "CachePath": "51/{511A8C32-B5BE-C0DA-61B8-1B9C4F6B7D07}.wem"
      },
      {
       "Id": "275879356",
@@ -117,7 +117,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_140.wav",
-      "CachePath": "F4/{F4763A2C-AC91-3A2D-C56B-6E73DF6ED5C0}.wem"
+      "CachePath": "A5/{A523FE7F-FFAA-7764-43A1-5E66C3420BD4}.wem"
      },
      {
       "Id": "281493717",
@@ -125,7 +125,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_90.wav",
-      "CachePath": "69/{69E27860-612A-E193-C6FC-7DA18D1F7292}.wem"
+      "CachePath": "78/{7894652B-0B23-3333-5B3D-27C4BD8543AD}.wem"
      },
      {
       "Id": "296436777",
@@ -133,7 +133,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_15.wav",
-      "CachePath": "9D/{9D63C3B6-F579-B498-1AE1-F2B04E9CBA3E}.wem"
+      "CachePath": "29/{29588BA2-39B0-357F-9E6A-4D216FE20A4D}.wem"
      },
      {
       "Id": "312655483",
@@ -141,7 +141,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_3.wav",
-      "CachePath": "D4/{D46EEEE4-5770-C1DE-77C5-4597E52F5E15}.wem"
+      "CachePath": "3D/{3D3AA5EB-1ABE-0F76-4E04-531636FD7765}.wem"
      },
      {
       "Id": "352764488",
@@ -149,7 +149,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_35.wav",
-      "CachePath": "0A/{0A091490-8BE8-0B4C-4A37-FABDD4C922EA}.wem"
+      "CachePath": "33/{3329A8CE-B078-E165-9BEC-B5C830236963}.wem"
      },
      {
       "Id": "384439757",
@@ -157,7 +157,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_190.wav",
-      "CachePath": "EF/{EFDA91CE-B5F3-2E1D-876C-38E49665A27C}.wem"
+      "CachePath": "E1/{E1779AE2-D2A4-7356-D9D3-8B2E0829B8A0}.wem"
      },
      {
       "Id": "415172585",
@@ -165,7 +165,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_40.wav",
-      "CachePath": "21/{214B6048-BF3B-FC54-7EC4-9A1E98D9CD97}.wem"
+      "CachePath": "DF/{DF0F1DB6-A5AC-67F3-5497-A4D12DAB034E}.wem"
      },
      {
       "Id": "428002276",
@@ -173,7 +173,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_30.wav",
-      "CachePath": "6F/{6FE523FD-9FD2-86E4-E5E4-CD76B4A6AF37}.wem"
+      "CachePath": "C7/{C751412E-B603-32AE-747D-1CD683F67B0F}.wem"
      },
      {
       "Id": "431297954",
@@ -181,7 +181,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_75.wav",
-      "CachePath": "FE/{FED3D83A-87D9-F264-C37C-DCDA1D7C5787}.wem"
+      "CachePath": "F7/{F75D47D3-7C51-7962-14F5-7524CA4EC6C2}.wem"
      },
      {
       "Id": "495735999",
@@ -189,7 +189,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_20.wav",
-      "CachePath": "55/{55EDE038-4C9F-AAA9-3D80-08D640CC5712}.wem"
+      "CachePath": "DB/{DB4D473E-ED31-577B-4BE4-28AF18AAD6A3}.wem"
      },
      {
       "Id": "499815888",
@@ -197,7 +197,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_2.wav",
-      "CachePath": "F3/{F3332FFE-1662-576A-5B81-56698EC03F44}.wem"
+      "CachePath": "55/{556313F3-CB4E-26EE-C7E6-4ABF567F74F4}.wem"
      },
      {
       "Id": "502700156",
@@ -205,7 +205,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_10.wav",
-      "CachePath": "7D/{7D01BA94-24AB-FCD1-D2F4-E82B1A2DFF47}.wem"
+      "CachePath": "49/{496F1A48-A637-C39B-40BB-F5E4C569B9E2}.wem"
      },
      {
       "Id": "638251489",
@@ -213,7 +213,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_95.wav",
-      "CachePath": "9B/{9BCB51C7-9DAB-5309-B7F3-F6F02562AF51}.wem"
+      "CachePath": "63/{63E3DFA0-9A6C-6EB7-FAAC-E6DD09DF1F60}.wem"
      },
      {
       "Id": "643072411",
@@ -221,7 +221,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_50.wav",
-      "CachePath": "24/{24BEAEE8-EC56-2D3A-FC38-DE839FA0C5E6}.wem"
+      "CachePath": "D9/{D9B8C9B5-4A8D-5FEC-8501-0B9B3B6D934B}.wem"
      },
      {
       "Id": "665660573",
@@ -229,7 +229,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_65.wav",
-      "CachePath": "D7/{D7C8A872-3DEF-DFCE-4B13-7365DF9A218C}.wem"
+      "CachePath": "93/{93E668D8-3F1A-5940-1CD3-23F18220FAE9}.wem"
      },
      {
       "Id": "809945826",
@@ -237,7 +237,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_130.wav",
-      "CachePath": "1C/{1CE66296-6EDE-0BE5-25C3-085C2C6E2676}.wem"
+      "CachePath": "7F/{7F88CF8C-66AC-4284-E756-8BA8E9DF8423}.wem"
      },
      {
       "Id": "812875699",
@@ -245,7 +245,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_180.wav",
-      "CachePath": "D6/{D6299825-B452-C0A3-E685-B7FDFCE45D32}.wem"
+      "CachePath": "38/{383130F0-5011-B0DE-7D6B-FA8D6A9D4822}.wem"
      },
      {
       "Id": "841277880",
@@ -253,7 +253,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_1.wav",
-      "CachePath": "78/{7840ED90-3EF9-A2AA-80F7-799CA8A37CDC}.wem"
+      "CachePath": "29/{29B2CCFD-E2B1-61B2-9DBD-E49DFA9839DC}.wem"
      },
      {
       "Id": "841775150",
@@ -261,7 +261,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_7.wav",
-      "CachePath": "CA/{CABC6D04-F26C-F4D2-8CE7-D56BA803052F}.wem"
+      "CachePath": "F4/{F41F078D-F711-C2E9-0F8D-1CCBC40B23E6}.wem"
      },
      {
       "Id": "856612942",
@@ -269,7 +269,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_5.wav",
-      "CachePath": "44/{44AC2CD6-275F-BF46-D4B0-D139F59DB7A1}.wem"
+      "CachePath": "91/{9136CE4B-AEC3-1676-1EAF-9913709AE827}.wem"
      },
      {
       "Id": "860780804",
@@ -277,7 +277,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_120.wav",
-      "CachePath": "03/{032DA5E3-294C-1E68-21A7-2EDB065D029C}.wem"
+      "CachePath": "91/{91246743-0E6F-8193-AD03-C6EEEBE0BB2D}.wem"
      },
      {
       "Id": "914882427",
@@ -285,7 +285,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_25.wav",
-      "CachePath": "71/{71BBBBA0-4DAB-BC27-E347-FD1627D5041B}.wem"
+      "CachePath": "10/{10F3C06A-180D-2089-1305-2191F1745660}.wem"
      },
      {
       "Id": "1005155270",
@@ -293,7 +293,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_55.wav",
-      "CachePath": "7C/{7C94955E-A5DF-E505-38F1-43069D95728C}.wem"
+      "CachePath": "BA/{BAF78943-B7DA-AB46-562E-CB8672ED9BCA}.wem"
      },
      {
       "Id": "1034611591",
@@ -301,7 +301,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_150.wav",
-      "CachePath": "0D/{0DB1C4FC-0FE1-D385-D7A0-089216203D2D}.wem"
+      "CachePath": "02/{022A2B5F-4B99-62D6-7663-0627B4015B8A}.wem"
      },
      {
       "Id": "1035899610",
@@ -309,7 +309,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_45.wav",
-      "CachePath": "F5/{F5CBAAA4-1F7B-B939-D2F9-92FB5F70F135}.wem"
+      "CachePath": "E6/{E6B3B9BC-42FB-88FF-D0D3-F5D8BA276712}.wem"
      },
      {
       "Id": "1049443531",
@@ -317,7 +317,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_70.wav",
-      "CachePath": "38/{38FAC70E-2BBE-E5A3-2ED0-B5245820A003}.wem"
+      "CachePath": "5E/{5EFDD60B-7A56-0813-1AEB-CB141CE11AFD}.wem"
      },
      {
       "Id": "1070845789",
@@ -325,7 +325,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "DistanceDebug_4.wav",
-      "CachePath": "FE/{FEEA1A97-6C1C-C8AC-54DE-4FE8AAC1C6A1}.wem"
+      "CachePath": "D4/{D4A57C71-AF5D-FDE0-963E-4F8269F8F065}.wem"
      }
     ],
     "Plugins": {
@@ -680,6 +680,6 @@
     ]
    }
   ],
-  "FileHash": "{92C60046-F721-3F26-3E31-FD7A3216D5B9}"
+  "FileHash": "{6E65B308-8724-119D-CA2A-9909EBEF3C85}"
  }
 }

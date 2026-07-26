@@ -1,14 +1,9 @@
 Switch Group	ID	Name			Wwise Object Path	Notes
-	48152839	RainType			\Generic\RainType	
 	1493153371	PlayerSpeed			\Player\PlayerSpeed	
 	2533675384	PlayerAmmo			\Player\PlayerAmmo	
 
 Switch	ID	Name	Switch Group			Notes
-	991379416	FullRain	RainType			
-	1278453130	MediumRain	RainType			
-	1686739424	Storm	RainType			
-	2789071989	LightRain	RainType			
-	3569642402	Sunny	RainType			
+	712161704	Run	PlayerSpeed			
 	1296465089	Sprint	PlayerSpeed			
 	2108779966	Walk	PlayerSpeed			
 	3354297748	Empty	PlayerAmmo			

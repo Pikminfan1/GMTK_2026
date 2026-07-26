@@ -398,8 +398,135 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Test_WeponEnemy" ID="{0D6411B8-9142-4CA1-94D0-49530A22E3C2}">
+							<ChildrenList>
+								<Action Name="" ID="{10202F6E-1856-4F6C-8B30-0332A5037198}" ShortID="216220473">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D8FB9EAA-0B10-4538-8D0A-7882B48FD7D3}" ShortID="587353614">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="0.075"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="NPC_Pain" ID="{98162397-C994-49AC-82E9-3C8DEDD5C07E}" WorkUnitID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Test_Health" ID="{D883B8BB-5C13-4D5C-B78B-B4EDEE4BB0F0}">
+					<ChildrenList>
+						<Action Name="" ID="{8EC297E6-925C-47A8-BF3E-7BD4E89C8F02}" ShortID="418230265">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{231FF438-9AAC-4051-B531-BB3D321905BA}" ShortID="863135208">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+								<Property Name="Delay" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{04F02371-68DF-4855-BF11-D8DD2F921F75}" ShortID="1005865298">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1FC5236D-703F-4C63-8DA8-8C5569C5B403}" ShortID="943212843">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+								<Property Name="Delay" Type="Real64" Value="0.15"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{05C4C65F-E516-4760-8832-60DADA9A2AE1}" ShortID="359329440">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C5C1ADAE-7162-42B2-85FF-67EC961FFA62}" ShortID="559655401">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+								<Property Name="Delay" Type="Real64" Value="0.25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{414929DB-B63F-48E6-A24E-058F5FD80280}" ShortID="865827474">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+								<Property Name="Delay" Type="Real64" Value="0.3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1602219F-7ACE-4480-A75C-BD0C2AD58F90}" ShortID="482755053">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+								<Property Name="Delay" Type="Real64" Value="0.35"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{63BD75B7-5290-47FC-A730-D52C4809FBB3}" ShortID="67242378">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+								<Property Name="Delay" Type="Real64" Value="0.4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

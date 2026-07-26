@@ -73,6 +73,10 @@
 							<ObjectRef Name="Combat" ID="{16E618D0-8D40-403A-8659-05C1FD34A4BD}" WorkUnitID="{F2C8D915-5418-485C-AB64-F31120AE7696}"/>
 							<Position X="0" Y="1"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Music" ID="{8F4170BC-9B40-40E1-B771-60039B3AE87F}" WorkUnitID="{F2C8D915-5418-485C-AB64-F31120AE7696}"/>
+							<Position X="1" Y="0"/>
+						</Module>
 					</ModuleList>
 				</SoundcasterSession>
 			</ChildrenList>

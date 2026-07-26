@@ -11,58 +11,6 @@
 						<Switch Name="Water" ID="{4DBABE6C-B1B2-4F92-A75E-963F8BFE2A81}"/>
 					</ChildrenList>
 				</SwitchGroup>
-				<SwitchGroup Name="RainType" ID="{CD9471AD-CC65-4C5B-9B0A-1950B90D8364}">
-					<PropertyList>
-						<Property Name="UseGameParameter" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Switch Name="Sunny" ID="{1D0B5907-8A79-4307-8CEB-6A634C4478A8}"/>
-						<Switch Name="LightRain" ID="{F9E5A956-2B31-4367-86D4-8845034CAF80}"/>
-						<Switch Name="MediumRain" ID="{AAA60392-28B2-420B-B078-EA2392ECD56E}"/>
-						<Switch Name="FullRain" ID="{E7B89B17-83A3-40AC-8F79-B6A4004481F1}"/>
-						<Switch Name="Storm" ID="{5601F7AB-CDD6-4334-B43F-CE8B48AB7AFB}"/>
-					</ChildrenList>
-					<SwitchOnRTPC>
-						<GameParameterRef Name="RTPC_RainAmount" ID="{43653B55-7322-4910-83A8-072561860C74}"/>
-						<Curve Name="" ID="{0C655A2D-7439-4F36-A29B-2E8EDCC956A7}">
-							<PropertyList>
-								<Property Name="Flags" Type="int32" Value="65537"/>
-							</PropertyList>
-							<PointList>
-								<Point>
-									<XPos>0</XPos>
-									<YPos>1</YPos>
-									<Flags>5</Flags>
-								</Point>
-								<Point>
-									<XPos>0.2</XPos>
-									<YPos>2</YPos>
-									<Flags>0</Flags>
-								</Point>
-								<Point>
-									<XPos>0.4</XPos>
-									<YPos>3</YPos>
-									<Flags>0</Flags>
-								</Point>
-								<Point>
-									<XPos>0.6</XPos>
-									<YPos>4</YPos>
-									<Flags>0</Flags>
-								</Point>
-								<Point>
-									<XPos>0.8</XPos>
-									<YPos>5</YPos>
-									<Flags>0</Flags>
-								</Point>
-								<Point>
-									<XPos>1</XPos>
-									<YPos>5</YPos>
-									<Flags>37</Flags>
-								</Point>
-							</PointList>
-						</Curve>
-					</SwitchOnRTPC>
-				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

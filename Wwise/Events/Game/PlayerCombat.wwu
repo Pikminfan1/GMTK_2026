@@ -117,6 +117,13 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Revolver_Reload_start" ID="{02C94503-1A2B-4216-85C3-EC1F2DAF4430}">
+							<PropertyList>
+								<Property Name="InstanceLimit" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{6E6E3FBE-AD8A-4E5D-BD1D-0E37EE7162B7}" ShortID="923872509">
 									<ReferenceList>
@@ -150,6 +157,18 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Revolver_reload_end" ID="{90745F62-D7A3-4208-8EDE-460A3EBAB0EB}">
+							<PropertyList>
+								<Property Name="CooldownTime" Type="Real32">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="InstanceLimit" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{C80F1C28-F695-468E-B1FE-A24C1FB43882}" ShortID="826252665">
 									<ReferenceList>

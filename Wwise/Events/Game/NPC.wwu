@@ -92,6 +92,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{42B04450-9BA5-462E-B09B-E095126159F4}" ShortID="887178979">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_NPCRay_Mono_lp_Bulba" ID="{9C8CF281-DADC-4A8B-B22B-1BD760CB7DCF}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>

@@ -118,6 +118,16 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
+											<XPos>865.78947</XPos>
+											<YPos>-2.46043</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
+											<XPos>1594.73684</XPos>
+											<YPos>-7.6339</YPos>
+											<Flags>0</Flags>
+										</Point>
+										<Point>
 											<XPos>2000</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
@@ -139,7 +149,25 @@
 							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
 						</HighPassFilterUsage>
 						<DualShelfUsage>
-							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="DualShelfFilter" ID="{E3F7C0A3-BAF0-43D0-8709-802696E8084A}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="3"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>0</YPos>
+											<Flags>5</Flags>
+										</Point>
+										<Point>
+											<XPos>2000</XPos>
+											<YPos>-200</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
 						</DualShelfUsage>
 						<SpreadUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
