@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{BFC4083C-CFC4-CB4D-50FE-A4C13CE40262}",
+    "Hash": "{EA510960-AB94-3704-DC25-09ED6B058744}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -570,12 +570,6 @@
       },
       "Switches": [
        {
-        "Id": "712161704",
-        "Name": "Run",
-        "ObjectPath": "\\Switches\\Player\\PlayerSpeed\\Run",
-        "GUID": "{4FCAB6EB-E9BE-42CC-9F87-249CE7D94EE6}"
-       },
-       {
         "Id": "1296465089",
         "Name": "Sprint",
         "ObjectPath": "\\Switches\\Player\\PlayerSpeed\\Sprint",
@@ -647,6 +641,6 @@
     ]
    }
   ],
-  "FileHash": "{BFB8ED99-6376-7510-0022-806176641A48}"
+  "FileHash": "{04709E8C-592E-0368-969D-957AFDE898E5}"
  }
 }

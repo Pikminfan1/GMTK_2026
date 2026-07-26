@@ -9,7 +9,6 @@ Switch	ID	Name	Switch Group			Notes
 	1686739424	Storm	RainType			
 	2789071989	LightRain	RainType			
 	3569642402	Sunny	RainType			
-	712161704	Run	PlayerSpeed			
 	1296465089	Sprint	PlayerSpeed			
 	2108779966	Walk	PlayerSpeed			
 	3354297748	Empty	PlayerAmmo			

@@ -11,7 +11,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Amb2D_Courtyard_Bed" ID="{1BD1ED3C-0CD3-423C-ABA0-D1A3A82F8110}" WorkUnitID="{C5960BBC-3754-4098-B66C-E168451D2F66}"/>
+									<ObjectRef Name="amb2d_outdoorsBed01_lp_st_fm" ID="{81B8D0C0-2E2A-4062-B482-6D04A0F93E8F}" WorkUnitID="{C5960BBC-3754-4098-B66C-E168451D2F66}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -26,7 +26,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Amb2D_Courtyard_Bed" ID="{1BD1ED3C-0CD3-423C-ABA0-D1A3A82F8110}" WorkUnitID="{C5960BBC-3754-4098-B66C-E168451D2F66}"/>
+									<ObjectRef Name="amb2d_outdoorsBed01_lp_st_fm" ID="{81B8D0C0-2E2A-4062-B482-6D04A0F93E8F}" WorkUnitID="{C5960BBC-3754-4098-B66C-E168451D2F66}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
