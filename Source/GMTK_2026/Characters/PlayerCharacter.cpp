@@ -201,6 +201,13 @@ void APlayerCharacter::StartFire(const FInputActionValue& Value)
 
 void APlayerCharacter::StartReload(const FInputActionValue& Value)
 {
+	// Reload-zone gate: when enabled, the player can only reload inside an active zone.
+	// Toggle bReloadRequiresZone off to allow reloading anywhere.
+	if (bReloadRequiresZone && !bIsInReloadZone)
+	{
+		UE_LOG(LogGMTKCombat, Verbose, TEXT("Reload blocked - not in a reload zone."));
+		return;
+	}
 	// Both hands begin loading independently. Each weapon guards against reloading
 	// when full or already loading, and runs its own per-round timer, so the two
 	// mags fill on their own schedules.

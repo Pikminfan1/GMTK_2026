@@ -88,6 +88,22 @@ public:
 	/** Fires ONCE when the player ends the reload action (input released). */
 	UPROPERTY(BlueprintAssignable, Category = "Reload")
 	FOnPlayerReloadStopped OnReloadStopped;
+	
+	/** If true, reloading is only allowed while inside a reload zone. Toggle off to let
+	 *  the player reload anywhere. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Reload")
+	bool bReloadRequiresZone = true;
+	// ---------- Reload zone ----------
+
+	/** Called by a reload zone when the player enters/leaves it. */
+	UFUNCTION(BlueprintCallable, Category = "Reload")
+	void SetInReloadZone(bool bInZone) { bIsInReloadZone = bInZone; }
+
+	UFUNCTION(BlueprintPure, Category = "Reload")
+	bool IsInReloadZone() const { return bIsInReloadZone; }
+
+	UFUNCTION(BlueprintPure, Category = "Combat")
+	UComboComponent* GetComboComponent() const { return ComboComponent; }
 
 protected:
 	virtual void BeginPlay() override;
@@ -102,8 +118,6 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UComboComponent> ComboComponent;
 	
-	UFUNCTION(BlueprintPure, Category = "Combat")
-	UComboComponent* GetComboComponent() const { return ComboComponent; }
 
 	// ---------- Combo reward tuning ----------
 	// Rewards are granted ONE PER STACK in a cycling sequence:
@@ -181,6 +195,9 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
 	bool bIsAiming = false;
+	
+	// True while the player is standing in an active reload zone.
+	bool bIsInReloadZone = false;
 
 	// Current applied reward buffs (base = 1.0 / 1.0 / 0), so UI and resets are exact.
 	float CurrentDamageMultiplier = 1.f;
