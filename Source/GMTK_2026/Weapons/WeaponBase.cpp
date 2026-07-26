@@ -21,6 +21,12 @@ AWeaponBase::AWeaponBase()
 void AWeaponBase::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// Snapshot designer values so combo buffs scale from the original and reset cleanly.
+	BaseDamage = Damage;
+	BaseMaxAmmo = MaxAmmo;
+	DamageMultiplier = 1.f;
+
 	CurrentAmmo = MaxAmmo;
 }
 
@@ -211,7 +217,7 @@ void AWeaponBase::FireHitscan()
 		{
 			InstigatorController = OwnerPawn->GetController();
 		}
-		IDamageable::Execute_ApplyDamage(Hit.GetActor(), Damage, InstigatorController, this);
+		IDamageable::Execute_ApplyDamage(Hit.GetActor(), GetEffectiveDamage(), InstigatorController, this);
 	}
 }
 
@@ -229,4 +235,33 @@ void AWeaponBase::FireProjectile()
 	SpawnParams.Instigator = GetOwner() ? GetOwner()->GetInstigator() : nullptr;
 
 	GetWorld()->SpawnActor<AProjectileBase>(ProjectileClass, MuzzleTransform, SpawnParams);
+}
+
+void AWeaponBase::SetDamageMultiplier(float Multiplier)
+{
+	DamageMultiplier = FMath::Max(0.f, Multiplier);
+	// Damage is read via GetEffectiveDamage() at fire time, so nothing else to do.
+}
+
+void AWeaponBase::SetBonusMaxAmmo(int32 Bonus)
+{
+	Bonus = FMath::Max(0, Bonus);
+
+	const int32 OldMax = MaxAmmo;
+	MaxAmmo = BaseMaxAmmo + Bonus;
+
+	const int32 Delta = MaxAmmo - OldMax;
+	if (Delta > 0)
+	{
+		// Give the newly-added rounds immediately so a bigger mag is usable now.
+		CurrentAmmo = FMath::Min(CurrentAmmo + Delta, MaxAmmo);
+	}
+	else
+	{
+		// Bonus dropped (combo reset): clamp current ammo to the new capacity.
+		CurrentAmmo = FMath::Min(CurrentAmmo, MaxAmmo);
+	}
+
+	// OnRoundLoaded carries (CurrentAmmo, MaxAmmo) - exactly what an ammo HUD needs.
+	OnRoundLoaded.Broadcast(CurrentAmmo, MaxAmmo);
 }

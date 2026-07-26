@@ -102,6 +102,20 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Weapon")
 	bool IsMagazineFull() const { return CurrentAmmo >= MaxAmmo; }
 
+	// ---------- Combo buffs (applied by the player's reward layer) ----------
+
+	/** Scale outgoing damage. 1.0 = base. Applied on top of the weapon's base Damage. */
+	UFUNCTION(BlueprintCallable, Category = "Weapon|Buffs")
+	void SetDamageMultiplier(float Multiplier);
+
+	/** Add bonus magazine capacity on top of base MaxAmmo. 0 restores base. Tops up
+	 *  current ammo by the delta so added rounds are usable immediately. */
+	UFUNCTION(BlueprintCallable, Category = "Weapon|Buffs")
+	void SetBonusMaxAmmo(int32 Bonus);
+
+	UFUNCTION(BlueprintPure, Category = "Weapon|Buffs")
+	float GetEffectiveDamage() const { return BaseDamage * DamageMultiplier; }
+
 	// ---------- Events ----------
 
 	/** A shot fired. Carries ammo after the shot. */
@@ -153,6 +167,12 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
 	float Damage = 10.f;
+
+	/** Base values captured at BeginPlay so buffs scale from the original and a reset
+	 *  (multiplier 1.0 / bonus 0) restores them exactly. */
+	float BaseDamage = 10.f;
+	int32 BaseMaxAmmo = 30;
+	float DamageMultiplier = 1.f;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
 	float HitscanRange = 5000.f;

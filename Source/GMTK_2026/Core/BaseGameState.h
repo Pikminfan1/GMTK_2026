@@ -8,6 +8,9 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnScoreChanged, int32, NewScore);
 
+/** Fired when the running total kill count changes, for a kill-count UI. */
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnTotalKillsChanged, int32, NewTotalKills);
+
 /** Central kill signal. Killer may be null (environmental death). Combo, score,
  *  and pickup-spawning all hook this one event rather than each watching deaths. */
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnEnemyKilled, AActor*, Killer, AActor*, Victim);
@@ -60,6 +63,11 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Match")
 	int32 Score = 0;
 
+	/** Running total of enemies killed this match (distinct from Score, which is
+	 *  points). Drives the kill-count UI. */
+	UPROPERTY(BlueprintReadOnly, Category = "Match")
+	int32 TotalKills = 0;
+
 	UPROPERTY(BlueprintReadOnly, Category = "Match")
 	EMatchState MatchState = EMatchState::WaitingToStart;
 
@@ -71,6 +79,9 @@ public:
 
 	UPROPERTY(BlueprintAssignable, Category = "Match")
 	FOnScoreChanged OnScoreChanged;
+
+	UPROPERTY(BlueprintAssignable, Category = "Match")
+	FOnTotalKillsChanged OnTotalKillsChanged;
 
 	UPROPERTY(BlueprintAssignable, Category = "Match")
 	FOnEnemyKilled OnEnemyKilled;

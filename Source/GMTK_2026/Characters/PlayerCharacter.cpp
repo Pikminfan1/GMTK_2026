@@ -61,6 +61,19 @@ void APlayerCharacter::BeginPlay()
 	{
 		UE_LOG(LogGMTKCombat, Warning, TEXT("%s has no DefaultWeaponClass assigned - nothing to auto-equip."), *GetName());
 	}
+
+	// Capture base values so combo buffs scale from them and reset restores them.
+	if (UCharacterMovementComponent* Movement = GetCharacterMovement())
+	{
+		BaseWalkSpeed = Movement->MaxWalkSpeed;
+	}
+	bBaseIsAltFire = bIsAltFire;
+
+	// Drive the cycling reward chain off the combo component's stack changes.
+	if (ComboComponent)
+	{
+		ComboComponent->OnComboStacksChanged.AddDynamic(this, &APlayerCharacter::HandleComboStacksChanged);
+	}
 }
 
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -230,6 +243,8 @@ void APlayerCharacter::StartAim(const FInputActionValue& Value)
 	{
 		Movement->bOrientRotationToMovement = false;
 	}
+
+	OnAimStarted.Broadcast();
 }
 
 void APlayerCharacter::StopAim(const FInputActionValue& Value)
@@ -241,6 +256,8 @@ void APlayerCharacter::StopAim(const FInputActionValue& Value)
 	{
 		Movement->bOrientRotationToMovement = true;
 	}
+
+	OnAimStopped.Broadcast();
 }
 
 void APlayerCharacter::HandleDeathResetCombo(AActor* DeadActor)
@@ -249,4 +266,76 @@ void APlayerCharacter::HandleDeathResetCombo(AActor* DeadActor)
 	{
 		ComboComponent->ResetCombo();
 	}
+}
+
+void APlayerCharacter::HandleComboStacksChanged(int32 NewStacks)
+{
+	// Walk the reward sequence from scratch for NewStacks stacks. Recomputing from
+	// zero each time (rather than applying a delta) is deterministic and reset-safe:
+	// NewStacks == 0 naturally restores every buff to base.
+	//
+	// Sequence per stack position (1-based):
+	//   1 -> Damage, 2 -> Speed, 3 -> Ammo, 4 -> DoubleFire (once),
+	//   then cycle Damage/Speed/Ammo, skipping DoubleFire (already on) and granting
+	//   Damage in its place so a stack is never wasted.
+
+	int32 DamageTiers = 0;
+	int32 SpeedTiers = 0;
+	int32 AmmoTiers = 0;
+	bool bDoubleFire = false;
+
+	for (int32 Position = 1; Position <= NewStacks; ++Position)
+	{
+		// Map position to a slot in the 4-length cycle: 1=Dmg,2=Spd,3=Ammo,0=DoubleFire.
+		const int32 Slot = Position % 4;
+		switch (Slot)
+		{
+		case 1: DamageTiers++; break;
+		case 2: SpeedTiers++;  break;
+		case 3: AmmoTiers++;   break;
+		case 0: // DoubleFire slot
+			if (!bDoubleFire)
+			{
+				bDoubleFire = true;   // first time: turn it on
+			}
+			else
+			{
+				DamageTiers++;        // already on: don't waste the stack, grant Damage
+			}
+			break;
+		}
+	}
+
+	// Compute the resulting buff values.
+	CurrentDamageMultiplier = 1.f + (DamageBonusPerTier * DamageTiers);
+	CurrentSpeedMultiplier  = 1.f + (SpeedBonusPerTier  * SpeedTiers);
+	CurrentBonusMaxAmmo     = AmmoBonusPerTier * AmmoTiers;
+
+	// Apply to both weapons.
+	if (EquippedWeaponR)
+	{
+		EquippedWeaponR->SetDamageMultiplier(CurrentDamageMultiplier);
+		EquippedWeaponR->SetBonusMaxAmmo(CurrentBonusMaxAmmo);
+	}
+	if (EquippedWeaponL)
+	{
+		EquippedWeaponL->SetDamageMultiplier(CurrentDamageMultiplier);
+		EquippedWeaponL->SetBonusMaxAmmo(CurrentBonusMaxAmmo);
+	}
+
+	// Apply speed to the player.
+	if (UCharacterMovementComponent* Movement = GetCharacterMovement())
+	{
+		Movement->MaxWalkSpeed = BaseWalkSpeed * CurrentSpeedMultiplier;
+	}
+
+	// Double-fire: bIsAltFire == false makes both hands fire per pull (double output).
+	// When the reward is active we force it off; otherwise restore the base setting.
+	bIsAltFire = bDoubleFire ? false : bBaseIsAltFire;
+
+	// Notify UI.
+	OnDamageBonusChanged.Broadcast(CurrentDamageMultiplier);
+	OnSpeedBonusChanged.Broadcast(CurrentSpeedMultiplier);
+	OnAmmoBonusChanged.Broadcast(CurrentBonusMaxAmmo);
+	OnDoubleFireChanged.Broadcast(bDoubleFire);
 }

@@ -42,6 +42,12 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Match")
 	int32 ScorePerKill = 100;
 
+	/** Score multiplier bonus per point of combo. Final points for a kill are
+	 *  ScorePerKill * (1 + ComboCount * ComboScoreBonusPerKill). 0.1 = +10% per combo,
+	 *  so a 10-combo kill is worth double. 0 = combo doesn't affect score. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Match")
+	float ComboScoreBonusPerKill = 0.1f;
+
 	// ---------- Event handlers ----------
 
 	UFUNCTION()

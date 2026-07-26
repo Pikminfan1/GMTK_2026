@@ -20,6 +20,10 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnComboIncremented, int32, NewCombo
  *  combo reached before ending, so you can reward/celebrate a big finished streak. */
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnComboEnded, int32, FinalCombo);
 
+/** Fires when the number of reward STACKS changes (every KillsPerStack kills, and 0 on
+ *  reset). The player's reward layer listens to this to apply the cycling rewards. */
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnComboStacksChanged, int32, NewStacks);
+
 /**
  * Tracks a kill streak: consecutive enemy kills within a refreshing time window.
  *
@@ -50,6 +54,10 @@ public:
 	/** Current streak count. 0 when no combo is active. */
 	UFUNCTION(BlueprintPure, Category = "Combo")
 	int32 GetComboCount() const { return ComboCount; }
+
+	/** Reward stacks earned = ComboCount / KillsPerStack. 0 until the first threshold. */
+	UFUNCTION(BlueprintPure, Category = "Combo")
+	int32 GetComboStacks() const { return ComboCount / FMath::Max(1, KillsPerStack); }
 
 	UFUNCTION(BlueprintPure, Category = "Combo")
 	bool IsComboActive() const { return ComboCount > 0; }
@@ -85,6 +93,10 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Combo")
 	FOnComboEnded OnComboEnded;
 
+	/** Fires when the reward stack tier changes (including back to 0 on reset). */
+	UPROPERTY(BlueprintAssignable, Category = "Combo")
+	FOnComboStacksChanged OnComboStacksChanged;
+
 protected:
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
@@ -93,6 +105,10 @@ protected:
 	 *  timer to this. Tune for feel - your spec mentioned ~10s. */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo", meta = (ClampMin = "0.1"))
 	float ComboWindow = 10.f;
+
+	/** Kills required per reward stack. Every this-many kills advances the reward chain. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo", meta = (ClampMin = "1"))
+	int32 KillsPerStack = 5;
 
 	/** Bound to the GameState's central kill event. */
 	UFUNCTION()
@@ -104,4 +120,5 @@ private:
 
 	int32 ComboCount = 0;
 	float TimeRemaining = 0.f;
+	int32 LastBroadcastStacks = 0;
 };

@@ -58,8 +58,13 @@ void ABaseGameState::StartMatch(float SurvivalSeconds)
 
 void ABaseGameState::ReportEnemyKilled(AActor* Killer, AActor* Victim)
 {
-	// Central fan-out. Score is bumped here as the one guaranteed consequence;
-	// combo and pickups subscribe to the event rather than being called directly.
+	// Every kill flows through here, so it's the right place to bump the running
+	// total kill count (separate from Score, which is points).
+	TotalKills++;
+	OnTotalKillsChanged.Broadcast(TotalKills);
+
+	// Central fan-out. Combo and pickups subscribe to the event rather than being
+	// called directly.
 	OnEnemyKilled.Broadcast(Killer, Victim);
 }
 

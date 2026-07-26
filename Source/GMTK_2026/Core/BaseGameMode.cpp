@@ -4,6 +4,7 @@
 #include "Core/BaseGameState.h"
 #include "Spawning/Components/WaveManagerComponent.h"
 #include "Characters/PlayerCharacter.h"
+#include "Characters/Components/ComboComponent.h"
 #include "Characters/Components/HealthComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Utility/LogChannels.h"
@@ -97,8 +98,24 @@ void ABaseGameMode::HandleEnemyDied(AActor* DeadEnemy)
 	// environment can kill them, resolve this from damage instigator instead.
 	AActor* Killer = UGameplayStatics::GetPlayerPawn(this, 0);
 
-	CachedGameState->AddScore(ScorePerKill);
+	// Report the kill FIRST so the combo component (which listens to OnEnemyKilled)
+	// increments for this kill before we read it - this kill's points should reflect
+	// the combo it just contributed to.
 	CachedGameState->ReportEnemyKilled(Killer, DeadEnemy);
+
+	// Score scales with the current combo: base * (1 + combo * bonus). A longer streak
+	// makes each kill worth progressively more.
+	int32 Points = ScorePerKill;
+	if (APlayerCharacter* Player = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0)))
+	{
+		if (const UComboComponent* Combo = Player->GetComboComponent())
+		{
+			const float Multiplier = 1.f + (Combo->GetComboCount() * ComboScoreBonusPerKill);
+			Points = FMath::RoundToInt(ScorePerKill * Multiplier);
+		}
+	}
+
+	CachedGameState->AddScore(Points);
 }
 
 void ABaseGameMode::HandlePlayerDeath(AActor* DeadPlayer)

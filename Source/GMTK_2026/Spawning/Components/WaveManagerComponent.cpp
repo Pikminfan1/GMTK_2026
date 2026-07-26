@@ -5,6 +5,7 @@
 #include "Characters/Components/HealthComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Utility/LogChannels.h"
+#include "TimerManager.h"
 
 UWaveManagerComponent::UWaveManagerComponent()
 {
@@ -31,8 +32,32 @@ void UWaveManagerComponent::BeginPlay()
 	}
 }
 
+void UWaveManagerComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	// Don't leave the between-wave timer pointing at a torn-down component.
+	if (UWorld* World = GetWorld())
+	{
+		World->GetTimerManager().ClearTimer(NextWaveTimer);
+	}
+	Super::EndPlay(EndPlayReason);
+}
+
+bool UWaveManagerComponent::IsBetweenWaves() const
+{
+	// A pending next-wave timer means a wave was cleared and the next hasn't begun.
+	return GetWorld() && GetWorld()->GetTimerManager().IsTimerActive(NextWaveTimer);
+}
+
 void UWaveManagerComponent::StartNextWave(bool bForce)
 {
+	// Any manual/early start cancels a pending auto-advance so the two can't both fire
+	// and double-spawn. This is what lets the trigger act as an early-start: shooting
+	// it during the countdown starts the wave now and clears the timer.
+	if (UWorld* World = GetWorld())
+	{
+		World->GetTimerManager().ClearTimer(NextWaveTimer);
+	}
+
 	// Guard against starting a new wave while the current one is still being fought,
 	// so a stray call (or an over-eager player shooting the start actor twice) can't
 	// double-spawn. bForce bypasses this for debug or scripted starts.
@@ -118,9 +143,36 @@ void UWaveManagerComponent::HandleEnemyDeath(AActor* DeadActor)
 		OnWaveCompleted.Broadcast(GetCurrentWaveNumber());
 		UE_LOG(LogGMTKSpawn, Log, TEXT("Wave %d cleared"), GetCurrentWaveNumber());
 
-		// Intentionally does NOT auto-start the next wave. The next wave begins when
-		// something external calls StartNextWave() - e.g. the shootable "start wave"
-		// actor. This is also where a between-wave upgrade/shop pause would slot in
-		// later (not built yet).
+		if (bAutoAdvanceWaves)
+		{
+			// Auto-advance: schedule the next wave after the between-wave delay. The
+			// shootable trigger can still call StartNextWave() during this window to
+			// begin early - that path clears this timer, so there's no double-start.
+			if (UWorld* World = GetWorld())
+			{
+				if (TimeBetweenWaves > 0.f)
+				{
+					World->GetTimerManager().SetTimer(
+						NextWaveTimer,
+						[this]() { StartNextWave(); },
+						TimeBetweenWaves,
+						false);
+
+					OnNextWaveCountdownStarted.Broadcast(TimeBetweenWaves);
+					UE_LOG(LogGMTKSpawn, Log, TEXT("Next wave in %.1fs (or shoot the trigger to start early)."), TimeBetweenWaves);
+				}
+				else
+				{
+					// No delay configured - go straight to the next wave.
+					StartNextWave();
+				}
+			}
+		}
+		else
+		{
+			// Auto-advance disabled: the next wave begins only when something external
+			// calls StartNextWave() - e.g. the shootable "start wave" actor.
+			UE_LOG(LogGMTKSpawn, Log, TEXT("Auto-advance off - waiting for the trigger to start the next wave."));
+		}
 	}
 }

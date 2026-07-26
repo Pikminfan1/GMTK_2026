@@ -64,6 +64,13 @@ void UComboComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 
 		OnComboEnded.Broadcast(FinalCombo);
 		OnComboChanged.Broadcast(ComboCount);
+
+		// Stacks drop to 0 when the streak ends, so the reward layer strips buffs.
+		if (LastBroadcastStacks != 0)
+		{
+			LastBroadcastStacks = 0;
+			OnComboStacksChanged.Broadcast(0);
+		}
 	}
 }
 
@@ -88,6 +95,14 @@ void UComboComponent::RegisterKill()
 
 	OnComboIncremented.Broadcast(ComboCount);
 	OnComboChanged.Broadcast(ComboCount);
+
+	// Fire the stack event only when the tier actually changes (every KillsPerStack).
+	const int32 Stacks = GetComboStacks();
+	if (Stacks != LastBroadcastStacks)
+	{
+		LastBroadcastStacks = Stacks;
+		OnComboStacksChanged.Broadcast(Stacks);
+	}
 }
 
 void UComboComponent::ResetCombo()
@@ -106,4 +121,10 @@ void UComboComponent::ResetCombo()
 	// OnComboEnded fires consistently whether it timed out or was cleared.
 	OnComboEnded.Broadcast(FinalCombo);
 	OnComboChanged.Broadcast(ComboCount);
+
+	if (LastBroadcastStacks != 0)
+	{
+		LastBroadcastStacks = 0;
+		OnComboStacksChanged.Broadcast(0);
+	}
 }

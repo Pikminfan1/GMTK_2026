@@ -12,11 +12,23 @@ class UComboComponent;
 class UHealthComponent;
 struct FInputActionValue;
 
+// Combo-reward UI signals. Each fires when the corresponding buff changes (including
+// back to base on combo reset), passing the new value so UI can display it.
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDamageBonusChanged, float, DamageMultiplier);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSpeedBonusChanged, float, SpeedMultiplier);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAmmoBonusChanged, int32, BonusMaxAmmo);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDoubleFireChanged, bool, bDoubleFireActive);
+
 // Player-level reload signals, fired ONCE per reload action (not once per weapon).
 // Bind shared reload art/SFX here; use the per-weapon AWeaponBase reload events only
 // for per-gun art, since those fire once for each hand.
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerReloadStarted);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerReloadStopped);
+
+// Player aim signals, fired when the player starts/stops aiming. Bind crosshair, FOV,
+// or aim-pose reactions here instead of polling IsAiming() every frame.
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerAimStarted);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerAimStopped);
 
 /**
  * The player-controlled leaf class - camera boom, Enhanced Input bindings, and
@@ -33,9 +45,40 @@ public:
 	APlayerCharacter();
 	UFUNCTION(BlueprintPure, Category = "Combat")
 	bool IsAiming() const { return bIsAiming; }
+
+	/** Fires when the player begins aiming (aim input pressed). */
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnPlayerAimStarted OnAimStarted;
+
+	/** Fires when the player stops aiming (aim input released). */
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnPlayerAimStopped OnAimStopped;
 	
 	UFUNCTION(BlueprintPure, Category = "Camera")
 	UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	// ---------- Combo reward buffs (driven by the combo component's stacks) ----------
+
+	UPROPERTY(BlueprintAssignable, Category = "Combo|Rewards")
+	FOnDamageBonusChanged OnDamageBonusChanged;
+
+	UPROPERTY(BlueprintAssignable, Category = "Combo|Rewards")
+	FOnSpeedBonusChanged OnSpeedBonusChanged;
+
+	UPROPERTY(BlueprintAssignable, Category = "Combo|Rewards")
+	FOnAmmoBonusChanged OnAmmoBonusChanged;
+
+	UPROPERTY(BlueprintAssignable, Category = "Combo|Rewards")
+	FOnDoubleFireChanged OnDoubleFireChanged;
+
+	UFUNCTION(BlueprintPure, Category = "Combo|Rewards")
+	float GetDamageMultiplier() const { return CurrentDamageMultiplier; }
+
+	UFUNCTION(BlueprintPure, Category = "Combo|Rewards")
+	float GetSpeedMultiplier() const { return CurrentSpeedMultiplier; }
+
+	UFUNCTION(BlueprintPure, Category = "Combo|Rewards")
+	int32 GetBonusMaxAmmo() const { return CurrentBonusMaxAmmo; }
 
 	/** Fires ONCE when the player begins a reload action (input pressed), regardless
 	 *  of how many weapons actually reload. */
@@ -61,6 +104,31 @@ protected:
 	
 	UFUNCTION(BlueprintPure, Category = "Combat")
 	UComboComponent* GetComboComponent() const { return ComboComponent; }
+
+	// ---------- Combo reward tuning ----------
+	// Rewards are granted ONE PER STACK in a cycling sequence:
+	//   Damage -> Speed -> Ammo -> DoubleFire(once) -> Damage -> Speed -> Ammo -> ...
+	// Damage/Speed/Ammo accumulate each time their slot comes up. DoubleFire triggers
+	// only the first time its slot is reached; later DoubleFire slots are skipped and
+	// grant Damage instead so a stack is never wasted. Everything resets on combo loss.
+
+	/** Damage multiplier added each time the Damage slot is granted. 0.5 = +50%. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo|Rewards")
+	float DamageBonusPerTier = 0.5f;
+
+	/** Move-speed multiplier added each time the Speed slot is granted. 0.15 = +15%. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo|Rewards")
+	float SpeedBonusPerTier = 0.15f;
+
+	/** Max ammo (per weapon) added each time the Ammo slot is granted. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combo|Rewards")
+	int32 AmmoBonusPerTier = 2;
+
+	/** Recomputes and applies all reward buffs for the given stack count by walking the
+	 *  reward sequence from scratch (deterministic, reset-safe). Bound to the combo
+	 *  component's OnComboStacksChanged. */
+	UFUNCTION()
+	void HandleComboStacksChanged(int32 NewStacks);
 
 	// Assign these Input Actions in the Class Defaults / a Blueprint subclass once you've
 	// created them via Project Settings > Input (Enhanced Input).
@@ -113,6 +181,16 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
 	bool bIsAiming = false;
+
+	// Current applied reward buffs (base = 1.0 / 1.0 / 0), so UI and resets are exact.
+	float CurrentDamageMultiplier = 1.f;
+	float CurrentSpeedMultiplier = 1.f;
+	int32 CurrentBonusMaxAmmo = 0;
+
+	// Base walk speed + base alt-fire state captured at BeginPlay so buffs scale from
+	// them and a reset restores the originals exactly.
+	float BaseWalkSpeed = 600.f;
+	bool bBaseIsAltFire = true;
 
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
