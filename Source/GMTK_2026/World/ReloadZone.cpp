@@ -7,6 +7,9 @@
 #include "Kismet/GameplayStatics.h"
 #include "Utility/LogChannels.h"
 
+// Shared registry of points occupied by any zone, so zones never stack on one point.
+TSet<TWeakObjectPtr<AReloadPoint>> AReloadZone::ClaimedPoints;
+
 AReloadZone::AReloadZone()
 {
 	PrimaryActorTick.bCanEverTick = false;
@@ -17,6 +20,14 @@ AReloadZone::AReloadZone()
 	TriggerVolume->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	TriggerVolume->SetCollisionResponseToAllChannels(ECR_Ignore);
 	TriggerVolume->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
+}
+
+void AReloadZone::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	// Free our point so a future/other zone can use it, and don't leave a stale claim.
+	ReleasePoint(CurrentPoint);
+	CurrentPoint = nullptr;
+	Super::EndPlay(EndPlayReason);
 }
 
 void AReloadZone::BeginPlay()
@@ -43,8 +54,15 @@ void AReloadZone::BeginPlay()
 		return;
 	}
 
-	// Start at a random point.
-	AReloadPoint* Start = ReloadPoints[FMath::RandRange(0, ReloadPoints.Num() - 1)];
+	// Start at a free point (one no other zone has claimed) so multiple zones spread out.
+	AReloadPoint* Start = PickFreePoint();
+	if (!Start)
+	{
+		// More zones than points, or all claimed - fall back to any point so this zone
+		// still functions (it may share, but that's better than sitting nowhere).
+		Start = ReloadPoints[FMath::RandRange(0, ReloadPoints.Num() - 1)];
+		UE_LOG(LogGMTKCombat, Warning, TEXT("ReloadZone: no free reload point at start - more zones than points?"));
+	}
 	MoveToPoint(Start);
 }
 
@@ -55,13 +73,58 @@ void AReloadZone::MoveToPoint(AReloadPoint* Point)
 		return;
 	}
 
+	// Update the shared claim registry: free the old point, claim the new one.
+	ReleasePoint(CurrentPoint);
 	CurrentPoint = Point;
+	ClaimPoint(CurrentPoint);
+
 	SetActorLocation(Point->GetActorLocation());
+
+	// Teleporting a trigger does NOT automatically re-evaluate overlaps, so force it.
+	// Without this, the engine keeps stale overlap state from the old location and the
+	// player won't get a fresh BeginOverlap at the new spot - which broke reloads after
+	// the first relocation.
+	TriggerVolume->UpdateOverlaps();
+
+	// Re-sync the player's in-zone state against the NEW location: if the player is
+	// standing inside the trigger now, mark them in-zone and (re)bind the reload hook;
+	// otherwise they're outside until they walk in.
+	SyncOverlappingPlayer();
 
 	OnZoneShown();
 	OnZoneActivated.Broadcast();
 
 	UE_LOG(LogGMTKCombat, Verbose, TEXT("ReloadZone now at %s"), *Point->GetName());
+}
+
+void AReloadZone::SyncOverlappingPlayer()
+{
+	// Find the player and test whether they're currently within the trigger volume.
+	APlayerCharacter* Player = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(this, 0));
+	if (!Player)
+	{
+		return;
+	}
+
+	TArray<AActor*> Overlapping;
+	TriggerVolume->GetOverlappingActors(Overlapping, APlayerCharacter::StaticClass());
+	const bool bPlayerInside = Overlapping.Contains(Player);
+
+	if (bPlayerInside)
+	{
+		OverlappingPlayer = Player;
+		Player->SetInReloadZone(true);
+		Player->OnReloadStopped.AddUniqueDynamic(this, &AReloadZone::HandlePlayerReloaded);
+	}
+	else
+	{
+		if (OverlappingPlayer == Player)
+		{
+			OverlappingPlayer = nullptr;
+		}
+		Player->SetInReloadZone(false);
+		Player->OnReloadStopped.RemoveDynamic(this, &AReloadZone::HandlePlayerReloaded);
+	}
 }
 
 void AReloadZone::RelocateToNewPoint()
@@ -74,19 +137,14 @@ void AReloadZone::RelocateToNewPoint()
 	// Signal the old spot is going away (particle off) before moving.
 	OnZoneHidden();
 
-	// If there's more than one point, pick any point that isn't the current one so the
-	// zone always visibly moves. With a single point it just stays put.
-	AReloadPoint* NewPoint = CurrentPoint;
-	if (ReloadPoints.Num() == 1)
+	// Pick a point that isn't the current one AND isn't claimed by another zone.
+	AReloadPoint* NewPoint = PickFreePoint();
+	if (!NewPoint)
 	{
-		NewPoint = ReloadPoints[0];
-	}
-	else
-	{
-		while (NewPoint == CurrentPoint)
-		{
-			NewPoint = ReloadPoints[FMath::RandRange(0, ReloadPoints.Num() - 1)];
-		}
+		// Nowhere free to move (e.g. only one point, or all others claimed). Stay put
+		// rather than stacking onto another zone's point.
+		UE_LOG(LogGMTKCombat, Verbose, TEXT("ReloadZone: no free point to relocate to - staying."));
+		return;
 	}
 
 	MoveToPoint(NewPoint);
@@ -109,7 +167,7 @@ void AReloadZone::HandleTriggerBeginOverlap(UPrimitiveComponent* OverlappedComp,
 
 	// Listen for the player's reload so we can relocate once they use the zone. Bound
 	// only while overlapping; unbound on exit.
-	Player->OnReloadStarted.AddUniqueDynamic(this, &AReloadZone::HandlePlayerReloaded);
+	Player->OnReloadStopped.AddUniqueDynamic(this, &AReloadZone::HandlePlayerReloaded);
 }
 
 void AReloadZone::HandleTriggerEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
@@ -122,7 +180,7 @@ void AReloadZone::HandleTriggerEndOverlap(UPrimitiveComponent* OverlappedComp, A
 	}
 
 	Player->SetInReloadZone(false);
-	Player->OnReloadStarted.RemoveDynamic(this, &AReloadZone::HandlePlayerReloaded);
+	Player->OnReloadStopped.RemoveDynamic(this, &AReloadZone::HandlePlayerReloaded);
 
 	if (OverlappingPlayer == Player)
 	{
@@ -132,15 +190,55 @@ void AReloadZone::HandleTriggerEndOverlap(UPrimitiveComponent* OverlappedComp, A
 
 void AReloadZone::HandlePlayerReloaded()
 {
-	// The player reloaded while standing in the zone - relocate to a new point. Clear
-	// the current player's in-zone flag and unbind first (they're about to be "outside"
-	// the zone once it moves away from them).
-	if (OverlappingPlayer)
+	// Bound to the player's OnReloadStopped (reload RELEASE). Only relocate if a real
+	// reload actually loaded rounds - a tap-and-release on full mags shouldn't move the
+	// zone.
+	if (OverlappingPlayer && !OverlappingPlayer->DidLastReloadLoadRounds())
 	{
-		OverlappingPlayer->SetInReloadZone(false);
-		OverlappingPlayer->OnReloadStarted.RemoveDynamic(this, &AReloadZone::HandlePlayerReloaded);
-		OverlappingPlayer = nullptr;
+		return;
 	}
 
+	// RelocateToNewPoint -> MoveToPoint -> SyncOverlappingPlayer re-evaluates the
+	// player's in-zone state at the new location, so we don't manually clear it here.
 	RelocateToNewPoint();
+}
+
+AReloadPoint* AReloadZone::PickFreePoint() const
+{
+	// Collect points that aren't the current one and aren't claimed by another zone.
+	TArray<AReloadPoint*> Candidates;
+	for (AReloadPoint* Point : ReloadPoints)
+	{
+		if (!Point || Point == CurrentPoint)
+		{
+			continue;
+		}
+		if (ClaimedPoints.Contains(Point))
+		{
+			continue; // another zone is here
+		}
+		Candidates.Add(Point);
+	}
+
+	if (Candidates.Num() == 0)
+	{
+		return nullptr;
+	}
+	return Candidates[FMath::RandRange(0, Candidates.Num() - 1)];
+}
+
+void AReloadZone::ClaimPoint(AReloadPoint* Point)
+{
+	if (Point)
+	{
+		ClaimedPoints.Add(Point);
+	}
+}
+
+void AReloadZone::ReleasePoint(AReloadPoint* Point)
+{
+	if (Point)
+	{
+		ClaimedPoints.Remove(Point);
+	}
 }

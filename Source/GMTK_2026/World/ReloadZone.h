@@ -35,6 +35,7 @@ public:
 	AReloadZone();
 
 	virtual void BeginPlay() override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 	UPROPERTY(BlueprintAssignable, Category = "ReloadZone")
 	FOnReloadZoneActivated OnZoneActivated;
@@ -74,6 +75,22 @@ protected:
 
 private:
 	void MoveToPoint(AReloadPoint* Point);
+
+	/** Pick a random reload point that is neither the current one nor claimed by another
+	 *  zone. Returns nullptr if none are free. */
+	AReloadPoint* PickFreePoint() const;
+
+	/** Claim/release a point in the shared registry so multiple zones never overlap. */
+	void ClaimPoint(AReloadPoint* Point);
+	void ReleasePoint(AReloadPoint* Point);
+
+	/** Shared across all reload zones: which points are currently occupied. Static so
+	 *  every zone sees every other zone's claim and avoids landing on the same point. */
+	static TSet<TWeakObjectPtr<AReloadPoint>> ClaimedPoints;
+
+	/** After a teleport, re-check whether the player is inside the trigger at the new
+	 *  location and set their in-zone state + reload binding accordingly. */
+	void SyncOverlappingPlayer();
 
 	UPROPERTY()
 	TArray<TObjectPtr<AReloadPoint>> ReloadPoints;

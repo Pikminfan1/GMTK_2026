@@ -46,6 +46,14 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Combat")
 	bool IsAiming() const { return bIsAiming; }
 
+	UFUNCTION(BlueprintPure, Category = "Combat")
+	bool IsAmmoMaxed();
+	
+	/** True if the most recent reload action actually loaded at least one round into
+	 *  either weapon (as opposed to a no-op tap on full mags). Reset when a new reload
+	 *  begins. The reload zone checks this to decide whether to relocate. */
+	UFUNCTION(BlueprintPure, Category = "Reload")
+	bool DidLastReloadLoadRounds() const { return bReloadLoadedRounds; }
 	/** Fires when the player begins aiming (aim input pressed). */
 	UPROPERTY(BlueprintAssignable, Category = "Combat")
 	FOnPlayerAimStarted OnAimStarted;
@@ -118,6 +126,13 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UComboComponent> ComboComponent;
 	
+	
+	// Set true when a round loads during the current reload; reset when reload starts.
+	bool bReloadLoadedRounds = false;
+
+	/** Bound to each weapon's OnRoundLoaded so we know a real reload occurred. */
+	UFUNCTION()
+	void HandleWeaponRoundLoaded(int32 CurrentAmmo, int32 MaxAmmo);
 
 	// ---------- Combo reward tuning ----------
 	// Rewards are granted ONE PER STACK in a cycling sequence:

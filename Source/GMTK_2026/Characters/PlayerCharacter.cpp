@@ -30,6 +30,25 @@ APlayerCharacter::APlayerCharacter()
 		Movement->RotationRate = FRotator(0.f, 540.f, 0.f);
 	}
 }
+
+bool APlayerCharacter::IsAmmoMaxed()
+{
+	if (EquippedWeaponL && EquippedWeaponR)
+	{
+		return EquippedWeaponL->IsMagazineFull() && EquippedWeaponR->IsMagazineFull();
+	}
+	else if (EquippedWeaponL)
+	{
+		return EquippedWeaponL->IsMagazineFull();
+	}
+	else if (EquippedWeaponR)
+	{
+		return EquippedWeaponR->IsMagazineFull();
+	}
+
+	return true; // no weapons equipped, so ammo is "maxed"
+}
+
 //TODO: Account for single weapons, (shotguns)
 void APlayerCharacter::BeginPlay()
 {
@@ -55,6 +74,9 @@ void APlayerCharacter::BeginPlay()
 
 			EquippedWeaponR->Equip(this);
 			EquippedWeaponR->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketNameR);
+			
+			EquippedWeaponL->OnRoundLoaded.AddDynamic(this, &APlayerCharacter::HandleWeaponRoundLoaded);
+			EquippedWeaponR->OnRoundLoaded.AddDynamic(this, &APlayerCharacter::HandleWeaponRoundLoaded);
 		}
 	}
 	else
@@ -208,6 +230,14 @@ void APlayerCharacter::StartReload(const FInputActionValue& Value)
 		UE_LOG(LogGMTKCombat, Verbose, TEXT("Reload blocked - not in a reload zone."));
 		return;
 	}
+	if (EquippedWeaponR->GetCurrentAmmo() == EquippedWeaponR->GetMaxAmmo() && EquippedWeaponL->GetCurrentAmmo() == EquippedWeaponL->GetMaxAmmo())
+	{
+		UE_LOG(LogGMTKCombat, Verbose, TEXT("Reload blocked - both mags are already full."));
+		return;
+	}
+	// New reload action: clear the "loaded a round" flag so DidLastReloadLoadRounds()
+	// reflects only this reload.
+	bReloadLoadedRounds = false;
 	// Both hands begin loading independently. Each weapon guards against reloading
 	// when full or already loading, and runs its own per-round timer, so the two
 	// mags fill on their own schedules.
@@ -346,3 +376,18 @@ void APlayerCharacter::HandleComboStacksChanged(int32 NewStacks)
 	OnAmmoBonusChanged.Broadcast(CurrentBonusMaxAmmo);
 	OnDoubleFireChanged.Broadcast(bDoubleFire);
 }
+void APlayerCharacter::HandleWeaponRoundLoaded(int32 CurrentAmmo, int32 MaxAmmo)
+{
+	// Only count this as a real reload if a weapon is actually mid-reload. This filters
+	// out OnRoundLoaded broadcasts that come from the combo ammo reward (SetBonusMaxAmmo
+	// tops up the mag and broadcasts the same event), which aren't reloads.
+	const bool bAnyReloading =
+		(EquippedWeaponR && EquippedWeaponR->IsReloading()) ||
+		(EquippedWeaponL && EquippedWeaponL->IsReloading());
+
+	if (bAnyReloading)
+	{
+		bReloadLoadedRounds = true;
+	}
+}
+
