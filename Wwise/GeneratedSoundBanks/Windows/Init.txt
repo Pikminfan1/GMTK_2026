@@ -57,17 +57,14 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	4275850663	Projectiles			\MainBusses\Main Audio Bus\World\Objects\Projectiles	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	602546716	Room_Large			\MainBusses\Main Audio Bus\World\Reverbs\Room_Large	
-	1990128658	Room_Medium			\MainBusses\Main Audio Bus\World\Reverbs\Room_Medium	
 	2730119150	Outdoors			\MainBusses\Main Audio Bus\World\Reverbs\Outdoors	
-	2995775460	Room_Small			\MainBusses\Main Audio Bus\World\Reverbs\Room_Small	
-	4122393694	Cave			\MainBusses\Main Audio Bus\World\Reverbs\Cave	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	122002127	Gain (Custom)	Wwise Gain			
 	357717049	Parametric EQ (Custom)	Wwise Parametric EQ			
 	594436390	Inside_Your_Head (Custom)	Wwise RoomVerb			
+	742798873	Parametric EQ (Custom)	Wwise Parametric EQ			
 	900190560	Master_EQ	Wwise Parametric EQ			
 	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
 

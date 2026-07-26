@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{7B1A247C-21C4-FF8C-D9FD-59CAC05ABB1E}",
+    "Hash": "{17D49AB3-5CAE-AEE1-F0DE-E027226A7BE7}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -39,6 +39,14 @@
        "GUID": "{E70B35B9-610E-484D-A071-806AD073BBAD}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
+      },
+      {
+       "Id": "742798873",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors\\[Effect Slot [1]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{D6984BB8-E6F4-4225-865C-B82817435BE1}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
       }
      ],
      "ShareSets": [
@@ -284,46 +292,23 @@
     ],
     "AuxBusses": [
      {
-      "Id": "602546716",
-      "Name": "Room_Large",
-      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Room_Large",
-      "GUID": "{ECB2B324-77C5-4EB4-AD62-7E75AC58FCA2}",
-      "Color": "24"
-     },
-     {
-      "Id": "1990128658",
-      "Name": "Room_Medium",
-      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Room_Medium",
-      "GUID": "{65FE0A3A-3C20-4621-8416-07760CF0F4D9}",
-      "Color": "24"
-     },
-     {
       "Id": "2730119150",
       "Name": "Outdoors",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
       "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}",
       "Color": "24",
       "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "742798873"
+        }
+       ],
        "ShareSets": [
         {
          "Id": "48620415"
         }
        ]
       }
-     },
-     {
-      "Id": "2995775460",
-      "Name": "Room_Small",
-      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Room_Small",
-      "GUID": "{E0D9BC87-EF3E-4ED7-9B11-F65A2301ACCB}",
-      "Color": "24"
-     },
-     {
-      "Id": "4122393694",
-      "Name": "Cave",
-      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Cave",
-      "GUID": "{1618779C-6D79-42CC-BE24-5B192AE46F9B}",
-      "Color": "24"
      }
     ],
     "GameParameters": [
@@ -513,6 +498,6 @@
     ]
    }
   ],
-  "FileHash": "{945D972F-4224-0AA0-0052-C7E25BBF477B}"
+  "FileHash": "{91C2CE4C-21E3-AF29-3830-E7B23290AA31}"
  }
 }

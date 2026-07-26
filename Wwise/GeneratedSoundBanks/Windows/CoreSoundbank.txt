@@ -102,7 +102,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	463424544	Pickup_HealthOrb	.cache\26\{2668F0E7-8A49-6371-112D-AFFCE1C4050C}.wem		\Containers\World\Objects\ObjectPickup\Pickups\Pickup_HealthOrb		12485
 	482921553	sfx_reload_bullet01_mo_fm	.cache\F1\{F12DD602-FB27-192D-396F-771DDE394B09}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_reload\Revolver_Reload\Revolver_reload_insertBullet\sfx_reload_bullet01_mo_fm		2418
 	488679294	sfx_player_fs_gravel07_mo_fm	.cache\4B\{4B1580CC-7D83-6E7A-DB56-1D84B35D5B62}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel07_mo_fm		4804
-	495019206	SFX_NPCRayStop_Mono_Bulba	.cache\E8\{E8BA6CE5-5CB1-AF18-F9F5-B71CAAABBD72}.wem		\Containers\World\NPC\NPCCombat\NPC_Ray\SFX_NPCRayStop_Mono_Bulba		5477
+	495019206	SFX_NPCRayStop_Mono_Bulba	.cache\6B\{6B87CBC4-9C68-790D-42CE-0B3FCF7CF791}.wem		\Containers\World\NPC\NPCCombat\NPC_Ray\SFX_NPCRayStop_Mono_Bulba		5477
 	525508710	UI_Click	.cache\37\{37A8688C-5BB3-74B1-99A8-B1D4AE1B09AE}.wem		\Containers\UI\CoreUI\UI_Click		36505
 	537368572	sfx_revolver_Metal04_mo_fm	.cache\F0\{F08AE232-4C5D-2F4A-AF5C-8B3C5DFCCD1E}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_metal\sfx_revolver_Metal04_mo_fm		8502
 	554598858	sfx_revolver_Mech03_mo_fm	.cache\A5\{A518987A-2E9C-7A16-0C68-DD09B5BD1762}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_mech\sfx_revolver_Mech03_mo_fm		6299
@@ -127,14 +127,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	741894269	sfx_player_fs_concrete06_mo_fm	.cache\BB\{BB0DA184-16A2-A968-1E8C-68C19DFFE3A4}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Concrete\sfx_player_fs_concrete06_mo_fm		2109
 	763663487	sfx_reload_bullet03_mo_fm	.cache\8D\{8DD60E71-FBC9-4FD1-5BF6-BA7573AFD5DB}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_reload\Revolver_Reload\Revolver_reload_insertBullet\sfx_reload_bullet03_mo_fm		2267
 	766849001	sfx_player_fs_gravel06_mo_fm	.cache\2C\{2C319C71-CA55-79BC-9440-15ED7EB3EEAD}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel06_mo_fm		3599
-	767883867	SFX_RayWindup_Mono_Bulba	.cache\99\{99628B71-84BC-EDFD-D22F-47118E9C2F3A}.wem		\Containers\World\NPC\NPCCombat\NPC_Ray\SFX_RayWindup_Mono_Bulba		14947
+	767883867	SFX_RayWindup_Mono_Bulba	.cache\A1\{A15D64F6-8D8D-CB73-7764-A5447789373F}.wem		\Containers\World\NPC\NPCCombat\NPC_Ray\SFX_RayWindup_Mono_Bulba		14947
 	776065053	sfx_revolver_Mech04_mo_fm	.cache\63\{63EF1903-0AC0-DCF9-42AD-203D515843AB}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_NoAmmo\sfx_revolver_Mech04_mo_fm		1584
 	785571228	sfx_revolver_Mech04_mo_fm	.cache\62\{62C8962A-E724-BD55-894A-90A98B9748A5}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_Aim\sfx_revolver_Mech04_mo_fm		968
 	810403928	sfx_player_fs_gravel02_mo_fm	.cache\E0\{E0B10BB0-1C0C-4391-0539-E70DA969E861}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel02_mo_fm		3349
 	813004226	mus_Combat_harpsichord_120bpm4-4_L36M-P17B_iw_48k24_260725_FM	.cache\A1\{A1BB7674-3EFF-C2BC-57CF-7C73EC04D124}.wem		\Containers\Music\Music\Combat\Combat_A\mus_Combat_harpsichord_120bpm4-4_L36M-P17B_iw_48k24_260725_FM		1023701
 	820646846	sfx_player_fs_water01_mo_fm	.cache\7D\{7DF70E5A-D156-B14A-30F3-8762AD78608A}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water01_mo_fm		4643
 	822825595	sfx_player_fs_grass06_mo_fm	.cache\18\{18F87A2E-11A1-8541-FDF4-E6AA6190ACEA}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass06_mo_fm		2072
-	825183121	SFX_NPCRay_Mono_lp_Bulba	.cache\C1\{C11D67F5-4438-F2D7-937A-B0911FB5DEA6}.wem		\Containers\World\NPC\NPCCombat\NPC_Ray\SFX_NPCRay_Mono_lp_Bulba		31570
+	825183121	SFX_NPCRay_Mono_lp_Bulba	.cache\54\{54155CEB-C7B9-0632-C521-5CF6332AEFCA}.wem		\Containers\World\NPC\NPCCombat\NPC_Ray\SFX_NPCRay_Mono_lp_Bulba		31570
 	837232218	sfx_player_fs_water07_mo_fm	.cache\2E\{2ED0C1E9-C660-7348-0779-196FA78DC36E}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water07_mo_fm		3613
 	863346427	sfx_revolver_tail01_mo_fm	.cache\34\{347A9A66-19A0-3B90-38F3-67A4BA341F79}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_tail\sfx_revolver_tail01_mo_fm		7153
 	899753535	Revolver_reload_loop	.cache\4F\{4F9A780B-587A-E3BE-106E-2356294D617F}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_reload\Revolver_Reload\Revolver_reload_loop		66046
@@ -142,7 +142,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	925016750	sfx_player_fs_gravel04_mo_fm	.cache\71\{715B9B85-8FB3-2248-96A3-CFC10ABA6181}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel04_mo_fm		3022
 	927475916	UI_Confirm	.cache\B4\{B42E61F0-8F62-5E46-3091-D26FD8ABE8E6}.wem		\Containers\UI\CoreUI\UI_Confirm		31748
 	927997342	SFX_NPCDeath_Mono_2_Bulba	.cache\77\{77790380-C486-3F1B-0C98-FA5E75B650B3}.wem		\Containers\World\NPC\NPCCombat\NPC_Death\SFX_NPCDeath_Mono_2_Bulba		14666
-	933638355	SFX_NPCRayStart_Mono_Bulba	.cache\7D\{7DBC6916-7C27-517B-345D-DE8F1D59A9B9}.wem		\Containers\World\NPC\NPCCombat\NPC_Ray\SFX_NPCRayStart_Mono_Bulba		9078
+	933638355	SFX_NPCRayStart_Mono_Bulba	.cache\17\{17F24081-D62E-3568-14A4-6768AE98BF3D}.wem		\Containers\World\NPC\NPCCombat\NPC_Ray\SFX_NPCRayStart_Mono_Bulba		9078
 	943985641	sfx_player_fs_grass02_mo_fm	.cache\E9\{E9E609E6-F04A-9D48-BDA4-1BBCAF182D6B}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass02_mo_fm		2611
 	998249834	sfx_revolver_Metal01_mo_fm	.cache\37\{3760EEC7-007D-B632-7378-1AE855723073}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_metal\sfx_revolver_Metal01_mo_fm		5683
 	1003709863	SFX_NPCHit_Mono_1_Bulba	.cache\5B\{5B5FF7DB-0EE7-DF08-93AD-A4B84C1318E8}.wem		\Containers\World\NPC\NPCCombat\NPC_Hit\SFX_NPCHit_Mono_1_Bulba		4121
