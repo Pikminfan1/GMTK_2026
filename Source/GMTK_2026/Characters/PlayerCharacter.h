@@ -25,6 +25,10 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDoubleFireChanged, bool, bDoubleF
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerReloadStarted);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerReloadStopped);
 
+// Player aim signals, fired when the player starts/stops aiming.
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerAimStarted);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerAimStopped);
+
 /**
  * The player-controlled leaf class - camera boom, Enhanced Input bindings, and
  * equipped-weapon handling. Any custom movement component swap, if you ever need
@@ -76,6 +80,36 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Reload")
 	FOnPlayerReloadStopped OnReloadStopped;
 
+	/** Fires when the player begins aiming (aim input pressed). */
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnPlayerAimStarted OnAimStarted;
+
+	/** Fires when the player stops aiming (aim input released). */
+	UPROPERTY(BlueprintAssignable, Category = "Combat")
+	FOnPlayerAimStopped OnAimStopped;
+
+	// ---------- Reload zone ----------
+
+	/** Called by a reload zone when the player enters/leaves it. */
+	UFUNCTION(BlueprintCallable, Category = "Reload")
+	void SetInReloadZone(bool bInZone) { bIsInReloadZone = bInZone; }
+
+	UFUNCTION(BlueprintPure, Category = "Reload")
+	bool IsInReloadZone() const { return bIsInReloadZone; }
+
+	/** If true, reloading is only allowed while inside a reload zone. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Reload")
+	bool bReloadRequiresZone = true;
+
+	/** True if the most recent reload action actually loaded a round (vs a no-op tap on
+	 *  full mags). Reset when a new reload begins. The reload zone checks this. */
+	UFUNCTION(BlueprintPure, Category = "Reload")
+	bool DidLastReloadLoadRounds() const { return bReloadLoadedRounds; }
+
+	// GetComboComponent must be PUBLIC: the GameMode calls it for combo-scaled scoring.
+	UFUNCTION(BlueprintPure, Category = "Combat")
+	UComboComponent* GetComboComponent() const { return ComboComponent; }
+
 protected:
 	virtual void BeginPlay() override;
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
@@ -89,9 +123,6 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UComboComponent> ComboComponent;
 	
-	UFUNCTION(BlueprintPure, Category = "Combat")
-	UComboComponent* GetComboComponent() const { return ComboComponent; }
-
 	// ---------- Combo reward tuning ----------
 	// Rewards are granted ONE PER STACK in a cycling sequence:
 	//   Damage -> Speed -> Ammo -> DoubleFire(once) -> Damage -> Speed -> Ammo -> ...
@@ -116,6 +147,10 @@ protected:
 	 *  component's OnComboStacksChanged. */
 	UFUNCTION()
 	void HandleComboStacksChanged(int32 NewStacks);
+
+	/** Bound to each weapon's OnRoundLoaded so we know a real reload occurred. */
+	UFUNCTION()
+	void HandleWeaponRoundLoaded(int32 CurrentAmmo, int32 MaxAmmo);
 
 	// Assign these Input Actions in the Class Defaults / a Blueprint subclass once you've
 	// created them via Project Settings > Input (Enhanced Input).
@@ -169,6 +204,12 @@ protected:
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
 	bool bIsAiming = false;
 
+	// True while the player is standing in an active reload zone.
+	bool bIsInReloadZone = false;
+
+	// Set true when a round loads during the current reload; reset when reload starts.
+	bool bReloadLoadedRounds = false;
+
 	// Current applied reward buffs (base = 1.0 / 1.0 / 0), so UI and resets are exact.
 	float CurrentDamageMultiplier = 1.f;
 	float CurrentSpeedMultiplier = 1.f;
@@ -194,6 +235,9 @@ protected:
 	 *  crumple, instead of freezing in place. Calls the base first (disables movement)
 	 *  then enables physics on the mesh. */
 	virtual void HandleDeath_Implementation(AActor* DeadActor) override;
+	
+	UFUNCTION(BlueprintPure, Category = "Combat")
+	bool IsAmmoMaxed();
 
 	/** Collision profile the mesh switches to for ragdoll (must collide with world
 	 *  static so the body rests on the floor). "Ragdoll" is the UE default profile. */

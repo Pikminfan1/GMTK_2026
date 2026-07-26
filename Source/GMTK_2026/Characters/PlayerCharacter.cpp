@@ -57,6 +57,9 @@ void APlayerCharacter::BeginPlay()
 
 			EquippedWeaponR->Equip(this);
 			EquippedWeaponR->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketNameR);
+
+			EquippedWeaponL->OnRoundLoaded.AddDynamic(this, &APlayerCharacter::HandleWeaponRoundLoaded);
+			EquippedWeaponR->OnRoundLoaded.AddDynamic(this, &APlayerCharacter::HandleWeaponRoundLoaded);
 		}
 	}
 	else
@@ -203,6 +206,17 @@ void APlayerCharacter::StartFire(const FInputActionValue& Value)
 
 void APlayerCharacter::StartReload(const FInputActionValue& Value)
 {
+	// Reload-zone gate: when enabled, the player can only reload inside an active zone.
+	if (bReloadRequiresZone && !bIsInReloadZone)
+	{
+		UE_LOG(LogGMTKCombat, Verbose, TEXT("Reload blocked - not in a reload zone."));
+		return;
+	}
+
+	// New reload action: clear the "loaded a round" flag so DidLastReloadLoadRounds()
+	// reflects only this reload.
+	bReloadLoadedRounds = false;
+
 	// Both hands begin loading independently. Each weapon guards against reloading
 	// when full or already loading, and runs its own per-round timer, so the two
 	// mags fill on their own schedules.
@@ -245,6 +259,8 @@ void APlayerCharacter::StartAim(const FInputActionValue& Value)
 	{
 		Movement->bOrientRotationToMovement = false;
 	}
+
+	OnAimStarted.Broadcast();
 }
 
 void APlayerCharacter::StopAim(const FInputActionValue& Value)
@@ -256,6 +272,8 @@ void APlayerCharacter::StopAim(const FInputActionValue& Value)
 	{
 		Movement->bOrientRotationToMovement = true;
 	}
+
+	OnAimStopped.Broadcast();
 }
 
 void APlayerCharacter::HandleDeathResetCombo(AActor* DeadActor)
@@ -338,6 +356,20 @@ void APlayerCharacter::HandleComboStacksChanged(int32 NewStacks)
 	OnDoubleFireChanged.Broadcast(bDoubleFire);
 }
 
+void APlayerCharacter::HandleWeaponRoundLoaded(int32 CurrentAmmo, int32 MaxAmmo)
+{
+	// Only count as a real reload if a weapon is actually mid-reload (filters out the
+	// combo ammo reward's OnRoundLoaded broadcasts, which aren't reloads).
+	const bool bAnyReloading =
+		(EquippedWeaponR && EquippedWeaponR->IsReloading()) ||
+		(EquippedWeaponL && EquippedWeaponL->IsReloading());
+
+	if (bAnyReloading)
+	{
+		bReloadLoadedRounds = true;
+	}
+}
+
 void APlayerCharacter::HandleDeath_Implementation(AActor* DeadActor)
 {
 	// Base handling first: stops movement. Note the base also disables ACTOR collision,
@@ -368,4 +400,23 @@ void APlayerCharacter::HandleDeath_Implementation(AActor* DeadActor)
 		MeshComp->SetSimulatePhysics(true);
 		MeshComp->WakeAllRigidBodies();
 	}
+}
+
+
+bool APlayerCharacter::IsAmmoMaxed()
+{
+	if (EquippedWeaponL && EquippedWeaponR)
+	{
+		return EquippedWeaponL->IsMagazineFull() && EquippedWeaponR->IsMagazineFull();
+	}
+	else if (EquippedWeaponL)
+	{
+		return EquippedWeaponL->IsMagazineFull();
+	}
+	else if (EquippedWeaponR)
+	{
+		return EquippedWeaponR->IsMagazineFull();
+	}
+
+	return true; // no weapons equipped, so ammo is "maxed"
 }
