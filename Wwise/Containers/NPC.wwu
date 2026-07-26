@@ -359,10 +359,16 @@
 						<PropertyContainer Name="NPC_Ray" ID="{3209F260-289B-430B-BAA2-4F5D3CB819B4}" ShortID="492271360">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Priority" Type="int16">
 									<ValueList>
 										<Value>40</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -511,7 +517,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+									<ObjectRef Name="NPC_ATTACK" ID="{0DAD90F1-0F71-4937-AD44-A75277802371}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
