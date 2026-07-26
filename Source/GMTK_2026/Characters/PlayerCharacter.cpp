@@ -8,6 +8,7 @@
 #include "InputActionValue.h"
 #include "Weapons/WeaponBase.h"
 #include "Utility/LogChannels.h"
+#include "Kismet/GameplayStatics.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 
@@ -114,6 +115,10 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 			EnhancedInput->BindAction(ReloadAction, ETriggerEvent::Started, this, &APlayerCharacter::StartReload);
 			EnhancedInput->BindAction(ReloadAction, ETriggerEvent::Completed, this, &APlayerCharacter::StopReload);
 		}
+		if (PauseAction)
+		{
+			EnhancedInput->BindAction(PauseAction, ETriggerEvent::Started, this, &APlayerCharacter::StartPause);
+		}
 	}
 	else
 	{
@@ -202,6 +207,35 @@ void APlayerCharacter::StartFire(const FInputActionValue& Value)
 			UE_LOG(LogGMTKCombat, Verbose, TEXT("Fire input received but no weapon is equipped"));
 		}
 	}
+}
+
+void APlayerCharacter::StartPause(const FInputActionValue& Value)
+{
+	APlayerController* PC = Cast<APlayerController>(GetController());
+	if (!PC)
+	{
+		return;
+	}
+
+	// Toggle the paused state.
+	const bool bNewPaused = !UGameplayStatics::IsGamePaused(this);
+	UGameplayStatics::SetGamePaused(this, bNewPaused);
+
+	// Show the cursor + hand input to UI while paused; restore game input when resumed.
+	if (bNewPaused)
+	{
+		PC->SetShowMouseCursor(true);
+		FInputModeGameAndUI InputMode;
+		PC->SetInputMode(InputMode);
+	}
+	else
+	{
+		PC->SetShowMouseCursor(false);
+		PC->SetInputMode(FInputModeGameOnly());
+	}
+
+	// Let Blueprint show/hide the pause menu widget.
+	OnPauseToggled(bNewPaused);
 }
 
 void APlayerCharacter::StartReload(const FInputActionValue& Value)

@@ -44,6 +44,10 @@ public:
 	APlayerCharacter();
 	UFUNCTION(BlueprintPure, Category = "Combat")
 	bool IsAiming() const { return bIsAiming; }
+
+	/** Fires when pause is toggled (true = now paused). Show/hide the pause menu here. */
+	UFUNCTION(BlueprintImplementableEvent, Category = "UI")
+	void OnPauseToggled(bool bIsPaused);
 	
 	UFUNCTION(BlueprintPure, Category = "Camera")
 	UCameraComponent* GetFollowCamera() const { return FollowCamera; }
@@ -158,6 +162,9 @@ protected:
 	TObjectPtr<UInputAction> MoveAction;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Input")
+	TObjectPtr<UInputAction> PauseAction;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Input")
 	TObjectPtr<UInputAction> LookAction;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Input")
@@ -223,6 +230,7 @@ protected:
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
 	void StartFire(const FInputActionValue& Value);
+	void StartPause(const FInputActionValue& Value);
 	void StartAim(const FInputActionValue& Value);
 	void StopAim(const FInputActionValue& Value);
 	void StartReload(const FInputActionValue& Value);
