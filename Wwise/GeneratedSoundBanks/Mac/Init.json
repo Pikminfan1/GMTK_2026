@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{86D0FF1D-2169-4D73-76D6-557A3CF6C53C}",
+    "Hash": "{2BAFC0F6-F6D2-3E7A-11AC-FB32E1FABE01}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -239,6 +239,12 @@
       "Name": "NPCVocals",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\NPCs\\NPCVocals",
       "GUID": "{992199C8-302C-4EE2-9C4A-D9094B6CB76F}"
+     },
+     {
+      "Id": "3354310601",
+      "Name": "NPC_ATTACK",
+      "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\NPCs\\NPCCombat\\NPC_ATTACK",
+      "GUID": "{0DAD90F1-0F71-4937-AD44-A75277802371}"
      },
      {
       "Id": "3545700988",
@@ -600,6 +606,6 @@
     ]
    }
   ],
-  "FileHash": "{08F0EBB6-D83F-8D1E-A792-A430F7AE2AC6}"
+  "FileHash": "{9CCB0BAA-17F3-B6F7-EDF7-206FE64206A7}"
  }
 }

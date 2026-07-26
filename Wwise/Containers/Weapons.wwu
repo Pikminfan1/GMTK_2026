@@ -1145,6 +1145,135 @@
 								</PropertyContainer>
 							</ChildrenList>
 						</Folder>
+						<RandomSequenceContainer Name="Revolver_Aim" ID="{B0D8347F-6ACB-4092-A498-E044083BB218}" ShortID="4729153">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PlayerCombat" ID="{E0794755-7A44-41C5-98E3-2E356CE63F32}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_revolver_Mech01_mo_fm" ID="{DBFB5219-712F-4B45-9B87-33ABE4A1A6FA}" ShortID="1061908882">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_revolver_Mech01_mo_fm" ID="{468457FE-8A86-4CE8-B891-9EE6180AB2EE}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.2403"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.33934"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_revolver_Mech01_mo_fm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1048698070"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_revolver_Mech01_mo_fm" ID="{468457FE-8A86-4CE8-B891-9EE6180AB2EE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_revolver_Mech02_mo_fm" ID="{C297DFBD-FA19-483A-90A0-686CE39EAEFE}" ShortID="564696694">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_revolver_Mech02_mo_fm" ID="{A0846190-554C-45CF-9AC3-CD37F47936BB}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.2604"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.38443"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_revolver_Mech02_mo_fm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1051905915"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_revolver_Mech02_mo_fm" ID="{A0846190-554C-45CF-9AC3-CD37F47936BB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_revolver_Mech03_mo_fm" ID="{3A9D72A4-3A41-4A11-8EE6-5678E8FA5EE3}" ShortID="980590172">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_revolver_Mech03_mo_fm" ID="{BF784C2E-3311-4FDC-8BA3-6881F74C58E4}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.03625"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.11658"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_revolver_Mech03_mo_fm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="12250624"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_revolver_Mech03_mo_fm" ID="{BF784C2E-3311-4FDC-8BA3-6881F74C58E4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_revolver_Mech04_mo_fm" ID="{40A0CB8A-4BD5-404E-880B-A53CC07820D4}" ShortID="731945579">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_revolver_Mech04_mo_fm" ID="{082DD95C-631C-48EC-B62E-A659D24A0F47}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.23964"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.28315"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>sfx_revolver_Mech04_mo_fm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="785571228"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_revolver_Mech04_mo_fm" ID="{082DD95C-631C-48EC-B62E-A659D24A0F47}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</PropertyContainer>
 			</ChildrenList>

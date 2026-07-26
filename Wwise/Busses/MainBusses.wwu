@@ -46,7 +46,11 @@
 								</Bus>
 								<Bus Name="NPCs" ID="{316AA0B0-2FDA-4563-A591-EDE30805F674}">
 									<ChildrenList>
-										<Bus Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}"/>
+										<Bus Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}">
+											<ChildrenList>
+												<Bus Name="NPC_ATTACK" ID="{0DAD90F1-0F71-4937-AD44-A75277802371}"/>
+											</ChildrenList>
+										</Bus>
 										<Bus Name="NPCLocomotion" ID="{2B45A8A7-9841-4E20-975F-EE4AF534F605}"/>
 										<Bus Name="NPCVocals" ID="{992199C8-302C-4EE2-9C4A-D9094B6CB76F}"/>
 										<Bus Name="NPCActions" ID="{1332443F-AFEF-4643-8236-2C139FFE9AA7}"/>
@@ -87,11 +91,6 @@
 										</AuxBus>
 										<AuxBus Name="Outdoors" ID="{1925E056-166D-4DD7-AB68-8EA81697C003}">
 											<PropertyList>
-												<Property Name="BusVolume" Type="Real64">
-													<ValueList>
-														<Value>-3</Value>
-													</ValueList>
-												</Property>
 												<Property Name="Color" Type="int16" Value="24"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
 											</PropertyList>
@@ -156,6 +155,13 @@
 						<Bus Name="Non-World" ID="{5D9DD141-1969-45C3-94E0-FE8731676F7E}">
 							<ChildrenList>
 								<Bus Name="GameEvents" ID="{1483FF16-16EC-422E-95B4-A6916FCC8D04}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
 											<RTPC Name="" ID="{77DFD54E-46C6-42FE-AD13-F343A2FC8617}" ShortID="537766077">

@@ -65,7 +65,7 @@
 					<ChildrenList>
 						<Action Name="" ID="{AB9EB9B5-A59E-4167-B490-3B75C7086BFF}" ShortID="88532585">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.1"/>
+								<Property Name="Delay" Type="Real64" Value="0.15"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -74,6 +74,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{1B6F064F-6112-41F9-B377-9575014EB863}" ShortID="698867359">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.05"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="NPC_Hit" ID="{54733D4D-F8DA-4C78-8C2E-1AA73F69D683}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>

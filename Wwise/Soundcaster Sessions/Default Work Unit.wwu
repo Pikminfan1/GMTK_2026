@@ -79,6 +79,22 @@
 						</Module>
 					</ModuleList>
 				</SoundcasterSession>
+				<SoundcasterSession Name="Ray" ID="{94ADFDA0-222D-4323-AA9D-62EE8490F863}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="NPC_Ray_Windup" ID="{CA86A4E2-0F07-4514-B68B-70ED30A4D402}" WorkUnitID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Ray_Start" ID="{61720CB7-A9F1-4F0F-A916-EFD202D3127A}" WorkUnitID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Ray_Stop" ID="{737329C3-A8CC-47CF-9B29-7032509B7790}" WorkUnitID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>
