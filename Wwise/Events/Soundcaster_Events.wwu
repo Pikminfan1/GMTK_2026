@@ -398,6 +398,31 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Test_WeponEnemy" ID="{0D6411B8-9142-4CA1-94D0-49530A22E3C2}">
+							<ChildrenList>
+								<Action Name="" ID="{10202F6E-1856-4F6C-8B30-0332A5037198}" ShortID="216220473">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}" WorkUnitID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D8FB9EAA-0B10-4538-8D0A-7882B48FD7D3}" ShortID="587353614">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="0.075"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="NPC_Pain" ID="{98162397-C994-49AC-82E9-3C8DEDD5C07E}" WorkUnitID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

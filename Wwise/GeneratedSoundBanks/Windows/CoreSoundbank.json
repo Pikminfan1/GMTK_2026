@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{82B797AA-EC85-FE64-78DC-1EA93AFFFA31}",
+    "Hash": "{59E5072C-699D-1B3E-8E28-6D121DA21ABB}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
@@ -1664,6 +1664,6 @@
     ]
    }
   ],
-  "FileHash": "{3BE9A2F7-255E-C3BE-EEA9-3B048369AE90}"
+  "FileHash": "{C694925A-6144-5BFD-5E5A-D7153CBEDF05}"
  }
 }

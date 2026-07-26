@@ -6697,30 +6697,7 @@
 						</ObjectList>
 					</ObjectLists>
 				</MusicSegment>
-				<MusicSwitchContainer Name="Stingers" ID="{7F107F4E-DF79-47A3-B3C3-0D21E8794A1A}" ShortID="153841884">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-						</Reference>
-						<Reference Name="TransitionRoot">
-							<Custom>
-								<MusicTransition Name="Root" ID="{178D1E47-06C8-4660-8DB6-552066C580BA}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicTransition Name="Transition" ID="{63811B80-0749-4095-B5D6-6D4A4A0BB69F}">
-											<TransitionInfo/>
-										</MusicTransition>
-									</ChildrenList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</Custom>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="Stingers" ID="{C4F92C59-1E8F-4A75-9FAE-250957504EFC}" ShortID="701028735">
 					<ChildrenList>
 						<MusicSegment Name="mus_stg_PlayerDeath_120bpm4-4_iw" ID="{D080E6DC-CF0B-4695-8F0B-A02E326D861E}" ShortID="843190474">
 							<PropertyList>
@@ -6933,7 +6910,7 @@
 							</ObjectLists>
 						</MusicSegment>
 					</ChildrenList>
-				</MusicSwitchContainer>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

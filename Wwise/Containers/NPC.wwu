@@ -250,115 +250,6 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<Folder Name="NPC_Ray" ID="{F43C30E7-6722-4F10-AC0A-AA4458E6E9D5}" ShortID="609165459">
-							<ChildrenList>
-								<Sound Name="SFX_NPCRayStart_Mono_Bulba" ID="{1E09EF4E-D57F-46E8-9B66-B4B06DB9DD89}" ShortID="63725975">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_NPCRayStart_Mono_Bulba" ID="{F517858D-7973-4678-89FC-50BF45A96C54}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.07623"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.32046"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.03516"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.17504"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>SFX_NPCRayStart_Mono_Bulba.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="933638355"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_NPCRayStart_Mono_Bulba" ID="{F517858D-7973-4678-89FC-50BF45A96C54}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_NPCRay_Mono_lp_Bulba" ID="{9C8CF281-DADC-4A8B-B22B-1BD760CB7DCF}" ShortID="580772304">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_NPCRay_Mono_lp_Bulba" ID="{75C72A27-763A-4A76-A5A9-B5EA965FDA63}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_NPCRay_Mono_lp_Bulba.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="825183121"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_NPCRay_Mono_lp_Bulba" ID="{75C72A27-763A-4A76-A5A9-B5EA965FDA63}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_NPCRayStop_Mono_Bulba" ID="{B28690FB-1C92-47FC-B33B-99ED4C98956D}" ShortID="916595225">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_NPCRayStop_Mono_lp_Bulba" ID="{5C270F98-859C-435F-A92C-212D2A5E26F3}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.05401"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.05346"/>
-												<Property Name="LoopEnd" Type="Real64" Value="0.84374"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.18509"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>SFX_NPCRayStop_Mono_lp_Bulba.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="495019206"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_NPCRayStop_Mono_lp_Bulba" ID="{5C270F98-859C-435F-A92C-212D2A5E26F3}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_RayWindup_Mono_Bulba" ID="{C5E945C4-56A2-4FD9-AC9E-CD8E7FD0C6A0}" ShortID="43879109">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_RayWindup_Mono_Bulba" ID="{0758A970-700E-4598-9D91-C92CE245648F}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_RayWindup_Mono_Bulba.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="767883867"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_RayWindup_Mono_Bulba" ID="{0758A970-700E-4598-9D91-C92CE245648F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</Folder>
 						<RandomSequenceContainer Name="NPC_Hit" ID="{54733D4D-F8DA-4C78-8C2E-1AA73F69D683}" ShortID="178290327">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
@@ -465,6 +356,314 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<PropertyContainer Name="NPC_Ray" ID="{3209F260-289B-430B-BAA2-4F5D3CB819B4}" ShortID="492271360">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Priority" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom>
+										<Attenuation Name="Attenuation (Custom)" ID="{D1EB06CF-ECA8-4EC9-BCED-643FCE984E6D}" ShortID="1048740891">
+											<PropertyList>
+												<Property Name="ConeAttenuation" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="ConeInnerAngle" Type="int32" Value="125"/>
+												<Property Name="ConeLowPassFilterValue" Type="int32">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+												</Property>
+												<Property Name="ConeOuterAngle" Type="int32" Value="270"/>
+											</PropertyList>
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{63FA1E78-A33F-4DEB-A11D-913B8666C0A4}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>36.44737</XPos>
+																	<YPos>-2.16346</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>68.55263</XPos>
+																	<YPos>-4.34108</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-6.89389</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<DualShelfUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None">
+														<Curve Name="DualShelfFilter" ID="{59097DF4-9726-4D10-9EF5-0E8C721349FC}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</DualShelfUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+												<ObstructionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionVolumeUsage>
+												<ObstructionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionLPFUsage>
+												<ObstructionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionHPFUsage>
+												<ObstructionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionDSFUsage>
+												<OcclusionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionVolumeUsage>
+												<OcclusionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionLPFUsage>
+												<OcclusionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionHPFUsage>
+												<OcclusionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionDSFUsage>
+												<DiffractionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionVolumeUsage>
+												<DiffractionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionLPFUsage>
+												<DiffractionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionHPFUsage>
+												<DiffractionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionDSFUsage>
+												<TransmissionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionVolumeUsage>
+												<TransmissionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionLPFUsage>
+												<TransmissionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionHPFUsage>
+												<TransmissionDSFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionDSFUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_NPCRay_Mono_lp_Bulba" ID="{9C8CF281-DADC-4A8B-B22B-1BD760CB7DCF}" ShortID="580772304">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Priority" Type="int16">
+											<ValueList>
+												<Value>40</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Generic_2000" ID="{929FD621-29CD-495F-B79B-AE15B24D87A4}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCRay_Mono_lp_Bulba" ID="{75C72A27-763A-4A76-A5A9-B5EA965FDA63}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCRay_Mono_lp_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="825183121"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCRay_Mono_lp_Bulba" ID="{75C72A27-763A-4A76-A5A9-B5EA965FDA63}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_NPCRayStart_Mono_Bulba" ID="{1E09EF4E-D57F-46E8-9B66-B4B06DB9DD89}" ShortID="63725975">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="Priority" Type="int16">
+											<ValueList>
+												<Value>40</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Generic_2000" ID="{929FD621-29CD-495F-B79B-AE15B24D87A4}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCRayStart_Mono_Bulba" ID="{F517858D-7973-4678-89FC-50BF45A96C54}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.07623"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.32046"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.03516"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.17504"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCRayStart_Mono_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="933638355"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCRayStart_Mono_Bulba" ID="{F517858D-7973-4678-89FC-50BF45A96C54}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_NPCRayStop_Mono_Bulba" ID="{B28690FB-1C92-47FC-B33B-99ED4C98956D}" ShortID="916595225">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="Priority" Type="int16">
+											<ValueList>
+												<Value>40</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Generic_2000" ID="{929FD621-29CD-495F-B79B-AE15B24D87A4}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCRayStop_Mono_lp_Bulba" ID="{5C270F98-859C-435F-A92C-212D2A5E26F3}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.05401"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.05346"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.84374"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.18509"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCRayStop_Mono_lp_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="495019206"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCRayStop_Mono_lp_Bulba" ID="{5C270F98-859C-435F-A92C-212D2A5E26F3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_RayWindup_Mono_Bulba" ID="{C5E945C4-56A2-4FD9-AC9E-CD8E7FD0C6A0}" ShortID="43879109">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="Priority" Type="int16">
+											<ValueList>
+												<Value>40</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Generic_2000" ID="{929FD621-29CD-495F-B79B-AE15B24D87A4}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCCombat" ID="{FA892B7C-2267-4D15-8A00-A002DF0B41DD}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_RayWindup_Mono_Bulba" ID="{0758A970-700E-4598-9D91-C92CE245648F}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_RayWindup_Mono_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="767883867"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_RayWindup_Mono_Bulba" ID="{0758A970-700E-4598-9D91-C92CE245648F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</PropertyContainer>
 					</ChildrenList>
 				</PropertyContainer>
 				<PropertyContainer Name="NPCActions" ID="{09C5BBBE-8DE8-493C-BD08-CAD8E2B6E91A}" ShortID="383474643">
@@ -492,109 +691,117 @@
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
 								</Reference>
 							</ReferenceList>
-							<ChildrenList>
-								<SourcePlugin Name="Tone Generator" ID="{CB283452-A17E-47FA-BA8A-A59C72D724F1}" ShortID="956524932" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
-									<PropertyList>
-										<Property Name="FixDur" Type="Real32" Value="0.1"/>
-										<Property Name="StartFreq" Type="Real32" Value="220"/>
-									</PropertyList>
-									<Language>SFX</Language>
-								</SourcePlugin>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Tone Generator" ID="{CB283452-A17E-47FA-BA8A-A59C72D724F1}" Platform="Linked"/>
-							</ActiveSourceList>
 						</Sound>
+						<PropertyContainer Name="Bats" ID="{80B5CB95-A6F5-470A-AA38-E3FF534F8D0F}" ShortID="11782502">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_Generic_20000" ID="{79CA2108-D3D6-4BEF-AE0E-61A619222A1D}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="NPCActions" ID="{1332443F-AFEF-4643-8236-2C139FFE9AA7}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_BatSwarmBrust_Mono_Bulba" ID="{A4086548-64F5-41F6-A281-BB99F2A7B14E}" ShortID="108322014">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Generic_20000" ID="{79CA2108-D3D6-4BEF-AE0E-61A619222A1D}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCActions" ID="{1332443F-AFEF-4643-8236-2C139FFE9AA7}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_BatSwarmBrust_Mono_Bulba" ID="{62C16744-9A1B-40AF-85BC-7AC38B87C959}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.14833"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_BatSwarmBrust_Mono_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1007823311"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_BatSwarmBrust_Mono_Bulba" ID="{62C16744-9A1B-40AF-85BC-7AC38B87C959}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{F0DC3F8F-7CD6-437F-BA06-BDBD4754CB66}" ShortID="838832022">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Generic_20000" ID="{79CA2108-D3D6-4BEF-AE0E-61A619222A1D}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCActions" ID="{1332443F-AFEF-4643-8236-2C139FFE9AA7}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{C8910642-4DCF-4EA5-9CC4-BD2068A3CBC9}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_BatSwarmChatter_Mono_Loop_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="408460133"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{C8910642-4DCF-4EA5-9CC4-BD2068A3CBC9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{A9E92591-3B67-4931-AF08-CAFF92EAA3DD}" ShortID="134934048">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Generic_20000" ID="{79CA2108-D3D6-4BEF-AE0E-61A619222A1D}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCActions" ID="{1332443F-AFEF-4643-8236-2C139FFE9AA7}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{0C263047-615C-483B-AE1E-D43B6CD0EF04}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_BatSwarmWings_Mono_Loop_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="827384587"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{0C263047-615C-483B-AE1E-D43B6CD0EF04}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</PropertyContainer>
 					</ChildrenList>
 				</PropertyContainer>
-				<Folder Name="Bats" ID="{5865CEA0-2DB2-41C0-9980-DB7B76AA6D7A}" ShortID="544165987">
-					<ChildrenList>
-						<Sound Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{A9E92591-3B67-4931-AF08-CAFF92EAA3DD}" ShortID="134934048">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="ATT_Generic_2000" ID="{929FD621-29CD-495F-B79B-AE15B24D87A4}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{0C263047-615C-483B-AE1E-D43B6CD0EF04}">
-									<Language>SFX</Language>
-									<AudioFile>SFX_BatSwarmWings_Mono_Loop_Bulba.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="827384587"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{0C263047-615C-483B-AE1E-D43B6CD0EF04}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{F0DC3F8F-7CD6-437F-BA06-BDBD4754CB66}" ShortID="838832022">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="ATT_Generic_2000" ID="{929FD621-29CD-495F-B79B-AE15B24D87A4}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{C8910642-4DCF-4EA5-9CC4-BD2068A3CBC9}">
-									<Language>SFX</Language>
-									<AudioFile>SFX_BatSwarmChatter_Mono_Loop_Bulba.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="408460133"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{C8910642-4DCF-4EA5-9CC4-BD2068A3CBC9}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_BatSwarmBrust_Mono_Bulba" ID="{A4086548-64F5-41F6-A281-BB99F2A7B14E}" ShortID="108322014">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_BatSwarmBrust_Mono_Bulba" ID="{62C16744-9A1B-40AF-85BC-7AC38B87C959}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.14833"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>SFX_BatSwarmBrust_Mono_Bulba.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1007823311"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_BatSwarmBrust_Mono_Bulba" ID="{62C16744-9A1B-40AF-85BC-7AC38B87C959}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
