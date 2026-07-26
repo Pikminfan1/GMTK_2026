@@ -12,6 +12,12 @@ class UComboComponent;
 class UHealthComponent;
 struct FInputActionValue;
 
+// Player-level reload signals, fired ONCE per reload action (not once per weapon).
+// Bind shared reload art/SFX here; use the per-weapon AWeaponBase reload events only
+// for per-gun art, since those fire once for each hand.
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerReloadStarted);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerReloadStopped);
+
 /**
  * The player-controlled leaf class - camera boom, Enhanced Input bindings, and
  * equipped-weapon handling. Any custom movement component swap, if you ever need
@@ -31,13 +37,19 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Camera")
 	UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
+	/** Fires ONCE when the player begins a reload action (input pressed), regardless
+	 *  of how many weapons actually reload. */
+	UPROPERTY(BlueprintAssignable, Category = "Reload")
+	FOnPlayerReloadStarted OnReloadStarted;
+
+	/** Fires ONCE when the player ends the reload action (input released). */
+	UPROPERTY(BlueprintAssignable, Category = "Reload")
+	FOnPlayerReloadStopped OnReloadStopped;
+
 protected:
 	virtual void BeginPlay() override;
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
-	
-
-	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<USpringArmComponent> CameraBoom;
 

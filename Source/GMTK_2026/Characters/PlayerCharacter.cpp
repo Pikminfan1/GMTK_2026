@@ -191,8 +191,6 @@ void APlayerCharacter::StartReload(const FInputActionValue& Value)
 	// Both hands begin loading independently. Each weapon guards against reloading
 	// when full or already loading, and runs its own per-round timer, so the two
 	// mags fill on their own schedules.
-	UE_LOG(LogTemp, Warning, TEXT(">>> StartReload C++ handler CALLED"));
-	UE_LOG(LogGMTKCombat, Verbose, TEXT("Player Character Reload input received"));
 	if (EquippedWeaponR)
 	{
 		EquippedWeaponR->StartReload();
@@ -201,6 +199,10 @@ void APlayerCharacter::StartReload(const FInputActionValue& Value)
 	{
 		EquippedWeaponL->StartReload();
 	}
+
+	// Single player-level signal for shared reload art/SFX, fired once per action
+	// rather than once per weapon (the per-weapon events still fire per hand).
+	OnReloadStarted.Broadcast();
 }
 
 void APlayerCharacter::StopReload(const FInputActionValue& Value)
@@ -213,6 +215,8 @@ void APlayerCharacter::StopReload(const FInputActionValue& Value)
 	{
 		EquippedWeaponL->StopReload();
 	}
+
+	OnReloadStopped.Broadcast();
 }
 	
 
