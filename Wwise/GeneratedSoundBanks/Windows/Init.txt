@@ -3,6 +3,7 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 	2533675384	PlayerAmmo			\Player\PlayerAmmo	
 
 Switch	ID	Name	Switch Group			Notes
+	712161704	Run	PlayerSpeed			
 	1296465089	Sprint	PlayerSpeed			
 	2108779966	Walk	PlayerSpeed			
 	3354297748	Empty	PlayerAmmo			
