@@ -59,6 +59,11 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Heal")
 	EHealBeamState GetState() const { return State; }
 
+	/** The ally currently being healed (valid during WindUp/Firing, null when idle).
+	 *  Use this actor's location as the heal beam's end point. */
+	UFUNCTION(BlueprintPure, Category = "Heal")
+	AActor* GetHealTarget() const { return Target; }
+
 	UFUNCTION(BlueprintPure, Category = "Heal")
 	bool IsBusy() const { return State != EHealBeamState::Idle; }
 
