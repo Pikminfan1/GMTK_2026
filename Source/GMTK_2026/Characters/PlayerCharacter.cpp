@@ -8,6 +8,8 @@
 #include "InputActionValue.h"
 #include "Weapons/WeaponBase.h"
 #include "Utility/LogChannels.h"
+#include "Components/CapsuleComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 
 APlayerCharacter::APlayerCharacter()
 {
@@ -30,25 +32,6 @@ APlayerCharacter::APlayerCharacter()
 		Movement->RotationRate = FRotator(0.f, 540.f, 0.f);
 	}
 }
-
-bool APlayerCharacter::IsAmmoMaxed()
-{
-	if (EquippedWeaponL && EquippedWeaponR)
-	{
-		return EquippedWeaponL->IsMagazineFull() && EquippedWeaponR->IsMagazineFull();
-	}
-	else if (EquippedWeaponL)
-	{
-		return EquippedWeaponL->IsMagazineFull();
-	}
-	else if (EquippedWeaponR)
-	{
-		return EquippedWeaponR->IsMagazineFull();
-	}
-
-	return true; // no weapons equipped, so ammo is "maxed"
-}
-
 //TODO: Account for single weapons, (shotguns)
 void APlayerCharacter::BeginPlay()
 {
@@ -74,9 +57,6 @@ void APlayerCharacter::BeginPlay()
 
 			EquippedWeaponR->Equip(this);
 			EquippedWeaponR->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketNameR);
-			
-			EquippedWeaponL->OnRoundLoaded.AddDynamic(this, &APlayerCharacter::HandleWeaponRoundLoaded);
-			EquippedWeaponR->OnRoundLoaded.AddDynamic(this, &APlayerCharacter::HandleWeaponRoundLoaded);
 		}
 	}
 	else
@@ -223,21 +203,6 @@ void APlayerCharacter::StartFire(const FInputActionValue& Value)
 
 void APlayerCharacter::StartReload(const FInputActionValue& Value)
 {
-	// Reload-zone gate: when enabled, the player can only reload inside an active zone.
-	// Toggle bReloadRequiresZone off to allow reloading anywhere.
-	if (bReloadRequiresZone && !bIsInReloadZone)
-	{
-		UE_LOG(LogGMTKCombat, Verbose, TEXT("Reload blocked - not in a reload zone."));
-		return;
-	}
-	if (EquippedWeaponR->GetCurrentAmmo() == EquippedWeaponR->GetMaxAmmo() && EquippedWeaponL->GetCurrentAmmo() == EquippedWeaponL->GetMaxAmmo())
-	{
-		UE_LOG(LogGMTKCombat, Verbose, TEXT("Reload blocked - both mags are already full."));
-		return;
-	}
-	// New reload action: clear the "loaded a round" flag so DidLastReloadLoadRounds()
-	// reflects only this reload.
-	bReloadLoadedRounds = false;
 	// Both hands begin loading independently. Each weapon guards against reloading
 	// when full or already loading, and runs its own per-round timer, so the two
 	// mags fill on their own schedules.
@@ -280,8 +245,6 @@ void APlayerCharacter::StartAim(const FInputActionValue& Value)
 	{
 		Movement->bOrientRotationToMovement = false;
 	}
-
-	OnAimStarted.Broadcast();
 }
 
 void APlayerCharacter::StopAim(const FInputActionValue& Value)
@@ -293,8 +256,6 @@ void APlayerCharacter::StopAim(const FInputActionValue& Value)
 	{
 		Movement->bOrientRotationToMovement = true;
 	}
-
-	OnAimStopped.Broadcast();
 }
 
 void APlayerCharacter::HandleDeathResetCombo(AActor* DeadActor)
@@ -376,18 +337,35 @@ void APlayerCharacter::HandleComboStacksChanged(int32 NewStacks)
 	OnAmmoBonusChanged.Broadcast(CurrentBonusMaxAmmo);
 	OnDoubleFireChanged.Broadcast(bDoubleFire);
 }
-void APlayerCharacter::HandleWeaponRoundLoaded(int32 CurrentAmmo, int32 MaxAmmo)
-{
-	// Only count this as a real reload if a weapon is actually mid-reload. This filters
-	// out OnRoundLoaded broadcasts that come from the combo ammo reward (SetBonusMaxAmmo
-	// tops up the mag and broadcasts the same event), which aren't reloads.
-	const bool bAnyReloading =
-		(EquippedWeaponR && EquippedWeaponR->IsReloading()) ||
-		(EquippedWeaponL && EquippedWeaponL->IsReloading());
 
-	if (bAnyReloading)
+void APlayerCharacter::HandleDeath_Implementation(AActor* DeadActor)
+{
+	// Base handling first: stops movement. Note the base also disables ACTOR collision,
+	// which is fine - we re-enable physics collision on the mesh specifically below so
+	// the ragdoll still rests on the floor.
+	Super::HandleDeath_Implementation(DeadActor);
+
+	// Optionally hide the weapons so they don't fling around when the hands go limp.
+	if (bHideWeaponsOnDeath)
 	{
-		bReloadLoadedRounds = true;
+		if (EquippedWeaponR) { EquippedWeaponR->SetActorHiddenInGame(true); }
+		if (EquippedWeaponL) { EquippedWeaponL->SetActorHiddenInGame(true); }
+	}
+
+	// The capsule must stop blocking so it can't hold the ragdoll up in a T-pose.
+	if (UCapsuleComponent* Capsule = GetCapsuleComponent())
+	{
+		Capsule->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	}
+
+	// Drop the skeletal mesh into physics simulation (ragdoll). This overrides the Anim
+	// BP pose - physics drives the bones directly - so the player crumples under gravity.
+	if (USkeletalMeshComponent* MeshComp = GetMesh())
+	{
+		MeshComp->SetCollisionProfileName(RagdollCollisionProfile);
+		MeshComp->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+		MeshComp->SetAllBodiesSimulatePhysics(true);
+		MeshComp->SetSimulatePhysics(true);
+		MeshComp->WakeAllRigidBodies();
 	}
 }
-

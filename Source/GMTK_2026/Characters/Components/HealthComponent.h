@@ -8,6 +8,9 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnHealthChanged, float, NewHealth, float, MaxHealth, float, Delta);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDeath, AActor*, DeadActor);
+/** Fired when damage is actually applied (health went down). Carries the instigating
+ *  controller so listeners can react to WHO dealt it (aggro, token steal, etc.). */
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnDamaged, float, DamageAmount, AController*, EventInstigator);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnHealed, float, AmountHealed, float, NewHealth);
 
 /**
@@ -34,6 +37,10 @@ public:
 	/* Broadcast health changes, for UI SFX VFX etc */
 	UPROPERTY(BlueprintAssignable, Category = "Health")
 	FOnHealthChanged OnHealthChanged;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnDamaged OnDamaged;
+	
 	
 	/* Broadcast death, for ragdoll / death animation / VFX etc */
 	UPROPERTY(BlueprintAssignable, Category = "Health")

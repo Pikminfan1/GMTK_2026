@@ -15,6 +15,7 @@ public class GMTK_2026 : ModuleRules
 			"InputCore",
 			"EnhancedInput",
 			"AIModule",
+			"NavigationSystem",
 			"StateTreeModule",
 			"GameplayStateTreeModule",
 			"UMG",

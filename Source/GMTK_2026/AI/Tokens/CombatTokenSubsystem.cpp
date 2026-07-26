@@ -4,6 +4,7 @@
 #include "Engine/Engine.h"
 #include "Kismet/GameplayStatics.h"
 #include "Utility/LogChannels.h"
+#include "Characters/Components/EnemyLaserAttackComponent.h"
 
 void UCombatTokenSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
@@ -302,4 +303,86 @@ float UCombatTokenSubsystem::GetWaitTime(const AActor* Actor) const
 		}
 	}
 	return 0.f;
+}
+
+bool UCombatTokenSubsystem::IsActorAttackBusy(const AActor* Actor) const
+{
+	if (!Actor)
+	{
+		return false;
+	}
+
+	// The laser component's IsBusy() is true during WindUp and Firing. An actor with no
+	// laser component is considered not-busy (nothing threatening in progress), so its
+	// token is fair game.
+	if (const UEnemyLaserAttackComponent* Laser = Actor->FindComponentByClass<UEnemyLaserAttackComponent>())
+	{
+		return Laser->IsBusy();
+	}
+	return false;
+}
+
+bool UCombatTokenSubsystem::TryStealTokenFor(AActor* DamagedEnemy, ETokenRequestType Type)
+{
+	if (!IsValid(DamagedEnemy))
+	{
+		return false;
+	}
+
+	// Already armed - nothing to steal.
+	if (HoldsToken(DamagedEnemy))
+	{
+		return true;
+	}
+
+	// Find a current holder that isn't mid-attack or winding up. That enemy is just
+	// sitting on a token, so we can take it and hand it to the one being shot.
+	int32 VictimIndex = INDEX_NONE;
+	for (int32 i = 0; i < ActiveGrants.Num(); ++i)
+	{
+		AActor* Holder = ActiveGrants[i].Holder.Get();
+		if (!Holder || Holder == DamagedEnemy)
+		{
+			continue;
+		}
+		if (!IsActorAttackBusy(Holder))
+		{
+			VictimIndex = i;
+			break;
+		}
+	}
+
+	if (VictimIndex == INDEX_NONE)
+	{
+		// Everyone holding a token is actively attacking - don't interrupt them. The
+		// damaged enemy will still pursue; it just doesn't get to attack this instant.
+		return false;
+	}
+
+	AActor* Victim = ActiveGrants[VictimIndex].Holder.Get();
+
+	// Tell the victim's AI to give up its token cleanly (so its BT stops trying to
+	// attack), then transfer the grant to the damaged enemy.
+	ReleaseToken(Victim);
+
+	FTokenGrant Grant;
+	Grant.Holder = DamagedEnemy;
+	Grant.Type = Type;
+	Grant.Cost = GetCostForType(Type);
+	Grant.GrantTime = GetWorld()->GetTimeSeconds();
+	ActiveGrants.Add(Grant);
+
+	// Clear any lockout on the damaged enemy so it can act on the stolen token now.
+	LockoutExpiry.Remove(DamagedEnemy);
+
+	// Drop it from the wait queue if it was waiting.
+	WaitQueue.RemoveAll([DamagedEnemy](const FTokenQueueEntry& Entry)
+	{
+		return Entry.Requester.Get() == DamagedEnemy;
+	});
+
+	UE_LOG(LogGMTKAI, Verbose, TEXT("[Tokens] %s stole a token from idle holder %s"),
+		*DamagedEnemy->GetName(), Victim ? *Victim->GetName() : TEXT("?"));
+
+	return true;
 }

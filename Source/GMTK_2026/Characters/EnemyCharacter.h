@@ -65,6 +65,24 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Spawn")
 	void OnSpawnSequenceFinished();
 
+	// ---------- Teleport (teleporter variant) ----------
+
+	/** Fires when the teleporter begins a teleport (pawn is about to hide). Play the
+	 *  vanish VFX/SFX here. */
+	UFUNCTION(BlueprintImplementableEvent, Category = "Teleport")
+	void OnTeleportVanish();
+
+	/** Fires when the teleporter reappears at its destination. Play the arrival
+	 *  VFX/SFX here. */
+	UFUNCTION(BlueprintImplementableEvent, Category = "Teleport")
+	void OnTeleportAppear();
+
+	/** Seconds between teleport attempts for the teleporter variant. Tunable per
+	 *  archetype in the Details panel. The teleporter's Behavior Tree reads this to
+	 *  drive its teleport timer (via a Wait that uses GetTeleportInterval). */
+	UFUNCTION(BlueprintPure, Category = "Teleport")
+	float GetTeleportInterval() const { return TeleportInterval; }
+
 	/** Begins the spawn sequence: pauses AI, disables movement, fires the BP event.
 	 *  Called by the AI controller's OnPossess after the Behavior Tree has started, so
 	 *  the pause isn't immediately undone. Returns early if the sequence is disabled or
@@ -79,6 +97,10 @@ protected:
 	 *  archetype that should just appear and act immediately. */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Spawn")
 	bool bUseSpawnSequence = true;
+
+	/** Seconds between teleport attempts (teleporter variant only). */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Teleport", meta = (ClampMin = "0.1"))
+	float TeleportInterval = 3.f;
 
 	/** Safety: if the Blueprint never calls FinishSpawn (e.g. no anim wired), auto-finish
 	 *  after this many seconds so the enemy can't stay frozen forever. 0 = no failsafe. */

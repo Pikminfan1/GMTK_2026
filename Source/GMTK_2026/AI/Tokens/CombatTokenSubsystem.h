@@ -88,6 +88,14 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Combat Tokens")
 	bool HoldsToken(const AActor* Actor) const;
 
+	/** Force-transfer a token to DamagedEnemy by taking one from any current holder that
+	 *  isn't mid-attack or winding up (an "idle" holder sitting on a token). Bypasses the
+	 *  normal budget/queue/lockout since it's a forced steal, not a request. No-op if the
+	 *  damaged enemy already holds one, or if no idle holder can be found. Returns true if
+	 *  a token was transferred. Used to make a shot enemy fight back. */
+	UFUNCTION(BlueprintCallable, Category = "Combat Tokens")
+	bool TryStealTokenFor(AActor* DamagedEnemy, ETokenRequestType Type);
+
 	/** Seconds this actor has been waiting since it first got denied. Drives fallback aggression. */
 	UFUNCTION(BlueprintPure, Category = "Combat Tokens")
 	float GetWaitTime(const AActor* Actor) const;
@@ -157,6 +165,9 @@ private:
 	void ReclaimStaleTokens();
 	void PruneQueue();
 	void AddOrRefreshQueueEntry(AActor* Requester, ETokenRequestType Type);
+
+	/** True if the actor is mid-attack or winding up (so its token shouldn't be stolen). */
+	bool IsActorAttackBusy(const AActor* Actor) const;
 	bool IsHighestPriorityWaiter(const AActor* Requester) const;
 
 	UPROPERTY()

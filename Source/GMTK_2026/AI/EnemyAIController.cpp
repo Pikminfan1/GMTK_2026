@@ -1,4 +1,5 @@
 #include "AI/EnemyAIController.h"
+#include "Kismet/GameplayStatics.h"
 #include "Characters/PlayerCharacter.h"
 #include "AI/Tokens/CombatTokenSubsystem.h"
 #include "BehaviorTree/BehaviorTree.h"
@@ -99,13 +100,27 @@ void AEnemyAIController::OnPossess(APawn* InPawn)
 		Blackboard->SetValueAsBool(IsDeadKey, false);
 	}
 
+	// Constant pursuit: seed the player as the target immediately so the enemy chases
+	// from spawn without needing line of sight first. Perception still refines the
+	// last-known location while the player is visible.
+	if (bConstantPursuit && Blackboard)
+	{
+		if (APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(this, 0))
+		{
+			Blackboard->SetValueAsObject(TargetActorKey, PlayerPawn);
+			Blackboard->SetValueAsVector(LastKnownLocationKey, PlayerPawn->GetActorLocation());
+		}
+	}
+
 	// Death has to release the combat token, or the budget leaks every time an
-	// enemy dies mid-attack and eventually nobody can attack at all.
+	// enemy dies mid-attack and eventually nobody can attack at all. Damage forces
+	// aggro and attempts a token steal so the shot enemy fights back.
 	if (const ABaseCharacter* PossessedCharacter = Cast<ABaseCharacter>(InPawn))
 	{
 		if (UHealthComponent* Health = PossessedCharacter->GetHealthComponent())
 		{
 			Health->OnDeath.AddUniqueDynamic(this, &AEnemyAIController::HandlePawnDeath);
+			Health->OnDamaged.AddUniqueDynamic(this, &AEnemyAIController::HandlePawnDamaged);
 		}
 	}
 
@@ -192,5 +207,28 @@ void AEnemyAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus St
 		// last known position. BTService_CombatState clears it if the target goes
 		// stale or dies.
 		Blackboard->SetValueAsVector(LastKnownLocationKey, Stimulus.StimulusLocation);
+	}
+}
+
+void AEnemyAIController::HandlePawnDamaged(float DamageAmount, AController* EventInstigator)
+{
+	// Force aggro: lock onto the player the instant this enemy is hurt (covers the case
+	// where constant pursuit is off, or the target was somehow cleared).
+	if (Blackboard)
+	{
+		if (APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(this, 0))
+		{
+			Blackboard->SetValueAsObject(TargetActorKey, PlayerPawn);
+			Blackboard->SetValueAsVector(LastKnownLocationKey, PlayerPawn->GetActorLocation());
+		}
+	}
+
+	// Try to steal a token from an idle holder so the enemy being shot can fight back.
+	if (UWorld* World = GetWorld())
+	{
+		if (UCombatTokenSubsystem* Tokens = World->GetSubsystem<UCombatTokenSubsystem>())
+		{
+			Tokens->TryStealTokenFor(GetPawn(), AggroTokenType);
+		}
 	}
 }

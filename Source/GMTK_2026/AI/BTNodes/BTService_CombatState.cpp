@@ -129,7 +129,9 @@ void UBTService_CombatState::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* 
 	const bool bCanSee = AICon->LineOfSightTo(TargetActor);
 	Blackboard->SetValueAsBool(CanSeeTargetKey.SelectedKeyName, bCanSee);
 
-	if (bCanSee)
+	// Constant pursuit: keep chasing the player's CURRENT position even with no line of
+	// sight. Otherwise only refresh the last-known spot while visible (search behaviour).
+	if (bCanSee || bAlwaysTrackTargetLocation)
 	{
 		Blackboard->SetValueAsVector(LastKnownLocationKey.SelectedKeyName, TargetActor->GetActorLocation());
 	}

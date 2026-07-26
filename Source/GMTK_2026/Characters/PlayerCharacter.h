@@ -25,11 +25,6 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDoubleFireChanged, bool, bDoubleF
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerReloadStarted);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerReloadStopped);
 
-// Player aim signals, fired when the player starts/stops aiming. Bind crosshair, FOV,
-// or aim-pose reactions here instead of polling IsAiming() every frame.
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerAimStarted);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerAimStopped);
-
 /**
  * The player-controlled leaf class - camera boom, Enhanced Input bindings, and
  * equipped-weapon handling. Any custom movement component swap, if you ever need
@@ -45,22 +40,6 @@ public:
 	APlayerCharacter();
 	UFUNCTION(BlueprintPure, Category = "Combat")
 	bool IsAiming() const { return bIsAiming; }
-
-	UFUNCTION(BlueprintPure, Category = "Combat")
-	bool IsAmmoMaxed();
-	
-	/** True if the most recent reload action actually loaded at least one round into
-	 *  either weapon (as opposed to a no-op tap on full mags). Reset when a new reload
-	 *  begins. The reload zone checks this to decide whether to relocate. */
-	UFUNCTION(BlueprintPure, Category = "Reload")
-	bool DidLastReloadLoadRounds() const { return bReloadLoadedRounds; }
-	/** Fires when the player begins aiming (aim input pressed). */
-	UPROPERTY(BlueprintAssignable, Category = "Combat")
-	FOnPlayerAimStarted OnAimStarted;
-
-	/** Fires when the player stops aiming (aim input released). */
-	UPROPERTY(BlueprintAssignable, Category = "Combat")
-	FOnPlayerAimStopped OnAimStopped;
 	
 	UFUNCTION(BlueprintPure, Category = "Camera")
 	UCameraComponent* GetFollowCamera() const { return FollowCamera; }
@@ -96,22 +75,6 @@ public:
 	/** Fires ONCE when the player ends the reload action (input released). */
 	UPROPERTY(BlueprintAssignable, Category = "Reload")
 	FOnPlayerReloadStopped OnReloadStopped;
-	
-	/** If true, reloading is only allowed while inside a reload zone. Toggle off to let
-	 *  the player reload anywhere. */
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Reload")
-	bool bReloadRequiresZone = true;
-	// ---------- Reload zone ----------
-
-	/** Called by a reload zone when the player enters/leaves it. */
-	UFUNCTION(BlueprintCallable, Category = "Reload")
-	void SetInReloadZone(bool bInZone) { bIsInReloadZone = bInZone; }
-
-	UFUNCTION(BlueprintPure, Category = "Reload")
-	bool IsInReloadZone() const { return bIsInReloadZone; }
-
-	UFUNCTION(BlueprintPure, Category = "Combat")
-	UComboComponent* GetComboComponent() const { return ComboComponent; }
 
 protected:
 	virtual void BeginPlay() override;
@@ -126,13 +89,8 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combat", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UComboComponent> ComboComponent;
 	
-	
-	// Set true when a round loads during the current reload; reset when reload starts.
-	bool bReloadLoadedRounds = false;
-
-	/** Bound to each weapon's OnRoundLoaded so we know a real reload occurred. */
-	UFUNCTION()
-	void HandleWeaponRoundLoaded(int32 CurrentAmmo, int32 MaxAmmo);
+	UFUNCTION(BlueprintPure, Category = "Combat")
+	UComboComponent* GetComboComponent() const { return ComboComponent; }
 
 	// ---------- Combo reward tuning ----------
 	// Rewards are granted ONE PER STACK in a cycling sequence:
@@ -210,9 +168,6 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
 	bool bIsAiming = false;
-	
-	// True while the player is standing in an active reload zone.
-	bool bIsInReloadZone = false;
 
 	// Current applied reward buffs (base = 1.0 / 1.0 / 0), so UI and resets are exact.
 	float CurrentDamageMultiplier = 1.f;
@@ -234,4 +189,18 @@ protected:
 	
 	UFUNCTION()
 	void HandleDeathResetCombo(AActor* DeadActor);
+
+	/** Override the base death handling to drop the player into a ragdoll so they
+	 *  crumple, instead of freezing in place. Calls the base first (disables movement)
+	 *  then enables physics on the mesh. */
+	virtual void HandleDeath_Implementation(AActor* DeadActor) override;
+
+	/** Collision profile the mesh switches to for ragdoll (must collide with world
+	 *  static so the body rests on the floor). "Ragdoll" is the UE default profile. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Death")
+	FName RagdollCollisionProfile = TEXT("Ragdoll");
+
+	/** If true, hide the equipped weapons on death so they don't fling with the hands. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Death")
+	bool bHideWeaponsOnDeath = true;
 };

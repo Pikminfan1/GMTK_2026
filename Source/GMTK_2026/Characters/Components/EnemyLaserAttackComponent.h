@@ -181,7 +181,7 @@ protected:
 
 	/** Draw the beam and wind-up with debug lines. Leave on until Niagara exists. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Laser|Debug")
-	bool bDrawDebugBeam = true;
+	bool bDrawDebugBeam = false;
 
 private:
 	void EnterState(ELaserState NewState);

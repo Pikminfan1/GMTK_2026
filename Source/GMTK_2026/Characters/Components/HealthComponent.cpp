@@ -40,6 +40,7 @@ bool UHealthComponent::TakeDamage(float DamageAmount, AController* EventInstigat
 		GetOwner() ? *GetOwner()->GetName() : TEXT("Unknown"), DamageAmount, OldHealth, CurrentHealth);
 	
 	OnHealthChanged.Broadcast(CurrentHealth, MaxHealth, Delta);
+	OnDamaged.Broadcast(DamageAmount, EventInstigator);
 
 	if (CurrentHealth <= 0.f && !bIsDead)
 	{
@@ -65,6 +66,7 @@ void UHealthComponent::Heal(float HealAmount)
 		GetOwner() ? *GetOwner()->GetName() : TEXT("Unknown"), HealAmount, OldHealth, CurrentHealth);
 
 	OnHealthChanged.Broadcast(CurrentHealth, MaxHealth, Delta);
+
 
 	// Delta is positive here (we clamped upward), so this is the actual amount restored.
 	if (Delta > 0.f)

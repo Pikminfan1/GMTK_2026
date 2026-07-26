@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AI/Tokens/CombatTokenSubsystem.h"
 #include "DetourCrowdAIController.h"
 #include "GenericTeamAgentInterface.h"
 #include "Perception/AIPerceptionTypes.h"
@@ -87,6 +88,21 @@ protected:
 	/** Bound to the possessed pawn's HealthComponent so death releases the token. */
 	UFUNCTION()
 	void HandlePawnDeath(AActor* DeadActor);
+
+	/** Bound to the possessed pawn's HealthComponent. On damage, forces aggro onto the
+	 *  player and tries to steal a token so the shot enemy fights back. */
+	UFUNCTION()
+	void HandlePawnDamaged(float DamageAmount, AController* EventInstigator);
+
+	/** If true, the enemy always targets the player from possession on (constant
+	 *  pursuit), instead of only acquiring via line of sight. Perception still updates
+	 *  the last-known location for nicer movement. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "AI|Aggro")
+	bool bConstantPursuit = true;
+
+	/** The token type this enemy uses, for steal-on-damage grants. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "AI|Aggro")
+	ETokenRequestType AggroTokenType = ETokenRequestType::RangedLaser;
 
 private:
 	/** Hands the combat token back, if this pawn is holding one. Safe to call repeatedly. */

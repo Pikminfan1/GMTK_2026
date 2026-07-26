@@ -197,6 +197,7 @@ void AReloadZone::HandlePlayerReloaded()
 	{
 		return;
 	}
+	
 
 	// RelocateToNewPoint -> MoveToPoint -> SyncOverlappingPlayer re-evaluates the
 	// player's in-zone state at the new location, so we don't manually clear it here.

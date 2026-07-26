@@ -97,4 +97,11 @@ protected:
 	/** Clear TargetActor if the target dies, so the tree drops out of combat. */
 	UPROPERTY(EditAnywhere, Category = "Combat")
 	bool bClearTargetOnDeath = true;
+
+	/** When true, LastKnownLocation is updated to the target's CURRENT position every
+	 *  tick, even without line of sight - so the enemy pursues the player's live
+	 *  position constantly rather than the last-seen spot. Line of sight still gates
+	 *  whether the laser can actually fire. */
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	bool bAlwaysTrackTargetLocation = true;
 };
