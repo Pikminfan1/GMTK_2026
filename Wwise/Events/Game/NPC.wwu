@@ -5,10 +5,17 @@
 			<ChildrenList>
 				<Event Name="NPC_Spawn" ID="{21F256B3-C993-4BB3-9692-6FBA3183FA3B}">
 					<ChildrenList>
-						<Action Name="" ID="{49636F3D-7D6A-4136-8AE7-D4A5570C5550}" ShortID="798416725">
+						<Action Name="" ID="{9BC8E7B0-C9DF-4133-AA2F-92E6EDA9C94D}" ShortID="280446759">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="NPC_Spawn" ID="{D3C1D72C-51DE-4FC1-BE09-B9790E9EE4DA}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
+									<ObjectRef Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{F0DC3F8F-7CD6-437F-BA06-BDBD4754CB66}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{64403D64-12D0-4AD0-A2FC-8D454817224B}" ShortID="128469562">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{A9E92591-3B67-4931-AF08-CAFF92EAA3DD}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -20,6 +27,35 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="NPC_Death" ID="{29D69050-8AE8-4B57-9315-90CB98C91C38}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E740E52E-FC40-4984-BB95-1E2D0FC5EC17}" ShortID="740676798">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{F0DC3F8F-7CD6-437F-BA06-BDBD4754CB66}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FCA87353-04E1-4CBA-B062-54E60AD03C80}" ShortID="135250604">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{A9E92591-3B67-4931-AF08-CAFF92EAA3DD}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E3473605-59E5-4F7F-A1A4-D76ADB3BF9B2}" ShortID="297261519">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_BatSwarmBrust_Mono_Bulba" ID="{A4086548-64F5-41F6-A281-BB99F2A7B14E}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -60,7 +96,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">

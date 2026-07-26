@@ -19,7 +19,7 @@
 						<Action Name="" ID="{8B4EE6BA-907A-4370-941B-AFA9508FD491}" ShortID="152268302">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_GameWaveStart_Stereo_1_Bulba" ID="{A6215565-AC16-4F4D-96D9-C7DD87246F86}" WorkUnitID="{04587476-D33D-4081-9715-B7828A2CA1A1}"/>
+									<ObjectRef Name="SFX_GameWaveEnd_Stereo_1_Bulba" ID="{EA383A6B-1E36-4659-9F64-5F1DCFE4148F}" WorkUnitID="{04587476-D33D-4081-9715-B7828A2CA1A1}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
