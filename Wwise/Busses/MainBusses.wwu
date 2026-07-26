@@ -73,6 +73,11 @@
 									<ChildrenList>
 										<AuxBus Name="Outdoors" ID="{1925E056-166D-4DD7-AB68-8EA81697C003}">
 											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Color" Type="int16" Value="24"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
 											</PropertyList>
@@ -92,7 +97,10 @@
 																	<Effect Name="Parametric EQ (Custom)" ID="{D6984BB8-E6F4-4225-865C-B82817435BE1}" ShortID="742798873" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 																		<PropertyList>
 																			<Property Name="FrequencyBand2" Type="Real32" Value="1708.653"/>
+																			<Property Name="FrequencyBand3" Type="Real32" Value="12227.98"/>
 																			<Property Name="GainBand2" Type="Real32" Value="-5.746479"/>
+																			<Property Name="GainBand3" Type="Real32" Value="-10.92958"/>
+																			<Property Name="OnOffBand3" Type="bool" Value="True"/>
 																		</PropertyList>
 																	</Effect>
 																</Custom>
