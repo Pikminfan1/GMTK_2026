@@ -67,6 +67,14 @@
 						</Module>
 					</ModuleList>
 				</SoundcasterSession>
+				<SoundcasterSession Name="Music" ID="{0E365DCC-1F8F-4847-AC3B-62893B7D9D6B}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Combat" ID="{16E618D0-8D40-403A-8659-05C1FD34A4BD}" WorkUnitID="{F2C8D915-5418-485C-AB64-F31120AE7696}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>

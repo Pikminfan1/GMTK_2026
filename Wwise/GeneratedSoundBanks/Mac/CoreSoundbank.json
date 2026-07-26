@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{473D0A5A-CEA4-5A8F-07AB-9C3986271A0C}",
+    "Hash": "{2E138FE5-7217-2F4E-3680-EA9946938335}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
@@ -995,6 +995,7 @@
       "Name": "Player_Footstep",
       "ObjectPath": "\\Events\\Game\\Player\\PlayerLocomotion\\Player_Footstep",
       "GUID": "{CFA5B9DE-F894-4129-A77D-7F7C1CBDA8C9}",
+      "MaxAttenuation": "2000",
       "DurationType": "OneShot",
       "DurationMin": "0.118436545",
       "DurationMax": "0.55147964",
@@ -1138,6 +1139,7 @@
       "Name": "Player_JumpLand",
       "ObjectPath": "\\Events\\Game\\Player\\PlayerLocomotion\\Player_JumpLand",
       "GUID": "{25E1C6A7-BC62-4B4B-A201-1E0412548BFE}",
+      "MaxAttenuation": "2000",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0",
@@ -1529,6 +1531,6 @@
     ]
    }
   ],
-  "FileHash": "{A5DE0EB4-0DD0-4BAE-372A-EC48A0BCDD70}"
+  "FileHash": "{55EBE04C-9AB3-262F-A5A5-11F2F20A1D85}"
  }
 }

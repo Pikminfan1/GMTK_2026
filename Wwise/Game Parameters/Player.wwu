@@ -5,7 +5,8 @@
 			<ChildrenList>
 				<GameParameter Name="RTPC_PlayerHealth" ID="{5617AFDA-566B-4414-AFB2-BF2BBF6378D4}">
 					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="RTPC_PlayerSpeed" ID="{222BC605-777A-42C7-9324-D60B841AEC24}">

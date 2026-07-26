@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{0E46FF5D-58C9-84CE-CFB0-7F4BF6EB2923}",
+    "Hash": "{E6181847-20B1-250E-C316-6A33E44BBFB3}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -23,6 +23,22 @@
        "GUID": "{36BE553E-6B99-458A-99FC-C02F4A9BF282}",
        "LibName": "Wwise Gain",
        "LibId": "9109507"
+      },
+      {
+       "Id": "357717049",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\Non-World\\Music\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{440F135E-51D4-46E1-BB22-1E425B4DE5B2}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "594436390",
+       "Name": "Inside_Your_Head (Custom)",
+       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\Non-World\\Music\\[Effect Slot [1]: (RoomVerb)]\\Inside_Your_Head (Custom)",
+       "GUID": "{E70B35B9-610E-484D-A071-806AD073BBAD}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
       }
      ],
      "ShareSets": [
@@ -235,7 +251,17 @@
       "Id": "3991942870",
       "Name": "Music",
       "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\Non-World\\Music",
-      "GUID": "{E5C6A8DB-6725-4FC9-8818-3C39D38E99B9}"
+      "GUID": "{E5C6A8DB-6725-4FC9-8818-3C39D38E99B9}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "357717049"
+        },
+        {
+         "Id": "594436390"
+        }
+       ]
+      }
      },
      {
       "Id": "4000439062",
@@ -621,6 +647,6 @@
     ]
    }
   ],
-  "FileHash": "{F95213AA-C0F5-27B5-53C5-51E01D61AD91}"
+  "FileHash": "{4F26B82C-3430-2EC6-90AF-5BF4AC949C30}"
  }
 }

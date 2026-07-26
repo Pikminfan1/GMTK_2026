@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{806425B6-D29B-4CBA-9E26-2D2FE498C5C4}",
     "Language": "SFX",
-    "Hash": "{A825FDD1-C6D5-147B-FB37-14CAC36D43F0}",
+    "Hash": "{3BED5DAB-F5CE-2EED-68AD-C9AAAC135F7D}",
     "ObjectPath": "\\SoundBanks\\Debug\\DebugSoundbank",
     "ShortName": "DebugSoundbank",
     "Path": "DebugSoundbank.bnk",
@@ -484,7 +484,7 @@
       "Name": "Debug3D_100ms",
       "ObjectPath": "\\Events\\_Debug\\Debug3D\\Debug3D_100ms",
       "GUID": "{B06F1353-0FF6-4940-935A-1C25173C7FF5}",
-      "MaxAttenuation": "20000",
+      "MaxAttenuation": "2000",
       "DurationType": "OneShot",
       "DurationMin": "0.1",
       "DurationMax": "0.1",
@@ -501,7 +501,7 @@
       "Name": "Debug3D_3000ms_lp_start",
       "ObjectPath": "\\Events\\_Debug\\Debug3D\\Debug3D_3000ms_lp_start",
       "GUID": "{4A27A9CA-565D-41BD-B0C4-6FC76CDC4D36}",
-      "MaxAttenuation": "20000",
+      "MaxAttenuation": "2000",
       "DurationType": "OneShot",
       "DurationMin": "3",
       "DurationMax": "3",
@@ -528,7 +528,7 @@
       "Name": "Debug3D_WhiteNoise_lp_start",
       "ObjectPath": "\\Events\\_Debug\\Debug3D\\Debug3D_WhiteNoise_lp_start",
       "GUID": "{8711344B-7585-4730-A08B-673A56D9C762}",
-      "MaxAttenuation": "20000",
+      "MaxAttenuation": "2000",
       "DurationType": "Infinite",
       "PluginRefs": {
        "Custom": [
@@ -553,7 +553,7 @@
       "Name": "Debug_Distance",
       "ObjectPath": "\\Events\\_Debug\\Debug3D\\Debug_Distance",
       "GUID": "{9B6F5F03-EEB4-468F-BCA1-E77DAF0FAA3B}",
-      "MaxAttenuation": "20000",
+      "MaxAttenuation": "2000",
       "DurationType": "OneShot",
       "DurationMin": "1.0682292",
       "DurationMax": "1.0682292",
@@ -680,6 +680,6 @@
     ]
    }
   ],
-  "FileHash": "{C7E9E639-6A59-B715-C2D9-F31D834B36AD}"
+  "FileHash": "{DEB28E3B-C786-2A9D-995E-68DE1A8AED83}"
  }
 }

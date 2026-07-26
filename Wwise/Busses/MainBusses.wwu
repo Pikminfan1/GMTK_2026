@@ -192,6 +192,17 @@
 											</RTPC>
 										</ObjectList>
 									</ObjectLists>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="Music" ID="{E5C6A8DB-6725-4FC9-8818-3C39D38E99B9}"/>
+											<DuckingParam>
+												<Volume>-6</Volume>
+												<FadeInTime>1</FadeInTime>
+												<FadeOutTime>1</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
 								</Bus>
 								<Bus Name="Music" ID="{E5C6A8DB-6725-4FC9-8818-3C39D38E99B9}">
 									<PropertyList>
@@ -204,7 +215,178 @@
 									<ChildrenList>
 										<Bus Name="Stingers" ID="{D284416F-B7B8-4789-8924-8724D2B97C22}"/>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="GameState" ID="{567F5043-A81B-4281-A7C1-0D08768169EB}"/>
+												<StateGroupInfo Name="" ID="{690EB2FA-C0EF-43D6-8E6B-635CA8D51123}" ShortID="330243409"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="InMenu" ID="{460E9C64-EAB3-4105-86A6-B699F9B16754}"/>
+												<CustomState Name="" ID="{5C253BB1-6567-4CB4-B5E7-BC665B1CBA66}" ShortID="817204783"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="None" ID="{066EBA92-BE06-48B1-B6FD-B032178EBF1A}"/>
+												<CustomState Name="" ID="{D2CBE22B-D94E-4E50-8DF2-1D3F29CE70DE}" ShortID="8247764"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="InGame" ID="{5B8E4749-545C-4E1A-9F98-9F37C7DF1FFB}"/>
+												<CustomState Name="" ID="{578C9D2B-9C03-434E-9237-4C6F7CFD3074}" ShortID="262859721"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="InPause" ID="{0C858250-0140-4F25-A4DA-AB76497864D2}"/>
+												<CustomState Name="" ID="{30025BBA-76E0-431E-876D-72D9DB6DE415}" ShortID="181596820">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-6"/>
+														<Property Name="Lowpass" Type="int16" Value="50"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{0FCAFCC8-1151-4A7A-B914-D071830FBB67}" ShortID="87614919">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom>
+															<Effect Name="Parametric EQ (Custom)" ID="{440F135E-51D4-46E1-BB22-1E425B4DE5B2}" ShortID="357717049" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<PropertyList>
+																	<Property Name="FrequencyBand2" Type="Real32" Value="11609.39"/>
+																	<Property Name="FrequencyBand3" Type="Real32" Value="176.1619"/>
+																	<Property Name="FrequencyBand4" Type="Real32" Value="1761.619"/>
+																	<Property Name="GainBand2" Type="Real32" Value="-4.169014"/>
+																	<Property Name="GainBand3" Type="Real32" Value="-3.71831"/>
+																	<Property Name="GainBand4" Type="Real32" Value="-2.366197"/>
+																	<Property Name="NumBands" Type="int32" Value="4"/>
+																	<Property Name="OnOffBand1" Type="bool" Value="False"/>
+																	<Property Name="OnOffBand3" Type="bool" Value="True"/>
+																	<Property Name="OnOffBand4" Type="bool" Value="True"/>
+																</PropertyList>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+												<StateInfo>
+													<CustomStateList>
+														<CustomState>
+															<StateRef Name="InMenu" ID="{460E9C64-EAB3-4105-86A6-B699F9B16754}"/>
+															<CustomState Name="" ID="{94329E97-4F28-4C87-8CAA-04174FD9D3B1}" ShortID="76810477"/>
+														</CustomState>
+														<CustomState>
+															<StateRef Name="None" ID="{066EBA92-BE06-48B1-B6FD-B032178EBF1A}"/>
+															<CustomState Name="" ID="{DF62CE28-7BC6-4F81-9F3C-5F6F34F19E87}" ShortID="677709580"/>
+														</CustomState>
+														<CustomState>
+															<StateRef Name="InGame" ID="{5B8E4749-545C-4E1A-9F98-9F37C7DF1FFB}"/>
+															<CustomState Name="" ID="{6479D0FE-EA77-43B9-A8CA-FE8EEAC80616}" ShortID="404906274"/>
+														</CustomState>
+														<CustomState>
+															<StateRef Name="InPause" ID="{0C858250-0140-4F25-A4DA-AB76497864D2}"/>
+															<CustomState Name="" ID="{B4D603CE-E30A-4F5F-A0E6-1FE8EB241F3B}" ShortID="24598634"/>
+														</CustomState>
+													</CustomStateList>
+												</StateInfo>
+											</EffectSlot>
+											<EffectSlot Name="" ID="{98C0717D-9987-4C12-A940-BB90936B0BE3}" ShortID="723002221">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom CreatedFrom="{AE2D0AE1-8963-400A-AA4A-52A7A6397F89}">
+															<Effect Name="Inside_Your_Head (Custom)" ID="{E70B35B9-610E-484D-A071-806AD073BBAD}" ShortID="594436390" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<PropertyList>
+																	<Property Name="DecayTime" Type="Real32" Value="1"/>
+																	<Property Name="Density" Type="Real32" Value="82"/>
+																	<Property Name="Diffusion" Type="Real32" Value="0"/>
+																	<Property Name="DryLevel" Type="Real32" Value="0"/>
+																	<Property Name="ERLevel" Type="Real32" Value="-3"/>
+																	<Property Name="ERPattern" Type="int32" Value="24"/>
+																	<Property Name="EnableEarlyReflections" Type="bool" Value="False"/>
+																	<Property Name="Filter1Freq" Type="Real32" Value="590"/>
+																	<Property Name="Filter1Gain" Type="Real32" Value="-8"/>
+																	<Property Name="Filter2Freq" Type="Real32" Value="490"/>
+																	<Property Name="Filter2Gain" Type="Real32" Value="9"/>
+																	<Property Name="Filter3Freq" Type="Real32" Value="6930"/>
+																	<Property Name="Filter3Gain" Type="Real32" Value="-24"/>
+																	<Property Name="HFDamping" Type="Real32" Value="0.5"/>
+																	<Property Name="PreDelay" Type="Real32" Value="200"/>
+																	<Property Name="Quality" Type="int32" Value="4"/>
+																	<Property Name="ReverbLevel" Type="Real32" Value="-12"/>
+																	<Property Name="RoomSize" Type="Real32" Value="-100"/>
+																	<Property Name="StereoWidth" Type="Real32" Value="101"/>
+																</PropertyList>
+																<ObjectLists>
+																	<ObjectList Name="RTPC">
+																		<RTPC Name="" ID="{30A11C52-9C77-4EF9-B9E9-E3A46A276D9E}" ShortID="570793465">
+																			<PropertyList>
+																				<Property Name="PropertyName" Type="string" Value="ReverbLevel"/>
+																			</PropertyList>
+																			<ReferenceList>
+																				<Reference Name="ControlInput">
+																					<ObjectRef Name="RTPC_PlayerHealth" ID="{5617AFDA-566B-4414-AFB2-BF2BBF6378D4}" WorkUnitID="{BD140EFC-66FC-4DFD-BAF3-73B13478D5DC}"/>
+																				</Reference>
+																				<Reference Name="Curve">
+																					<Custom>
+																						<Curve Name="" ID="{F8EF278D-80BE-4F05-9487-93F3D374078D}">
+																							<PropertyList>
+																								<Property Name="Flags" Type="int32" Value="3"/>
+																							</PropertyList>
+																							<PointList>
+																								<Point>
+																									<XPos>0</XPos>
+																									<YPos>0.02913</YPos>
+																									<Flags>5</Flags>
+																								</Point>
+																								<Point>
+																									<XPos>20.50761</XPos>
+																									<YPos>-1.54798</YPos>
+																									<Flags>0</Flags>
+																								</Point>
+																								<Point>
+																									<XPos>50.05076</XPos>
+																									<YPos>-96.3</YPos>
+																									<Flags>0</Flags>
+																								</Point>
+																								<Point>
+																									<XPos>100</XPos>
+																									<YPos>-96.3</YPos>
+																									<Flags>37</Flags>
+																								</Point>
+																							</PointList>
+																						</Curve>
+																					</Custom>
+																				</Reference>
+																			</ReferenceList>
+																		</RTPC>
+																	</ObjectList>
+																</ObjectLists>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+												<StateInfo>
+													<CustomStateList>
+														<CustomState>
+															<StateRef Name="InMenu" ID="{460E9C64-EAB3-4105-86A6-B699F9B16754}"/>
+															<CustomState Name="" ID="{17EE7159-A348-4D6E-AD2C-91F303817B8E}" ShortID="106243334"/>
+														</CustomState>
+														<CustomState>
+															<StateRef Name="None" ID="{066EBA92-BE06-48B1-B6FD-B032178EBF1A}"/>
+															<CustomState Name="" ID="{BA465A1D-46E2-454F-A2A4-FE603D5EE9E4}" ShortID="794955357"/>
+														</CustomState>
+														<CustomState>
+															<StateRef Name="InGame" ID="{5B8E4749-545C-4E1A-9F98-9F37C7DF1FFB}"/>
+															<CustomState Name="" ID="{A0A2CDF6-26C2-4006-8547-D17FBC257482}" ShortID="595557058"/>
+														</CustomState>
+														<CustomState>
+															<StateRef Name="InPause" ID="{0C858250-0140-4F25-A4DA-AB76497864D2}"/>
+															<CustomState Name="" ID="{BF3FEAAC-E162-461A-89DF-098468787462}" ShortID="306320914"/>
+														</CustomState>
+													</CustomStateList>
+												</StateInfo>
+											</EffectSlot>
+										</ObjectList>
 										<ObjectList Name="RTPC">
 											<RTPC Name="" ID="{BF6465A0-41C8-41B4-A780-8C3A6355A3B6}" ShortID="11433210">
 												<PropertyList>
@@ -238,8 +420,60 @@
 													</Reference>
 												</ReferenceList>
 											</RTPC>
+											<RTPC Name="" ID="{DD013902-BD1C-445A-845B-DAB51B845BBF}" ShortID="415203677">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="OutputBusLowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="RTPC_PlayerHealth" ID="{5617AFDA-566B-4414-AFB2-BF2BBF6378D4}" WorkUnitID="{BD140EFC-66FC-4DFD-BAF3-73B13478D5DC}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{36E240CE-0A02-4855-AC54-45BAFE20C0F0}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>75</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.92308</XPos>
+																		<YPos>-50</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>50</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-100</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
 										</ObjectList>
 									</ObjectLists>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="Ambience" ID="{4AE7ACDA-9A33-4550-AB26-A275524C9351}"/>
+											<DuckingParam>
+												<Volume>-9</Volume>
+												<FadeInTime>1</FadeInTime>
+												<FadeOutTime>1</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
 								</Bus>
 								<Bus Name="UI" ID="{1661C569-BA41-492E-8564-FC4A04407F71}">
 									<ObjectLists>

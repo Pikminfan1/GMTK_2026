@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{BC7BA1F0-88FC-478B-B9E7-29354BC361FF}" SchemaVersion="133">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{BC7BA1F0-88FC-478B-B9E7-29354BC361FF}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{BC7BA1F0-88FC-478B-B9E7-29354BC361FF}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="MasterBoard" ID="{82D8504A-BBC8-403B-AE16-01E8393BCA8C}">
+					<ObjectList>
+						<ObjectRef Name="Music" ID="{E5C6A8DB-6725-4FC9-8818-3C39D38E99B9}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+						<ObjectRef Name="World" ID="{BCB3C6E0-27DD-4C3F-B929-4944D0EBC3D1}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>

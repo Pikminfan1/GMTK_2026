@@ -42,6 +42,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1016444334	RTPC_User_Music			\UserSettings\RTPC_User_Music	
 	3592141631	RTPC_User_Master			\UserSettings\RTPC_User_Master	
 	3751289958	RTPC_User_SFX			\UserSettings\RTPC_User_SFX	
+	3975082306	RTPC_PlayerHealth			\Player\RTPC_PlayerHealth	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\MainBusses\Main Audio Bus\World\Ambience	
@@ -82,6 +83,8 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	122002127	Gain (Custom)	Wwise Gain			
+	357717049	Parametric EQ (Custom)	Wwise Parametric EQ			
+	594436390	Inside_Your_Head (Custom)	Wwise RoomVerb			
 	900190560	Master_EQ	Wwise Parametric EQ			
 	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
 

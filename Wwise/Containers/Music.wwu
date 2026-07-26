@@ -4,6 +4,13 @@
 		<WorkUnit Name="Music" ID="{F2C8D915-5418-485C-AB64-F31120AE7696}" PersistMode="Standalone">
 			<ChildrenList>
 				<MusicPlaylistContainer Name="Combat" ID="{16E618D0-8D40-403A-8659-05C1FD34A4BD}" ShortID="75310503">
+					<PropertyList>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
@@ -284,6 +291,11 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -420,6 +432,11 @@
 										<Property Name="IsStreamingEnabled" Type="bool">
 											<ValueList>
 												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1297,6 +1314,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicTrack Name="mus_Combat_bass_120bpm4-4_L36M-P17B_iw_48k24_260725_FM" ID="{9AD6C13B-21DC-49C3-BFD7-88A3F75197D7}" ShortID="730359379">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
@@ -2166,6 +2190,11 @@
 										<Property Name="IsStreamingEnabled" Type="bool">
 											<ValueList>
 												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3161,6 +3190,7 @@
 						<MusicSegment Name="Combat_A" ID="{04EA3A93-4FF6-4F4D-BCD3-44CDB3D580C1}" ShortID="6283235">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="31525.6201404227"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3176,6 +3206,11 @@
 										<Property Name="IsStreamingEnabled" Type="bool">
 											<ValueList>
 												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -4763,6 +4798,11 @@
 											</ValueList>
 										</Property>
 										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -5625,6 +5665,11 @@
 											</ValueList>
 										</Property>
 										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">

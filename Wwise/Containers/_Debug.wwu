@@ -9,7 +9,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="ATT_Generic_20000" ID="{79CA2108-D3D6-4BEF-AE0E-61A619222A1D}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+							<ObjectRef Name="ATT_Generic_2000" ID="{929FD621-29CD-495F-B79B-AE15B24D87A4}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>

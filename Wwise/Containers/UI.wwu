@@ -18,6 +18,11 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>80</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
