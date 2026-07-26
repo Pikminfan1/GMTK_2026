@@ -4,6 +4,7 @@
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Characters/BaseCharacter.h"
+#include "Characters/EnemyCharacter.h"
 #include "Characters/Components/HealthComponent.h"
 #include "Perception/AIPerceptionComponent.h"
 #include "Perception/AISenseConfig_Sight.h"
@@ -105,6 +106,18 @@ void AEnemyAIController::OnPossess(APawn* InPawn)
 		if (UHealthComponent* Health = PossessedCharacter->GetHealthComponent())
 		{
 			Health->OnDeath.AddUniqueDynamic(this, &AEnemyAIController::HandlePawnDeath);
+		}
+	}
+
+	// Kick off the spawn-in sequence now that the Behavior Tree is running - this
+	// pauses the brain again until the spawn animation finishes. Done here (after
+	// RunBehaviorTree) rather than in the pawn's BeginPlay/PossessedBy so the pause
+	// isn't immediately undone by the tree starting.
+	if (AEnemyCharacter* Enemy = Cast<AEnemyCharacter>(InPawn))
+	{
+		if (Enemy->UsesSpawnSequence())
+		{
+			Enemy->BeginSpawnSequence();
 		}
 	}
 }
