@@ -535,7 +535,7 @@
 										<Custom>
 											<Effect Name="Gain (Custom)" ID="{36BE553E-6B99-458A-99FC-C02F4A9BF282}" ShortID="122002127" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
 												<PropertyList>
-													<Property Name="FullBandGain" Type="Real32" Value="17"/>
+													<Property Name="FullBandGain" Type="Real32" Value="14"/>
 												</PropertyList>
 											</Effect>
 										</Custom>
