@@ -5,7 +5,10 @@
 			<ChildrenList>
 				<Effect Name="Master_EQ" ID="{C73728D6-CD65-4947-AC4A-2DC5E5750345}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 					<PropertyList>
-						<Property Name="FrequencyBand2" Type="Real32" Value="93.92598"/>
+						<Property Name="DynamicsEnableBand2" Type="bool" Value="True"/>
+						<Property Name="FrequencyBand2" Type="Real32" Value="164.1935"/>
+						<Property Name="RangeBand2" Type="Real32" Value="-6.9"/>
+						<Property Name="ThresholdBand2" Type="Real32" Value="-30"/>
 					</PropertyList>
 				</Effect>
 				<Effect Name="Verb_Outdoors" ID="{C5ACEBE2-3841-47C2-9CF8-508142D6322D}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">

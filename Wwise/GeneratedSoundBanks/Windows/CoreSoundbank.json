@@ -10,11 +10,19 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{317308E0-84CC-B737-45D0-31377E409D4D}",
+    "Hash": "{A1C8DA0D-AB40-523D-FB1B-8617EB3BE813}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
     "Media": [
+     {
+      "Id": "6733374",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_healthorb01_pickup_st_fm.wav",
+      "CachePath": "9F/{9F2C84FA-2AD1-F252-E955-770827830E6E}.wem"
+     },
      {
       "Id": "7507446",
       "Language": "SFX",
@@ -296,14 +304,6 @@
       "Location": "Memory",
       "ShortName": "sfx_player_fs_grass01_mo_fm.wav",
       "CachePath": "7A/{7AD5DC2B-FB35-005B-D77D-4F4CE2971B41}.wem"
-     },
-     {
-      "Id": "408460133",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "SFX_BatSwarmChatter_Mono_Loop_Bulba.wav",
-      "CachePath": "26/{26B75002-605F-7461-839E-F11F9E3C0C98}.wem"
      },
      {
       "Id": "428893571",
@@ -616,14 +616,6 @@
       "Location": "Memory",
       "ShortName": "SFX_NPCRay_Mono_lp_Bulba.wav",
       "CachePath": "EB/{EB863B1C-096B-BF07-5BE8-6798545C4B15}.wem"
-     },
-     {
-      "Id": "827384587",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "SFX_BatSwarmWings_Mono_Loop_Bulba.wav",
-      "CachePath": "A6/{A6781612-27F1-16EA-8537-4C438C9F542C}.wem"
      },
      {
       "Id": "837232218",
@@ -1065,14 +1057,16 @@
       "Name": "NPC_Spawn",
       "ObjectPath": "\\Events\\Game\\NPC\\NPC_Spawn",
       "GUID": "{21F256B3-C993-4BB3-9692-6FBA3183FA3B}",
-      "MaxAttenuation": "1000",
-      "DurationType": "Infinite",
+      "MaxAttenuation": "20000",
+      "DurationType": "OneShot",
+      "DurationMin": "8.909637",
+      "DurationMax": "8.909637",
       "MediaRefs": [
        {
-        "Id": "408460133"
+        "Id": "6733374"
        },
        {
-        "Id": "827384587"
+        "Id": "1007823311"
        }
       ]
      },
@@ -1683,6 +1677,6 @@
     ]
    }
   ],
-  "FileHash": "{0F7236D4-41E3-8C19-B6BE-476A56C5E441}"
+  "FileHash": "{53931D3C-A1D5-D3AB-3E6B-7A743934315C}"
  }
 }

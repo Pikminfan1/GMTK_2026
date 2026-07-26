@@ -305,20 +305,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="sfx_healthorb01_pickup_st_fm" ID="{A62EF120-13A2-42EC-96BA-01BF717B6EA8}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.10576"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="1.22501"/>
-										<Property Name="FadeOutShape" Type="int16" Value="1"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.8095"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>sfx_healthorb01_pickup_st_fm.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="6733374"/>
-									</MediaIDList>
-								</AudioFileSource>
 								<AudioFileSource Name="health_pickup" ID="{B86D7201-9FD1-4DAF-8CC7-BC8C3DA528DB}">
 									<Language>SFX</Language>
 									<AudioFile>health_pickup.wav</AudioFile>

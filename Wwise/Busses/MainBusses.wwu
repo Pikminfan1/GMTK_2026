@@ -261,10 +261,10 @@
 															<Effect Name="Parametric EQ (Custom)" ID="{440F135E-51D4-46E1-BB22-1E425B4DE5B2}" ShortID="357717049" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 																<PropertyList>
 																	<Property Name="FrequencyBand2" Type="Real32" Value="11609.39"/>
-																	<Property Name="FrequencyBand3" Type="Real32" Value="176.1619"/>
+																	<Property Name="FrequencyBand3" Type="Real32" Value="82.49253"/>
 																	<Property Name="FrequencyBand4" Type="Real32" Value="1761.619"/>
 																	<Property Name="GainBand2" Type="Real32" Value="-4.169014"/>
-																	<Property Name="GainBand3" Type="Real32" Value="-3.71831"/>
+																	<Property Name="GainBand3" Type="Real32" Value="-2.366197"/>
 																	<Property Name="GainBand4" Type="Real32" Value="-2.366197"/>
 																	<Property Name="NumBands" Type="int32" Value="4"/>
 																	<Property Name="OnOffBand1" Type="bool" Value="False"/>

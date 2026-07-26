@@ -5,17 +5,17 @@
 			<ChildrenList>
 				<Event Name="NPC_Spawn" ID="{21F256B3-C993-4BB3-9692-6FBA3183FA3B}">
 					<ChildrenList>
-						<Action Name="" ID="{9BC8E7B0-C9DF-4133-AA2F-92E6EDA9C94D}" ShortID="280446759">
+						<Action Name="" ID="{0D134964-6D30-4CDE-9EDF-BE8D05125D58}" ShortID="69151075">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{F0DC3F8F-7CD6-437F-BA06-BDBD4754CB66}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
+									<ObjectRef Name="NPC_Spawn" ID="{D3C1D72C-51DE-4FC1-BE09-B9790E9EE4DA}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{64403D64-12D0-4AD0-A2FC-8D454817224B}" ShortID="128469562">
+						<Action Name="" ID="{9BC8E7B0-C9DF-4133-AA2F-92E6EDA9C94D}" ShortID="280446759">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{A9E92591-3B67-4931-AF08-CAFF92EAA3DD}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
+									<ObjectRef Name="SFX_BatSwarmBrust_Mono_Bulba" ID="{A4086548-64F5-41F6-A281-BB99F2A7B14E}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

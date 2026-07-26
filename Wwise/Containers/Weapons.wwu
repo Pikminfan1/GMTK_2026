@@ -158,6 +158,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<PropertyContainer Name="Revolver_shoot" ID="{0AEBF0AB-DC35-4418-A6E8-9165FC0D8940}" ShortID="730469166">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>

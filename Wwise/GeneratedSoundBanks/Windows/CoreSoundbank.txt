@@ -60,6 +60,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1370132602	RTPC_PlayerAmmo			\Player\RTPC_PlayerAmmo	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	6733374	NPC_Spawn	.cache\9F\{9F2C84FA-2AD1-F252-E955-770827830E6E}.wem		\Containers\World\NPC\NPCActions\NPC_Spawn		24881
 	7507446	sfx_revolver_shot04_mo_fm	.cache\A7\{A7674457-68B9-D5D7-5CAF-C565A84DD6B4}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_shot\sfx_revolver_shot04_mo_fm		5465
 	12250624	sfx_revolver_Mech03_mo_fm	.cache\2C\{2CADD1FC-F5DC-6A84-4520-70E54CEFEF73}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_Aim\sfx_revolver_Mech03_mo_fm		1568
 	28656243	sfx_revolver_kick04_mo_fm	.cache\12\{12B98675-F011-311D-1E5E-B39D376538EE}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_kick\sfx_revolver_kick04_mo_fm		2867
@@ -93,7 +94,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	330647431	mus_Combat_theremish_120bpm4-4_L36M-P17B_iw_48k24_260725_FM	.cache\80\{80BF5068-9DA7-8F27-E6B8-F214093865E3}.wem		\Containers\Music\Music\Combat\Combat_Intro_A\mus_Combat_theremish_120bpm4-4_L36M-P17B_iw_48k24_260725_FM		1045005
 	339785647	sfx_player_fs_concrete02_mo_fm	.cache\2A\{2A6982FE-81BE-A9EF-610D-FFFD23C1233E}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Concrete\sfx_player_fs_concrete02_mo_fm		1680
 	360556948	sfx_player_fs_grass01_mo_fm	.cache\7A\{7AD5DC2B-FB35-005B-D77D-4F4CE2971B41}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass01_mo_fm		2204
-	408460133	SFX_BatSwarmChatter_Mono_Loop_Bulba	.cache\26\{26B75002-605F-7461-839E-F11F9E3C0C98}.wem		\Containers\World\NPC\NPCActions\Bats\SFX_BatSwarmChatter_Mono_Loop_Bulba		29207
 	428893571	sfx_revolver_Metal02_mo_fm	.cache\26\{263D4585-CA2B-5309-1D4C-F29B402E48C7}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_metal\sfx_revolver_Metal02_mo_fm		6373
 	452332477	SFX_NPCHit_Mono_2_Bulba	.cache\DB\{DB24CD97-8DBF-2E31-8D04-25D339234915}.wem		\Containers\World\NPC\NPCCombat\NPC_Hit\SFX_NPCHit_Mono_2_Bulba		5173
 	455978967	sfx_revolver_tail04_mo_fm	.cache\7A\{7A221B7C-01B1-2169-9732-593081F5BFB4}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_tail\sfx_revolver_tail04_mo_fm		7036
@@ -133,7 +133,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	820646846	sfx_player_fs_water01_mo_fm	.cache\7D\{7DF70E5A-D156-B14A-30F3-8762AD78608A}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water01_mo_fm		4643
 	822825595	sfx_player_fs_grass06_mo_fm	.cache\18\{18F87A2E-11A1-8541-FDF4-E6AA6190ACEA}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass06_mo_fm		2072
 	825183121	SFX_NPCRay_Mono_lp_Bulba	.cache\EB\{EB863B1C-096B-BF07-5BE8-6798545C4B15}.wem		\Containers\World\NPC\NPCCombat\NPC_Ray\SFX_NPCRay_Mono_lp_Bulba		32274
-	827384587	SFX_BatSwarmWings_Mono_Loop_Bulba	.cache\A6\{A6781612-27F1-16EA-8537-4C438C9F542C}.wem		\Containers\World\NPC\NPCActions\Bats\SFX_BatSwarmWings_Mono_Loop_Bulba		27070
 	837232218	sfx_player_fs_water07_mo_fm	.cache\2E\{2ED0C1E9-C660-7348-0779-196FA78DC36E}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Water\sfx_player_fs_water07_mo_fm		3613
 	863346427	sfx_revolver_tail01_mo_fm	.cache\34\{347A9A66-19A0-3B90-38F3-67A4BA341F79}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_tail\sfx_revolver_tail01_mo_fm		7153
 	899753535	Revolver_reload_loop	.cache\4F\{4F9A780B-587A-E3BE-106E-2356294D617F}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_reload\Revolver_Reload\Revolver_reload_loop		66046
