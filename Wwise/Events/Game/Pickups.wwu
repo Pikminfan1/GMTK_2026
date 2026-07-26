@@ -6,9 +6,23 @@
 				<Event Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}">
 					<ChildrenList>
 						<Action Name="" ID="{27356583-0FF0-4EEE-B39A-604F7D36A0A3}" ShortID="213115753">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Pickup_HealthOrb" ID="{9632FC5E-E2E4-482D-87B0-F9D304DED3C4}" WorkUnitID="{433A0264-D9DE-4F48-8D20-5242DC114632}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{20FE58AF-DFF8-4A26-B948-7EBEDAF5FC56}" ShortID="196567760">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup_Hp_Orb" ID="{21E3F4FB-73A7-435E-9FE5-3F677190EC0D}" WorkUnitID="{433A0264-D9DE-4F48-8D20-5242DC114632}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

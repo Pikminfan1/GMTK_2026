@@ -116,6 +116,250 @@
 								<ActiveSource Name="sfx_healthorb01_pickup_st_fm" ID="{A62EF120-13A2-42EC-96BA-01BF717B6EA8}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Pickup_Hp_Orb" ID="{21E3F4FB-73A7-435E-9FE5-3F677190EC0D}" ShortID="762888464">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DDDF760B-8AF1-428C-ACB8-16982296694C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-225"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_PickUpHeal_Stereo_5_Bulba" ID="{545B08AE-BB3E-4A52-AC5A-167F5BEFDDD5}" ShortID="204160894">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_PickUpHeal_Stereo_5_Bulba" ID="{E6BEE852-5588-4AA5-AECB-62F13BEDE4C6}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.08433"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.32371"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_PickUpHeal_Stereo_5_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="312132679"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_PickUpHeal_Stereo_5_Bulba" ID="{E6BEE852-5588-4AA5-AECB-62F13BEDE4C6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_PickUpHeal_Stereo_8_Bulba" ID="{1B24542D-3875-4B91-88E4-14E566A40C3E}" ShortID="624580604">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_PickUpHeal_Stereo_8_Bulba" ID="{EF71C268-62EB-40F8-B107-B0996409587A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.07846"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.26276"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_PickUpHeal_Stereo_8_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1003203452"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_PickUpHeal_Stereo_8_Bulba" ID="{EF71C268-62EB-40F8-B107-B0996409587A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_PickUpHeal_Stereo_7_Bulba" ID="{AD4490D0-97F3-4036-A63E-DEACD31E314F}" ShortID="1018774290">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_PickUpHeal_Stereo_7_Bulba" ID="{39A14F78-C22B-4FDD-A421-86A6FF45EC6D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.04706"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.35901"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_PickUpHeal_Stereo_7_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="903697184"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_PickUpHeal_Stereo_7_Bulba" ID="{39A14F78-C22B-4FDD-A421-86A6FF45EC6D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_PickUpHeal_Stereo_6_Bulba" ID="{3FD43E2B-1D38-4EAF-A72B-21FF1830CA93}" ShortID="859019398">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_PickUpHeal_Stereo_6_Bulba" ID="{1442B972-3F3F-4819-9998-713AAC79665C}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.02942"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.4728"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_PickUpHeal_Stereo_6_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="80016931"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_PickUpHeal_Stereo_6_Bulba" ID="{1442B972-3F3F-4819-9998-713AAC79665C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_PickUpHeal_Stereo_1_Bulba" ID="{B632DCB7-553C-4107-ABE8-2C82A2CAC870}" ShortID="837944738">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_PickUpHeal_Stereo_1_Bulba" ID="{A49E540B-53AB-4B57-BD93-755898ADE35A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.07451"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.40803"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.37863"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_PickUpHeal_Stereo_1_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="745707804"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_PickUpHeal_Stereo_1_Bulba" ID="{A49E540B-53AB-4B57-BD93-755898ADE35A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_PickUpHeal_Stereo_4_Bulba" ID="{D7385326-986A-408D-9531-B87083CBD3F6}" ShortID="302727837">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_PickUpHeal_Stereo_4_Bulba" ID="{E0E36F93-3CFE-4755-9522-CE8E242A6920}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.07844"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.53545"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_PickUpHeal_Stereo_4_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="193836840"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_PickUpHeal_Stereo_4_Bulba" ID="{E0E36F93-3CFE-4755-9522-CE8E242A6920}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_PickUpHeal_Stereo_3_Bulba" ID="{CA2C4B7A-0A91-486C-B7D0-2747004F7FBA}" ShortID="250045737">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_PickUpHeal_Stereo_3_Bulba" ID="{81C21047-75C6-4172-BC1F-FAC9820B317A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.03922"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.36879"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_PickUpHeal_Stereo_3_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="481228993"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_PickUpHeal_Stereo_3_Bulba" ID="{81C21047-75C6-4172-BC1F-FAC9820B317A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_PickUpHeal_Stereo_2_Bulba" ID="{3877331A-8114-4109-88F9-1E3C3D21F4EB}" ShortID="475579099">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_PickUpHeal_Stereo_2_Bulba" ID="{F5AB2490-5E73-4DEA-819F-6CEFC48A7655}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.02159"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.4179"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_PickUpHeal_Stereo_2_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="950841242"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_PickUpHeal_Stereo_2_Bulba" ID="{F5AB2490-5E73-4DEA-819F-6CEFC48A7655}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</PropertyContainer>
 			</ChildrenList>
