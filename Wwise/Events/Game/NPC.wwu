@@ -64,9 +64,19 @@
 				<Event Name="NPC_Pain" ID="{98162397-C994-49AC-82E9-3C8DEDD5C07E}">
 					<ChildrenList>
 						<Action Name="" ID="{AB9EB9B5-A59E-4167-B490-3B75C7086BFF}" ShortID="88532585">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="NPC_Pain" ID="{7D4B3623-82FB-457A-8388-8096057ACD1A}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1B6F064F-6112-41F9-B377-9575014EB863}" ShortID="698867359">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NPC_Hit" ID="{54733D4D-F8DA-4C78-8C2E-1AA73F69D683}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

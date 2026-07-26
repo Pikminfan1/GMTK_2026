@@ -13,6 +13,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1359982855	Game_Unpause			\Game\Generic\Game_Unpause	
 	1496310610	Ambience_Play			\Game\Ambience\Ambience_Play	
 	1639008996	Music_Combat_Start			\Game\Music\Music_Combat_Start	
+	1735662523	NPC_Ray_Windup			\Game\NPC\NPC_Ray_Windup	
 	1909082840	Revolver_reload_insertBullet			\Game\Player\PlayerCombat\Revolver\Revolver_reload_insertBullet	
 	2024222415	UI_Back			\Game\UI\UI_Back	
 	2033512703	Game_Wave_End			\Game\GameEvents\Game_Wave_End	
@@ -74,6 +75,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	206242964	Revolver_reload_end	.cache\79\{7934D907-FC0B-01CF-AC99-77E70665DD6A}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_reload\Revolver_Reload\Revolver_reload_end		519724
 	222492959	sfx_revolver_Mech02_mo_fm	.cache\B1\{B15EF704-7E94-53FC-21FC-AD9E381011DD}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_NoAmmo\sfx_revolver_Mech02_mo_fm		10072
 	270737109	SFX_NPCPain_Mono_3_Bulba	.cache\66\{666E9102-0A9D-3A0A-4E1C-6EFE19513EBB}.wem		\Containers\World\NPC\NPCCombat\NPC_Pain\SFX_NPCPain_Mono_3_Bulba		74686
+	289029107	SFX_NPCHit_Mono_3_Bulba	.cache\92\{92C7357B-68C1-9086-6C2C-6E0674C67B5F}.wem		\Containers\World\NPC\NPCCombat\NPC_Hit\SFX_NPCHit_Mono_3_Bulba		42016
 	291894663	mus_Combat_percussion_120bpm4-4_L36M-P17B_iw_48k24_260725_FM	.cache\ED\{ED066DB8-ED61-04E7-4AFE-1001C963A721}.wem		\Containers\Music\Combat\Combat_B\mus_Combat_percussion_120bpm4-4_L36M-P17B_iw_48k24_260725_FM		15552096
 	292997913	sfx_revolver_Mech02_mo_fm	.cache\83\{83FADDA5-F25D-6A19-7DDE-94F4424D6ADD}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_mech\sfx_revolver_Mech02_mo_fm		48898
 	304552554	SFX_NPCPain_Mono_1_Bulba	.cache\26\{26450C28-7274-6361-E965-A62106160A36}.wem		\Containers\World\NPC\NPCCombat\NPC_Pain\SFX_NPCPain_Mono_1_Bulba		98130
@@ -82,6 +84,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	360556948	sfx_player_fs_grass01_mo_fm	.cache\AC\{ACB075C0-2828-13B2-3A13-CCF0DBB00096}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass01_mo_fm		23534
 	408460133	SFX_BatSwarmChatter_Mono_Loop_Bulba	.cache\49\{49402944-E2C5-F3F4-EDC4-8DA2C3FFBDB2}.wem		\Containers\World\NPC\Bats\SFX_BatSwarmChatter_Mono_Loop_Bulba		300192
 	428893571	sfx_revolver_Metal02_mo_fm	.cache\42\{429248B7-5E49-3742-04DA-5672C6C95DBC}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_metal\sfx_revolver_Metal02_mo_fm		78254
+	452332477	SFX_NPCHit_Mono_2_Bulba	.cache\F5\{F500FCAE-6721-0DB2-5521-7956355E439D}.wem		\Containers\World\NPC\NPCCombat\NPC_Hit\SFX_NPCHit_Mono_2_Bulba		64622
 	455978967	sfx_revolver_tail04_mo_fm	.cache\37\{37B4A9F1-3A0C-8C05-4315-2F7B85C4F27F}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_tail\sfx_revolver_tail04_mo_fm		112082
 	456620000	sfx_revolver_Mech01_mo_fm	.cache\40\{40DBF69C-4BD0-132A-C457-EA435E5CBA12}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_mech\sfx_revolver_Mech01_mo_fm		40634
 	482921553	sfx_reload_bullet01_mo_fm	.cache\40\{40C146CA-B92C-26E9-4853-A6CC1170AE92}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_reload\Revolver_Reload\Revolver_reload_insertBullet\sfx_reload_bullet01_mo_fm		13454
@@ -110,6 +113,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	741894269	sfx_player_fs_concrete06_mo_fm	.cache\FC\{FC80D0B8-639F-C37A-53E3-3393E8EA8EAC}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Concrete\sfx_player_fs_concrete06_mo_fm		21090
 	763663487	sfx_reload_bullet03_mo_fm	.cache\F1\{F12CF014-A2D8-0673-7772-EAE8A84368C6}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_reload\Revolver_Reload\Revolver_reload_insertBullet\sfx_reload_bullet03_mo_fm		13090
 	766849001	sfx_player_fs_gravel06_mo_fm	.cache\20\{205870B3-4A95-D9BC-0689-8B1AE830F615}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel06_mo_fm		36802
+	767883867	SFX_RayWindup_Mono_Bulba	.cache\9B\{9B2BEFED-23D8-7FB1-3635-24E9BD93DECD}.wem		\Containers\World\NPC\NPCCombat\NPC_Ray\SFX_RayWindup_Mono_Bulba		156292
 	776065053	sfx_revolver_Mech04_mo_fm	.cache\91\{912E2C71-DDC7-5C84-5585-896F09A702C0}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_NoAmmo\sfx_revolver_Mech04_mo_fm		7762
 	810403928	sfx_player_fs_gravel02_mo_fm	.cache\5D\{5DAAC415-E6E4-C28E-343C-907AF42D6939}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Gravel\sfx_player_fs_gravel02_mo_fm		31926
 	813004226	mus_Combat_harpsichord_120bpm4-4_L36M-P17B_iw_48k24_260725_FM	.cache\5C\{5C0BC5D1-69A2-9573-2A8E-2F581AE8C8A9}.wem		\Containers\Music\Combat\Combat_A\mus_Combat_harpsichord_120bpm4-4_L36M-P17B_iw_48k24_260725_FM		15552096
@@ -127,6 +131,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	933638355	SFX_NPCRayStart_Mono_Bulba	.cache\26\{2679F59A-6D31-DDC8-CB6F-83D783A27D9A}.wem		\Containers\World\NPC\NPCCombat\NPC_Ray\SFX_NPCRayStart_Mono_Bulba		100632
 	943985641	sfx_player_fs_grass02_mo_fm	.cache\E4\{E40AC205-ED98-6067-D50C-3F11BDD8548C}.wem		\Containers\World\Player\PlayerLocomotion\PlayerLocomotion\PlayerFootstep\PlayerFootstep_Grass\sfx_player_fs_grass02_mo_fm		32204
 	998249834	sfx_revolver_Metal01_mo_fm	.cache\1A\{1AFCAFA3-D2BB-E86F-A4C2-3B12E67D149E}.wem		\Containers\World\Player\PlayerCombat\Weapons\Revolver\Revolver_shoot\Revolver_metal\sfx_revolver_Metal01_mo_fm		62614
+	1003709863	SFX_NPCHit_Mono_1_Bulba	.cache\32\{3244A501-CE09-5F12-8955-FFD8D867A9E1}.wem		\Containers\World\NPC\NPCCombat\NPC_Hit\SFX_NPCHit_Mono_1_Bulba		39900
 	1007823311	SFX_BatSwarmBrust_Mono_Bulba	.cache\8A\{8A187D56-A5C0-8D93-DC92-8A8D37183BFA}.wem		\Containers\World\NPC\Bats\SFX_BatSwarmBrust_Mono_Bulba		785926
 	1032317867	mus_Combat_organ_120bpm4-4_L36M-P17B_iw_48k24_260725_FM	.cache\F0\{F0367710-E890-1CB9-5C49-F32262D215E6}.wem		\Containers\Music\Combat\Combat_Intro_WithFill\mus_Combat_organ_120bpm4-4_L36M-P17B_iw_48k24_260725_FM		15552096
 	1038514920	mus_Combat_strings_120bpm4-4_L36M-P17B_iw_48k24_260725_FM	.cache\F5\{F5BD0BB0-971F-1A4B-EB69-93D5A14DAB2A}.wem		\Containers\Music\Combat\Combat_B\mus_Combat_strings_120bpm4-4_L36M-P17B_iw_48k24_260725_FM		15552096

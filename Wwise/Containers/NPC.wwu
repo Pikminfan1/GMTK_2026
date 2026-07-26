@@ -121,6 +121,19 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="NPC_Pain" ID="{7D4B3623-82FB-457A-8388-8096057ACD1A}" ShortID="720210925">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{40B834E1-1906-4820-A363-9D6773CF9A99}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="250"/>
+													<Property Name="Min" Type="Real64" Value="-175"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 							</PropertyList>
 							<ReferenceList>
@@ -322,6 +335,112 @@
 								</Sound>
 							</ChildrenList>
 						</Folder>
+						<RandomSequenceContainer Name="NPC_Hit" ID="{54733D4D-F8DA-4C78-8C2E-1AA73F69D683}" ShortID="178290327">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5D408ADB-E380-4573-A421-62908F6A644E}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="225"/>
+													<Property Name="Min" Type="Real64" Value="-300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_NPCHit_Mono_1_Bulba" ID="{A3CC191E-D76B-4A0B-AADB-BC7E9A440E90}" ShortID="781021682">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCHit_Mono_1_Bulba" ID="{A1262394-0584-4DBF-A1AC-A5AA2F394625}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.06637"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.04925"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCHit_Mono_1_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1003709863"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCHit_Mono_1_Bulba" ID="{A1262394-0584-4DBF-A1AC-A5AA2F394625}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_NPCHit_Mono_3_Bulba" ID="{87C8D4C7-143B-4ABF-B436-325259111DF3}" ShortID="818073675">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCHit_Mono_3_Bulba" ID="{7CFB29D9-F376-4C63-9CD2-5A8E3CECD513}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.08721"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCHit_Mono_3_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="289029107"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCHit_Mono_3_Bulba" ID="{7CFB29D9-F376-4C63-9CD2-5A8E3CECD513}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_NPCHit_Mono_2_Bulba" ID="{3E31FC2D-977C-4B1C-B4B6-4177BCD57B45}" ShortID="185300867">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_NPCHit_Mono_2_Bulba" ID="{4532E44D-3DCD-4FB5-85A9-335EDB749DEC}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.01841"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_NPCHit_Mono_2_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="452332477"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_NPCHit_Mono_2_Bulba" ID="{4532E44D-3DCD-4FB5-85A9-335EDB749DEC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</PropertyContainer>
 				<PropertyContainer Name="NPCActions" ID="{09C5BBBE-8DE8-493C-BD08-CAD8E2B6E91A}" ShortID="383474643">

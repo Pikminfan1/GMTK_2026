@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{FCBC2FBF-4291-B32C-FC4D-ED7695DED31C}",
+    "Hash": "{6F3EAC50-5100-FA1B-D02E-4238BF31490F}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
@@ -242,6 +242,14 @@
       "CachePath": "66/{666E9102-0A9D-3A0A-4E1C-6EFE19513EBB}.wem"
      },
      {
+      "Id": "289029107",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_NPCHit_Mono_3_Bulba.wav",
+      "CachePath": "92/{92C7357B-68C1-9086-6C2C-6E0674C67B5F}.wem"
+     },
+     {
       "Id": "291894663",
       "Language": "SFX",
       "Streaming": "false",
@@ -313,6 +321,14 @@
       "Location": "Memory",
       "ShortName": "sfx_revolver_Metal02_mo_fm.wav",
       "CachePath": "42/{429248B7-5E49-3742-04DA-5672C6C95DBC}.wem"
+     },
+     {
+      "Id": "452332477",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_NPCHit_Mono_2_Bulba.wav",
+      "CachePath": "F5/{F500FCAE-6721-0DB2-5521-7956355E439D}.wem"
      },
      {
       "Id": "455978967",
@@ -539,6 +555,14 @@
       "CachePath": "20/{205870B3-4A95-D9BC-0689-8B1AE830F615}.wem"
      },
      {
+      "Id": "767883867",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_RayWindup_Mono_Bulba.wav",
+      "CachePath": "9B/{9B2BEFED-23D8-7FB1-3635-24E9BD93DECD}.wem"
+     },
+     {
       "Id": "776065053",
       "Language": "SFX",
       "Streaming": "false",
@@ -682,6 +706,14 @@
       "Location": "Memory",
       "ShortName": "sfx_revolver_Metal01_mo_fm.wav",
       "CachePath": "1A/{1AFCAFA3-D2BB-E86F-A4C2-3B12E67D149E}.wem"
+     },
+     {
+      "Id": "1003709863",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_NPCHit_Mono_1_Bulba.wav",
+      "CachePath": "32/{3244A501-CE09-5F12-8955-FFD8D867A9E1}.wem"
      },
      {
       "Id": "1007823311",
@@ -919,17 +951,26 @@
       "ObjectPath": "\\Events\\Game\\NPC\\NPC_Pain",
       "GUID": "{98162397-C994-49AC-82E9-3C8DEDD5C07E}",
       "DurationType": "OneShot",
-      "DurationMin": "0.8303857",
-      "DurationMax": "1.1114887",
+      "DurationMin": "0.8187292",
+      "DurationMax": "1.3297174",
       "MediaRefs": [
        {
         "Id": "270737109"
        },
        {
+        "Id": "289029107"
+       },
+       {
         "Id": "304552554"
        },
        {
+        "Id": "452332477"
+       },
+       {
         "Id": "701897157"
+       },
+       {
+        "Id": "1003709863"
        }
       ]
      },
@@ -959,6 +1000,20 @@
       "MediaRefs": [
        {
         "Id": "495019206"
+       }
+      ]
+     },
+     {
+      "Id": "1735662523",
+      "Name": "NPC_Ray_Windup",
+      "ObjectPath": "\\Events\\Game\\NPC\\NPC_Ray_Windup",
+      "GUID": "{CA86A4E2-0F07-4514-B68B-70ED30A4D402}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.7709297",
+      "DurationMax": "1.7709297",
+      "MediaRefs": [
+       {
+        "Id": "767883867"
        }
       ]
      },
@@ -1551,6 +1606,6 @@
     ]
    }
   ],
-  "FileHash": "{285F0747-54EC-2698-3842-556650045EAA}"
+  "FileHash": "{B77421D7-A088-25E1-DCFD-A925DA40C005}"
  }
 }
