@@ -342,6 +342,94 @@
 						</Sound>
 					</ChildrenList>
 				</PropertyContainer>
+				<Folder Name="Bats" ID="{5865CEA0-2DB2-41C0-9980-DB7B76AA6D7A}" ShortID="544165987">
+					<ChildrenList>
+						<Sound Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{A9E92591-3B67-4931-AF08-CAFF92EAA3DD}" ShortID="134934048">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_Generic_2000" ID="{929FD621-29CD-495F-B79B-AE15B24D87A4}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{0C263047-615C-483B-AE1E-D43B6CD0EF04}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_BatSwarmWings_Mono_Loop_Bulba.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="827384587"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_BatSwarmWings_Mono_Loop_Bulba" ID="{0C263047-615C-483B-AE1E-D43B6CD0EF04}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{F0DC3F8F-7CD6-437F-BA06-BDBD4754CB66}" ShortID="838832022">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_Generic_2000" ID="{929FD621-29CD-495F-B79B-AE15B24D87A4}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{C8910642-4DCF-4EA5-9CC4-BD2068A3CBC9}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_BatSwarmChatter_Mono_Loop_Bulba.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="408460133"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_BatSwarmChatter_Mono_Loop_Bulba" ID="{C8910642-4DCF-4EA5-9CC4-BD2068A3CBC9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_BatSwarmBrust_Mono_Bulba" ID="{A4086548-64F5-41F6-A281-BB99F2A7B14E}" ShortID="108322014">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_BatSwarmBrust_Mono_Bulba" ID="{62C16744-9A1B-40AF-85BC-7AC38B87C959}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.14833"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SFX_BatSwarmBrust_Mono_Bulba.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1007823311"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_BatSwarmBrust_Mono_Bulba" ID="{62C16744-9A1B-40AF-85BC-7AC38B87C959}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
