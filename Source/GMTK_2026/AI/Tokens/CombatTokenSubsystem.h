@@ -124,7 +124,7 @@ protected:
 
 	/** Pool size when the player is nearly dead - the mercy window. */
 	UPROPERTY(EditDefaultsOnly, Category = "Combat Tokens|Budget")
-	int32 MinBudget = 2;
+	int32 MinBudget = 1;
 
 	/** Below this fraction of player health, the budget starts shrinking toward MinBudget. */
 	UPROPERTY(EditDefaultsOnly, Category = "Combat Tokens|Budget", meta = (ClampMin = "0.0", ClampMax = "1.0"))
@@ -142,7 +142,7 @@ protected:
 
 	/** The laser is a heavy commitment - it should eat a large slice of the pool. */
 	UPROPERTY(EditDefaultsOnly, Category = "Combat Tokens|Cost")
-	int32 RangedLaserCost = 3;
+	int32 RangedLaserCost = 2;
 
 	/** After releasing, an enemy cannot re-request for this long. Forces rotation. */
 	UPROPERTY(EditDefaultsOnly, Category = "Combat Tokens|Fairness")
