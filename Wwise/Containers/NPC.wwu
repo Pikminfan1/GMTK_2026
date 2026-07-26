@@ -298,6 +298,28 @@
 										<ActiveSource Name="SFX_NPCRayStop_Mono_lp_Bulba" ID="{5C270F98-859C-435F-A92C-212D2A5E26F3}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="SFX_RayWindup_Mono_Bulba" ID="{C5E945C4-56A2-4FD9-AC9E-CD8E7FD0C6A0}" ShortID="43879109">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{66ECAEA2-F804-4D86-9794-C60350778AEA}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_RayWindup_Mono_Bulba" ID="{0758A970-700E-4598-9D91-C92CE245648F}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_RayWindup_Mono_Bulba.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="767883867"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_RayWindup_Mono_Bulba" ID="{0758A970-700E-4598-9D91-C92CE245648F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

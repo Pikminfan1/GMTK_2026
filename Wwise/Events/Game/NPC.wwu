@@ -113,6 +113,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="NPC_Ray_Windup" ID="{CA86A4E2-0F07-4514-B68B-70ED30A4D402}">
+					<ChildrenList>
+						<Action Name="" ID="{C7C0261C-C659-421C-9E24-731F8DA1C065}" ShortID="574125885">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_RayWindup_Mono_Bulba" ID="{C5E945C4-56A2-4FD9-AC9E-CD8E7FD0C6A0}" WorkUnitID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -30,8 +30,20 @@
 				<SoundcasterSession Name="Pickups" ID="{8B29A9D2-031C-4C91-9921-53E2E76BCEC7}">
 					<ModuleList>
 						<Module>
+							<ObjectRef Name="NPC_Ray_Windup" ID="{CA86A4E2-0F07-4514-B68B-70ED30A4D402}" WorkUnitID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Pickup_HealthOrb" ID="{DC3957FC-E710-4903-BAA4-384BEB15302D}" WorkUnitID="{014582D2-5B8A-40DE-86AA-CC25BD115E19}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Ray_Start" ID="{61720CB7-A9F1-4F0F-A916-EFD202D3127A}" WorkUnitID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="NPC_Ray_Stop" ID="{737329C3-A8CC-47CF-9B29-7032509B7790}" WorkUnitID="{2511664B-489D-4C55-A366-F0ABF72EF9D1}"/>
+							<Position X="2" Y="1"/>
 						</Module>
 					</ModuleList>
 				</SoundcasterSession>
