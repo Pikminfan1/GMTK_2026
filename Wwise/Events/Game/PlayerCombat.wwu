@@ -4,7 +4,17 @@
 		<WorkUnit Name="PlayerCombat" ID="{7229928A-E3F6-4321-9C46-9DAE7876E22F}" OwnerID="{267721AC-3434-4988-BC76-0271F7F5E92D}" PersistMode="Nested">
 			<ChildrenList>
 				<Event Name="Player_Death" ID="{D5FB05DA-69C2-4E8D-8037-E1546E1B8313}"/>
-				<Event Name="Player_Hit" ID="{522E92C0-CB47-4E3E-9C1F-33E9713D5C5A}"/>
+				<Event Name="Player_Hit" ID="{522E92C0-CB47-4E3E-9C1F-33E9713D5C5A}">
+					<ChildrenList>
+						<Action Name="" ID="{73169055-84D7-4AF8-AE30-31E4B6B776AB}" ShortID="647415128">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pla_TakeDamage" ID="{D45A8B84-3486-40B0-BB35-73758A80119D}" WorkUnitID="{3DC3FB59-BDF1-4361-86DC-0B3DD48E0A2D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Folder Name="Revolver" ID="{E6BECD6C-83D8-41C8-BEDB-2695A095690D}" ShortID="332505742">
 					<ChildrenList>
 						<Event Name="Revolver_Shoot" ID="{07A6474B-8F1D-47EA-BC2B-ED7DC6FC0291}">

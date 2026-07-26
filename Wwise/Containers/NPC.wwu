@@ -365,6 +365,7 @@
 						<PropertyContainer Name="NPC_Ray" ID="{3209F260-289B-430B-BAA2-4F5D3CB819B4}" ShortID="492271360">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Priority" Type="int16">
@@ -675,6 +676,33 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{B7A430CF-3964-42C0-A5C8-9A8AD19AADA5}" ShortID="225237110">
+										<PropertyList>
+											<Property Name="Render" Type="bool" Value="True"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="Effect">
+												<Custom>
+													<Effect Name="Parametric EQ (Custom)" ID="{5D6322E6-E9FF-4104-98BC-FB8BAEA711D1}" ShortID="636923572" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<PropertyList>
+															<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+															<Property Name="FrequencyBand1" Type="Real32" Value="122.2798"/>
+															<Property Name="FrequencyBand2" Type="Real32" Value="8580.422"/>
+															<Property Name="FrequencyBand3" Type="Real32" Value="253.276"/>
+															<Property Name="GainBand1" Type="Real32" Value="0.5633803"/>
+															<Property Name="GainBand2" Type="Real32" Value="2.816901"/>
+															<Property Name="GainBand3" Type="Real32" Value="-10.02817"/>
+															<Property Name="OnOffBand3" Type="bool" Value="True"/>
+														</PropertyList>
+													</Effect>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
 						</PropertyContainer>
 					</ChildrenList>
 				</PropertyContainer>

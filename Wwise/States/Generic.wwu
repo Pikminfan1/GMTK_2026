@@ -19,14 +19,6 @@
 						<State Name="Exploration" ID="{05F8B323-F3F4-40FB-BE60-ADA9D37AAE46}"/>
 					</ChildrenList>
 				</StateGroup>
-				<StateGroup Name="CombatIntensity" ID="{AA83C3B5-2836-475A-872A-E1317AB10234}">
-					<ChildrenList>
-						<State Name="None" ID="{CB6020BF-7EE4-4C4F-9387-C8B8C2B05325}"/>
-						<State Name="Easy" ID="{D1641EF6-2CFC-41B9-8C12-42D697334159}"/>
-						<State Name="Uncomfortable" ID="{D1430318-412E-4400-B404-46E1EDACBDC4}"/>
-						<State Name="Bad" ID="{1C1E0F0F-C5DA-4B42-B468-F53D6D72045F}"/>
-					</ChildrenList>
-				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{BBD4EEB5-C659-F5E3-B09B-6B3160509B5F}",
+    "Hash": "{2DCBCF31-B5B4-BE2E-CE9F-8A9E1A375A18}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -346,12 +346,6 @@
       "GUID": "{B7BD444D-47D9-4A45-B494-75FFDBB16E06}"
      },
      {
-      "Id": "1318719891",
-      "Name": "RTPC_FlyCount",
-      "ObjectPath": "\\Game Parameters\\Generic\\RTPC_FlyCount",
-      "GUID": "{A94098B4-8EDD-40B3-8148-AC62C66A477C}"
-     },
-     {
       "Id": "1370132602",
       "Name": "RTPC_PlayerAmmo",
       "ObjectPath": "\\Game Parameters\\Player\\RTPC_PlayerAmmo",
@@ -380,12 +374,6 @@
       "Name": "RTPC_User_SFX",
       "ObjectPath": "\\Game Parameters\\UserSettings\\RTPC_User_SFX",
       "GUID": "{4DF2F460-4C89-46E1-8331-9F32711CCFDC}"
-     },
-     {
-      "Id": "3895981790",
-      "Name": "RTPC_EnemyCount",
-      "ObjectPath": "\\Game Parameters\\Generic\\RTPC_EnemyCount",
-      "GUID": "{AE3EE53E-CB7E-48C3-8A6B-4F826D46E61B}"
      },
      {
       "Id": "3975082306",
@@ -424,64 +412,6 @@
         "Name": "Combat",
         "ObjectPath": "\\States\\Generic\\GameplayState\\Combat",
         "GUID": "{2BE59E25-6AE0-4AA5-AE16-F86C3328DA34}"
-       }
-      ]
-     },
-     {
-      "Id": "1253610732",
-      "Name": "CombatIntensity",
-      "ObjectPath": "\\States\\Generic\\CombatIntensity",
-      "GUID": "{AA83C3B5-2836-475A-872A-E1317AB10234}",
-      "States": [
-       {
-        "Id": "513390134",
-        "Name": "Bad",
-        "ObjectPath": "\\States\\Generic\\CombatIntensity\\Bad",
-        "GUID": "{1C1E0F0F-C5DA-4B42-B468-F53D6D72045F}"
-       },
-       {
-        "Id": "529018163",
-        "Name": "Easy",
-        "ObjectPath": "\\States\\Generic\\CombatIntensity\\Easy",
-        "GUID": "{D1641EF6-2CFC-41B9-8C12-42D697334159}"
-       },
-       {
-        "Id": "748895195",
-        "Name": "None",
-        "ObjectPath": "\\States\\Generic\\CombatIntensity\\None",
-        "GUID": "{CB6020BF-7EE4-4C4F-9387-C8B8C2B05325}"
-       },
-       {
-        "Id": "1926155092",
-        "Name": "Uncomfortable",
-        "ObjectPath": "\\States\\Generic\\CombatIntensity\\Uncomfortable",
-        "GUID": "{D1430318-412E-4400-B404-46E1EDACBDC4}"
-       }
-      ]
-     },
-     {
-      "Id": "2554230907",
-      "Name": "PlayerLifeState",
-      "ObjectPath": "\\States\\Player\\PlayerLifeState",
-      "GUID": "{A360C670-3D6B-4B02-BF93-1E1D052F300E}",
-      "States": [
-       {
-        "Id": "655265632",
-        "Name": "Alive",
-        "ObjectPath": "\\States\\Player\\PlayerLifeState\\Alive",
-        "GUID": "{533059FC-BEBB-4E88-8F7B-04C55B2ED32B}"
-       },
-       {
-        "Id": "748895195",
-        "Name": "None",
-        "ObjectPath": "\\States\\Player\\PlayerLifeState\\None",
-        "GUID": "{9C946DD7-A44F-441C-B40F-2501824B339C}"
-       },
-       {
-        "Id": "2044049779",
-        "Name": "Dead",
-        "ObjectPath": "\\States\\Player\\PlayerLifeState\\Dead",
-        "GUID": "{313FB0D8-3016-4C6A-9B5A-8EAB93047476}"
        }
       ]
      },
@@ -549,29 +479,6 @@
       ]
      },
      {
-      "Id": "2533675384",
-      "Name": "PlayerAmmo",
-      "ObjectPath": "\\Switches\\Player\\PlayerAmmo",
-      "GUID": "{942B5B2B-0FF8-40E6-9AF3-C32BC6520B85}",
-      "GameParameterRef": {
-       "Id": "1370132602"
-      },
-      "Switches": [
-       {
-        "Id": "3354297748",
-        "Name": "Empty",
-        "ObjectPath": "\\Switches\\Player\\PlayerAmmo\\Empty",
-        "GUID": "{F9A2AF1A-DF83-40D1-B745-3E7490E85A5F}"
-       },
-       {
-        "Id": "3620752402",
-        "Name": "Loaded",
-        "ObjectPath": "\\Switches\\Player\\PlayerAmmo\\Loaded",
-        "GUID": "{E119A801-FC68-4C7E-B7A4-19BC1189F2BD}"
-       }
-      ]
-     },
-     {
       "Id": "3072116243",
       "Name": "GroundMaterial",
       "ObjectPath": "\\Switches\\Generic\\GroundMaterial",
@@ -606,6 +513,6 @@
     ]
    }
   ],
-  "FileHash": "{212B56D5-5BA3-24C8-D74E-B7926201FD6D}"
+  "FileHash": "{E59EA7F1-449B-C7C0-5E3E-8FE5F7C59F0D}"
  }
 }
