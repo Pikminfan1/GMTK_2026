@@ -59,6 +59,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Game_MainMenu" ID="{06FD07F2-56F9-4C15-9900-5D7E10B88E8D}">
+					<ChildrenList>
+						<Action Name="" ID="{A285BA95-748C-480E-9E18-B4258CE05E67}" ShortID="448200451">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="InMenu" ID="{460E9C64-EAB3-4105-86A6-B699F9B16754}" WorkUnitID="{12705436-DC25-4D2F-B4E3-6FFF03F90AAB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{EA510960-AB94-3704-DC25-09ED6B058744}",
+    "Hash": "{F1ECBE82-4F5D-D969-D152-93103EF2236F}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -340,12 +340,6 @@
       "GUID": "{B7BD444D-47D9-4A45-B494-75FFDBB16E06}"
      },
      {
-      "Id": "1294084109",
-      "Name": "RTPC_RainAmount",
-      "ObjectPath": "\\Game Parameters\\World\\RTPC_RainAmount",
-      "GUID": "{43653B55-7322-4910-83A8-072561860C74}"
-     },
-     {
       "Id": "1318719891",
       "Name": "RTPC_FlyCount",
       "ObjectPath": "\\Game Parameters\\Generic\\RTPC_FlyCount",
@@ -520,47 +514,6 @@
     ],
     "SwitchGroups": [
      {
-      "Id": "48152839",
-      "Name": "RainType",
-      "ObjectPath": "\\Switches\\Generic\\RainType",
-      "GUID": "{CD9471AD-CC65-4C5B-9B0A-1950B90D8364}",
-      "GameParameterRef": {
-       "Id": "1294084109"
-      },
-      "Switches": [
-       {
-        "Id": "991379416",
-        "Name": "FullRain",
-        "ObjectPath": "\\Switches\\Generic\\RainType\\FullRain",
-        "GUID": "{E7B89B17-83A3-40AC-8F79-B6A4004481F1}"
-       },
-       {
-        "Id": "1278453130",
-        "Name": "MediumRain",
-        "ObjectPath": "\\Switches\\Generic\\RainType\\MediumRain",
-        "GUID": "{AAA60392-28B2-420B-B078-EA2392ECD56E}"
-       },
-       {
-        "Id": "1686739424",
-        "Name": "Storm",
-        "ObjectPath": "\\Switches\\Generic\\RainType\\Storm",
-        "GUID": "{5601F7AB-CDD6-4334-B43F-CE8B48AB7AFB}"
-       },
-       {
-        "Id": "2789071989",
-        "Name": "LightRain",
-        "ObjectPath": "\\Switches\\Generic\\RainType\\LightRain",
-        "GUID": "{F9E5A956-2B31-4367-86D4-8845034CAF80}"
-       },
-       {
-        "Id": "3569642402",
-        "Name": "Sunny",
-        "ObjectPath": "\\Switches\\Generic\\RainType\\Sunny",
-        "GUID": "{1D0B5907-8A79-4307-8CEB-6A634C4478A8}"
-       }
-      ]
-     },
-     {
       "Id": "1493153371",
       "Name": "PlayerSpeed",
       "ObjectPath": "\\Switches\\Player\\PlayerSpeed",
@@ -641,6 +594,6 @@
     ]
    }
   ],
-  "FileHash": "{04709E8C-592E-0368-969D-957AFDE898E5}"
+  "FileHash": "{B02418EE-6146-8B48-99B0-A21E311BF35D}"
  }
 }
