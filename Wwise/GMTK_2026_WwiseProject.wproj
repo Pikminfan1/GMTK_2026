@@ -25,6 +25,12 @@
 						<Value Platform="Windows">GeneratedSoundBanks\Windows</Value>
 					</ValueList>
 				</Property>
+				<Property Name="GlobalVoiceInstancesLimit" Type="int16">
+					<ValueList>
+						<Value Platform="Mac">100</Value>
+						<Value Platform="Windows">100</Value>
+					</ValueList>
+				</Property>
 				<Property Name="LicenseKey" Type="string" Value="PHByb2plY3QgaWQ9IjIzMzAxIiBtYXNrPSJVRlJaMzk4MiIgZW5jPSIwIj48bGljZW5zZSBpZD0iMSIgbmFtZT0iV3dpc2UiIHR5cGU9IjMiIHBsYXRmb3Jtcz0iMiwzLDQsMTAsMTMsMTQsMzciIGV4cGlyZXM9IjIwMjYtMTEtMDEiICAvPjxsaWNlbnNlIGlkPSIyMiIgbmFtZT0iTGV2ZWwgQSBMaWNlbnNlIiB0eXBlPSIzIiBwbGF0Zm9ybXM9IjIsMyw0LDEwLDEzLDE0LDM3IiBleHBpcmVzPSIyMDI2LTExLTAxIiAgLz48bGljZW5zZSBpZD0iMjEiIG5hbWU9Ik1haW50ZW5hbmNlIiB0eXBlPSIzIiBwbGF0Zm9ybXM9IjIsMyw0LDEwLDEzLDE0LDM3IiBleHBpcmVzPSIyMDI2LTExLTAxIiAgLz48bGljZW5zZSBpZD0iMjUiIG5hbWU9IkFsbCBXd2lzZSBQbHVnLUlucyIgdHlwZT0iMyIgIGV4cGlyZXM9IjIwMjYtMTEtMDEiICAvPjwvcHJvamVjdD4=|uJaFUiP24miSW4gJTrarGc2cRgalj1z+yJwhbDbKuUC/vdQLBz0AlfMlEBFq38Rf6u4x/C3Ffh7xAw5bpev0rOChBPn98fIv3VXQ5HlfDfU6TmErb4JRZnHsD8AM5d8/gve22LvR2kxwZG9sL1WOQ8h+6TLawaVYNG4g/QYjhamJxwsAw7SkDDYqi0NYmF2ub4t4H2utrZvDDFKJ5QWcFkYpH6mXZvumLv10rihVuAj8nQO6AB3Cwjs17uT/X97Az3dRedRZ2TDfCfnd0V+o1Seyn7rhBljJJ3RMP0r+5XGRzdjDJBxWvYnBjapKAYHqh2EuoLTlPf3ufCxh59mHKw=="/>
 				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks"/>
 				<Property Name="SoundBankPaths" Type="string">
@@ -55,6 +61,12 @@
 					<ValueList>
 						<Value Platform="Mac"></Value>
 						<Value Platform="Windows"></Value>
+					</ValueList>
+				</Property>
+				<Property Name="VolumeThreshold" Type="Real64">
+					<ValueList>
+						<Value Platform="Mac">-60</Value>
+						<Value Platform="Windows">-60</Value>
 					</ValueList>
 				</Property>
 				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2025.1.9|Build=9197|VersionName=v2025.1.9|Config=Release"/>

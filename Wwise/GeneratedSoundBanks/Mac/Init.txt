@@ -62,6 +62,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	2702185859	PlayerCombatActions			\MainBusses\Main Audio Bus\World\Player\PlayerCombat\PlayerCombatActions	
 	2940432316	Stingers			\MainBusses\Main Audio Bus\Non-World\Music\Stingers	
 	3077849308	NPCVocals			\MainBusses\Main Audio Bus\World\NPCs\NPCVocals	
+	3354310601	NPC_ATTACK			\MainBusses\Main Audio Bus\World\NPCs\NPCCombat\NPC_ATTACK	
 	3545700988	Reverbs			\MainBusses\Main Audio Bus\World\Reverbs	
 	3991942870	Music			\MainBusses\Main Audio Bus\Non-World\Music	
 	4000439062	NPCCombat			\MainBusses\Main Audio Bus\World\NPCs\NPCCombat	

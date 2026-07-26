@@ -252,6 +252,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="NPC_Hit" ID="{54733D4D-F8DA-4C78-8C2E-1AA73F69D683}" ShortID="178290327">
 							<PropertyList>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -264,6 +265,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
