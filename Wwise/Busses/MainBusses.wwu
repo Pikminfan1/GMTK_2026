@@ -71,24 +71,6 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ChildrenList>
-										<AuxBus Name="Room_Small" ID="{E0D9BC87-EF3E-4ED7-9B11-F65A2301ACCB}">
-											<PropertyList>
-												<Property Name="Color" Type="int16" Value="24"/>
-												<Property Name="OverrideColor" Type="bool" Value="True"/>
-											</PropertyList>
-										</AuxBus>
-										<AuxBus Name="Room_Medium" ID="{65FE0A3A-3C20-4621-8416-07760CF0F4D9}">
-											<PropertyList>
-												<Property Name="Color" Type="int16" Value="24"/>
-												<Property Name="OverrideColor" Type="bool" Value="True"/>
-											</PropertyList>
-										</AuxBus>
-										<AuxBus Name="Room_Large" ID="{ECB2B324-77C5-4EB4-AD62-7E75AC58FCA2}">
-											<PropertyList>
-												<Property Name="Color" Type="int16" Value="24"/>
-												<Property Name="OverrideColor" Type="bool" Value="True"/>
-											</PropertyList>
-										</AuxBus>
 										<AuxBus Name="Outdoors" ID="{1925E056-166D-4DD7-AB68-8EA81697C003}">
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="24"/>
@@ -103,14 +85,22 @@
 															</Reference>
 														</ReferenceList>
 													</EffectSlot>
+													<EffectSlot Name="" ID="{C78C106C-771D-46E5-966E-9608D5943506}" ShortID="828739430">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom>
+																	<Effect Name="Parametric EQ (Custom)" ID="{D6984BB8-E6F4-4225-865C-B82817435BE1}" ShortID="742798873" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																		<PropertyList>
+																			<Property Name="FrequencyBand2" Type="Real32" Value="1708.653"/>
+																			<Property Name="GainBand2" Type="Real32" Value="-5.746479"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
 												</ObjectList>
 											</ObjectLists>
-										</AuxBus>
-										<AuxBus Name="Cave" ID="{1618779C-6D79-42CC-BE24-5B192AE46F9B}">
-											<PropertyList>
-												<Property Name="Color" Type="int16" Value="24"/>
-												<Property Name="OverrideColor" Type="bool" Value="True"/>
-											</PropertyList>
 										</AuxBus>
 									</ChildrenList>
 								</Bus>
@@ -214,7 +204,7 @@
 									<PropertyList>
 										<Property Name="BusVolume" Type="Real64">
 											<ValueList>
-												<Value>-12</Value>
+												<Value>-14</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -260,12 +250,12 @@
 														<Custom>
 															<Effect Name="Parametric EQ (Custom)" ID="{440F135E-51D4-46E1-BB22-1E425B4DE5B2}" ShortID="357717049" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 																<PropertyList>
-																	<Property Name="FrequencyBand2" Type="Real32" Value="11609.39"/>
-																	<Property Name="FrequencyBand3" Type="Real32" Value="82.49253"/>
-																	<Property Name="FrequencyBand4" Type="Real32" Value="1761.619"/>
-																	<Property Name="GainBand2" Type="Real32" Value="-4.169014"/>
-																	<Property Name="GainBand3" Type="Real32" Value="-2.366197"/>
-																	<Property Name="GainBand4" Type="Real32" Value="-2.366197"/>
+																	<Property Name="FrequencyBand2" Type="Real32" Value="8750.959"/>
+																	<Property Name="FrequencyBand3" Type="Real32" Value="87.50959"/>
+																	<Property Name="FrequencyBand4" Type="Real32" Value="1403.408"/>
+																	<Property Name="GainBand2" Type="Real32" Value="-7.098591"/>
+																	<Property Name="GainBand3" Type="Real32" Value="-6.422535"/>
+																	<Property Name="GainBand4" Type="Real32" Value="-8.676056"/>
 																	<Property Name="NumBands" Type="int32" Value="4"/>
 																	<Property Name="OnOffBand1" Type="bool" Value="False"/>
 																	<Property Name="OnOffBand3" Type="bool" Value="True"/>
@@ -537,7 +527,7 @@
 										<Custom>
 											<Effect Name="Gain (Custom)" ID="{36BE553E-6B99-458A-99FC-C02F4A9BF282}" ShortID="122002127" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
 												<PropertyList>
-													<Property Name="FullBandGain" Type="Real32" Value="5.5"/>
+													<Property Name="FullBandGain" Type="Real32" Value="17"/>
 												</PropertyList>
 											</Effect>
 										</Custom>

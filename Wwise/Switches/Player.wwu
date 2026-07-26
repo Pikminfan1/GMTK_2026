@@ -43,40 +43,6 @@
 						</Curve>
 					</SwitchOnRTPC>
 				</SwitchGroup>
-				<SwitchGroup Name="PlayerAmmo" ID="{942B5B2B-0FF8-40E6-9AF3-C32BC6520B85}">
-					<PropertyList>
-						<Property Name="UseGameParameter" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Switch Name="Loaded" ID="{E119A801-FC68-4C7E-B7A4-19BC1189F2BD}"/>
-						<Switch Name="Empty" ID="{F9A2AF1A-DF83-40D1-B745-3E7490E85A5F}"/>
-					</ChildrenList>
-					<SwitchOnRTPC>
-						<GameParameterRef Name="RTPC_PlayerAmmo" ID="{2B746929-9453-45FF-9C67-310FC96EEAB9}"/>
-						<Curve Name="" ID="{55A73DCE-E4E5-4B38-9517-5E40EE161E9F}">
-							<PropertyList>
-								<Property Name="Flags" Type="int32" Value="65537"/>
-							</PropertyList>
-							<PointList>
-								<Point>
-									<XPos>0</XPos>
-									<YPos>2</YPos>
-									<Flags>5</Flags>
-								</Point>
-								<Point>
-									<XPos>0.001</XPos>
-									<YPos>1</YPos>
-									<Flags>0</Flags>
-								</Point>
-								<Point>
-									<XPos>10</XPos>
-									<YPos>0</YPos>
-									<Flags>37</Flags>
-								</Point>
-							</PointList>
-						</Curve>
-					</SwitchOnRTPC>
-				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

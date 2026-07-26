@@ -1,18 +1,13 @@
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1493153371	PlayerSpeed			\Player\PlayerSpeed	
-	2533675384	PlayerAmmo			\Player\PlayerAmmo	
 
 Switch	ID	Name	Switch Group			Notes
 	712161704	Run	PlayerSpeed			
 	1296465089	Sprint	PlayerSpeed			
 	2108779966	Walk	PlayerSpeed			
-	3354297748	Empty	PlayerAmmo			
-	3620752402	Loaded	PlayerAmmo			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	778922764	GameplayState			\Generic\GameplayState	
-	1253610732	CombatIntensity			\Generic\CombatIntensity	
-	2554230907	PlayerLifeState			\Player\PlayerLifeState	
 	4091656514	GameState			\Generic\GameState	
 
 State	ID	Name	State Group			Notes
@@ -20,13 +15,6 @@ State	ID	Name	State Group			Notes
 	748895195	None	GameplayState			
 	2582085496	Exploration	GameplayState			
 	2764240573	Combat	GameplayState			
-	513390134	Bad	CombatIntensity			
-	529018163	Easy	CombatIntensity			
-	748895195	None	CombatIntensity			
-	1926155092	Uncomfortable	CombatIntensity			
-	655265632	Alive	PlayerLifeState			
-	748895195	None	PlayerLifeState			
-	2044049779	Dead	PlayerLifeState			
 	748895195	None	GameState			
 	984691642	InGame	GameState			
 	3327551418	InPause	GameState			
@@ -69,17 +57,14 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	4275850663	Projectiles			\MainBusses\Main Audio Bus\World\Objects\Projectiles	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	602546716	Room_Large			\MainBusses\Main Audio Bus\World\Reverbs\Room_Large	
-	1990128658	Room_Medium			\MainBusses\Main Audio Bus\World\Reverbs\Room_Medium	
 	2730119150	Outdoors			\MainBusses\Main Audio Bus\World\Reverbs\Outdoors	
-	2995775460	Room_Small			\MainBusses\Main Audio Bus\World\Reverbs\Room_Small	
-	4122393694	Cave			\MainBusses\Main Audio Bus\World\Reverbs\Cave	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	122002127	Gain (Custom)	Wwise Gain			
 	357717049	Parametric EQ (Custom)	Wwise Parametric EQ			
 	594436390	Inside_Your_Head (Custom)	Wwise RoomVerb			
+	742798873	Parametric EQ (Custom)	Wwise Parametric EQ			
 	900190560	Master_EQ	Wwise Parametric EQ			
 	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
 

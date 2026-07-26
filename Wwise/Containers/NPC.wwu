@@ -4,6 +4,9 @@
 		<WorkUnit Name="NPC" ID="{FDE73CBA-743C-4142-9509-B7EEC84F1199}" OwnerID="{38282CAE-841C-4993-AD65-B53E6DCDEDF3}" PersistMode="Nested">
 			<ChildrenList>
 				<PropertyContainer Name="NPCLocomotion" ID="{CC3F401E-0777-4FDA-8F87-39F11FA349B1}" ShortID="659776278">
+					<PropertyList>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
 							<ObjectRef Name="ATT_Generic_1000" ID="{BEA8B0CE-57DB-40B1-A1AB-F45DEAE711F1}" WorkUnitID="{45D68877-CE1B-4135-98BC-C165B2B4501C}"/>
@@ -29,6 +32,7 @@
 								<Value>40</Value>
 							</ValueList>
 						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
 							<ValueList>
 								<Value>True</Value>
@@ -365,6 +369,7 @@
 						<PropertyContainer Name="NPC_Ray" ID="{3209F260-289B-430B-BAA2-4F5D3CB819B4}" ShortID="492271360">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Priority" Type="int16">
@@ -675,12 +680,40 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{B7A430CF-3964-42C0-A5C8-9A8AD19AADA5}" ShortID="225237110">
+										<PropertyList>
+											<Property Name="Render" Type="bool" Value="True"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="Effect">
+												<Custom>
+													<Effect Name="Parametric EQ (Custom)" ID="{5D6322E6-E9FF-4104-98BC-FB8BAEA711D1}" ShortID="636923572" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<PropertyList>
+															<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+															<Property Name="FrequencyBand1" Type="Real32" Value="122.2798"/>
+															<Property Name="FrequencyBand2" Type="Real32" Value="8580.422"/>
+															<Property Name="FrequencyBand3" Type="Real32" Value="253.276"/>
+															<Property Name="GainBand1" Type="Real32" Value="0.5633803"/>
+															<Property Name="GainBand2" Type="Real32" Value="2.816901"/>
+															<Property Name="GainBand3" Type="Real32" Value="-10.02817"/>
+															<Property Name="OnOffBand3" Type="bool" Value="True"/>
+														</PropertyList>
+													</Effect>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
 						</PropertyContainer>
 					</ChildrenList>
 				</PropertyContainer>
 				<PropertyContainer Name="NPCActions" ID="{09C5BBBE-8DE8-493C-BD08-CAD8E2B6E91A}" ShortID="383474643">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -695,6 +728,14 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="NPC_Spawn" ID="{D3C1D72C-51DE-4FC1-BE09-B9790E9EE4DA}" ShortID="697895905">
+							<PropertyList>
+								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9EFB2BB3-651A-4DBB-B8B5-310D02D52FCE}"/>
@@ -740,6 +781,7 @@
 									</ValueList>
 								</Property>
 								<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="OverridePriority" Type="bool" Value="True"/>
 								<Property Name="OverrideVirtualVoice" Type="bool" Value="True"/>

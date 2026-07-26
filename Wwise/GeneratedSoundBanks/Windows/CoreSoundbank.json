@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{4602E80A-26A8-4DB0-82B0-7431E1FE69B3}",
     "Language": "SFX",
-    "Hash": "{A1C8DA0D-AB40-523D-FB1B-8617EB3BE813}",
+    "Hash": "{C88365A5-6D0B-997B-E3D1-3CD2F293AB3D}",
     "ObjectPath": "\\SoundBanks\\Core\\CoreSoundbank",
     "ShortName": "CoreSoundbank",
     "Path": "CoreSoundbank.bnk",
@@ -233,6 +233,14 @@
       "CachePath": "97/{97BF251F-F262-E757-06BD-E6EDAFF05609}.wem"
      },
      {
+      "Id": "252823386",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Playerhit03.wav",
+      "CachePath": "96/{96FB675A-E6FB-4482-4D5C-D8F9AB3F3BFD}.wem"
+     },
+     {
       "Id": "270737109",
       "Language": "SFX",
       "Streaming": "false",
@@ -367,7 +375,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "SFX_NPCRayStop_Mono_lp_Bulba.wav",
-      "CachePath": "80/{80A010A1-030F-88DF-5020-30519B6C2094}.wem"
+      "CachePath": "6B/{6B87CBC4-9C68-790D-42CE-0B3FCF7CF791}.wem"
      },
      {
       "Id": "525508710",
@@ -424,6 +432,14 @@
       "Location": "Memory",
       "ShortName": "sfx_player_fs_grass03_mo_fm.wav",
       "CachePath": "C0/{C0C0C5A5-215C-B739-CC71-26AF7AD0AE0D}.wem"
+     },
+     {
+      "Id": "652380647",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Playerhit02.wav",
+      "CachePath": "16/{16DD10D2-1A6F-7DB2-E7DF-A5D3C1380ABF}.wem"
      },
      {
       "Id": "652876724",
@@ -559,7 +575,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "SFX_RayWindup_Mono_Bulba.wav",
-      "CachePath": "ED/{EDBDF8AC-8C5B-02ED-5F0C-A4AA82CBB0CE}.wem"
+      "CachePath": "A1/{A15D64F6-8D8D-CB73-7764-A5447789373F}.wem"
      },
      {
       "Id": "776065053",
@@ -615,7 +631,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "SFX_NPCRay_Mono_lp_Bulba.wav",
-      "CachePath": "EB/{EB863B1C-096B-BF07-5BE8-6798545C4B15}.wem"
+      "CachePath": "54/{54155CEB-C7B9-0632-C521-5CF6332AEFCA}.wem"
      },
      {
       "Id": "837232218",
@@ -679,7 +695,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "SFX_NPCRayStart_Mono_Bulba.wav",
-      "CachePath": "F2/{F232E8DC-5AC7-5FBA-C40C-43656915B44A}.wem"
+      "CachePath": "17/{17F24081-D62E-3568-14A4-6768AE98BF3D}.wem"
      },
      {
       "Id": "940847795",
@@ -761,6 +777,14 @@
       "Location": "Memory",
       "ShortName": "sfx_ui_Back_st_fm.wav",
       "CachePath": "53/{53F2BF2C-BDA3-38BA-E497-6AC9700B8610}.wem"
+     },
+     {
+      "Id": "1058888378",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Playerhit01.wav",
+      "CachePath": "3B/{3BE43BD6-4007-4EA2-BEB5-C40A51AC182A}.wem"
      },
      {
       "Id": "1071347720",
@@ -1243,10 +1267,21 @@
       "Name": "Player_Hit",
       "ObjectPath": "\\Events\\Game\\Player\\PlayerCombat\\Player_Hit",
       "GUID": "{522E92C0-CB47-4E3E-9C1F-33E9713D5C5A}",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "5000",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.91046244",
+      "DurationMax": "0.9880158",
+      "MediaRefs": [
+       {
+        "Id": "252823386"
+       },
+       {
+        "Id": "652380647"
+       },
+       {
+        "Id": "1058888378"
+       }
+      ]
      },
      {
       "Id": "3610725078",
@@ -1290,15 +1325,6 @@
        {
         "Id": "1051905915"
        }
-      ],
-      "AuxBusRefs": [
-       {
-        "Id": "2730119150",
-        "Name": "Outdoors",
-        "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
-        "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}",
-        "Color": "24"
-       }
       ]
      },
      {
@@ -1321,15 +1347,6 @@
        },
        {
         "Id": "776065053"
-       }
-      ],
-      "AuxBusRefs": [
-       {
-        "Id": "2730119150",
-        "Name": "Outdoors",
-        "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
-        "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}",
-        "Color": "24"
        }
       ]
      },
@@ -1355,15 +1372,6 @@
        {
         "Id": "206242964"
        }
-      ],
-      "AuxBusRefs": [
-       {
-        "Id": "2730119150",
-        "Name": "Outdoors",
-        "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
-        "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}",
-        "Color": "24"
-       }
       ]
      },
      {
@@ -1387,15 +1395,6 @@
        {
         "Id": "763663487"
        }
-      ],
-      "AuxBusRefs": [
-       {
-        "Id": "2730119150",
-        "Name": "Outdoors",
-        "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
-        "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}",
-        "Color": "24"
-       }
       ]
      },
      {
@@ -1410,15 +1409,6 @@
        },
        {
         "Id": "899753535"
-       }
-      ],
-      "AuxBusRefs": [
-       {
-        "Id": "2730119150",
-        "Name": "Outdoors",
-        "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
-        "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}",
-        "Color": "24"
        }
       ]
      },
@@ -1490,15 +1480,6 @@
        },
        {
         "Id": "998249834"
-       }
-      ],
-      "AuxBusRefs": [
-       {
-        "Id": "2730119150",
-        "Name": "Outdoors",
-        "ObjectPath": "\\Busses\\MainBusses\\Main Audio Bus\\World\\Reverbs\\Outdoors",
-        "GUID": "{1925E056-166D-4DD7-AB68-8EA81697C003}",
-        "Color": "24"
        }
       ]
      },
@@ -1677,6 +1658,6 @@
     ]
    }
   ],
-  "FileHash": "{53931D3C-A1D5-D3AB-3E6B-7A743934315C}"
+  "FileHash": "{DD55FEDF-EA7C-067D-BFFF-674F8B32EF8D}"
  }
 }

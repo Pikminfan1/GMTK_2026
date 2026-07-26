@@ -9,19 +9,6 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="RTPC_FlyCount" ID="{A94098B4-8EDD-40B3-8148-AC62C66A477C}">
-					<Comment>If A lot of dead enemies around, we could use this to drive a flies buzzing sound (while not in frenetic combat)</Comment>
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="Max" Type="Real64" Value="1"/>
-					</PropertyList>
-				</GameParameter>
-				<GameParameter Name="RTPC_EnemyCount" ID="{AE3EE53E-CB7E-48C3-8A6B-4F826D46E61B}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="Max" Type="Real64" Value="10"/>
-					</PropertyList>
-				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
