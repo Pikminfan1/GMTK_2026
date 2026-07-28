@@ -16,8 +16,6 @@ public class GMTK_2026 : ModuleRules
 			"EnhancedInput",
 			"AIModule",
 			"NavigationSystem",
-			"StateTreeModule",
-			"GameplayStateTreeModule",
 			"UMG",
 			"Slate"
 		});
@@ -25,20 +23,7 @@ public class GMTK_2026 : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new string[] { "Niagara" });
 
 		PublicIncludePaths.AddRange(new string[] {
-			"GMTK_2026",
-			"GMTK_2026/Variant_Platforming",
-			"GMTK_2026/Variant_Platforming/Animation",
-			"GMTK_2026/Variant_Combat",
-			"GMTK_2026/Variant_Combat/AI",
-			"GMTK_2026/Variant_Combat/Animation",
-			"GMTK_2026/Variant_Combat/Gameplay",
-			"GMTK_2026/Variant_Combat/Interfaces",
-			"GMTK_2026/Variant_Combat/UI",
-			"GMTK_2026/Variant_SideScrolling",
-			"GMTK_2026/Variant_SideScrolling/AI",
-			"GMTK_2026/Variant_SideScrolling/Gameplay",
-			"GMTK_2026/Variant_SideScrolling/Interfaces",
-			"GMTK_2026/Variant_SideScrolling/UI"
+			"GMTK_2026"
 		});
 
 		// Uncomment if you are using Slate UI

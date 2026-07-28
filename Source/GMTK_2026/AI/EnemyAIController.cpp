@@ -6,6 +6,8 @@
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Characters/BaseCharacter.h"
 #include "Characters/EnemyCharacter.h"
+#include "Characters/Components/EnemyBeamComponentBase.h"
+#include "Characters/Components/EnemyMeleeAttackComponent.h"
 #include "Characters/Components/HealthComponent.h"
 #include "Perception/AIPerceptionComponent.h"
 #include "Perception/AISenseConfig_Sight.h"
@@ -17,6 +19,8 @@ AEnemyAIController::AEnemyAIController()
 	UAIPerceptionComponent* NewPerceptionComponent =
 		CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("PerceptionComponent"));
 
+	// Sight radius needs to comfortably exceed the laser's max engagement range,
+	// otherwise the enemy loses its target mid-attack and the beam cuts out.
 	SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("SightConfig"));
 	SightConfig->SightRadius = 2200.f;
 	SightConfig->LoseSightRadius = 2600.f;
@@ -24,7 +28,7 @@ AEnemyAIController::AEnemyAIController()
 	SightConfig->SetMaxAge(5.f);
 
 	// Only react to hostiles. GetTeamAttitudeTowards() below is what actually
-	// classifies actors, so enemies no longer register each other as targets.
+	// classifies actors, so enemies never register each other as targets.
 	SightConfig->DetectionByAffiliation.bDetectEnemies = true;
 	SightConfig->DetectionByAffiliation.bDetectNeutrals = false;
 	SightConfig->DetectionByAffiliation.bDetectFriendlies = false;
@@ -36,14 +40,7 @@ AEnemyAIController::AEnemyAIController()
 
 	SetPerceptionComponent(*NewPerceptionComponent);
 
-	// Sight radius needs to comfortably exceed the laser's max engagement range,
-	// otherwise the enemy loses its target mid-attack and the beam cuts out.
 	SetGenericTeamId(CombatTeams::Enemy);
-}
-
-FGenericTeamId AEnemyAIController::GetGenericTeamId() const
-{
-	return FGenericTeamId(TeamId);
 }
 
 ETeamAttitude::Type AEnemyAIController::GetTeamAttitudeTowards(const AActor& Other) const
@@ -98,6 +95,7 @@ void AEnemyAIController::OnPossess(APawn* InPawn)
 		// each one having to walk the controller chain.
 		Blackboard->SetValueAsObject(SelfActorKey, InPawn);
 		Blackboard->SetValueAsBool(IsDeadKey, false);
+		Blackboard->SetValueAsBool(HasTokenKey, false);
 	}
 
 	// Constant pursuit: seed the player as the target immediately so the enemy chases
@@ -149,6 +147,52 @@ void AEnemyAIController::EndPlay(const EEndPlayReason::Type EndPlayReason)
 	Super::EndPlay(EndPlayReason);
 }
 
+void AEnemyAIController::OnTokenGranted_Implementation(ETokenRequestType Type)
+{
+	if (Blackboard)
+	{
+		Blackboard->SetValueAsBool(HasTokenKey, true);
+	}
+}
+
+void AEnemyAIController::OnTokenRevoked_Implementation(ETokenRevokeReason Reason)
+{
+	if (Blackboard)
+	{
+		Blackboard->SetValueAsBool(HasTokenKey, false);
+	}
+
+	// A voluntary release means the attack already ended cleanly; there is nothing
+	// to interrupt. A steal or reclaim means this pawn may be mid-wind-up or
+	// mid-beam with no permission to finish - abort every busy attack component
+	// right now so the attack (and its montage) stops this frame rather than
+	// whenever the Behavior Tree's abort lands.
+	if (Reason == ETokenRevokeReason::Released)
+	{
+		return;
+	}
+
+	if (APawn* MyPawn = GetPawn())
+	{
+		TInlineComponentArray<UEnemyBeamComponentBase*> Beams(MyPawn);
+		for (UEnemyBeamComponentBase* Beam : Beams)
+		{
+			if (Beam && Beam->IsBusy())
+			{
+				Beam->AbortAttack();
+			}
+		}
+
+		if (UEnemyMeleeAttackComponent* Melee = MyPawn->FindComponentByClass<UEnemyMeleeAttackComponent>())
+		{
+			if (Melee->IsBusy())
+			{
+				Melee->AbortAttack();
+			}
+		}
+	}
+}
+
 void AEnemyAIController::HandlePawnDeath(AActor* DeadActor)
 {
 	ReleaseCombatToken();
@@ -171,7 +215,7 @@ void AEnemyAIController::ReleaseCombatToken()
 	{
 		if (UCombatTokenSubsystem* Tokens = World->GetSubsystem<UCombatTokenSubsystem>())
 		{
-			Tokens->ReleaseToken(GetPawn());
+			Tokens->ReleaseToken(this);
 		}
 	}
 }
@@ -190,7 +234,7 @@ void AEnemyAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus St
 	{
 		return;
 	}
-	
+
 	if (!Actor->IsA<APlayerCharacter>())
 	{
 		return;
@@ -228,7 +272,7 @@ void AEnemyAIController::HandlePawnDamaged(float DamageAmount, AController* Even
 	{
 		if (UCombatTokenSubsystem* Tokens = World->GetSubsystem<UCombatTokenSubsystem>())
 		{
-			Tokens->TryStealTokenFor(GetPawn(), AggroTokenType);
+			Tokens->TryStealTokenFor(this, AggroTokenType);
 		}
 	}
 }

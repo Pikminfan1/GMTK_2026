@@ -1,9 +1,8 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
-#include "AI/Tokens/CombatTokenSubsystem.h"
+#include "AI/Tokens/TokenHolder.h"
+#include "AI/Tokens/TokenTypes.h"
 #include "DetourCrowdAIController.h"
 #include "GenericTeamAgentInterface.h"
 #include "Perception/AIPerceptionTypes.h"
@@ -40,9 +39,16 @@ enum class EEnemyMovementSpeed : uint8
  * Implements IGenericTeamAgentInterface so perception can tell the player apart from
  * other enemies - without that, enemies perceive each other and end up writing a
  * fellow enemy into TargetActor.
+ *
+ * Implements ITokenHolder as the combat-token subsystem's point of contact: the
+ * controller is the thing that requests, holds, and releases attack permission on
+ * behalf of its pawn. Grant/revoke events arrive here and are mirrored onto the
+ * blackboard the same frame; a forced revoke (steal or reclaim) also aborts any
+ * attack component mid-flight so the pawn never finishes an attack it no longer
+ * has permission for.
  */
 UCLASS()
-class GMTK_2026_API AEnemyAIController : public ADetourCrowdAIController
+class GMTK_2026_API AEnemyAIController : public ADetourCrowdAIController, public ITokenHolder
 {
 	GENERATED_BODY()
 
@@ -50,9 +56,13 @@ public:
 	AEnemyAIController();
 
 	//~ Begin IGenericTeamAgentInterface
-	virtual FGenericTeamId GetGenericTeamId() const override;
 	virtual ETeamAttitude::Type GetTeamAttitudeTowards(const AActor& Other) const override;
 	//~ End IGenericTeamAgentInterface
+
+	//~ Begin ITokenHolder
+	virtual void OnTokenGranted_Implementation(ETokenRequestType Type) override;
+	virtual void OnTokenRevoked_Implementation(ETokenRevokeReason Reason) override;
+	//~ End ITokenHolder
 
 	/** Blackboard key names. Exposed so a Blueprint subclass can rename them if needed. */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AI|Blackboard")
@@ -67,6 +77,12 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AI|Blackboard")
 	FName IsDeadKey = TEXT("IsDead");
 
+	/** Mirrors token possession onto the blackboard. Written by the ITokenHolder
+	 *  callbacks the moment a grant or revoke happens, so blackboard-observing
+	 *  decorators react on the same frame. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AI|Blackboard")
+	FName HasTokenKey = TEXT("HasToken");
+
 protected:
 	virtual void OnPossess(APawn* InPawn) override;
 	virtual void OnUnPossess() override;
@@ -77,10 +93,6 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UAISenseConfig_Sight> SightConfig;
-
-	/** Which team this controller belongs to. Set to Enemy by default. */
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AI|Team")
-	uint8 TeamId = 1;
 
 	UFUNCTION()
 	void OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus);
@@ -105,6 +117,6 @@ protected:
 	ETokenRequestType AggroTokenType = ETokenRequestType::RangedLaser;
 
 private:
-	/** Hands the combat token back, if this pawn is holding one. Safe to call repeatedly. */
+	/** Hands the combat token back, if this controller is holding one. Safe to call repeatedly. */
 	void ReleaseCombatToken();
 };

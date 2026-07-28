@@ -25,19 +25,20 @@ FString UBTTask_RequestToken::GetStaticDescription() const
 
 EBTNodeResult::Type UBTTask_RequestToken::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
+	// Tokens are held by the CONTROLLER - the thing that decides to attack - so the
+	// controller is what gets registered with the director.
 	AAIController* AICon = OwnerComp.GetAIOwner();
-	APawn* Pawn = AICon ? AICon->GetPawn() : nullptr;
 
 	UCombatTokenSubsystem* Tokens = GetWorld()
 		? GetWorld()->GetSubsystem<UCombatTokenSubsystem>()
 		: nullptr;
 
-	if (!Pawn || !Tokens)
+	if (!AICon || !Tokens)
 	{
 		return EBTNodeResult::Failed;
 	}
 
-	const bool bGranted = Tokens->RequestToken(Pawn, TokenType);
+	const bool bGranted = Tokens->RequestToken(AICon, TokenType);
 
 	if (UBlackboardComponent* Blackboard = OwnerComp.GetBlackboardComponent())
 	{

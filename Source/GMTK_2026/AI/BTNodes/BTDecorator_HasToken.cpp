@@ -31,19 +31,18 @@ FString UBTDecorator_HasToken::GetStaticDescription() const
 bool UBTDecorator_HasToken::CalculateRawConditionValue(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) const
 {
 	const AAIController* AICon = OwnerComp.GetAIOwner();
-	const APawn* Pawn = AICon ? AICon->GetPawn() : nullptr;
 
 	UCombatTokenSubsystem* Tokens = GetWorld()
 		? GetWorld()->GetSubsystem<UCombatTokenSubsystem>()
 		: nullptr;
 
-	if (!Pawn || !Tokens)
+	if (!AICon || !Tokens)
 	{
 		return false;
 	}
 
 	// Already holding always passes, in both modes.
-	if (Tokens->HoldsToken(Pawn))
+	if (Tokens->HoldsToken(AICon))
 	{
 		return true;
 	}

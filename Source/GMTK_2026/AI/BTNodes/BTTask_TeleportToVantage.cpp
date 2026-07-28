@@ -11,6 +11,13 @@
 UBTTask_TeleportToVantage::UBTTask_TeleportToVantage()
 {
 	NodeName = TEXT("Teleport To Vantage");
+
+	// A Behavior Tree normally shares ONE node object between every AI running the
+	// same tree asset. This task keeps latent state across the telegraph delay
+	// (pawn, destination, timer), so each AI needs its own copy of the node -
+	// otherwise two teleporters teleporting at the same time overwrite each
+	// other's state.
+	bCreateNodeInstance = true;
 }
 
 EBTNodeResult::Type UBTTask_TeleportToVantage::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
@@ -119,6 +126,28 @@ EBTNodeResult::Type UBTTask_TeleportToVantage::ExecuteTask(UBehaviorTreeComponen
 
 	// The task stays in progress until CompleteTeleport finishes it.
 	return EBTNodeResult::InProgress;
+}
+
+EBTNodeResult::Type UBTTask_TeleportToVantage::AbortTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
+{
+	// The branch aborted mid-telegraph (token lost, target died, a higher-priority
+	// branch fired). The pawn must never be left hidden and collisionless, so
+	// restore it in place and cancel the pending reappear.
+	if (UWorld* World = GetWorld())
+	{
+		World->GetTimerManager().ClearTimer(TelegraphTimer);
+	}
+
+	if (APawn* Pawn = CachedPawn.Get())
+	{
+		Pawn->SetActorHiddenInGame(false);
+		Pawn->SetActorEnableCollision(true);
+	}
+
+	CachedPawn = nullptr;
+	CachedOwnerComp = nullptr;
+
+	return EBTNodeResult::Aborted;
 }
 
 void UBTTask_TeleportToVantage::CompleteTeleport()

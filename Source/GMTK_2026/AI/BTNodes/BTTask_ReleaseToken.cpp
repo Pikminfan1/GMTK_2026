@@ -22,13 +22,12 @@ FString UBTTask_ReleaseToken::GetStaticDescription() const
 EBTNodeResult::Type UBTTask_ReleaseToken::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
 	AAIController* AICon = OwnerComp.GetAIOwner();
-	APawn* Pawn = AICon ? AICon->GetPawn() : nullptr;
 
-	if (Pawn && GetWorld())
+	if (AICon && GetWorld())
 	{
 		if (UCombatTokenSubsystem* Tokens = GetWorld()->GetSubsystem<UCombatTokenSubsystem>())
 		{
-			Tokens->ReleaseToken(Pawn);
+			Tokens->ReleaseToken(AICon);
 		}
 	}
 

@@ -144,8 +144,8 @@ void UBTTask_HealAlly::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMe
 		return;
 	}
 
-	const EHealBeamState BeamState = HealBeam->GetState();
-	if (BeamState == EHealBeamState::Cooldown || BeamState == EHealBeamState::Idle)
+	const EBeamAttackState BeamState = HealBeam->GetState();
+	if (BeamState == EBeamAttackState::Cooldown || BeamState == EBeamAttackState::Idle)
 	{
 		if (AICon)
 		{

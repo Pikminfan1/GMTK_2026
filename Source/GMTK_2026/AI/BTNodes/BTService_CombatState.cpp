@@ -87,11 +87,11 @@ void UBTService_CombatState::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* 
 	AActor* TargetActor = Cast<AActor>(Blackboard->GetValueAsObject(TargetActorKey.SelectedKeyName));
 
 	// Token state is worth mirroring even with no target, so the tree can still
-	// make sensible decisions while searching.
+	// make sensible decisions while searching. The controller is the token holder.
 	if (UCombatTokenSubsystem* Tokens = GetWorld()->GetSubsystem<UCombatTokenSubsystem>())
 	{
-		Blackboard->SetValueAsBool(HasTokenKey.SelectedKeyName, Tokens->HoldsToken(Pawn));
-		Blackboard->SetValueAsFloat(WaitTimeKey.SelectedKeyName, Tokens->GetWaitTime(Pawn));
+		Blackboard->SetValueAsBool(HasTokenKey.SelectedKeyName, Tokens->HoldsToken(AICon));
+		Blackboard->SetValueAsFloat(WaitTimeKey.SelectedKeyName, Tokens->GetWaitTime(AICon));
 	}
 
 	if (!IsValid(TargetActor))
